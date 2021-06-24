@@ -32,6 +32,7 @@ Make sure you've read and followed instructions in [setup guide](./setup/00-setu
 
 ### Part 2: Intermediate
 - [Week 8: Unit Test](./program/08-week8-Unit-test.md)
-- Week 9: Draff InterView
+- Week 9: Draft Interview
 ### Part 3: Capstone Project
 - [Week 10: IOS Interviewer App](./program/10-week10-capstone-project.md)
+- Week 11: Setup build setting for project, setup FireBase, Import SDK, Upload Appstore, Upload TestFlight (Offline conference)
