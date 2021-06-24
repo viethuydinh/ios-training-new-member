@@ -31,7 +31,7 @@ Make sure you've read and followed instructions in [setup guide](./setup/00-setu
 - [Week 7: Collection Views](./program/07-week7-collection-views.md)
 
 ### Part 2: Intermediate
-- [Week 8: Unit Test](https://drive.google.com/drive/folders/1vZdj8zwxiHXgOCmhNqvS0F499FXmLHHt?usp=sharing)
+- [Week 8: Unit Test](./program/08-week8-Unit-test.md)
 - Week 9: Draff InterView
 ### Part 3: Capstone Project
 - [Week 10: IOS Interviewer App](./program/10-week10-capstone-project.md)
