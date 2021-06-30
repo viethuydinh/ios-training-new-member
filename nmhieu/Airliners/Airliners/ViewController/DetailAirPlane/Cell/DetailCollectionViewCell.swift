@@ -20,7 +20,6 @@ class DetailCollectionViewCell: UICollectionViewCell {
             self.bindingData()
         }
     }
-
     fileprivate func bindingData() {
         self.detail!.forEach({ (key,value) in
             self.lblItem.text = key
