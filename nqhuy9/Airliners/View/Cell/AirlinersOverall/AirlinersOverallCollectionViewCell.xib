@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" restorationIdentifier="AirlinersOverallCollectionViewCell" reuseIdentifier="AirlinersOverallCollectionViewCell" id="gTV-IL-0wX" customClass="AirlinersOverallCollectionViewCell" customModule="Airliners" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="404" height="169"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="404" height="169"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The boeing 707" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rmp-SA-LkT">
+                        <rect key="frame" x="16" y="16" width="230" height="17"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="17" id="dWL-bi-GQO"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="14"/>
+                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mid-sized, mid- to long-range, narrow-body, four-engine jet airliner" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Smu-Nl-EPe">
+                        <rect key="frame" x="16" y="37" width="230" height="33.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <color key="textColor" red="0.4823529412" green="0.57647058819999997" blue="0.64705882349999999" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Logo" translatesAutoresizingMaskIntoConstraints="NO" id="hDy-hd-CWb">
+                        <rect key="frame" x="262" y="16" width="126" height="137"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="hDy-hd-CWb" secondAttribute="height" multiplier="82:89" id="aMB-Tm-1oY"/>
+                        </constraints>
+                    </imageView>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstItem="hDy-hd-CWb" firstAttribute="leading" secondItem="rmp-SA-LkT" secondAttribute="trailing" constant="16" id="4uE-xo-PuQ"/>
+                <constraint firstItem="rmp-SA-LkT" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="16" id="GjK-yh-mEG"/>
+                <constraint firstItem="rmp-SA-LkT" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="16" id="Zpu-vW-mLK"/>
+                <constraint firstItem="hDy-hd-CWb" firstAttribute="leading" secondItem="Smu-Nl-EPe" secondAttribute="trailing" constant="16" id="aPF-NS-UZx"/>
+                <constraint firstAttribute="bottom" secondItem="hDy-hd-CWb" secondAttribute="bottom" constant="16" id="ibW-ew-zpb"/>
+                <constraint firstItem="Smu-Nl-EPe" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="16" id="jDA-hp-HrL"/>
+                <constraint firstAttribute="trailing" secondItem="hDy-hd-CWb" secondAttribute="trailing" constant="16" id="jiG-nS-Egt"/>
+                <constraint firstItem="hDy-hd-CWb" firstAttribute="centerY" secondItem="gTV-IL-0wX" secondAttribute="centerY" id="kHs-Dc-1N9"/>
+                <constraint firstItem="Smu-Nl-EPe" firstAttribute="top" secondItem="rmp-SA-LkT" secondAttribute="bottom" constant="4" id="sso-84-rEX"/>
+            </constraints>
+            <size key="customSize" width="404" height="169"/>
+            <connections>
+                <outlet property="imageAirplane" destination="hDy-hd-CWb" id="ma0-Az-qyn"/>
+                <outlet property="modelAirplaneLabel" destination="rmp-SA-LkT" id="lWx-xq-UbT"/>
+                <outlet property="shortInfoLabel" destination="Smu-Nl-EPe" id="fEO-Wq-H8B"/>
+            </connections>
+            <point key="canvasLocation" x="-115.94202898550725" y="114.17410714285714"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="Logo" width="40" height="40"/>
+    </resources>
+</document>
