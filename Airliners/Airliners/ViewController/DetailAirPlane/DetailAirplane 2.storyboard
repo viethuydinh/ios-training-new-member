@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Detail Airplane View Controller-->
+        <scene sceneID="IQu-WM-647">
+            <objects>
+                <viewController storyboardIdentifier="DetailAirplaneViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="g2N-5T-I2M" customClass="DetailAirplaneViewController" customModule="Airliners" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="tH4-c7-zb8">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="qZg-y7-DIq">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="300"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="300" id="da8-T9-KtN"/>
+                                </constraints>
+                            </imageView>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="ZZG-os-gdv">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="aqY-dZ-f1l">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells/>
+                            </collectionView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yki-sU-zf9">
+                                <rect key="frame" x="20" y="44" width="38" height="38"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="38" id="1ZE-O7-Ags"/>
+                                    <constraint firstAttribute="width" constant="38" id="8Ko-qx-eiW"/>
+                                </constraints>
+                                <inset key="contentEdgeInsets" minX="8" minY="8" maxX="8" maxY="8"/>
+                                <state key="normal" image="BackButton"/>
+                                <connections>
+                                    <action selector="btnBack:" destination="g2N-5T-I2M" eventType="touchUpInside" id="NsN-1j-jfk"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="pGn-31-dBC"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="pGn-31-dBC" firstAttribute="trailing" secondItem="qZg-y7-DIq" secondAttribute="trailing" id="EI1-XG-xgc"/>
+                            <constraint firstItem="qZg-y7-DIq" firstAttribute="top" secondItem="tH4-c7-zb8" secondAttribute="top" id="NxO-Wd-3bv"/>
+                            <constraint firstItem="qZg-y7-DIq" firstAttribute="leading" secondItem="pGn-31-dBC" secondAttribute="leading" id="Q8U-qO-3j1"/>
+                            <constraint firstAttribute="bottom" secondItem="ZZG-os-gdv" secondAttribute="bottom" id="SAJ-kO-id2"/>
+                            <constraint firstItem="ZZG-os-gdv" firstAttribute="leading" secondItem="pGn-31-dBC" secondAttribute="leading" id="hfy-pu-W8Q"/>
+                            <constraint firstItem="yki-sU-zf9" firstAttribute="top" secondItem="pGn-31-dBC" secondAttribute="top" id="jAb-JI-nw8"/>
+                            <constraint firstItem="ZZG-os-gdv" firstAttribute="top" secondItem="tH4-c7-zb8" secondAttribute="top" id="n4t-F3-YUw"/>
+                            <constraint firstItem="pGn-31-dBC" firstAttribute="trailing" secondItem="ZZG-os-gdv" secondAttribute="trailing" id="nv8-TE-tmq"/>
+                            <constraint firstItem="yki-sU-zf9" firstAttribute="leading" secondItem="pGn-31-dBC" secondAttribute="leading" constant="20" id="uaj-H9-PZB"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="collectionView" destination="ZZG-os-gdv" id="aSt-GF-4Oz"/>
+                        <outlet property="heightImage" destination="da8-T9-KtN" id="bWa-go-4Nd"/>
+                        <outlet property="imgAirplane" destination="qZg-y7-DIq" id="1ae-al-Z7Y"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xxj-cI-oJa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-233.33333333333334" y="14.732142857142856"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="BackButton" width="21" height="21"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

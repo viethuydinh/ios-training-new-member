@@ -1,0 +1,722 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		151A44D3268AB78900432D7D /* DetailAirplaneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 151A44D2268AB78900432D7D /* DetailAirplaneViewController.swift */; };
+		151A44D8268AB7B700432D7D /* DetailAirplane.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 151A44D7268AB7B700432D7D /* DetailAirplane.storyboard */; };
+		151A4503268AD38200432D7D /* ImageView+Extention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 151A4502268AD38200432D7D /* ImageView+Extention.swift */; };
+		151A450B268AFA6700432D7D /* LongInforCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 151A4509268AFA6700432D7D /* LongInforCollectionViewCell.swift */; };
+		151A450C268AFA6800432D7D /* LongInforCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 151A450A268AFA6700432D7D /* LongInforCollectionViewCell.xib */; };
+		156FCC02268C05FE0059C6A7 /* DetailCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 156FCC00268C05FE0059C6A7 /* DetailCollectionViewCell.swift */; };
+		156FCC03268C05FE0059C6A7 /* DetailCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 156FCC01268C05FE0059C6A7 /* DetailCollectionViewCell.xib */; };
+		156FCC19268C2DAC0059C6A7 /* HeaderCollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 156FCC17268C2DAC0059C6A7 /* HeaderCollectionReusableView.swift */; };
+		156FCC1A268C2DAC0059C6A7 /* HeaderCollectionReusableView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 156FCC18268C2DAC0059C6A7 /* HeaderCollectionReusableView.xib */; };
+		15BED6602689D55E008E5B45 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15BED65F2689D55E008E5B45 /* AppDelegate.swift */; };
+		15BED6622689D55E008E5B45 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15BED6612689D55E008E5B45 /* SceneDelegate.swift */; };
+		15BED6642689D55F008E5B45 /* ListAirlinerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15BED6632689D55F008E5B45 /* ListAirlinerViewController.swift */; };
+		15BED6672689D55F008E5B45 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 15BED6652689D55F008E5B45 /* Main.storyboard */; };
+		15BED6692689D562008E5B45 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 15BED6682689D562008E5B45 /* Assets.xcassets */; };
+		15BED66C2689D562008E5B45 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 15BED66A2689D562008E5B45 /* LaunchScreen.storyboard */; };
+		15BED6772689D563008E5B45 /* AirlinersTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15BED6762689D563008E5B45 /* AirlinersTests.swift */; };
+		15BED6822689D563008E5B45 /* AirlinersUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15BED6812689D563008E5B45 /* AirlinersUITests.swift */; };
+		15BED69D2689D792008E5B45 /* AirLineCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15BED69B2689D792008E5B45 /* AirLineCollectionViewCell.swift */; };
+		15BED69E2689D792008E5B45 /* AirLineCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 15BED69C2689D792008E5B45 /* AirLineCollectionViewCell.xib */; };
+		15BED6A32689DB73008E5B45 /* AirplaneInfor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15BED6A22689DB73008E5B45 /* AirplaneInfor.swift */; };
+		15BED6A82689DD60008E5B45 /* Airplane.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15BED6A72689DD60008E5B45 /* Airplane.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		15BED6732689D563008E5B45 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 15BED6542689D55E008E5B45 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 15BED65B2689D55E008E5B45;
+			remoteInfo = Airliners;
+		};
+		15BED67E2689D563008E5B45 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 15BED6542689D55E008E5B45 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 15BED65B2689D55E008E5B45;
+			remoteInfo = Airliners;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		151A44D2268AB78900432D7D /* DetailAirplaneViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailAirplaneViewController.swift; sourceTree = "<group>"; };
+		151A44D7268AB7B700432D7D /* DetailAirplane.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DetailAirplane.storyboard; sourceTree = "<group>"; };
+		151A4502268AD38200432D7D /* ImageView+Extention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ImageView+Extention.swift"; sourceTree = "<group>"; };
+		151A4509268AFA6700432D7D /* LongInforCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LongInforCollectionViewCell.swift; sourceTree = "<group>"; };
+		151A450A268AFA6700432D7D /* LongInforCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LongInforCollectionViewCell.xib; sourceTree = "<group>"; };
+		156FCC00268C05FE0059C6A7 /* DetailCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailCollectionViewCell.swift; sourceTree = "<group>"; };
+		156FCC01268C05FE0059C6A7 /* DetailCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailCollectionViewCell.xib; sourceTree = "<group>"; };
+		156FCC17268C2DAC0059C6A7 /* HeaderCollectionReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderCollectionReusableView.swift; sourceTree = "<group>"; };
+		156FCC18268C2DAC0059C6A7 /* HeaderCollectionReusableView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HeaderCollectionReusableView.xib; sourceTree = "<group>"; };
+		15BED65C2689D55E008E5B45 /* Airliners.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Airliners.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		15BED65F2689D55E008E5B45 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		15BED6612689D55E008E5B45 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		15BED6632689D55F008E5B45 /* ListAirlinerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListAirlinerViewController.swift; sourceTree = "<group>"; };
+		15BED6662689D55F008E5B45 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		15BED6682689D562008E5B45 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		15BED66B2689D562008E5B45 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		15BED66D2689D562008E5B45 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		15BED6722689D563008E5B45 /* AirlinersTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AirlinersTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		15BED6762689D563008E5B45 /* AirlinersTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirlinersTests.swift; sourceTree = "<group>"; };
+		15BED6782689D563008E5B45 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		15BED67D2689D563008E5B45 /* AirlinersUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AirlinersUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		15BED6812689D563008E5B45 /* AirlinersUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirlinersUITests.swift; sourceTree = "<group>"; };
+		15BED6832689D563008E5B45 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		15BED69B2689D792008E5B45 /* AirLineCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirLineCollectionViewCell.swift; sourceTree = "<group>"; };
+		15BED69C2689D792008E5B45 /* AirLineCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AirLineCollectionViewCell.xib; sourceTree = "<group>"; };
+		15BED6A22689DB73008E5B45 /* AirplaneInfor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirplaneInfor.swift; sourceTree = "<group>"; };
+		15BED6A72689DD60008E5B45 /* Airplane.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Airplane.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		15BED6592689D55E008E5B45 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		15BED66F2689D563008E5B45 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		15BED67A2689D563008E5B45 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		151A44DF268AB8DB00432D7D /* ListAirliner */ = {
+			isa = PBXGroup;
+			children = (
+				15BED69A2689D723008E5B45 /* Cell */,
+				15BED6632689D55F008E5B45 /* ListAirlinerViewController.swift */,
+				15BED6652689D55F008E5B45 /* Main.storyboard */,
+			);
+			path = ListAirliner;
+			sourceTree = "<group>";
+		};
+		151A4507268AFA1C00432D7D /* DetailAirPlane */ = {
+			isa = PBXGroup;
+			children = (
+				156FCC16268C2D940059C6A7 /* Header */,
+				151A4508268AFA2E00432D7D /* Cell */,
+				151A44D2268AB78900432D7D /* DetailAirplaneViewController.swift */,
+				151A44D7268AB7B700432D7D /* DetailAirplane.storyboard */,
+			);
+			path = DetailAirPlane;
+			sourceTree = "<group>";
+		};
+		151A4508268AFA2E00432D7D /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				151A4509268AFA6700432D7D /* LongInforCollectionViewCell.swift */,
+				151A450A268AFA6700432D7D /* LongInforCollectionViewCell.xib */,
+				156FCC00268C05FE0059C6A7 /* DetailCollectionViewCell.swift */,
+				156FCC01268C05FE0059C6A7 /* DetailCollectionViewCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		156FCC16268C2D940059C6A7 /* Header */ = {
+			isa = PBXGroup;
+			children = (
+				156FCC17268C2DAC0059C6A7 /* HeaderCollectionReusableView.swift */,
+				156FCC18268C2DAC0059C6A7 /* HeaderCollectionReusableView.xib */,
+			);
+			path = Header;
+			sourceTree = "<group>";
+		};
+		15BED6532689D55E008E5B45 = {
+			isa = PBXGroup;
+			children = (
+				15BED65E2689D55E008E5B45 /* Airliners */,
+				15BED6752689D563008E5B45 /* AirlinersTests */,
+				15BED6802689D563008E5B45 /* AirlinersUITests */,
+				15BED65D2689D55E008E5B45 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		15BED65D2689D55E008E5B45 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				15BED65C2689D55E008E5B45 /* Airliners.app */,
+				15BED6722689D563008E5B45 /* AirlinersTests.xctest */,
+				15BED67D2689D563008E5B45 /* AirlinersUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		15BED65E2689D55E008E5B45 /* Airliners */ = {
+			isa = PBXGroup;
+			children = (
+				15BED6AC2689DDCA008E5B45 /* Ultis */,
+				15BED6972689D57F008E5B45 /* Common */,
+				15BED6932689D572008E5B45 /* ViewController */,
+				15BED6922689D56B008E5B45 /* Model */,
+				15BED66A2689D562008E5B45 /* LaunchScreen.storyboard */,
+				15BED66D2689D562008E5B45 /* Info.plist */,
+			);
+			path = Airliners;
+			sourceTree = "<group>";
+		};
+		15BED6752689D563008E5B45 /* AirlinersTests */ = {
+			isa = PBXGroup;
+			children = (
+				15BED6762689D563008E5B45 /* AirlinersTests.swift */,
+				15BED6782689D563008E5B45 /* Info.plist */,
+			);
+			path = AirlinersTests;
+			sourceTree = "<group>";
+		};
+		15BED6802689D563008E5B45 /* AirlinersUITests */ = {
+			isa = PBXGroup;
+			children = (
+				15BED6812689D563008E5B45 /* AirlinersUITests.swift */,
+				15BED6832689D563008E5B45 /* Info.plist */,
+			);
+			path = AirlinersUITests;
+			sourceTree = "<group>";
+		};
+		15BED6922689D56B008E5B45 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				15BED6A22689DB73008E5B45 /* AirplaneInfor.swift */,
+				15BED6A72689DD60008E5B45 /* Airplane.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		15BED6932689D572008E5B45 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				151A4507268AFA1C00432D7D /* DetailAirPlane */,
+				151A44DF268AB8DB00432D7D /* ListAirliner */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		15BED6972689D57F008E5B45 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				15BED6612689D55E008E5B45 /* SceneDelegate.swift */,
+				15BED65F2689D55E008E5B45 /* AppDelegate.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		15BED69A2689D723008E5B45 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				15BED69B2689D792008E5B45 /* AirLineCollectionViewCell.swift */,
+				15BED69C2689D792008E5B45 /* AirLineCollectionViewCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		15BED6AC2689DDCA008E5B45 /* Ultis */ = {
+			isa = PBXGroup;
+			children = (
+				15BED6682689D562008E5B45 /* Assets.xcassets */,
+				151A4502268AD38200432D7D /* ImageView+Extention.swift */,
+			);
+			path = Ultis;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		15BED65B2689D55E008E5B45 /* Airliners */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 15BED6862689D563008E5B45 /* Build configuration list for PBXNativeTarget "Airliners" */;
+			buildPhases = (
+				15BED6582689D55E008E5B45 /* Sources */,
+				15BED6592689D55E008E5B45 /* Frameworks */,
+				15BED65A2689D55E008E5B45 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Airliners;
+			productName = Airliners;
+			productReference = 15BED65C2689D55E008E5B45 /* Airliners.app */;
+			productType = "com.apple.product-type.application";
+		};
+		15BED6712689D563008E5B45 /* AirlinersTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 15BED6892689D563008E5B45 /* Build configuration list for PBXNativeTarget "AirlinersTests" */;
+			buildPhases = (
+				15BED66E2689D563008E5B45 /* Sources */,
+				15BED66F2689D563008E5B45 /* Frameworks */,
+				15BED6702689D563008E5B45 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				15BED6742689D563008E5B45 /* PBXTargetDependency */,
+			);
+			name = AirlinersTests;
+			productName = AirlinersTests;
+			productReference = 15BED6722689D563008E5B45 /* AirlinersTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		15BED67C2689D563008E5B45 /* AirlinersUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 15BED68C2689D563008E5B45 /* Build configuration list for PBXNativeTarget "AirlinersUITests" */;
+			buildPhases = (
+				15BED6792689D563008E5B45 /* Sources */,
+				15BED67A2689D563008E5B45 /* Frameworks */,
+				15BED67B2689D563008E5B45 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				15BED67F2689D563008E5B45 /* PBXTargetDependency */,
+			);
+			name = AirlinersUITests;
+			productName = AirlinersUITests;
+			productReference = 15BED67D2689D563008E5B45 /* AirlinersUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		15BED6542689D55E008E5B45 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1240;
+				LastUpgradeCheck = 1240;
+				TargetAttributes = {
+					15BED65B2689D55E008E5B45 = {
+						CreatedOnToolsVersion = 12.4;
+					};
+					15BED6712689D563008E5B45 = {
+						CreatedOnToolsVersion = 12.4;
+						TestTargetID = 15BED65B2689D55E008E5B45;
+					};
+					15BED67C2689D563008E5B45 = {
+						CreatedOnToolsVersion = 12.4;
+						TestTargetID = 15BED65B2689D55E008E5B45;
+					};
+				};
+			};
+			buildConfigurationList = 15BED6572689D55E008E5B45 /* Build configuration list for PBXProject "Airliners" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 15BED6532689D55E008E5B45;
+			productRefGroup = 15BED65D2689D55E008E5B45 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				15BED65B2689D55E008E5B45 /* Airliners */,
+				15BED6712689D563008E5B45 /* AirlinersTests */,
+				15BED67C2689D563008E5B45 /* AirlinersUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		15BED65A2689D55E008E5B45 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				156FCC1A268C2DAC0059C6A7 /* HeaderCollectionReusableView.xib in Resources */,
+				15BED66C2689D562008E5B45 /* LaunchScreen.storyboard in Resources */,
+				151A450C268AFA6800432D7D /* LongInforCollectionViewCell.xib in Resources */,
+				156FCC03268C05FE0059C6A7 /* DetailCollectionViewCell.xib in Resources */,
+				15BED69E2689D792008E5B45 /* AirLineCollectionViewCell.xib in Resources */,
+				15BED6692689D562008E5B45 /* Assets.xcassets in Resources */,
+				151A44D8268AB7B700432D7D /* DetailAirplane.storyboard in Resources */,
+				15BED6672689D55F008E5B45 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		15BED6702689D563008E5B45 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		15BED67B2689D563008E5B45 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		15BED6582689D55E008E5B45 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				15BED6642689D55F008E5B45 /* ListAirlinerViewController.swift in Sources */,
+				156FCC19268C2DAC0059C6A7 /* HeaderCollectionReusableView.swift in Sources */,
+				15BED6A32689DB73008E5B45 /* AirplaneInfor.swift in Sources */,
+				15BED69D2689D792008E5B45 /* AirLineCollectionViewCell.swift in Sources */,
+				151A4503268AD38200432D7D /* ImageView+Extention.swift in Sources */,
+				151A44D3268AB78900432D7D /* DetailAirplaneViewController.swift in Sources */,
+				151A450B268AFA6700432D7D /* LongInforCollectionViewCell.swift in Sources */,
+				15BED6602689D55E008E5B45 /* AppDelegate.swift in Sources */,
+				156FCC02268C05FE0059C6A7 /* DetailCollectionViewCell.swift in Sources */,
+				15BED6622689D55E008E5B45 /* SceneDelegate.swift in Sources */,
+				15BED6A82689DD60008E5B45 /* Airplane.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		15BED66E2689D563008E5B45 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				15BED6772689D563008E5B45 /* AirlinersTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		15BED6792689D563008E5B45 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				15BED6822689D563008E5B45 /* AirlinersUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		15BED6742689D563008E5B45 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 15BED65B2689D55E008E5B45 /* Airliners */;
+			targetProxy = 15BED6732689D563008E5B45 /* PBXContainerItemProxy */;
+		};
+		15BED67F2689D563008E5B45 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 15BED65B2689D55E008E5B45 /* Airliners */;
+			targetProxy = 15BED67E2689D563008E5B45 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		15BED6652689D55F008E5B45 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				15BED6662689D55F008E5B45 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		15BED66A2689D562008E5B45 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				15BED66B2689D562008E5B45 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		15BED6842689D563008E5B45 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		15BED6852689D563008E5B45 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		15BED6872689D563008E5B45 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = ABK98C7328;
+				INFOPLIST_FILE = Airliners/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.CMCGlobal.com.Airliners;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		15BED6882689D563008E5B45 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = ABK98C7328;
+				INFOPLIST_FILE = Airliners/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.CMCGlobal.com.Airliners;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		15BED68A2689D563008E5B45 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = ABK98C7328;
+				INFOPLIST_FILE = AirlinersTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.CMCGlobal.com.AirlinersTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Airliners.app/Airliners";
+			};
+			name = Debug;
+		};
+		15BED68B2689D563008E5B45 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = ABK98C7328;
+				INFOPLIST_FILE = AirlinersTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.CMCGlobal.com.AirlinersTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Airliners.app/Airliners";
+			};
+			name = Release;
+		};
+		15BED68D2689D563008E5B45 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = ABK98C7328;
+				INFOPLIST_FILE = AirlinersUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.CMCGlobal.com.AirlinersUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Airliners;
+			};
+			name = Debug;
+		};
+		15BED68E2689D563008E5B45 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = ABK98C7328;
+				INFOPLIST_FILE = AirlinersUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.CMCGlobal.com.AirlinersUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Airliners;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		15BED6572689D55E008E5B45 /* Build configuration list for PBXProject "Airliners" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				15BED6842689D563008E5B45 /* Debug */,
+				15BED6852689D563008E5B45 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		15BED6862689D563008E5B45 /* Build configuration list for PBXNativeTarget "Airliners" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				15BED6872689D563008E5B45 /* Debug */,
+				15BED6882689D563008E5B45 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		15BED6892689D563008E5B45 /* Build configuration list for PBXNativeTarget "AirlinersTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				15BED68A2689D563008E5B45 /* Debug */,
+				15BED68B2689D563008E5B45 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		15BED68C2689D563008E5B45 /* Build configuration list for PBXNativeTarget "AirlinersUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				15BED68D2689D563008E5B45 /* Debug */,
+				15BED68E2689D563008E5B45 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 15BED6542689D55E008E5B45 /* Project object */;
+}
