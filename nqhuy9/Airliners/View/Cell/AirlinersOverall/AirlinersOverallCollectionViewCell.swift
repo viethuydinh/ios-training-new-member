@@ -35,14 +35,14 @@ class AirlinersOverallCollectionViewCell: UICollectionViewCell {
     //MARK: -UI
     private func setupUI() {
         self.backgroundColor = .white
-        self.imageAirplane.layer.cornerRadius = CGFloat.defaultPadding*2
+        self.imageAirplane.layer.cornerRadius = CGFloat.defaultPadding * 2
     }
 
 }
 
 extension AirlinersOverallCollectionViewCell {
     static func size(bounds: CGSize) -> CGSize {
-        let size = CGSize(width: bounds.width - CGFloat.defaultPadding*2*2, height: bounds.height*0.14)
+        let size = CGSize(width: bounds.width - CGFloat.defaultPadding * 4, height: 100.0)
         return size
     }
 }

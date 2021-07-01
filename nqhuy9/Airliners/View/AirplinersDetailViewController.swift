@@ -65,19 +65,10 @@ class AirplinersDetailViewController: UIViewController {
         self.collectionViewDetail.dataSource = self
         self.collectionViewDetail.backgroundColor = .clear
         
-        let nibDescription = UINib(nibName: AirlinersDescriptionCollectionViewCell.name, bundle: nil)
-        self.collectionViewDetail.register(nibDescription, forCellWithReuseIdentifier: AirlinersDescriptionCollectionViewCell.identifier)
-        let nibInfomation = UINib(nibName: InfomationComponentCollectionViewCell.name, bundle: nil)
-        self.collectionViewDetail.register(nibInfomation, forCellWithReuseIdentifier: InfomationComponentCollectionViewCell.identifier)
-        self.collectionViewDetail.register(UINib(nibName: HeaderCollectionReusableView.name, bundle: nil), forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: HeaderCollectionReusableView.identifier)
+        self.collectionViewDetail.register(name: AirlinersDescriptionCollectionViewCell.name, identifier: AirlinersDescriptionCollectionViewCell.identifier)
+        self.collectionViewDetail.register(name: InfomationComponentCollectionViewCell.name, identifier: InfomationComponentCollectionViewCell.identifier)
+        self.collectionViewDetail.registerKind(name: HeaderCollectionReusableView.name, identifier: HeaderCollectionReusableView.identifier, kind: UICollectionView.elementKindSectionHeader)
     }
-    
-    func scrollViewDidScroll(_ scrollView: UIScrollView) {
-        let y = -scrollView.contentOffset.y
-        let height = max(y,10)
-        self.heightParalel.constant = height
-    }
-
 }
 
 
@@ -96,11 +87,11 @@ extension AirplinersDetailViewController: UICollectionViewDelegateFlowLayout {
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-        return CGFloat.defaultPadding*2
+        return CGFloat.defaultPadding * 2
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
-        return CGFloat.defaultPadding*2
+        return CGFloat.defaultPadding * 2
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
@@ -163,4 +154,13 @@ extension AirplinersDetailViewController: UICollectionViewDataSource {
         }
     }
 
+}
+
+//MARK: -Scroll Paralel Header
+extension AirplinersDetailViewController {
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        let y = -scrollView.contentOffset.y
+        let height = max(y,10)
+        self.heightParalel.constant = height
+    }
 }

@@ -7,7 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		F48883A4268AC92A009C26DA /* UIImageView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F48883A3268AC92A009C26DA /* UIImageView+Extension.swift */; };
+		F43B3862268D6BEE00BE176F /* UICollectionView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F43B3861268D6BEE00BE176F /* UICollectionView+Extension.swift */; };
+		F43B3865268D6D1B00BE176F /* UIImageView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F43B3864268D6D1B00BE176F /* UIImageView+Extension.swift */; };
 		F48883CE268AD841009C26DA /* AirplinersDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F48883CD268AD841009C26DA /* AirplinersDetailViewController.swift */; };
 		F48883D4268B174A009C26DA /* AirlinersDescriptionCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F48883D2268B174A009C26DA /* AirlinersDescriptionCollectionViewCell.swift */; };
 		F48883D5268B174A009C26DA /* AirlinersDescriptionCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F48883D3268B174A009C26DA /* AirlinersDescriptionCollectionViewCell.xib */; };
@@ -31,7 +32,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		F48883A3268AC92A009C26DA /* UIImageView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extension.swift"; sourceTree = "<group>"; };
+		F43B3861268D6BEE00BE176F /* UICollectionView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+Extension.swift"; sourceTree = "<group>"; };
+		F43B3864268D6D1B00BE176F /* UIImageView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIImageView+Extension.swift"; path = "Extension/UIImageView+Extension.swift"; sourceTree = "<group>"; };
 		F48883CD268AD841009C26DA /* AirplinersDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirplinersDetailViewController.swift; sourceTree = "<group>"; };
 		F48883D2268B174A009C26DA /* AirlinersDescriptionCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirlinersDescriptionCollectionViewCell.swift; sourceTree = "<group>"; };
 		F48883D3268B174A009C26DA /* AirlinersDescriptionCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AirlinersDescriptionCollectionViewCell.xib; sourceTree = "<group>"; };
@@ -67,14 +69,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		F48883A2268AC915009C26DA /* Extension */ = {
-			isa = PBXGroup;
-			children = (
-				F48883A3268AC92A009C26DA /* UIImageView+Extension.swift */,
-			);
-			path = Extension;
-			sourceTree = "<group>";
-		};
 		F48883D0268B16FC009C26DA /* AirlinersOverall */ = {
 			isa = PBXGroup;
 			children = (
@@ -156,9 +150,10 @@
 		F49D8F522689DD5B004D45CE /* Ultis */ = {
 			isa = PBXGroup;
 			children = (
-				F48883A2268AC915009C26DA /* Extension */,
+				F43B3864268D6D1B00BE176F /* UIImageView+Extension.swift */,
 				F49D8F532689DD75004D45CE /* DefaultNumber.swift */,
 				F49D8F382689D50F004D45CE /* Assets.xcassets */,
+				F43B3861268D6BEE00BE176F /* UICollectionView+Extension.swift */,
 			);
 			path = Ultis;
 			sourceTree = "<group>";
@@ -261,11 +256,12 @@
 			files = (
 				F4D7743E268C06CB00FF273B /* DefaultHeader.swift in Sources */,
 				F49D8F472689D619004D45CE /* AirlinersOverallCollectionViewCell.swift in Sources */,
+				F43B3865268D6D1B00BE176F /* UIImageView+Extension.swift in Sources */,
 				F49D8F342689D50A004D45CE /* ListAirlinersViewController.swift in Sources */,
-				F48883A4268AC92A009C26DA /* UIImageView+Extension.swift in Sources */,
 				F49D8F302689D50A004D45CE /* AppDelegate.swift in Sources */,
 				F4D77442268C2D9800FF273B /* HeaderCollectionReusableView.swift in Sources */,
 				F49D8F4D2689D8DD004D45CE /* Airplane.swift in Sources */,
+				F43B3862268D6BEE00BE176F /* UICollectionView+Extension.swift in Sources */,
 				F48883CE268AD841009C26DA /* AirplinersDetailViewController.swift in Sources */,
 				F49D8F542689DD75004D45CE /* DefaultNumber.swift in Sources */,
 				F48883D9268B18F3009C26DA /* InfomationComponentCollectionViewCell.swift in Sources */,

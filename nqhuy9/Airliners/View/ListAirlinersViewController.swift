@@ -20,8 +20,7 @@ class ListAirlinersViewController: UIViewController {
     }
     
     private func setupCollectionView() {
-        let nibAirline = UINib(nibName: AirlinersOverallCollectionViewCell.name, bundle: nil)
-        self.collectionViewAirlines.register(nibAirline, forCellWithReuseIdentifier: AirlinersOverallCollectionViewCell.identifier)
+        self.collectionViewAirlines.register(name: AirlinersOverallCollectionViewCell.name, identifier: AirlinersOverallCollectionViewCell.identifier)
         self.collectionViewAirlines.dataSource = self
         self.collectionViewAirlines.delegate = self
         self.collectionViewAirlines.backgroundColor = .clear
