@@ -11,6 +11,7 @@ import UIKit
 extension UIImageView {
     func downloaded(from url: URL, contentMode mode: ContentMode = .scaleToFill) {
         contentMode = mode
+        self.image = UIImage(named: "Logo")
         URLSession.shared.dataTask(with: url) { data, response, error in
             guard
                 let httpURLResponse = response as? HTTPURLResponse, httpURLResponse.statusCode == 200,
