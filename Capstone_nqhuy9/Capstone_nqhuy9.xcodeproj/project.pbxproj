@@ -32,6 +32,10 @@
 		F4FDF68B268EFEFA001B02D3 /* BaseVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4FDF68A268EFEFA001B02D3 /* BaseVC.swift */; };
 		F4FDF693268EFF6C001B02D3 /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4FDF692268EFF6C001B02D3 /* UIViewController+Extension.swift */; };
 		F4FDF698268EFF9A001B02D3 /* NSObject+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4FDF697268EFF9A001B02D3 /* NSObject+Extension.swift */; };
+		F4FDF6A9268F066E001B02D3 /* AuthenticationRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4FDF6A8268F066E001B02D3 /* AuthenticationRepository.swift */; };
+		F4FDF6AE268F06AE001B02D3 /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4FDF6AD268F06AE001B02D3 /* Account.swift */; };
+		F4FDF6C6268F0EBD001B02D3 /* AccountCoreData+CoreDataClass.swift in Resources */ = {isa = PBXBuildFile; fileRef = F4FDF6B3268F0A38001B02D3 /* AccountCoreData+CoreDataClass.swift */; };
+		F4FDF6C7268F0EBD001B02D3 /* AccountCoreData+CoreDataProperties.swift in Resources */ = {isa = PBXBuildFile; fileRef = F4FDF6B4268F0A38001B02D3 /* AccountCoreData+CoreDataProperties.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -88,6 +92,10 @@
 		F4FDF68A268EFEFA001B02D3 /* BaseVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseVC.swift; sourceTree = "<group>"; };
 		F4FDF692268EFF6C001B02D3 /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
 		F4FDF697268EFF9A001B02D3 /* NSObject+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSObject+Extension.swift"; sourceTree = "<group>"; };
+		F4FDF6A8268F066E001B02D3 /* AuthenticationRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationRepository.swift; sourceTree = "<group>"; };
+		F4FDF6AD268F06AE001B02D3 /* Account.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Account.swift; sourceTree = "<group>"; };
+		F4FDF6B3268F0A38001B02D3 /* AccountCoreData+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AccountCoreData+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
+		F4FDF6B4268F0A38001B02D3 /* AccountCoreData+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AccountCoreData+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
 		FA1FD1223A468E05C3D3EC07 /* Pods_Capstone_nqhuy9_Capstone_nqhuy9UITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Capstone_nqhuy9_Capstone_nqhuy9UITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -202,7 +210,8 @@
 		F4FDF596268EAB03001B02D3 /* Database */ = {
 			isa = PBXGroup;
 			children = (
-				F4FDF62A268EBB0D001B02D3 /* Model_CoreData */,
+				F4FDF62B268EBB19001B02D3 /* User_CoreData */,
+				F4FDF6B2268F09C7001B02D3 /* Account_CoreData */,
 				F4FDF60C268EB624001B02D3 /* Convertable.swift */,
 				F4FDF611268EB643001B02D3 /* Repository.swift */,
 			);
@@ -223,7 +232,8 @@
 		F4FDF598268EAB13001B02D3 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				F4FDF640268EBFA9001B02D3 /* Candidate.swift */,
+				F4FDF6A7268F064E001B02D3 /* Repository */,
+				F4FDF6A6268F0647001B02D3 /* Domain */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -271,14 +281,6 @@
 			path = Resource;
 			sourceTree = "<group>";
 		};
-		F4FDF62A268EBB0D001B02D3 /* Model_CoreData */ = {
-			isa = PBXGroup;
-			children = (
-				F4FDF62B268EBB19001B02D3 /* User_CoreData */,
-			);
-			path = Model_CoreData;
-			sourceTree = "<group>";
-		};
 		F4FDF62B268EBB19001B02D3 /* User_CoreData */ = {
 			isa = PBXGroup;
 			children = (
@@ -312,6 +314,32 @@
 				F4FDF68A268EFEFA001B02D3 /* BaseVC.swift */,
 			);
 			path = BaseViewController;
+			sourceTree = "<group>";
+		};
+		F4FDF6A6268F0647001B02D3 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				F4FDF640268EBFA9001B02D3 /* Candidate.swift */,
+				F4FDF6AD268F06AE001B02D3 /* Account.swift */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		F4FDF6A7268F064E001B02D3 /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				F4FDF6A8268F066E001B02D3 /* AuthenticationRepository.swift */,
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
+		F4FDF6B2268F09C7001B02D3 /* Account_CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				F4FDF6B3268F0A38001B02D3 /* AccountCoreData+CoreDataClass.swift */,
+				F4FDF6B4268F0A38001B02D3 /* AccountCoreData+CoreDataProperties.swift */,
+			);
+			path = Account_CoreData;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -422,6 +450,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F4FDF6C6268F0EBD001B02D3 /* AccountCoreData+CoreDataClass.swift in Resources */,
+				F4FDF6C7268F0EBD001B02D3 /* AccountCoreData+CoreDataProperties.swift in Resources */,
 				F4FDF66D268EF0BD001B02D3 /* Authentication.storyboard in Resources */,
 				F4FDF65D268EC39E001B02D3 /* User+CoreDataClass.swift in Resources */,
 				F4FDF65E268EC39E001B02D3 /* User+CoreDataProperties.swift in Resources */,
@@ -558,7 +588,9 @@
 				F4FDF685268EFC94001B02D3 /* SignUpViewController.swift in Sources */,
 				F4FDF693268EFF6C001B02D3 /* UIViewController+Extension.swift in Sources */,
 				F4FDF556268EA6B4001B02D3 /* ChooseLevelViewController.swift in Sources */,
+				F4FDF6A9268F066E001B02D3 /* AuthenticationRepository.swift in Sources */,
 				F4FDF60D268EB624001B02D3 /* Convertable.swift in Sources */,
+				F4FDF6AE268F06AE001B02D3 /* Account.swift in Sources */,
 				F4FDF552268EA6B4001B02D3 /* AppDelegate.swift in Sources */,
 				F4FDF680268EFA98001B02D3 /* Color.swift in Sources */,
 				F4FDF55C268EA6B4001B02D3 /* Capstone_nqhuy9.xcdatamodeld in Sources */,
