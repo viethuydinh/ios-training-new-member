@@ -125,12 +125,14 @@ extension AirplinersDetailViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         switch indexPath.section {
         case AirlinerDetailSection.general.rawValue:
-            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: AirlinersDescriptionCollectionViewCell.identifier, for: indexPath) as! AirlinersDescriptionCollectionViewCell
+            let c = collectionView.dequeueReusableCell(withReuseIdentifier: AirlinersDescriptionCollectionViewCell.identifier, for: indexPath) as? AirlinersDescriptionCollectionViewCell
+            guard let cell = c else { return UICollectionViewCell() }
             cell.descriptionLabel.text = airliner.infomation.longDescription
             return cell
         case AirlinerDetailSection.detail.rawValue:
-            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: InfomationComponentCollectionViewCell.identifier, for: indexPath) as! InfomationComponentCollectionViewCell
-            cell.detail = self.dictionaryDetail[indexPath.item]
+            let c = collectionView.dequeueReusableCell(withReuseIdentifier: InfomationComponentCollectionViewCell.identifier, for: indexPath) as? InfomationComponentCollectionViewCell
+            guard let cell = c else { return UICollectionViewCell() }
+            cell.configureData(data: self.dictionaryDetail[indexPath.item])
             return cell
         default:
             return UICollectionViewCell()
@@ -144,8 +146,9 @@ extension AirplinersDetailViewController: UICollectionViewDataSource {
         case AirlinerDetailSection.detail.rawValue:
             switch kind {
             case UICollectionView.elementKindSectionHeader:
-                let headerView = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: HeaderCollectionReusableView.identifier, for: indexPath) as! HeaderCollectionReusableView
-                return headerView
+                let headerView = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: HeaderCollectionReusableView.identifier, for: indexPath) as? HeaderCollectionReusableView
+                guard let header = headerView else { return UICollectionReusableView() }
+                return header
             default:
                 assert(false, "Unexpected element kind")
             }

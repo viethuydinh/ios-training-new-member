@@ -28,6 +28,10 @@ class InfomationComponentCollectionViewCell: UICollectionViewCell {
         super.awakeFromNib()
         // Initialization code
     }
+    
+    func configureData(data : [String : String]) {
+        self.detail = data
+    }
 
 }
 
