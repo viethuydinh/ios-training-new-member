@@ -26,10 +26,6 @@ extension User {
 
 }
 
-extension User : Identifiable {
-
-}
-
 extension User_CoreData: DomainConvertable {
     var asDomain: User {
         return User()

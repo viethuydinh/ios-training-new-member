@@ -8,7 +8,7 @@
 import Foundation
 
 struct Account {
-    var username : String
-    var password : String
-    var repassword : String
+    var username : String?
+    var password : String?
+    var repassword : String?
 }

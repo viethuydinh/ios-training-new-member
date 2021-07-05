@@ -22,10 +22,6 @@ extension AccountCoreData {
 
 }
 
-extension AccountCoreData : Identifiable {
-
-}
-
 extension AccountCoreData: DomainConvertable {
     var asDomain: Account {
         return Account()

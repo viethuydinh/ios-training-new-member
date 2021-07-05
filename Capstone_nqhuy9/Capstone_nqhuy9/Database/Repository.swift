@@ -41,6 +41,12 @@ class CoreDataConfiguration {
 
 struct CoreDataRepository<Domain: ObjectConvertable> {
     
+    /// FInd all Data followed by Predicate
+    /// - Parameters:
+    ///   - predicate: condition of query
+    ///   - range: range query
+    ///   - sorts: sort
+    /// - Returns:Array Object Result
     func findAll(predicate: NSPredicate? = nil, range: ClosedRange<Int>? = nil, sorts: [NSSortDescriptor]? = nil) -> [Domain] {
         let fetch: NSFetchRequest<Domain.Object> = NSFetchRequest<Domain.Object>(entityName: String(describing: Domain.Object.self))
         fetch.predicate = predicate
@@ -58,11 +64,15 @@ struct CoreDataRepository<Domain: ObjectConvertable> {
         }
     }
     
+    /// Find Object local by ID
+    /// - Parameter id: ID Object
+    /// - Returns: Object Result
     func find(id: Domain.ID) -> Domain? {
         self.findAll(predicate: .init(format: "id = %d", argumentArray: [id])).first
     }
     
-    // create & update
+    /// Save Data to Local
+    /// - Parameter domain: Object
     func save(domain: Domain) {
         if self.find(id: domain.id) == nil {
             let entity = NSEntityDescription.entity(forEntityName: String(describing: Domain.Object.self), in: CoreDataConfiguration.shared.persistentContainer.viewContext)!
@@ -84,11 +94,17 @@ struct CoreDataRepository<Domain: ObjectConvertable> {
         
         CoreDataConfiguration.shared.saveContext()
     }
-    // create & update
+    
+    /// Save all Data
+    /// - Parameter lists: Array Object
     func saveAll(lists: [Domain]) {
         lists.forEach(self.save(domain:))
     }
     
+    /// Delete all Data
+    /// - Parameters:
+    ///   - predicate: condition query
+    ///   - range: range query
     func deleteAll(predicate: NSPredicate? = nil, range: ClosedRange<Int>? = nil) {
         let fetch: NSFetchRequest<Domain.Object> = NSFetchRequest<Domain.Object>(entityName: String(describing: Domain.Object.self))
         fetch.predicate = predicate
@@ -107,6 +123,8 @@ struct CoreDataRepository<Domain: ObjectConvertable> {
         }
     }
     
+    /// Delete data by ID
+    /// - Parameter id: Object ID
     func delete(id: Domain.ID) {
         self.deleteAll(predicate: .init(format: "id = %d", argumentArray: [id]))
     }
