@@ -58,7 +58,7 @@ class SignInViewController: BaseVC {
     fileprivate func signUpEvent() {
         self.noAccountLbl.rx.tapGesture().when(.recognized).subscribe { (_) in
             let sb = UIStoryboard.init(name: "SignUp", bundle: nil)
-            let vc = sb.instantiateViewController(identifier: SignUpViewController.identifier)
+            guard let vc = sb.instantiateViewController(identifier: SignUpViewController.identifier) as? SignUpViewController else { return }
             self.navigationController?.pushViewController(vc, animated: true)
         } onError: { (_) in
 

@@ -9,9 +9,6 @@ import UIKit
 import RxSwift
 import RxCocoa
 
-
- 
-
 class BaseVC: UIViewController,UIGestureRecognizerDelegate {
 
     let disposeBag = DisposeBag()

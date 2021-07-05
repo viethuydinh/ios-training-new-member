@@ -18,7 +18,7 @@ class DetailAirplaneViewController: UIViewController {
     
     var dataAirplainInfo : Airplane? {
         didSet {
-            self.addInforDetail(airplaneData: dataAirplainInfo!.information)
+            self.addInforDetail(airplaneData: dataAirplainInfo!.information ?? AirplaneInfor())
         }
     }
     
@@ -55,16 +55,16 @@ class DetailAirplaneViewController: UIViewController {
     
     //MARK: -BindingData
     fileprivate func bindingData() {
-        self.imgAirplane.downloaded(from: self.dataAirplainInfo!.image)
+        self.imgAirplane.downloaded(from: self.dataAirplainInfo!.image!)
     }
     
     fileprivate func addInforDetail(airplaneData : AirplaneInfor) {
-        self.detailDictionary.append(["National Origin":airplaneData.nationalOrigin])
-        self.detailDictionary.append(["Manufacturer" : airplaneData.manufacturer])
-        self.detailDictionary.append(["First Flight" :airplaneData.firstFlight])
-        self.detailDictionary.append(["Produced" : airplaneData.produced])
-        self.detailDictionary.append(["Number Build" : airplaneData.numberBuild])
-        self.detailDictionary.append(["Status":airplaneData.status])
+        self.detailDictionary.append(["National Origin":airplaneData.nationalOrigin ?? ""])
+        self.detailDictionary.append(["Manufacturer" : airplaneData.manufacturer ?? ""])
+        self.detailDictionary.append(["First Flight" :airplaneData.firstFlight ?? ""])
+        self.detailDictionary.append(["Produced" : airplaneData.produced ?? ""])
+        self.detailDictionary.append(["Number Build" : airplaneData.numberBuild ?? ""])
+        self.detailDictionary.append(["Status":airplaneData.status ?? "" ])
         self.detailDictionary.remove(at: 0)
     }
     
@@ -89,12 +89,16 @@ extension DetailAirplaneViewController : UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         switch indexPath.section {
         case SectionAirplane.longInfor.rawValue:
-            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: LongInforCollectionViewCell.identifier, for: indexPath) as! LongInforCollectionViewCell
-            cell.lblContent.text = self.dataAirplainInfo!.information.longDescription
+            guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: LongInforCollectionViewCell.identifier, for: indexPath) as? LongInforCollectionViewCell else {
+                return UICollectionViewCell()
+            }
+            cell.configData(self.dataAirplainInfo!.information?.longDescription ?? "")
             return cell
         case SectionAirplane.detail.rawValue:
-            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: DetailCollectionViewCell.identifier, for: indexPath) as! DetailCollectionViewCell
-            cell.detail = self.detailDictionary[indexPath.row]
+            guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: DetailCollectionViewCell.identifier, for: indexPath) as? DetailCollectionViewCell else {
+                return UICollectionViewCell()
+            }
+            cell.configData(self.detailDictionary[indexPath.row]) 
             return cell
         default:
             return UICollectionViewCell()
@@ -108,8 +112,10 @@ extension DetailAirplaneViewController : UICollectionViewDataSource {
         case SectionAirplane.detail.rawValue:
             switch kind {
             case UICollectionView.elementKindSectionHeader:
-                let header = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: HeaderCollectionReusableView.identifier, for: indexPath) as! HeaderCollectionReusableView
-                header.lblTitle.text = SectionAirplane.detail.title
+                guard let header = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: HeaderCollectionReusableView.identifier, for: indexPath) as? HeaderCollectionReusableView else {
+                    return UICollectionReusableView()
+                }
+                header.configData(SectionAirplane.detail.title)
                 return header
             default:
                 return UIView() as! UICollectionReusableView
@@ -128,7 +134,7 @@ extension DetailAirplaneViewController : UICollectionViewDelegate,UICollectionVi
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         switch indexPath.section {
         case SectionAirplane.longInfor.rawValue:
-            return LongInforCollectionViewCell.size(bounds: self.view.bounds, content: self.dataAirplainInfo!.information.longDescription)
+            return LongInforCollectionViewCell.size(bounds: self.view.bounds, content: self.dataAirplainInfo!.information?.longDescription ?? "")
         case SectionAirplane.detail.rawValue :
             return DetailCollectionViewCell.size(bounds: self.view.bounds)
         default:

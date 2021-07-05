@@ -14,11 +14,9 @@ class HeaderCollectionReusableView: UICollectionReusableView {
     
     @IBOutlet weak var lblTitle: UILabel!
     
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
+    func configData(_ title : String) {
+        self.lblTitle.text = title
     }
-    
 }
 
 extension HeaderCollectionReusableView {

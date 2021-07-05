@@ -20,17 +20,16 @@ class DetailCollectionViewCell: UICollectionViewCell {
             self.bindingData()
         }
     }
-    
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
-    }
-    
+
     fileprivate func bindingData() {
         self.detail!.forEach({ (key,value) in
             self.lblItem.text = key
             self.lblContent.text = value
         })
+    }
+    
+    func configData(_ data : [String : String]) {
+        self.detail = data
     }
 
 }

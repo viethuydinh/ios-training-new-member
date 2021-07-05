@@ -25,7 +25,6 @@ class AirLineCollectionViewCell: UICollectionViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         self.setUpUI()
-        // Initialization code
     }
     
     fileprivate func setUpUI() {
@@ -36,9 +35,8 @@ class AirLineCollectionViewCell: UICollectionViewCell {
     private func bindingData() {
         self.lblTitleAirplane.text = self.airplane!.title
         self.lblInforAirplane.text = self.airplane!.shortInfor
-        self.imgAirplane.downloaded(from: self.airplane!.image)
+        self.imgAirplane.downloaded(from: self.airplane!.image!)
     }
-
 }
 
 extension AirLineCollectionViewCell {

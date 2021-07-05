@@ -8,12 +8,11 @@
 import Foundation
 
 struct Airplane {
-    var title : String
-    var model : String
-    var image : String
-    var shortInfor : String
-    var information : AirplaneInfor
-
+    var title : String?
+    var model : String?
+    var image : String?
+    var shortInfor : String?
+    var information : AirplaneInfor?
 }
 
 

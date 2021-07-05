@@ -41,6 +41,12 @@ class CoreDataConfiguration {
 
 struct CoreDataRepository<Domain: ObjectConvertable> {
     
+    /// find all
+    /// - Parameters:
+    ///   - predicate: condition query
+    ///   - range: range query
+    ///   - sorts: sort
+    /// - Returns: domain result
     func findAll(predicate: NSPredicate? = nil, range: ClosedRange<Int>? = nil, sorts: [NSSortDescriptor]? = nil) -> [Domain] {
         let fetch: NSFetchRequest<Domain.Object> = NSFetchRequest<Domain.Object>(entityName: String(describing: Domain.Object.self))
         fetch.predicate = predicate
@@ -62,7 +68,9 @@ struct CoreDataRepository<Domain: ObjectConvertable> {
         self.findAll(predicate: .init(format: "id = %d", argumentArray: [id])).first
     }
     
-    // create & update
+    
+    /// save data
+    /// - Parameter domain: domain param
     func save(domain: Domain) {
         if self.find(id: domain.id) == nil {
             let entity = NSEntityDescription.entity(forEntityName: String(describing: Domain.Object.self), in: CoreDataConfiguration.shared.persistentContainer.viewContext)!
@@ -84,11 +92,17 @@ struct CoreDataRepository<Domain: ObjectConvertable> {
         
         CoreDataConfiguration.shared.saveContext()
     }
-    // create & update
+    
+    /// save all data into coredata
+    /// - Parameter lists: list domain data
     func saveAll(lists: [Domain]) {
         lists.forEach(self.save(domain:))
     }
     
+    /// delete all data
+    /// - Parameters:
+    ///   - predicate: condition query
+    ///   - range: range query
     func deleteAll(predicate: NSPredicate? = nil, range: ClosedRange<Int>? = nil) {
         let fetch: NSFetchRequest<Domain.Object> = NSFetchRequest<Domain.Object>(entityName: String(describing: Domain.Object.self))
         fetch.predicate = predicate
@@ -107,6 +121,8 @@ struct CoreDataRepository<Domain: ObjectConvertable> {
         }
     }
     
+    /// delete a domain
+    /// - Parameter id: id  domain
     func delete(id: Domain.ID) {
         self.deleteAll(predicate: .init(format: "id = %d", argumentArray: [id]))
     }

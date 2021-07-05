@@ -16,7 +16,7 @@ class ListAirlinerViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.setUpUI()
-        // Do any additional setup after loading the view.
+    
     }
     
     //MARK: UI
@@ -26,8 +26,6 @@ class ListAirlinerViewController: UIViewController {
         self.airplaneCollectionView.delegate = self
         self.airplaneCollectionView.contentInset = UIEdgeInsets(top: AirLineCollectionViewCell.lineSpace, left: 0, bottom: 0, right: 0)
     }
-
-
 }
 
 extension ListAirlinerViewController : UICollectionViewDataSource {
@@ -62,6 +60,5 @@ extension ListAirlinerViewController: UICollectionViewDelegate,UICollectionViewD
         vc.dataAirplainInfo = self.dataAirplane[indexPath.row]
         self.navigationController?.pushViewController(vc, animated: true)
     }
-    
-}
+ }
 

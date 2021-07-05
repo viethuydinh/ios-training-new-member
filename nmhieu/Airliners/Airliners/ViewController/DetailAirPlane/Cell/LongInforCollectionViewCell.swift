@@ -14,11 +14,9 @@ class LongInforCollectionViewCell: UICollectionViewCell {
     
     @IBOutlet weak var lblContent: UILabel!
     
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
+    func configData(_ longInfor : String) {
+        self.lblContent.text = longInfor
     }
-
 }
 
 extension LongInforCollectionViewCell {
