@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell1" rowHeight="80" id="KGk-i7-Jjw" customClass="Cell1" customModule="ToDoList" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="80"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="80"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d5D-io-8zr">
+                        <rect key="frame" x="10" y="20" width="40" height="40"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="40" id="Ed4-K2-NqN"/>
+                            <constraint firstAttribute="width" secondItem="d5D-io-8zr" secondAttribute="height" multiplier="1:1" id="Kwo-Lv-3Ap"/>
+                        </constraints>
+                        <state key="normal" title="Button" image="Checked"/>
+                    </button>
+                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CqB-pv-FdD">
+                        <rect key="frame" x="60" y="23" width="250" height="34"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <textInputTraits key="textInputTraits"/>
+                    </textField>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="d5D-io-8zr" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="1HI-YA-bOj"/>
+                    <constraint firstItem="CqB-pv-FdD" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="KZo-QN-krv"/>
+                    <constraint firstItem="CqB-pv-FdD" firstAttribute="leading" secondItem="d5D-io-8zr" secondAttribute="trailing" constant="10" id="Rkw-eX-Gyl"/>
+                    <constraint firstItem="d5D-io-8zr" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="jl9-E0-rtp"/>
+                    <constraint firstAttribute="trailing" secondItem="CqB-pv-FdD" secondAttribute="trailing" constant="10" id="slQ-Pz-Pcb"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <point key="canvasLocation" x="-1.4492753623188408" y="77.008928571428569"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="Checked" width="44" height="44"/>
+    </resources>
+</document>
