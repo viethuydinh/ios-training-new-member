@@ -48,17 +48,16 @@ extension ListAirlinersViewController: UICollectionViewDataSource {
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let c = collectionView.dequeueReusableCell(withReuseIdentifier: AirlinersOverallCollectionViewCell.identifier, for: indexPath) as? AirlinersOverallCollectionViewCell
-        guard let cell = c else { return UICollectionViewCell() }
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: AirlinersOverallCollectionViewCell.identifier, for: indexPath) as? AirlinersOverallCollectionViewCell else {
+            return UICollectionViewCell()
+        }
         cell.airplane = Airplane.ListFakeAirplane[indexPath.row]
-        cell.layer.cornerRadius = CGFloat.defaultPadding*2.5
         return cell
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let sb = UIStoryboard.init(name: "Main", bundle: nil)
-        let viewController = sb.instantiateViewController(withIdentifier: AirplinersDetailViewController.identifier) as? AirplinersDetailViewController
-        guard let vc = viewController else { return }
+        guard let vc = sb.instantiateViewController(withIdentifier: AirplinersDetailViewController.identifier) as? AirplinersDetailViewController else { return }
         vc.airliner = Airplane.ListFakeAirplane[indexPath.item]
         self.navigationController?.pushViewController(vc, animated: true)
     }

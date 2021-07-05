@@ -36,6 +36,7 @@ class AirlinersOverallCollectionViewCell: UICollectionViewCell {
     private func setupUI() {
         self.backgroundColor = .white
         self.imageAirplane.layer.cornerRadius = CGFloat.defaultPadding * 2
+        self.layer.cornerRadius = CGFloat.defaultPadding * 2.5
     }
 
 }
