@@ -63,7 +63,7 @@
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
                 <outlet property="containerView" destination="uN3-9T-0f8" id="L2w-df-cNS"/>
-                <outlet property="imageView" destination="HVv-aC-mU8" id="Sd1-pV-cCN"/>
+                <outlet property="imageAirplaneView" destination="HVv-aC-mU8" id="pG1-Wu-z0P"/>
                 <outlet property="nameLabel" destination="3QL-co-qZE" id="it6-sp-TS4"/>
                 <outlet property="overviewLabel" destination="hLr-zj-JIh" id="7CU-S7-Lez"/>
             </connections>

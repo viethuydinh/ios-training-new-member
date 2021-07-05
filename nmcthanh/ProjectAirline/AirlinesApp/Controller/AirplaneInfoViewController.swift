@@ -29,12 +29,13 @@ class AirplaneInfoViewController: UIViewController {
     
     var informationDetail : AirplaneInfo? {
         didSet {
-            self.informationDictionary.append(["National Origin " : informationDetail!.nationalOrigin])
-            self.informationDictionary.append(["Manufacturer" : informationDetail!.manufacturer])
-            self.informationDictionary.append(["First Flight" : informationDetail!.firstFlight])
-            self.informationDictionary.append(["Produced" : informationDetail!.produced])
-            self.informationDictionary.append(["Number Built" : "\(informationDetail!.numberBuilt)"])
-            self.informationDictionary.append(["Status " : informationDetail!.status])
+            guard let informationDetail = informationDetail else { return }
+                self.informationDictionary.append(["National Origin" : informationDetail.nationalOrigin])
+                self.informationDictionary.append(["Manufacturer" : informationDetail.manufacturer])
+                self.informationDictionary.append(["First Flight" : informationDetail.firstFlight])
+                self.informationDictionary.append(["Produced" : informationDetail.produced])
+                self.informationDictionary.append(["Number Built" : "\(informationDetail.numberBuilt)"])
+                self.informationDictionary.append(["Status " : informationDetail.status])
         }
     }
     
@@ -47,7 +48,14 @@ class AirplaneInfoViewController: UIViewController {
     }
     
     func configureDescriptionLabel() {
-        descriptionTextView.text = list[index!].information.description
+        guard let index = index else { return }
+        descriptionTextView.text = list[index].information.description
+    }
+    
+    func configureView(list: [Airplane], indexPath: IndexPath) {
+        informationDetail = list[indexPath.row].information
+        imageName = list[indexPath.row].imageName
+        index = indexPath.row
     }
     
     @IBAction func backButtonTapped(_ sender: UIButton) {
@@ -66,7 +74,7 @@ extension AirplaneInfoViewController: UITableViewDelegate, UITableViewDataSource
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "AirplaneInfoCell", for: indexPath) as! AirplaneInfoCell
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "AirplaneInfoCell", for: indexPath) as? AirplaneInfoCell else { return UITableViewCell() }
         informationDictionary[indexPath.row].forEach { (key, value) in
             cell.informationListLabel.text = key
             cell.informationDetailLabel.text = value
@@ -76,7 +84,8 @@ extension AirplaneInfoViewController: UITableViewDelegate, UITableViewDataSource
     }
     
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return "Information"
+        let header = "Information"
+        return header
     }
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {

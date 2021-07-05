@@ -8,9 +8,9 @@
 import Foundation
 
 struct Airplane {
-    var name: String
-    var overview: String
-    var imageName: String
+    var name: String?
+    var overview: String?
+    var imageName: String?
     var information : AirplaneInfo
 }
 
