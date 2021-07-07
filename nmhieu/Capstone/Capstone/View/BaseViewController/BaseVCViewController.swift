@@ -42,7 +42,7 @@ class BaseVC: UIViewController,UIGestureRecognizerDelegate {
         navigationController?.setNavigationBarHidden(true, animated: false)
     }
 
-    func getViewControllerFromStorybroad(storybroadName: String,identifier: String) -> UIViewController{
+    func getViewControllerFromStorybroad(storybroadName: String,identifier: String) -> UIViewController {
         let storybroad = UIStoryboard(name: storybroadName, bundle: Bundle.main)
         return storybroad.instantiateViewController(withIdentifier: identifier)
     }

@@ -9,8 +9,8 @@ import UIKit
 
 class LongInforCollectionViewCell: UICollectionViewCell {
 
-    static var identifier : String {return "LongInforCollectionViewCell"}
-    static var name : String {return self.identifier}
+    static var identifier : String { return "LongInforCollectionViewCell" }
+    static var name : String { return self.identifier }
     
     @IBOutlet weak var lblContent: UILabel!
     

@@ -33,9 +33,16 @@ class SignUpViewController: BaseVC {
     }
     
     fileprivate func signUpEvent() {
-        self.signUpBtn.rx.tap.subscribe(onNext : {
-            
-        }).disposed(by: self.disposeBag)
+        
     }
+    
 
+    @IBAction func eventSignUp(_ sender: Any) {
+//        DefaultCoreDataRepo.shared.save(obj: AccountModel(username: self.userNameTF.text, password: self.paswordTF.text, email: self.confirmPasswordTF.text), domain: AccountCoreData())
+        DefaultCoreDataRepo.shared.fetchAll(obj: AccountModel(), domain: AccountCoreData())?.forEach({ (acc) in
+            print(acc)
+        })
+//        print(DefaultCoreDataRepo.shared.find(predicate: .init(format: "username = %s", argumentArray: [userNameTF.text]), obj: AccountModel(), domain: AccountCoreData()))
+    }
+    
 }

@@ -7,21 +7,24 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1507B20D268F13CE001945A8 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1507B20C268F13CE001945A8 /* User.swift */; };
+		1507B20D268F13CE001945A8 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1507B20C268F13CE001945A8 /* UserModel.swift */; };
 		1507B213268F1435001945A8 /* BaseVCViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1507B212268F1435001945A8 /* BaseVCViewController.swift */; };
 		1507B218268F14D6001945A8 /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1507B217268F14D6001945A8 /* UIViewController+Extension.swift */; };
 		1507B21D268F1519001945A8 /* NSObject+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1507B21C268F1519001945A8 /* NSObject+Extension.swift */; };
 		15095E6F268DC8B100129B9C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15095E6E268DC8B100129B9C /* AppDelegate.swift */; };
 		15095E71268DC8B100129B9C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15095E70268DC8B100129B9C /* SceneDelegate.swift */; };
-		15095E79268DC8B100129B9C /* Capstone.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 15095E77268DC8B100129B9C /* Capstone.xcdatamodeld */; };
 		15095E7B268DC8B400129B9C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 15095E7A268DC8B400129B9C /* Assets.xcassets */; };
 		15095E7E268DC8B400129B9C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 15095E7C268DC8B400129B9C /* LaunchScreen.storyboard */; };
 		15095E89268DC8B500129B9C /* CapstoneTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15095E88268DC8B500129B9C /* CapstoneTests.swift */; };
 		15095E94268DC8B500129B9C /* CapstoneUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15095E93268DC8B500129B9C /* CapstoneUITests.swift */; };
-		157F970B268EC375009BBF14 /* Entity+CoreDataClass.swift in Resources */ = {isa = PBXBuildFile; fileRef = 157F96F0268EBCA5009BBF14 /* Entity+CoreDataClass.swift */; };
-		157F970C268EC375009BBF14 /* Entity+CoreDataProperties.swift in Resources */ = {isa = PBXBuildFile; fileRef = 157F96F1268EBCA5009BBF14 /* Entity+CoreDataProperties.swift */; };
-		157F9711268EC443009BBF14 /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 157F9710268EC443009BBF14 /* Repository.swift */; };
-		157F9716268EC49D009BBF14 /* Convertable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 157F9715268EC49D009BBF14 /* Convertable.swift */; };
+		15179EB52695565F008D3A46 /* Convertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15179EB42695565F008D3A46 /* Convertible.swift */; };
+		15179EBA269557B2008D3A46 /* BaseCoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15179EB9269557B2008D3A46 /* BaseCoreData.swift */; };
+		15179EBF26958532008D3A46 /* AccountModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15179EBE26958532008D3A46 /* AccountModel.swift */; };
+		15179ECB26958640008D3A46 /* Capstone.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 15179EC926958640008D3A46 /* Capstone.xcdatamodeld */; };
+		15179EE92695B949008D3A46 /* AccountCoreData+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15179EE72695B949008D3A46 /* AccountCoreData+CoreDataClass.swift */; };
+		15179EEA2695B949008D3A46 /* AccountCoreData+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15179EE82695B949008D3A46 /* AccountCoreData+CoreDataProperties.swift */; };
+		155F2FF826943573007EFBAC /* UserCoreData+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 155F2FF626943573007EFBAC /* UserCoreData+CoreDataClass.swift */; };
+		155F2FF926943573007EFBAC /* UserCoreData+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 155F2FF726943573007EFBAC /* UserCoreData+CoreDataProperties.swift */; };
 		157F971D268EF131009BBF14 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 157F971C268EF131009BBF14 /* SignInViewController.swift */; };
 		157F9722268EF141009BBF14 /* SignIn.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 157F9721268EF141009BBF14 /* SignIn.storyboard */; };
 		157F972D268EFAB2009BBF14 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 157F972C268EFAB2009BBF14 /* SignUpViewController.swift */; };
@@ -52,14 +55,13 @@
 
 /* Begin PBXFileReference section */
 		1425AABD8FCD33A9D5DF26EE /* Pods_Capstone.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Capstone.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		1507B20C268F13CE001945A8 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		1507B20C268F13CE001945A8 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		1507B212268F1435001945A8 /* BaseVCViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseVCViewController.swift; sourceTree = "<group>"; };
 		1507B217268F14D6001945A8 /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
 		1507B21C268F1519001945A8 /* NSObject+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSObject+Extension.swift"; sourceTree = "<group>"; };
 		15095E6B268DC8B100129B9C /* Capstone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Capstone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		15095E6E268DC8B100129B9C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		15095E70268DC8B100129B9C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		15095E78268DC8B100129B9C /* Capstone.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Capstone.xcdatamodel; sourceTree = "<group>"; };
 		15095E7A268DC8B400129B9C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		15095E7D268DC8B400129B9C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		15095E7F268DC8B400129B9C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -69,10 +71,14 @@
 		15095E8F268DC8B500129B9C /* CapstoneUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CapstoneUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		15095E93268DC8B500129B9C /* CapstoneUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CapstoneUITests.swift; sourceTree = "<group>"; };
 		15095E95268DC8B500129B9C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		157F96F0268EBCA5009BBF14 /* Entity+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Entity+CoreDataClass.swift"; path = "Capstone/Entity+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
-		157F96F1268EBCA5009BBF14 /* Entity+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Entity+CoreDataProperties.swift"; path = "Capstone/Entity+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
-		157F9710268EC443009BBF14 /* Repository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
-		157F9715268EC49D009BBF14 /* Convertable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Convertable.swift; sourceTree = "<group>"; };
+		15179EB42695565F008D3A46 /* Convertible.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Convertible.swift; sourceTree = "<group>"; };
+		15179EB9269557B2008D3A46 /* BaseCoreData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCoreData.swift; sourceTree = "<group>"; };
+		15179EBE26958532008D3A46 /* AccountModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountModel.swift; sourceTree = "<group>"; };
+		15179ECA26958640008D3A46 /* Capstone.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Capstone.xcdatamodel; sourceTree = "<group>"; };
+		15179EE72695B949008D3A46 /* AccountCoreData+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AccountCoreData+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
+		15179EE82695B949008D3A46 /* AccountCoreData+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AccountCoreData+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
+		155F2FF626943573007EFBAC /* UserCoreData+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "UserCoreData+CoreDataClass.swift"; path = "Capstone/Model/Database/UserCoreData+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
+		155F2FF726943573007EFBAC /* UserCoreData+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "UserCoreData+CoreDataProperties.swift"; path = "Capstone/Model/Database/UserCoreData+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
 		157F971C268EF131009BBF14 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		157F9721268EF141009BBF14 /* SignIn.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SignIn.storyboard; sourceTree = "<group>"; };
 		157F972C268EFAB2009BBF14 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
@@ -151,7 +157,6 @@
 			isa = PBXGroup;
 			children = (
 				157F96EE268EBB67009BBF14 /* Application */,
-				157F96EC268EBB30009BBF14 /* Database */,
 				157F96EF268EBB7C009BBF14 /* Network */,
 				157F96ED268EBB4F009BBF14 /* Resource */,
 				157F96E9268EBB11009BBF14 /* Ultis */,
@@ -182,10 +187,22 @@
 			path = CapstoneUITests;
 			sourceTree = "<group>";
 		};
+		15179ED6269586B6008D3A46 /* DAO */ = {
+			isa = PBXGroup;
+			children = (
+				1507B20C268F13CE001945A8 /* UserModel.swift */,
+				15179EBE26958532008D3A46 /* AccountModel.swift */,
+			);
+			path = DAO;
+			sourceTree = "<group>";
+		};
 		157F96E8268EBB08009BBF14 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				1507B20C268F13CE001945A8 /* User.swift */,
+				15179ED6269586B6008D3A46 /* DAO */,
+				157F96EC268EBB30009BBF14 /* Database */,
+				15179EB42695565F008D3A46 /* Convertible.swift */,
+				15179EB9269557B2008D3A46 /* BaseCoreData.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -217,11 +234,11 @@
 		157F96EC268EBB30009BBF14 /* Database */ = {
 			isa = PBXGroup;
 			children = (
-				157F96F0268EBCA5009BBF14 /* Entity+CoreDataClass.swift */,
-				157F96F1268EBCA5009BBF14 /* Entity+CoreDataProperties.swift */,
-				15095E77268DC8B100129B9C /* Capstone.xcdatamodeld */,
-				157F9710268EC443009BBF14 /* Repository.swift */,
-				157F9715268EC49D009BBF14 /* Convertable.swift */,
+				15179EE72695B949008D3A46 /* AccountCoreData+CoreDataClass.swift */,
+				15179EE82695B949008D3A46 /* AccountCoreData+CoreDataProperties.swift */,
+				15179EC926958640008D3A46 /* Capstone.xcdatamodeld */,
+				155F2FF626943573007EFBAC /* UserCoreData+CoreDataClass.swift */,
+				155F2FF726943573007EFBAC /* UserCoreData+CoreDataProperties.swift */,
 			);
 			path = Database;
 			sourceTree = "<group>";
@@ -403,8 +420,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				157F970B268EC375009BBF14 /* Entity+CoreDataClass.swift in Resources */,
-				157F970C268EC375009BBF14 /* Entity+CoreDataProperties.swift in Resources */,
 				15095E7E268DC8B400129B9C /* LaunchScreen.storyboard in Resources */,
 				157F9732268EFAC0009BBF14 /* SignUp.storyboard in Resources */,
 				15095E7B268DC8B400129B9C /* Assets.xcassets in Resources */,
@@ -539,16 +554,21 @@
 				1507B218268F14D6001945A8 /* UIViewController+Extension.swift in Sources */,
 				157F971D268EF131009BBF14 /* SignInViewController.swift in Sources */,
 				1507B213268F1435001945A8 /* BaseVCViewController.swift in Sources */,
+				15179EB52695565F008D3A46 /* Convertible.swift in Sources */,
 				157F972D268EFAB2009BBF14 /* SignUpViewController.swift in Sources */,
 				15095E6F268DC8B100129B9C /* AppDelegate.swift in Sources */,
-				157F9711268EC443009BBF14 /* Repository.swift in Sources */,
-				157F9716268EC49D009BBF14 /* Convertable.swift in Sources */,
+				155F2FF926943573007EFBAC /* UserCoreData+CoreDataProperties.swift in Sources */,
+				15179EBF26958532008D3A46 /* AccountModel.swift in Sources */,
+				15179EEA2695B949008D3A46 /* AccountCoreData+CoreDataProperties.swift in Sources */,
 				1507B21D268F1519001945A8 /* NSObject+Extension.swift in Sources */,
-				15095E79268DC8B100129B9C /* Capstone.xcdatamodeld in Sources */,
 				15095E71268DC8B100129B9C /* SceneDelegate.swift in Sources */,
+				15179ECB26958640008D3A46 /* Capstone.xcdatamodeld in Sources */,
 				157F9737268EFEA4009BBF14 /* Color.swift in Sources */,
-				1507B20D268F13CE001945A8 /* User.swift in Sources */,
+				1507B20D268F13CE001945A8 /* UserModel.swift in Sources */,
+				15179EBA269557B2008D3A46 /* BaseCoreData.swift in Sources */,
+				155F2FF826943573007EFBAC /* UserCoreData+CoreDataClass.swift in Sources */,
 				157F973C268EFED5009BBF14 /* AccoutString.swift in Sources */,
+				15179EE92695B949008D3A46 /* AccountCoreData+CoreDataClass.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -881,12 +901,12 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		15095E77268DC8B100129B9C /* Capstone.xcdatamodeld */ = {
+		15179EC926958640008D3A46 /* Capstone.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				15095E78268DC8B100129B9C /* Capstone.xcdatamodel */,
+				15179ECA26958640008D3A46 /* Capstone.xcdatamodel */,
 			);
-			currentVersion = 15095E78268DC8B100129B9C /* Capstone.xcdatamodel */;
+			currentVersion = 15179ECA26958640008D3A46 /* Capstone.xcdatamodel */;
 			path = Capstone.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
