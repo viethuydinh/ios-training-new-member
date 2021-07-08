@@ -16,7 +16,9 @@ class SignInViewController: BaseVC {
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var signInButton: UIButton!
     @IBOutlet weak var noAccountLabel : UILabel!
-
+    
+    var signInViewModel = DefaultAuthenticationViewModel()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.setupUI()
@@ -59,7 +61,28 @@ class SignInViewController: BaseVC {
     }
     
     private func eventSignIn() {
-        
+        self.signInButton
+            .rx
+            .controlEvent(.touchUpInside)
+            .do(onNext: { (_) in
+                self.view.endEditing(true)
+            })
+            .withLatestFrom(Observable.combineLatest(self.usernameTextField.rx.text, self.passwordTextField.rx.text))
+            .map{ Account(username: $0, password: $1, repassword: nil) }
+            .subscribe { (acc) in
+                if self.signInViewModel.signIn(account: Account(username: self.usernameTextField.text, password: self.passwordTextField.text, repassword: nil)) {
+                    let signUpVC = self.getViewControllerFromStorybroad(storybroadName: "Authentication", identifier: SignUpViewController.identifier)
+                    self.navigationController?.pushViewController(signUpVC, animated: true)
+                } else {
+                    print("Sign In Error")
+                }
+            } onError: { (_) in
+                
+            } onCompleted: {
+                
+            } onDisposed: {
+                
+            }.disposed(by: self.disposeBag)
     }
     
     private func eventGoRegister() {

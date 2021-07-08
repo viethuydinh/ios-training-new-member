@@ -16,6 +16,8 @@ class SignUpViewController: BaseVC {
     @IBOutlet weak var repasswordTextField: UITextField!
     @IBOutlet weak var signUpButton: UIButton!
     @IBOutlet weak var haveAccountLabel : UILabel!
+    
+    var signUpViewModel = DefaultAuthenticationViewModel()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -60,7 +62,19 @@ class SignUpViewController: BaseVC {
     }
     
     private func eventSignUp() {
-        
+        self.signUpButton
+            .rx
+            .controlEvent(.touchUpInside)
+            .do(onNext: { (_) in
+                self.view.endEditing(true)
+            })
+            .withLatestFrom(Observable.combineLatest(self.usernameTextField.rx.text, self.passwordTextField.rx.text, self.repasswordTextField.rx.text))
+            
+            .map { Account(username: $0, password: $1, repassword: $2) }
+            .subscribe(onNext: { (acc) in
+                self.signUpViewModel.signUp(account: acc)
+            })
+            .disposed(by: self.disposeBag)
     }
     
     private func eventGoSignIn() {
