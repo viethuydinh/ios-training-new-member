@@ -14,20 +14,8 @@ struct AccountModel {
 }
 
 extension AccountModel : ObjectConvertible {
-    var primaryKey : [String : String] {
-        return ["username":self.username!]
-    }
-    
     typealias Object = AccountCoreData
 
-    var asObject: AccountCoreData {
-        var object = AccountCoreData()
-        object.username = self.username
-        object.password = self.password
-        object.email = self.email
-        return object
-    }
-    
     func update(obj: AccountCoreData) -> AccountCoreData {
         var object = obj
         object.username = self.username

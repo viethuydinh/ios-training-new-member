@@ -23,10 +23,5 @@ enum Gender: Int {
     case female = 2
     case unknow = 3
 }
-//extension UserModel : ObjectConvertible {
-//    func update(obj: UserModel) -> Us {
-//        <#code#>
-//    }
-//}
 
 

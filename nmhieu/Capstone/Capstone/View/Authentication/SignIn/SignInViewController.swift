@@ -14,12 +14,14 @@ class SignInViewController: BaseVC {
     @IBOutlet weak var userNameTF: UITextField!
     @IBOutlet weak var passwordTF: UITextField!
     @IBOutlet weak var signInBtn: UIButton!
-    @IBOutlet weak var noAccountLbl: UILabel!
+    @IBOutlet weak var signUpLabel: UILabel!
+    
+    var authenticationVM = DefaultAuthenticationViewModel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.setUpUI()
-        self.event()
+        self.setUpGesture()
     }
     
     //MARK: -UI
@@ -40,32 +42,34 @@ class SignInViewController: BaseVC {
             .font: UIFont.systemFont(ofSize: 14, weight: .bold),
             .foregroundColor: UIColor.niceBlue
         ], range: (text as NSString).range(of: textSignUp))
-        self.noAccountLbl.attributedText = attributedString
+        self.signUpLabel.attributedText = attributedString
     }
 
     //MARK: -Event
-    fileprivate func event() {
-        self.signInEvent()
-        self.signUpEvent()
+    @IBAction func signInEvent() {
+        let a = self.authenticationVM.signIn(username: self.userNameTF.text ?? "",
+                                              password: self.passwordTF.text ?? "")
+        print(a)
     }
     
-    fileprivate func signInEvent() {
-        self.signInBtn.rx.tap.subscribe(onNext: {
-            
-        }).disposed(by: self.disposeBag)
-    }
-    
-    fileprivate func signUpEvent() {
-        self.noAccountLbl.rx.tapGesture().when(.recognized).subscribe { (_) in
-            let sb = UIStoryboard.init(name: "SignUp", bundle: nil)
-            guard let vc = sb.instantiateViewController(identifier: SignUpViewController.identifier) as? SignUpViewController else { return }
-            self.navigationController?.pushViewController(vc, animated: true)
-        } onError: { (_) in
-
-        } onCompleted: {
-
-        } onDisposed: {
-
-        }.disposed(by: self.disposeBag)
+    @objc fileprivate func eventSignUp() {
+        let sb = UIStoryboard.init(name: "SignUp", bundle: nil)
+        guard let vc = sb.instantiateViewController(identifier: SignUpViewController.identifier) as? SignUpViewController else { return }
+        self.navigationController?.pushViewController(vc, animated: true)
     }
 }
+
+//MARK: -Gesture
+extension SignInViewController {
+    
+    fileprivate func setUpGesture() {
+        self.setUpGestureSignInLabel()
+    }
+    
+    fileprivate func setUpGestureSignInLabel() {
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(self.eventSignUp))
+        self.signUpLabel.isUserInteractionEnabled = true
+        self.signUpLabel.addGestureRecognizer(tapGesture)
+    }
+}
+

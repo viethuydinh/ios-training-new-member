@@ -7,19 +7,15 @@
 
 import Foundation
 import CoreData
-
+//Domain
 protocol ObjectConvertible {
-    associatedtype Object : NSManagedObject
-    
-    var asObject : Object { get }
+    associatedtype Object : DomainConvertible & NSManagedObject
     
     func update (obj: Object) -> Object
-    
-    var primaryKey : [String:String] { get }
 }
-
+//Object
 protocol DomainConvertible {
-    associatedtype Domain
+    associatedtype Domain : ObjectConvertible
     
     var asDomain : Domain { get }
 }

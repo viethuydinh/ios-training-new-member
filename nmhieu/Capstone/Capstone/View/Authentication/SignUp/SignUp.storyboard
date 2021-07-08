@@ -21,7 +21,7 @@
                                 <rect key="frame" x="0.0" y="44" width="414" height="224"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sign Up" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FUu-Xu-gEZ">
-                                        <rect key="frame" x="30" y="90.5" width="127.5" height="43"/>
+                                        <rect key="frame" x="16" y="90.5" width="127.5" height="43"/>
                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="36"/>
                                         <color key="textColor" name="navy"/>
                                         <nil key="highlightedColor"/>
@@ -30,7 +30,7 @@
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstItem="FUu-Xu-gEZ" firstAttribute="centerY" secondItem="HWA-sZ-nq1" secondAttribute="centerY" id="ZaQ-TH-pdt"/>
-                                    <constraint firstItem="FUu-Xu-gEZ" firstAttribute="leading" secondItem="HWA-sZ-nq1" secondAttribute="leading" constant="30" id="oYr-F4-2Bh"/>
+                                    <constraint firstItem="FUu-Xu-gEZ" firstAttribute="leading" secondItem="HWA-sZ-nq1" secondAttribute="leading" constant="16" id="oYr-F4-2Bh"/>
                                 </constraints>
                             </view>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="LCA-2n-EPn">
@@ -123,6 +123,12 @@
                                     <constraint firstItem="ZfP-Nt-St4" firstAttribute="height" secondItem="EVa-Le-3ia" secondAttribute="height" id="gju-7g-kyA"/>
                                 </constraints>
                             </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xAk-Ks-Hi6">
+                                <rect key="frame" x="186.5" y="811.5" width="41.5" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="FaP-c8-cjY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -132,6 +138,8 @@
                             <constraint firstItem="HWA-sZ-nq1" firstAttribute="top" secondItem="FaP-c8-cjY" secondAttribute="top" id="LLS-SR-scp"/>
                             <constraint firstItem="LCA-2n-EPn" firstAttribute="leading" secondItem="FaP-c8-cjY" secondAttribute="leading" constant="16" id="LdJ-3t-Leo"/>
                             <constraint firstItem="HWA-sZ-nq1" firstAttribute="height" secondItem="K5U-fq-4fs" secondAttribute="height" multiplier="0.25" id="MsV-KC-88R"/>
+                            <constraint firstItem="xAk-Ks-Hi6" firstAttribute="centerX" secondItem="FaP-c8-cjY" secondAttribute="centerX" id="Rvx-n2-xr3"/>
+                            <constraint firstItem="FaP-c8-cjY" firstAttribute="bottom" secondItem="xAk-Ks-Hi6" secondAttribute="bottom" constant="30" id="Z6n-2k-uyf"/>
                             <constraint firstItem="LCA-2n-EPn" firstAttribute="top" secondItem="HWA-sZ-nq1" secondAttribute="bottom" id="dW2-M4-EOK"/>
                             <constraint firstItem="HWA-sZ-nq1" firstAttribute="leading" secondItem="FaP-c8-cjY" secondAttribute="leading" id="fYt-fo-dmJ"/>
                         </constraints>
@@ -139,6 +147,7 @@
                     <connections>
                         <outlet property="confirmPasswordTF" destination="gqN-Ej-cxQ" id="eNx-ry-6Op"/>
                         <outlet property="paswordTF" destination="zlp-qO-Uq9" id="plf-BR-vQY"/>
+                        <outlet property="signInLabel" destination="xAk-Ks-Hi6" id="Mod-RH-Hav"/>
                         <outlet property="signUpBtn" destination="HBJ-kg-10V" id="3DT-jy-ify"/>
                         <outlet property="userNameTF" destination="jL4-uf-u7o" id="59M-4Y-Fmf"/>
                     </connections>

@@ -21,7 +21,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="184"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sign In" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="quI-Bp-2kA">
-                                        <rect key="frame" x="29.999999999999993" y="70.666666666666671" width="110.33333333333331" height="43"/>
+                                        <rect key="frame" x="15.999999999999993" y="70.666666666666671" width="110.33333333333331" height="43"/>
                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="36"/>
                                         <color key="textColor" name="navy"/>
                                         <nil key="highlightedColor"/>
@@ -29,7 +29,7 @@
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
-                                    <constraint firstItem="quI-Bp-2kA" firstAttribute="leading" secondItem="PUL-Hj-a1L" secondAttribute="leading" constant="30" id="6NI-oU-F8d"/>
+                                    <constraint firstItem="quI-Bp-2kA" firstAttribute="leading" secondItem="PUL-Hj-a1L" secondAttribute="leading" constant="16" id="6NI-oU-F8d"/>
                                     <constraint firstItem="quI-Bp-2kA" firstAttribute="centerY" secondItem="PUL-Hj-a1L" secondAttribute="centerY" id="R5w-d0-WZQ"/>
                                 </constraints>
                             </view>
@@ -87,6 +87,9 @@
                                                 <state key="normal" title="Sign In">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="signInEvent" destination="QGX-kw-W8m" eventType="touchUpInside" id="2ka-bc-p4H"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -124,9 +127,9 @@
                     </view>
                     <navigationItem key="navigationItem" id="yjK-Nn-fed"/>
                     <connections>
-                        <outlet property="noAccountLbl" destination="Spx-F1-97z" id="aAA-ds-KNm"/>
                         <outlet property="passwordTF" destination="PgQ-vF-lqc" id="04x-Le-gJf"/>
                         <outlet property="signInBtn" destination="h0J-7d-04u" id="N0w-zW-Qce"/>
+                        <outlet property="signUpLabel" destination="Spx-F1-97z" id="aAA-ds-KNm"/>
                         <outlet property="userNameTF" destination="DRa-Gi-lXA" id="oZS-8y-oXW"/>
                     </connections>
                 </viewController>

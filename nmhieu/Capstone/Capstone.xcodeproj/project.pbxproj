@@ -18,7 +18,7 @@
 		15095E89268DC8B500129B9C /* CapstoneTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15095E88268DC8B500129B9C /* CapstoneTests.swift */; };
 		15095E94268DC8B500129B9C /* CapstoneUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15095E93268DC8B500129B9C /* CapstoneUITests.swift */; };
 		15179EB52695565F008D3A46 /* Convertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15179EB42695565F008D3A46 /* Convertible.swift */; };
-		15179EBA269557B2008D3A46 /* BaseCoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15179EB9269557B2008D3A46 /* BaseCoreData.swift */; };
+		15179EBA269557B2008D3A46 /* DatabaseConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15179EB9269557B2008D3A46 /* DatabaseConfig.swift */; };
 		15179EBF26958532008D3A46 /* AccountModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15179EBE26958532008D3A46 /* AccountModel.swift */; };
 		15179ECB26958640008D3A46 /* Capstone.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 15179EC926958640008D3A46 /* Capstone.xcdatamodeld */; };
 		15179EE92695B949008D3A46 /* AccountCoreData+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15179EE72695B949008D3A46 /* AccountCoreData+CoreDataClass.swift */; };
@@ -31,6 +31,10 @@
 		157F9732268EFAC0009BBF14 /* SignUp.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 157F9731268EFAC0009BBF14 /* SignUp.storyboard */; };
 		157F9737268EFEA4009BBF14 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 157F9736268EFEA4009BBF14 /* Color.swift */; };
 		157F973C268EFED5009BBF14 /* AccoutString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 157F973B268EFED5009BBF14 /* AccoutString.swift */; };
+		1585AFBB2696B1700073F89E /* AuthenticationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1585AFBA2696B1700073F89E /* AuthenticationViewModel.swift */; };
+		1585AFD12696DA750073F89E /* AuthenticationRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1585AFD02696DA750073F89E /* AuthenticationRepository.swift */; };
+		1585AFD72696EA9E0073F89E /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1585AFD62696EA9E0073F89E /* HomeViewController.swift */; };
+		1585AFDF2696EAA90073F89E /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1585AFDE2696EAA90073F89E /* Home.storyboard */; };
 		17DCA4C5E48306770ED53512 /* Pods_CapstoneTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C57EF125C81F28DAD0D11FD /* Pods_CapstoneTests.framework */; };
 		45E19160B2B69DDB689A1456 /* Pods_Capstone_CapstoneUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D304FA87C63FB65B5C7B842 /* Pods_Capstone_CapstoneUITests.framework */; };
 		8CADBDA5078F84D6D1935E5F /* Pods_Capstone.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1425AABD8FCD33A9D5DF26EE /* Pods_Capstone.framework */; };
@@ -72,7 +76,7 @@
 		15095E93268DC8B500129B9C /* CapstoneUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CapstoneUITests.swift; sourceTree = "<group>"; };
 		15095E95268DC8B500129B9C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		15179EB42695565F008D3A46 /* Convertible.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Convertible.swift; sourceTree = "<group>"; };
-		15179EB9269557B2008D3A46 /* BaseCoreData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCoreData.swift; sourceTree = "<group>"; };
+		15179EB9269557B2008D3A46 /* DatabaseConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseConfig.swift; sourceTree = "<group>"; };
 		15179EBE26958532008D3A46 /* AccountModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountModel.swift; sourceTree = "<group>"; };
 		15179ECA26958640008D3A46 /* Capstone.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Capstone.xcdatamodel; sourceTree = "<group>"; };
 		15179EE72695B949008D3A46 /* AccountCoreData+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AccountCoreData+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
@@ -85,6 +89,10 @@
 		157F9731268EFAC0009BBF14 /* SignUp.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SignUp.storyboard; sourceTree = "<group>"; };
 		157F9736268EFEA4009BBF14 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		157F973B268EFED5009BBF14 /* AccoutString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccoutString.swift; sourceTree = "<group>"; };
+		1585AFBA2696B1700073F89E /* AuthenticationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationViewModel.swift; sourceTree = "<group>"; };
+		1585AFD02696DA750073F89E /* AuthenticationRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationRepository.swift; sourceTree = "<group>"; };
+		1585AFD62696EA9E0073F89E /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		1585AFDE2696EAA90073F89E /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
 		3C57EF125C81F28DAD0D11FD /* Pods_CapstoneTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CapstoneTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F18C5BF9AEEFD3B9FC56A64 /* Pods-Capstone-CapstoneUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Capstone-CapstoneUITests.release.xcconfig"; path = "Target Support Files/Pods-Capstone-CapstoneUITests/Pods-Capstone-CapstoneUITests.release.xcconfig"; sourceTree = "<group>"; };
 		5A6BD8BB820596903C469AAB /* Pods-Capstone.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Capstone.debug.xcconfig"; path = "Target Support Files/Pods-Capstone/Pods-Capstone.debug.xcconfig"; sourceTree = "<group>"; };
@@ -199,10 +207,11 @@
 		157F96E8268EBB08009BBF14 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				1585AFCF2696DA5C0073F89E /* Repository */,
 				15179ED6269586B6008D3A46 /* DAO */,
 				157F96EC268EBB30009BBF14 /* Database */,
 				15179EB42695565F008D3A46 /* Convertible.swift */,
-				15179EB9269557B2008D3A46 /* BaseCoreData.swift */,
+				15179EB9269557B2008D3A46 /* DatabaseConfig.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -218,8 +227,8 @@
 			isa = PBXGroup;
 			children = (
 				1507B211268F1412001945A8 /* BaseViewController */,
-				157F971B268EF0DC009BBF14 /* SignIn */,
-				157F971A268EF0C6009BBF14 /* SignUp */,
+				1585AFE42696EE5D0073F89E /* Authentication */,
+				1585AFD52696E9670073F89E /* Home */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -227,6 +236,7 @@
 		157F96EB268EBB21009BBF14 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				1585AFBA2696B1700073F89E /* AuthenticationViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -287,6 +297,32 @@
 				157F9721268EF141009BBF14 /* SignIn.storyboard */,
 			);
 			path = SignIn;
+			sourceTree = "<group>";
+		};
+		1585AFCF2696DA5C0073F89E /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				1585AFD02696DA750073F89E /* AuthenticationRepository.swift */,
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
+		1585AFD52696E9670073F89E /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				1585AFD62696EA9E0073F89E /* HomeViewController.swift */,
+				1585AFDE2696EAA90073F89E /* Home.storyboard */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		1585AFE42696EE5D0073F89E /* Authentication */ = {
+			isa = PBXGroup;
+			children = (
+				157F971A268EF0C6009BBF14 /* SignUp */,
+				157F971B268EF0DC009BBF14 /* SignIn */,
+			);
+			path = Authentication;
 			sourceTree = "<group>";
 		};
 		387F4C3CD5E6E9458DC272D1 /* Frameworks */ = {
@@ -421,6 +457,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				15095E7E268DC8B400129B9C /* LaunchScreen.storyboard in Resources */,
+				1585AFDF2696EAA90073F89E /* Home.storyboard in Resources */,
 				157F9732268EFAC0009BBF14 /* SignUp.storyboard in Resources */,
 				15095E7B268DC8B400129B9C /* Assets.xcassets in Resources */,
 				157F9722268EF141009BBF14 /* SignIn.storyboard in Resources */,
@@ -553,8 +590,10 @@
 			files = (
 				1507B218268F14D6001945A8 /* UIViewController+Extension.swift in Sources */,
 				157F971D268EF131009BBF14 /* SignInViewController.swift in Sources */,
+				1585AFBB2696B1700073F89E /* AuthenticationViewModel.swift in Sources */,
 				1507B213268F1435001945A8 /* BaseVCViewController.swift in Sources */,
 				15179EB52695565F008D3A46 /* Convertible.swift in Sources */,
+				1585AFD72696EA9E0073F89E /* HomeViewController.swift in Sources */,
 				157F972D268EFAB2009BBF14 /* SignUpViewController.swift in Sources */,
 				15095E6F268DC8B100129B9C /* AppDelegate.swift in Sources */,
 				155F2FF926943573007EFBAC /* UserCoreData+CoreDataProperties.swift in Sources */,
@@ -563,9 +602,10 @@
 				1507B21D268F1519001945A8 /* NSObject+Extension.swift in Sources */,
 				15095E71268DC8B100129B9C /* SceneDelegate.swift in Sources */,
 				15179ECB26958640008D3A46 /* Capstone.xcdatamodeld in Sources */,
+				1585AFD12696DA750073F89E /* AuthenticationRepository.swift in Sources */,
 				157F9737268EFEA4009BBF14 /* Color.swift in Sources */,
 				1507B20D268F13CE001945A8 /* UserModel.swift in Sources */,
-				15179EBA269557B2008D3A46 /* BaseCoreData.swift in Sources */,
+				15179EBA269557B2008D3A46 /* DatabaseConfig.swift in Sources */,
 				155F2FF826943573007EFBAC /* UserCoreData+CoreDataClass.swift in Sources */,
 				157F973C268EFED5009BBF14 /* AccoutString.swift in Sources */,
 				15179EE92695B949008D3A46 /* AccountCoreData+CoreDataClass.swift in Sources */,

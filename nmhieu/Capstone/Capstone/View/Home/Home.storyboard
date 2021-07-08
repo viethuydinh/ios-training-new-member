@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Home View Controller-->
+        <scene sceneID="Abz-wy-W0s">
+            <objects>
+                <viewController storyboardIdentifier="HomeViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Zdv-Bi-InI" customClass="HomeViewController" customModule="Capstone" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="YnA-0X-2dd">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rgw-tk-4vm">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="133.5"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Xgf-Ib-ncr">
+                                        <rect key="frame" x="16" y="56.5" width="56" height="20.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hello e" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dEm-Wb-CLM">
+                                                <rect key="frame" x="0.0" y="0.0" width="56" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="Xgf-Ib-ncr" firstAttribute="centerY" secondItem="rgw-tk-4vm" secondAttribute="centerY" id="JfZ-bW-lOu"/>
+                                    <constraint firstItem="Xgf-Ib-ncr" firstAttribute="leading" secondItem="rgw-tk-4vm" secondAttribute="leading" constant="16" id="nZ4-0r-DGd"/>
+                                </constraints>
+                            </view>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Wmi-pP-t1k">
+                                <rect key="frame" x="75" y="133.5" width="225" height="254"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ueO-x5-hCg">
+                                        <rect key="frame" x="0.0" y="0.0" width="225" height="56"/>
+                                        <color key="backgroundColor" name="lightMustard"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="56" id="Pli-5B-JbJ"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
+                                        <state key="normal" title="Intern">
+                                            <color key="titleColor" name="AccentColor"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gmv-SO-gu0">
+                                        <rect key="frame" x="0.0" y="66" width="225" height="56"/>
+                                        <color key="backgroundColor" name="lightMustard"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="56" id="ecw-Wa-oOd"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
+                                        <state key="normal" title="Fresher">
+                                            <color key="titleColor" name="AccentColor"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Ug-B8-3mM">
+                                        <rect key="frame" x="0.0" y="132" width="225" height="56"/>
+                                        <color key="backgroundColor" name="lightMustard"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="56" id="LhB-6T-BIo"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
+                                        <state key="normal" title="Junior">
+                                            <color key="titleColor" name="AccentColor"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mYU-sf-ExQ">
+                                        <rect key="frame" x="0.0" y="198" width="225" height="56"/>
+                                        <color key="backgroundColor" name="lightMustard"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="56" id="yz4-Ig-e2G"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
+                                        <state key="normal" title="Senior">
+                                            <color key="titleColor" name="AccentColor"/>
+                                        </state>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vPT-eT-D4k"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Wmi-pP-t1k" firstAttribute="top" secondItem="rgw-tk-4vm" secondAttribute="bottom" id="G2y-ma-ZeC"/>
+                            <constraint firstItem="mYU-sf-ExQ" firstAttribute="width" secondItem="YnA-0X-2dd" secondAttribute="width" multiplier="0.6" id="M1h-Gl-m4c"/>
+                            <constraint firstItem="rgw-tk-4vm" firstAttribute="leading" secondItem="vPT-eT-D4k" secondAttribute="leading" id="RW7-V4-brS"/>
+                            <constraint firstItem="vPT-eT-D4k" firstAttribute="trailing" secondItem="rgw-tk-4vm" secondAttribute="trailing" id="Yib-84-Qox"/>
+                            <constraint firstItem="rgw-tk-4vm" firstAttribute="top" secondItem="vPT-eT-D4k" secondAttribute="top" id="phP-FT-rjT"/>
+                            <constraint firstItem="rgw-tk-4vm" firstAttribute="height" secondItem="YnA-0X-2dd" secondAttribute="height" multiplier="0.2" id="tcH-zg-AMc"/>
+                            <constraint firstItem="Wmi-pP-t1k" firstAttribute="centerX" secondItem="vPT-eT-D4k" secondAttribute="centerX" id="yNr-y5-N6S"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="fresherButton" destination="Gmv-SO-gu0" id="v9t-ci-nHs"/>
+                        <outlet property="internButton" destination="ueO-x5-hCg" id="2qg-TY-DYR"/>
+                        <outlet property="juniorButton" destination="6Ug-B8-3mM" id="zp8-sw-aBp"/>
+                        <outlet property="nameLabel" destination="dEm-Wb-CLM" id="jOf-Di-nzK"/>
+                        <outlet property="seniorButton" destination="mYU-sf-ExQ" id="VpX-4n-Vbo"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="E5d-v8-qBu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-68" y="21"/>
+        </scene>
+    </scenes>
+    <resources>
+        <namedColor name="AccentColor">
+            <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="lightMustard">
+            <color red="0.97299998998641968" green="0.74900001287460327" blue="0.3880000114440918" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
