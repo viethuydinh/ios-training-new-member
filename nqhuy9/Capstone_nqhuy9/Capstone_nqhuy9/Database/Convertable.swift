@@ -7,22 +7,23 @@
 
 import Foundation
 import CoreData
-
-// Domain
-protocol ObjectConvertable: Identifiable {
-    associatedtype Object: DomainConvertable & NSManagedObject where Object.Domain == Self, Object.ID == Object.Domain.ID
-
-    func update(object: Object) -> Object
+//Domain
+protocol ObjectConvert {
+    associatedtype Object : DomainConvert & NSManagedObject
+        
+    func update(object: Object?) -> Object
     
+    var key: [String : String] { get }
 }
 
-// NSManagedObject
-protocol DomainConvertable: Identifiable {
-    associatedtype Domain: ObjectConvertable where Domain.Object == Self, Domain.ID == Domain.Object.ID
+
+//Object
+protocol DomainConvert {
+    associatedtype Domain: ObjectConvert
     
     var asDomain: Domain { get }
 }
 
-extension DomainConvertable {
+extension DomainConvert {
     static var name: String { String(describing: self) }
 }
