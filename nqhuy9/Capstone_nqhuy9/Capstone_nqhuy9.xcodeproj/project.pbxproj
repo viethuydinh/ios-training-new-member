@@ -10,6 +10,10 @@
 		281701568C76321EF7CB1708 /* Pods_Capstone_nqhuy9_Capstone_nqhuy9UITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA1FD1223A468E05C3D3EC07 /* Pods_Capstone_nqhuy9_Capstone_nqhuy9UITests.framework */; };
 		6E95F0CD1CA11F833E530BE2 /* Pods_Capstone_nqhuy9Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 358FEDF518254B81DC782BC8 /* Pods_Capstone_nqhuy9Tests.framework */; };
 		C009E5016078B88792495181 /* Pods_Capstone_nqhuy9.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D124386781458B5795EAF503 /* Pods_Capstone_nqhuy9.framework */; };
+		F4CE76102694303800330A77 /* BaseCoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4CE760F2694303800330A77 /* BaseCoreData.swift */; };
+		F4FDA8262696974A0039E9B4 /* AccountCoreData+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4FDA8242696974A0039E9B4 /* AccountCoreData+CoreDataClass.swift */; };
+		F4FDA8272696974A0039E9B4 /* AccountCoreData+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4FDA8252696974A0039E9B4 /* AccountCoreData+CoreDataProperties.swift */; };
+		F4FDA82C2696D9C70039E9B4 /* AuthenticationViewModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4FDA82B2696D9C70039E9B4 /* AuthenticationViewModels.swift */; };
 		F4FDF552268EA6B4001B02D3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4FDF551268EA6B4001B02D3 /* AppDelegate.swift */; };
 		F4FDF554268EA6B4001B02D3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4FDF553268EA6B4001B02D3 /* SceneDelegate.swift */; };
 		F4FDF556268EA6B4001B02D3 /* ChooseLevelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4FDF555268EA6B4001B02D3 /* ChooseLevelViewController.swift */; };
@@ -20,7 +24,6 @@
 		F4FDF56C268EA6B7001B02D3 /* Capstone_nqhuy9Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4FDF56B268EA6B7001B02D3 /* Capstone_nqhuy9Tests.swift */; };
 		F4FDF577268EA6B7001B02D3 /* Capstone_nqhuy9UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4FDF576268EA6B7001B02D3 /* Capstone_nqhuy9UITests.swift */; };
 		F4FDF60D268EB624001B02D3 /* Convertable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4FDF60C268EB624001B02D3 /* Convertable.swift */; };
-		F4FDF612268EB643001B02D3 /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4FDF611268EB643001B02D3 /* Repository.swift */; };
 		F4FDF641268EBFA9001B02D3 /* Candidate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4FDF640268EBFA9001B02D3 /* Candidate.swift */; };
 		F4FDF65D268EC39E001B02D3 /* User+CoreDataClass.swift in Resources */ = {isa = PBXBuildFile; fileRef = F4FDF636268EBBAD001B02D3 /* User+CoreDataClass.swift */; };
 		F4FDF65E268EC39E001B02D3 /* User+CoreDataProperties.swift in Resources */ = {isa = PBXBuildFile; fileRef = F4FDF637268EBBAD001B02D3 /* User+CoreDataProperties.swift */; };
@@ -34,8 +37,6 @@
 		F4FDF698268EFF9A001B02D3 /* NSObject+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4FDF697268EFF9A001B02D3 /* NSObject+Extension.swift */; };
 		F4FDF6A9268F066E001B02D3 /* AuthenticationRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4FDF6A8268F066E001B02D3 /* AuthenticationRepository.swift */; };
 		F4FDF6AE268F06AE001B02D3 /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4FDF6AD268F06AE001B02D3 /* Account.swift */; };
-		F4FDF6C6268F0EBD001B02D3 /* AccountCoreData+CoreDataClass.swift in Resources */ = {isa = PBXBuildFile; fileRef = F4FDF6B3268F0A38001B02D3 /* AccountCoreData+CoreDataClass.swift */; };
-		F4FDF6C7268F0EBD001B02D3 /* AccountCoreData+CoreDataProperties.swift in Resources */ = {isa = PBXBuildFile; fileRef = F4FDF6B4268F0A38001B02D3 /* AccountCoreData+CoreDataProperties.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,6 +65,10 @@
 		903968BBE03725A7106E4558 /* Pods-Capstone_nqhuy9.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Capstone_nqhuy9.release.xcconfig"; path = "Target Support Files/Pods-Capstone_nqhuy9/Pods-Capstone_nqhuy9.release.xcconfig"; sourceTree = "<group>"; };
 		ADC657B9F9BBBDE0B85CBCC7 /* Pods-Capstone_nqhuy9Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Capstone_nqhuy9Tests.release.xcconfig"; path = "Target Support Files/Pods-Capstone_nqhuy9Tests/Pods-Capstone_nqhuy9Tests.release.xcconfig"; sourceTree = "<group>"; };
 		D124386781458B5795EAF503 /* Pods_Capstone_nqhuy9.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Capstone_nqhuy9.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F4CE760F2694303800330A77 /* BaseCoreData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCoreData.swift; sourceTree = "<group>"; };
+		F4FDA8242696974A0039E9B4 /* AccountCoreData+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AccountCoreData+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
+		F4FDA8252696974A0039E9B4 /* AccountCoreData+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AccountCoreData+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
+		F4FDA82B2696D9C70039E9B4 /* AuthenticationViewModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationViewModels.swift; sourceTree = "<group>"; };
 		F4FDF54E268EA6B4001B02D3 /* Capstone_nqhuy9.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Capstone_nqhuy9.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4FDF551268EA6B4001B02D3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F4FDF553268EA6B4001B02D3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -80,7 +85,6 @@
 		F4FDF576268EA6B7001B02D3 /* Capstone_nqhuy9UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Capstone_nqhuy9UITests.swift; sourceTree = "<group>"; };
 		F4FDF578268EA6B7001B02D3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F4FDF60C268EB624001B02D3 /* Convertable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Convertable.swift; sourceTree = "<group>"; };
-		F4FDF611268EB643001B02D3 /* Repository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
 		F4FDF636268EBBAD001B02D3 /* User+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+CoreDataClass.swift"; sourceTree = "<group>"; };
 		F4FDF637268EBBAD001B02D3 /* User+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		F4FDF640268EBFA9001B02D3 /* Candidate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Candidate.swift; sourceTree = "<group>"; };
@@ -94,8 +98,6 @@
 		F4FDF697268EFF9A001B02D3 /* NSObject+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSObject+Extension.swift"; sourceTree = "<group>"; };
 		F4FDF6A8268F066E001B02D3 /* AuthenticationRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationRepository.swift; sourceTree = "<group>"; };
 		F4FDF6AD268F06AE001B02D3 /* Account.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Account.swift; sourceTree = "<group>"; };
-		F4FDF6B3268F0A38001B02D3 /* AccountCoreData+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AccountCoreData+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
-		F4FDF6B4268F0A38001B02D3 /* AccountCoreData+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AccountCoreData+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
 		FA1FD1223A468E05C3D3EC07 /* Pods_Capstone_nqhuy9_Capstone_nqhuy9UITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Capstone_nqhuy9_Capstone_nqhuy9UITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -175,6 +177,7 @@
 		F4FDF550268EA6B4001B02D3 /* Capstone_nqhuy9 */ = {
 			isa = PBXGroup;
 			children = (
+				F4FDF562268EA6B7001B02D3 /* Info.plist */,
 				F4FDF59D268EAB5B001B02D3 /* Resource */,
 				F4FDF59B268EAB40001B02D3 /* Ultis */,
 				F4FDF59A268EAB22001B02D3 /* Application */,
@@ -182,9 +185,6 @@
 				F4FDF598268EAB13001B02D3 /* Models */,
 				F4FDF597268EAB0D001B02D3 /* Views */,
 				F4FDF596268EAB03001B02D3 /* Database */,
-				F4FDF55F268EA6B7001B02D3 /* LaunchScreen.storyboard */,
-				F4FDF562268EA6B7001B02D3 /* Info.plist */,
-				F4FDF55A268EA6B4001B02D3 /* Capstone_nqhuy9.xcdatamodeld */,
 			);
 			path = Capstone_nqhuy9;
 			sourceTree = "<group>";
@@ -210,10 +210,11 @@
 		F4FDF596268EAB03001B02D3 /* Database */ = {
 			isa = PBXGroup;
 			children = (
+				F4FDF55A268EA6B4001B02D3 /* Capstone_nqhuy9.xcdatamodeld */,
 				F4FDF62B268EBB19001B02D3 /* User_CoreData */,
 				F4FDF6B2268F09C7001B02D3 /* Account_CoreData */,
 				F4FDF60C268EB624001B02D3 /* Convertable.swift */,
-				F4FDF611268EB643001B02D3 /* Repository.swift */,
+				F4CE760F2694303800330A77 /* BaseCoreData.swift */,
 			);
 			path = Database;
 			sourceTree = "<group>";
@@ -221,6 +222,7 @@
 		F4FDF597268EAB0D001B02D3 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				F4FDF55F268EA6B7001B02D3 /* LaunchScreen.storyboard */,
 				F4FDF689268EFEE1001B02D3 /* BaseViewController */,
 				F4FDF66B268EF09B001B02D3 /* AuthenticationScreen */,
 				F4FDF555268EA6B4001B02D3 /* ChooseLevelViewController.swift */,
@@ -241,6 +243,7 @@
 		F4FDF599268EAB19001B02D3 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				F4FDA82B2696D9C70039E9B4 /* AuthenticationViewModels.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -336,8 +339,8 @@
 		F4FDF6B2268F09C7001B02D3 /* Account_CoreData */ = {
 			isa = PBXGroup;
 			children = (
-				F4FDF6B3268F0A38001B02D3 /* AccountCoreData+CoreDataClass.swift */,
-				F4FDF6B4268F0A38001B02D3 /* AccountCoreData+CoreDataProperties.swift */,
+				F4FDA8242696974A0039E9B4 /* AccountCoreData+CoreDataClass.swift */,
+				F4FDA8252696974A0039E9B4 /* AccountCoreData+CoreDataProperties.swift */,
 			);
 			path = Account_CoreData;
 			sourceTree = "<group>";
@@ -450,8 +453,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F4FDF6C6268F0EBD001B02D3 /* AccountCoreData+CoreDataClass.swift in Resources */,
-				F4FDF6C7268F0EBD001B02D3 /* AccountCoreData+CoreDataProperties.swift in Resources */,
 				F4FDF66D268EF0BD001B02D3 /* Authentication.storyboard in Resources */,
 				F4FDF65D268EC39E001B02D3 /* User+CoreDataClass.swift in Resources */,
 				F4FDF65E268EC39E001B02D3 /* User+CoreDataProperties.swift in Resources */,
@@ -591,15 +592,18 @@
 				F4FDF6A9268F066E001B02D3 /* AuthenticationRepository.swift in Sources */,
 				F4FDF60D268EB624001B02D3 /* Convertable.swift in Sources */,
 				F4FDF6AE268F06AE001B02D3 /* Account.swift in Sources */,
+				F4FDA8272696974A0039E9B4 /* AccountCoreData+CoreDataProperties.swift in Sources */,
 				F4FDF552268EA6B4001B02D3 /* AppDelegate.swift in Sources */,
+				F4FDA82C2696D9C70039E9B4 /* AuthenticationViewModels.swift in Sources */,
 				F4FDF680268EFA98001B02D3 /* Color.swift in Sources */,
+				F4CE76102694303800330A77 /* BaseCoreData.swift in Sources */,
 				F4FDF55C268EA6B4001B02D3 /* Capstone_nqhuy9.xcdatamodeld in Sources */,
+				F4FDA8262696974A0039E9B4 /* AccountCoreData+CoreDataClass.swift in Sources */,
 				F4FDF672268EF706001B02D3 /* SignInViewController.swift in Sources */,
 				F4FDF68B268EFEFA001B02D3 /* BaseVC.swift in Sources */,
 				F4FDF554268EA6B4001B02D3 /* SceneDelegate.swift in Sources */,
 				F4FDF678268EF89B001B02D3 /* ConstantString.swift in Sources */,
 				F4FDF641268EBFA9001B02D3 /* Candidate.swift in Sources */,
-				F4FDF612268EB643001B02D3 /* Repository.swift in Sources */,
 				F4FDF698268EFF9A001B02D3 /* NSObject+Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
