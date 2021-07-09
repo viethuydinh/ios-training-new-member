@@ -94,6 +94,10 @@ class SignUpViewController: BaseVC {
             self.confirmPasswordTF.becomeFirstResponder()
         }
     }
+    
+    deinit {
+        print("deinit")
+    }
 }
 
 //MARK: -Gesture

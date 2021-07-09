@@ -24,7 +24,6 @@ extension UserCoreData {
     @NSManaged public var id: Int16
     @NSManaged public var position: String?
     @NSManaged public var descript: String?
-
 }
 
 extension UserCoreData : Identifiable {

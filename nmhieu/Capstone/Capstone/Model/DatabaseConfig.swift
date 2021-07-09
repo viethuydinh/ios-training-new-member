@@ -162,6 +162,7 @@ struct CoreDataRepository<Domain: ObjectConvertible> {
         catch let error as NSError {
             NSLog(error.description)
         }
+        
     }
     
     func delete(predicate : NSPredicate) {
