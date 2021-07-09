@@ -103,12 +103,19 @@ struct CoreDataRepository<Domain: ObjectConvertible> {
             let results = try CoreDataConfiguration.shared.configure().fetch(fetch)
             results.forEach { (object) in
                 CoreDataConfiguration.shared.configure().delete(object)
-                CoreDataConfiguration.shared.saveContext()
             }
         }
         catch let error as NSError {
-            NSLog(error as! String)
+            NSLog(error.description)
         }
+        
+        do {
+            try CoreDataConfiguration.shared.configure().save()
+        }
+        catch let error as NSError {
+            NSLog(error.description)
+        }
+        
     }
     
 }

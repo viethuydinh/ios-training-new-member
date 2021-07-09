@@ -58,6 +58,10 @@ class SignUpViewController: BaseVC {
     @objc fileprivate func eventSignIn() {
         self.navigationController?.popViewController(animated: true)
     }
+    
+    deinit {
+        print("deinit")
+    }
 }
 
 //MARK: -Gesture
