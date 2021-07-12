@@ -5,6 +5,16 @@
         <attribute name="repassword" optional="YES" attributeType="String"/>
         <attribute name="username" optional="YES" attributeType="String"/>
     </entity>
+    <entity name="AnswerCoreData" representedClassName=".AnswerCoreData" syncable="YES">
+        <attribute name="accuracy" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="content" optional="YES" attributeType="String"/>
+        <attribute name="id" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+    </entity>
+    <entity name="QuestionCoreData" representedClassName=".QuestionCoreData" syncable="YES">
+        <attribute name="content" optional="YES" attributeType="String"/>
+        <attribute name="id" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="level" optional="YES" attributeType="String"/>
+    </entity>
     <entity name="User" representedClassName="User" syncable="YES" codeGenerationType="class">
         <attribute name="date_of_birth" optional="YES" attributeType="String"/>
         <attribute name="email" optional="YES" attributeType="String"/>
@@ -16,6 +26,8 @@
     </entity>
     <elements>
         <element name="AccountCoreData" positionX="309.1796875" positionY="-25.73828125" width="128" height="88"/>
+        <element name="AnswerCoreData" positionX="124.7265625" positionY="-148.08203125" width="128" height="88"/>
+        <element name="QuestionCoreData" positionX="126" positionY="-18" width="128" height="88"/>
         <element name="User" positionX="-63" positionY="-72" width="128" height="148"/>
     </elements>
 </model>
