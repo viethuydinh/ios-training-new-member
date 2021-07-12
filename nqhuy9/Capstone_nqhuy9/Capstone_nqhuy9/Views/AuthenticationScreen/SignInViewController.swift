@@ -38,7 +38,7 @@ class SignInViewController: BaseVC {
         textfield.textColor = UIColor.lightGray
     }
     
-    private func setupRegister(){
+    private func setupRegister() {
         let textSignUp = AccountString.SIGN_UP_TITLE
         let text = String(format: AccountString.DONT_HAVE_ACCOUNT_TITLE, textSignUp)
         let attributedString = NSMutableAttributedString(string: text, attributes: [
@@ -71,8 +71,8 @@ class SignInViewController: BaseVC {
             .map{ Account(username: $0, password: $1, repassword: nil) }
             .subscribe { (acc) in
                 if self.signInViewModel.signIn(account: Account(username: self.usernameTextField.text, password: self.passwordTextField.text, repassword: nil)) {
-                    let signUpVC = self.getViewControllerFromStorybroad(storybroadName: "Authentication", identifier: SignUpViewController.identifier)
-                    self.navigationController?.pushViewController(signUpVC, animated: true)
+                    guard let chooseLevelVC = self.getViewControllerFromStorybroad(storybroadName: "Main", identifier: ChooseLevelViewController.identifier) as? ChooseLevelViewController else { return }
+                    self.navigationController?.pushViewController(chooseLevelVC, animated: true)
                 } else {
                     print("Sign In Error")
                 }

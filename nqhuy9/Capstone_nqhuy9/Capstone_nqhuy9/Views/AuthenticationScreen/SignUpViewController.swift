@@ -34,12 +34,12 @@ class SignUpViewController: BaseVC {
         self.setupTextfield(textfield: self.repasswordTextField, text: AccountString.PLACEHOLDER_RE_PASSWORD)
     }
     
-    private func setupTextfield(textfield:UITextField,text:String){
+    private func setupTextfield(textfield:UITextField,text:String) {
         textfield.attributedPlaceholder = NSAttributedString(string: text, attributes:[NSAttributedString.Key.foregroundColor: UIColor.lightGray])
         textfield.textColor = UIColor.lightGray
     }
     
-    private func setupSignInLabel(){
+    private func setupSignInLabel() {
         let textSignUp = AccountString.SIGN_IN_TITLE
         let text = String(format: AccountString.HAVE_ACCOUNT_TITLE, textSignUp)
         let attributedString = NSMutableAttributedString(string: text, attributes: [

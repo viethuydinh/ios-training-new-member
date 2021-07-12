@@ -28,6 +28,4 @@ struct DefaultAuthenticationViewModel: AuthenticationViewModels {
     func signUp(account: Account) {
         repository.signUp(account: account)
     }
-    
-    
 }

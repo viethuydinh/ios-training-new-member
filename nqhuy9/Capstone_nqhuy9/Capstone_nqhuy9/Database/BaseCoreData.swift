@@ -28,7 +28,7 @@ class CoreDataConfiguration {
             return container
         }()
     
-    func saveContext () {
+    func saveContext() {
             let context = persistentContainer.viewContext
             if context.hasChanges {
                 do {
@@ -40,10 +40,10 @@ class CoreDataConfiguration {
             }
         }
     
-    func configure() -> NSManagedObjectContext {
+    func context() -> NSManagedObjectContext {
         guard let appDelegate =
             UIApplication.shared.delegate as? AppDelegate else {
-            return NSManagedObjectContext()
+            return .init(concurrencyType: .mainQueueConcurrencyType)
           }
           let managedContext =
             appDelegate.persistentContainer.viewContext
@@ -66,7 +66,7 @@ struct CoreDataRepository<Domain : ObjectConvert> {
         do {
             let fetchRequest = NSFetchRequest<Domain.Object>(entityName: String(describing: Domain.Object.self))
             fetchRequest.predicate = predicate
-            let result = try CoreDataConfiguration.shared.configure().fetch(fetchRequest)
+            let result = try CoreDataConfiguration.shared.context().fetch(fetchRequest)
             return result.map{ $0.asDomain as! Domain }
         } catch let error as NSError {
             NSLog(error.description)
@@ -79,15 +79,15 @@ struct CoreDataRepository<Domain : ObjectConvert> {
     }
     
     func save(domain : Domain) {
-        let entity = NSEntityDescription.entity(forEntityName: String(describing: Domain.Object.self), in: CoreDataConfiguration.shared.configure())!
-        var newObject = Domain.Object(entity: entity, insertInto: CoreDataConfiguration.shared.configure())
+        let entity = NSEntityDescription.entity(forEntityName: String(describing: Domain.Object.self), in: CoreDataConfiguration.shared.context())!
+        var newObject = Domain.Object(entity: entity, insertInto: CoreDataConfiguration.shared.context())
         if self.fetch(predicate: .init(format: "\(domain.key.keys.first!) = %@", argumentArray: [domain.key.values.first!])) == nil {
             newObject = domain.update(object: newObject)
         } else {
             let fetch: NSFetchRequest<Domain.Object> = NSFetchRequest<Domain.Object>(entityName: String(describing: Domain.Object.self))
             fetch.predicate = .init(format: "\(domain.key.keys.first!) = %@", argumentArray: [domain.key.values.first!])
             do {
-                let results = try CoreDataConfiguration.shared.configure().fetch(fetch)
+                let results = try CoreDataConfiguration.shared.context().fetch(fetch)
                 results.forEach { (object) in
                     newObject = domain.update(object: object)
                 }
@@ -96,10 +96,14 @@ struct CoreDataRepository<Domain : ObjectConvert> {
             }
         }
         do {
-            try CoreDataConfiguration.shared.configure().save()
+            try CoreDataConfiguration.shared.context().save()
         } catch {
             print("Save Fail")
         }
+    }
+    
+    func saveAll(domains: [Domain]) {
+        domains.forEach(self.save(domain:))
     }
     
     func deleteAll(predicate: NSPredicate? = nil) {
@@ -115,5 +119,4 @@ struct CoreDataRepository<Domain : ObjectConvert> {
         print("Delete Fail")
         }
     }
-    
 }

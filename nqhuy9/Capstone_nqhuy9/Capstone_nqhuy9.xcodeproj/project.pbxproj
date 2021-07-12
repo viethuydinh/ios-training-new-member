@@ -10,10 +10,21 @@
 		281701568C76321EF7CB1708 /* Pods_Capstone_nqhuy9_Capstone_nqhuy9UITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA1FD1223A468E05C3D3EC07 /* Pods_Capstone_nqhuy9_Capstone_nqhuy9UITests.framework */; };
 		6E95F0CD1CA11F833E530BE2 /* Pods_Capstone_nqhuy9Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 358FEDF518254B81DC782BC8 /* Pods_Capstone_nqhuy9Tests.framework */; };
 		C009E5016078B88792495181 /* Pods_Capstone_nqhuy9.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D124386781458B5795EAF503 /* Pods_Capstone_nqhuy9.framework */; };
+		F433BC54269BF5B5002F5146 /* KnowledgeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F433BC53269BF5B5002F5146 /* KnowledgeViewModel.swift */; };
+		F433BC59269C1C53002F5146 /* Knowledge.swift in Sources */ = {isa = PBXBuildFile; fileRef = F433BC58269C1C53002F5146 /* Knowledge.swift */; };
+		F4428141269BE78800DB531B /* AnswerCoreData+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = F442813F269BE78800DB531B /* AnswerCoreData+CoreDataClass.swift */; };
+		F4428142269BE78800DB531B /* AnswerCoreData+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4428140269BE78800DB531B /* AnswerCoreData+CoreDataProperties.swift */; };
+		F4428148269BE7A900DB531B /* QuestionCoreData+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4428146269BE7A900DB531B /* QuestionCoreData+CoreDataClass.swift */; };
+		F4428149269BE7A900DB531B /* QuestionCoreData+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4428147269BE7A900DB531B /* QuestionCoreData+CoreDataProperties.swift */; };
+		F4428150269BEA8800DB531B /* InsertQuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F442814F269BEA8800DB531B /* InsertQuestionViewController.swift */; };
+		F4428159269BECE400DB531B /* DropDownList.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4428158269BECE400DB531B /* DropDownList.swift */; };
+		F442815E269BEFF100DB531B /* KnowledgeRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = F442815D269BEFF100DB531B /* KnowledgeRepository.swift */; };
 		F4CE76102694303800330A77 /* BaseCoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4CE760F2694303800330A77 /* BaseCoreData.swift */; };
 		F4FDA8262696974A0039E9B4 /* AccountCoreData+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4FDA8242696974A0039E9B4 /* AccountCoreData+CoreDataClass.swift */; };
 		F4FDA8272696974A0039E9B4 /* AccountCoreData+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4FDA8252696974A0039E9B4 /* AccountCoreData+CoreDataProperties.swift */; };
 		F4FDA82C2696D9C70039E9B4 /* AuthenticationViewModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4FDA82B2696D9C70039E9B4 /* AuthenticationViewModels.swift */; };
+		F4FDA834269702CC0039E9B4 /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4FDA833269702CC0039E9B4 /* Question.swift */; };
+		F4FDA839269702F50039E9B4 /* Answer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4FDA838269702F50039E9B4 /* Answer.swift */; };
 		F4FDF552268EA6B4001B02D3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4FDF551268EA6B4001B02D3 /* AppDelegate.swift */; };
 		F4FDF554268EA6B4001B02D3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4FDF553268EA6B4001B02D3 /* SceneDelegate.swift */; };
 		F4FDF556268EA6B4001B02D3 /* ChooseLevelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4FDF555268EA6B4001B02D3 /* ChooseLevelViewController.swift */; };
@@ -65,10 +76,21 @@
 		903968BBE03725A7106E4558 /* Pods-Capstone_nqhuy9.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Capstone_nqhuy9.release.xcconfig"; path = "Target Support Files/Pods-Capstone_nqhuy9/Pods-Capstone_nqhuy9.release.xcconfig"; sourceTree = "<group>"; };
 		ADC657B9F9BBBDE0B85CBCC7 /* Pods-Capstone_nqhuy9Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Capstone_nqhuy9Tests.release.xcconfig"; path = "Target Support Files/Pods-Capstone_nqhuy9Tests/Pods-Capstone_nqhuy9Tests.release.xcconfig"; sourceTree = "<group>"; };
 		D124386781458B5795EAF503 /* Pods_Capstone_nqhuy9.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Capstone_nqhuy9.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F433BC53269BF5B5002F5146 /* KnowledgeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KnowledgeViewModel.swift; sourceTree = "<group>"; };
+		F433BC58269C1C53002F5146 /* Knowledge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Knowledge.swift; sourceTree = "<group>"; };
+		F442813F269BE78800DB531B /* AnswerCoreData+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AnswerCoreData+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
+		F4428140269BE78800DB531B /* AnswerCoreData+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AnswerCoreData+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
+		F4428146269BE7A900DB531B /* QuestionCoreData+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "QuestionCoreData+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
+		F4428147269BE7A900DB531B /* QuestionCoreData+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "QuestionCoreData+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
+		F442814F269BEA8800DB531B /* InsertQuestionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsertQuestionViewController.swift; sourceTree = "<group>"; };
+		F4428158269BECE400DB531B /* DropDownList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropDownList.swift; sourceTree = "<group>"; };
+		F442815D269BEFF100DB531B /* KnowledgeRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KnowledgeRepository.swift; sourceTree = "<group>"; };
 		F4CE760F2694303800330A77 /* BaseCoreData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCoreData.swift; sourceTree = "<group>"; };
 		F4FDA8242696974A0039E9B4 /* AccountCoreData+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AccountCoreData+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
 		F4FDA8252696974A0039E9B4 /* AccountCoreData+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AccountCoreData+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
 		F4FDA82B2696D9C70039E9B4 /* AuthenticationViewModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationViewModels.swift; sourceTree = "<group>"; };
+		F4FDA833269702CC0039E9B4 /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
+		F4FDA838269702F50039E9B4 /* Answer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Answer.swift; sourceTree = "<group>"; };
 		F4FDF54E268EA6B4001B02D3 /* Capstone_nqhuy9.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Capstone_nqhuy9.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4FDF551268EA6B4001B02D3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F4FDF553268EA6B4001B02D3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -152,6 +174,48 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		F442814D269BEA4300DB531B /* ChooseLevelScreen */ = {
+			isa = PBXGroup;
+			children = (
+				F4FDF555268EA6B4001B02D3 /* ChooseLevelViewController.swift */,
+			);
+			path = ChooseLevelScreen;
+			sourceTree = "<group>";
+		};
+		F442814E269BEA5F00DB531B /* InsertQuestionScreen */ = {
+			isa = PBXGroup;
+			children = (
+				F442814F269BEA8800DB531B /* InsertQuestionViewController.swift */,
+			);
+			path = InsertQuestionScreen;
+			sourceTree = "<group>";
+		};
+		F4428157269BECCF00DB531B /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				F4428158269BECE400DB531B /* DropDownList.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		F4FDA83D269703860039E9B4 /* Question_CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				F4428146269BE7A900DB531B /* QuestionCoreData+CoreDataClass.swift */,
+				F4428147269BE7A900DB531B /* QuestionCoreData+CoreDataProperties.swift */,
+			);
+			path = Question_CoreData;
+			sourceTree = "<group>";
+		};
+		F4FDA848269704DE0039E9B4 /* Answer_CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				F442813F269BE78800DB531B /* AnswerCoreData+CoreDataClass.swift */,
+				F4428140269BE78800DB531B /* AnswerCoreData+CoreDataProperties.swift */,
+			);
+			path = Answer_CoreData;
+			sourceTree = "<group>";
+		};
 		F4FDF545268EA6B4001B02D3 = {
 			isa = PBXGroup;
 			children = (
@@ -210,6 +274,8 @@
 		F4FDF596268EAB03001B02D3 /* Database */ = {
 			isa = PBXGroup;
 			children = (
+				F4FDA848269704DE0039E9B4 /* Answer_CoreData */,
+				F4FDA83D269703860039E9B4 /* Question_CoreData */,
 				F4FDF55A268EA6B4001B02D3 /* Capstone_nqhuy9.xcdatamodeld */,
 				F4FDF62B268EBB19001B02D3 /* User_CoreData */,
 				F4FDF6B2268F09C7001B02D3 /* Account_CoreData */,
@@ -222,10 +288,11 @@
 		F4FDF597268EAB0D001B02D3 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				F442814E269BEA5F00DB531B /* InsertQuestionScreen */,
+				F442814D269BEA4300DB531B /* ChooseLevelScreen */,
 				F4FDF55F268EA6B7001B02D3 /* LaunchScreen.storyboard */,
 				F4FDF689268EFEE1001B02D3 /* BaseViewController */,
 				F4FDF66B268EF09B001B02D3 /* AuthenticationScreen */,
-				F4FDF555268EA6B4001B02D3 /* ChooseLevelViewController.swift */,
 				F4FDF557268EA6B4001B02D3 /* Main.storyboard */,
 			);
 			path = Views;
@@ -244,6 +311,7 @@
 			isa = PBXGroup;
 			children = (
 				F4FDA82B2696D9C70039E9B4 /* AuthenticationViewModels.swift */,
+				F433BC53269BF5B5002F5146 /* KnowledgeViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -260,6 +328,7 @@
 		F4FDF59B268EAB40001B02D3 /* Ultis */ = {
 			isa = PBXGroup;
 			children = (
+				F4428157269BECCF00DB531B /* Common */,
 				F4FDF676268EF864001B02D3 /* Constant */,
 				F4FDF59C268EAB4A001B02D3 /* Extension */,
 			);
@@ -324,6 +393,9 @@
 			children = (
 				F4FDF640268EBFA9001B02D3 /* Candidate.swift */,
 				F4FDF6AD268F06AE001B02D3 /* Account.swift */,
+				F4FDA833269702CC0039E9B4 /* Question.swift */,
+				F4FDA838269702F50039E9B4 /* Answer.swift */,
+				F433BC58269C1C53002F5146 /* Knowledge.swift */,
 			);
 			path = Domain;
 			sourceTree = "<group>";
@@ -332,6 +404,7 @@
 			isa = PBXGroup;
 			children = (
 				F4FDF6A8268F066E001B02D3 /* AuthenticationRepository.swift */,
+				F442815D269BEFF100DB531B /* KnowledgeRepository.swift */,
 			);
 			path = Repository;
 			sourceTree = "<group>";
@@ -589,19 +662,30 @@
 				F4FDF685268EFC94001B02D3 /* SignUpViewController.swift in Sources */,
 				F4FDF693268EFF6C001B02D3 /* UIViewController+Extension.swift in Sources */,
 				F4FDF556268EA6B4001B02D3 /* ChooseLevelViewController.swift in Sources */,
+				F4FDA839269702F50039E9B4 /* Answer.swift in Sources */,
 				F4FDF6A9268F066E001B02D3 /* AuthenticationRepository.swift in Sources */,
 				F4FDF60D268EB624001B02D3 /* Convertable.swift in Sources */,
+				F4428149269BE7A900DB531B /* QuestionCoreData+CoreDataProperties.swift in Sources */,
+				F4428148269BE7A900DB531B /* QuestionCoreData+CoreDataClass.swift in Sources */,
+				F4FDA834269702CC0039E9B4 /* Question.swift in Sources */,
 				F4FDF6AE268F06AE001B02D3 /* Account.swift in Sources */,
 				F4FDA8272696974A0039E9B4 /* AccountCoreData+CoreDataProperties.swift in Sources */,
 				F4FDF552268EA6B4001B02D3 /* AppDelegate.swift in Sources */,
+				F433BC54269BF5B5002F5146 /* KnowledgeViewModel.swift in Sources */,
+				F4428141269BE78800DB531B /* AnswerCoreData+CoreDataClass.swift in Sources */,
 				F4FDA82C2696D9C70039E9B4 /* AuthenticationViewModels.swift in Sources */,
 				F4FDF680268EFA98001B02D3 /* Color.swift in Sources */,
 				F4CE76102694303800330A77 /* BaseCoreData.swift in Sources */,
 				F4FDF55C268EA6B4001B02D3 /* Capstone_nqhuy9.xcdatamodeld in Sources */,
+				F4428150269BEA8800DB531B /* InsertQuestionViewController.swift in Sources */,
 				F4FDA8262696974A0039E9B4 /* AccountCoreData+CoreDataClass.swift in Sources */,
+				F4428142269BE78800DB531B /* AnswerCoreData+CoreDataProperties.swift in Sources */,
 				F4FDF672268EF706001B02D3 /* SignInViewController.swift in Sources */,
 				F4FDF68B268EFEFA001B02D3 /* BaseVC.swift in Sources */,
 				F4FDF554268EA6B4001B02D3 /* SceneDelegate.swift in Sources */,
+				F433BC59269C1C53002F5146 /* Knowledge.swift in Sources */,
+				F4428159269BECE400DB531B /* DropDownList.swift in Sources */,
+				F442815E269BEFF100DB531B /* KnowledgeRepository.swift in Sources */,
 				F4FDF678268EF89B001B02D3 /* ConstantString.swift in Sources */,
 				F4FDF641268EBFA9001B02D3 /* Candidate.swift in Sources */,
 				F4FDF698268EFF9A001B02D3 /* NSObject+Extension.swift in Sources */,
