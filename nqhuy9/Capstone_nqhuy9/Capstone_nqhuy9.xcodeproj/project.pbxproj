@@ -17,7 +17,6 @@
 		F4428148269BE7A900DB531B /* QuestionCoreData+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4428146269BE7A900DB531B /* QuestionCoreData+CoreDataClass.swift */; };
 		F4428149269BE7A900DB531B /* QuestionCoreData+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4428147269BE7A900DB531B /* QuestionCoreData+CoreDataProperties.swift */; };
 		F4428150269BEA8800DB531B /* InsertQuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F442814F269BEA8800DB531B /* InsertQuestionViewController.swift */; };
-		F4428159269BECE400DB531B /* DropDownList.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4428158269BECE400DB531B /* DropDownList.swift */; };
 		F442815E269BEFF100DB531B /* KnowledgeRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = F442815D269BEFF100DB531B /* KnowledgeRepository.swift */; };
 		F4CE76102694303800330A77 /* BaseCoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4CE760F2694303800330A77 /* BaseCoreData.swift */; };
 		F4FDA8262696974A0039E9B4 /* AccountCoreData+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4FDA8242696974A0039E9B4 /* AccountCoreData+CoreDataClass.swift */; };
@@ -83,7 +82,6 @@
 		F4428146269BE7A900DB531B /* QuestionCoreData+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "QuestionCoreData+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
 		F4428147269BE7A900DB531B /* QuestionCoreData+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "QuestionCoreData+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
 		F442814F269BEA8800DB531B /* InsertQuestionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsertQuestionViewController.swift; sourceTree = "<group>"; };
-		F4428158269BECE400DB531B /* DropDownList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropDownList.swift; sourceTree = "<group>"; };
 		F442815D269BEFF100DB531B /* KnowledgeRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KnowledgeRepository.swift; sourceTree = "<group>"; };
 		F4CE760F2694303800330A77 /* BaseCoreData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCoreData.swift; sourceTree = "<group>"; };
 		F4FDA8242696974A0039E9B4 /* AccountCoreData+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AccountCoreData+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
@@ -188,14 +186,6 @@
 				F442814F269BEA8800DB531B /* InsertQuestionViewController.swift */,
 			);
 			path = InsertQuestionScreen;
-			sourceTree = "<group>";
-		};
-		F4428157269BECCF00DB531B /* Common */ = {
-			isa = PBXGroup;
-			children = (
-				F4428158269BECE400DB531B /* DropDownList.swift */,
-			);
-			path = Common;
 			sourceTree = "<group>";
 		};
 		F4FDA83D269703860039E9B4 /* Question_CoreData */ = {
@@ -328,7 +318,6 @@
 		F4FDF59B268EAB40001B02D3 /* Ultis */ = {
 			isa = PBXGroup;
 			children = (
-				F4428157269BECCF00DB531B /* Common */,
 				F4FDF676268EF864001B02D3 /* Constant */,
 				F4FDF59C268EAB4A001B02D3 /* Extension */,
 			);
@@ -684,7 +673,6 @@
 				F4FDF68B268EFEFA001B02D3 /* BaseVC.swift in Sources */,
 				F4FDF554268EA6B4001B02D3 /* SceneDelegate.swift in Sources */,
 				F433BC59269C1C53002F5146 /* Knowledge.swift in Sources */,
-				F4428159269BECE400DB531B /* DropDownList.swift in Sources */,
 				F442815E269BEFF100DB531B /* KnowledgeRepository.swift in Sources */,
 				F4FDF678268EF89B001B02D3 /* ConstantString.swift in Sources */,
 				F4FDF641268EBFA9001B02D3 /* Candidate.swift in Sources */,
