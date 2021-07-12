@@ -23,6 +23,20 @@
 		15179ECB26958640008D3A46 /* Capstone.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 15179EC926958640008D3A46 /* Capstone.xcdatamodeld */; };
 		15179EE92695B949008D3A46 /* AccountCoreData+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15179EE72695B949008D3A46 /* AccountCoreData+CoreDataClass.swift */; };
 		15179EEA2695B949008D3A46 /* AccountCoreData+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15179EE82695B949008D3A46 /* AccountCoreData+CoreDataProperties.swift */; };
+		154A6366269BF253008E571C /* QuestionCoreData+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 154A6364269BF253008E571C /* QuestionCoreData+CoreDataClass.swift */; };
+		154A6367269BF253008E571C /* QuestionCoreData+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 154A6365269BF253008E571C /* QuestionCoreData+CoreDataProperties.swift */; };
+		154A637F269BF2D3008E571C /* AnswerCoreData+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 154A637D269BF2D3008E571C /* AnswerCoreData+CoreDataClass.swift */; };
+		154A6380269BF2D3008E571C /* AnswerCoreData+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 154A637E269BF2D3008E571C /* AnswerCoreData+CoreDataProperties.swift */; };
+		154A6388269BF30B008E571C /* AnswerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 154A6387269BF30B008E571C /* AnswerModel.swift */; };
+		154A638D269BF498008E571C /* QuestionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 154A638C269BF498008E571C /* QuestionModel.swift */; };
+		154A6396269BF9E0008E571C /* KnowledgeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 154A6395269BF9E0008E571C /* KnowledgeViewModel.swift */; };
+		154A639B269BFA2C008E571C /* KnowledgeRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 154A639A269BFA2C008E571C /* KnowledgeRepository.swift */; };
+		154A63A4269BFB2F008E571C /* InsertKnowledge.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 154A63A3269BFB2F008E571C /* InsertKnowledge.storyboard */; };
+		154A63A9269BFB58008E571C /* InsertKnowledgeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 154A63A8269BFB58008E571C /* InsertKnowledgeViewController.swift */; };
+		154A63B0269C1E08008E571C /* KnowledgeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 154A63AE269C1E08008E571C /* KnowledgeTableViewCell.swift */; };
+		154A63B1269C1E08008E571C /* KnowledgeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 154A63AF269C1E08008E571C /* KnowledgeTableViewCell.xib */; };
+		154A63B6269C2384008E571C /* UITableViewCell+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 154A63B5269C2384008E571C /* UITableViewCell+Extension.swift */; };
+		154A63BE269C3BD5008E571C /* KnowledgeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 154A63BD269C3BD5008E571C /* KnowledgeModel.swift */; };
 		155F2FF826943573007EFBAC /* UserCoreData+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 155F2FF626943573007EFBAC /* UserCoreData+CoreDataClass.swift */; };
 		155F2FF926943573007EFBAC /* UserCoreData+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 155F2FF726943573007EFBAC /* UserCoreData+CoreDataProperties.swift */; };
 		157F971D268EF131009BBF14 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 157F971C268EF131009BBF14 /* SignInViewController.swift */; };
@@ -79,10 +93,24 @@
 		15179EB9269557B2008D3A46 /* DatabaseConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseConfig.swift; sourceTree = "<group>"; };
 		15179EBE26958532008D3A46 /* AccountModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountModel.swift; sourceTree = "<group>"; };
 		15179ECA26958640008D3A46 /* Capstone.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Capstone.xcdatamodel; sourceTree = "<group>"; };
-		15179EE72695B949008D3A46 /* AccountCoreData+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AccountCoreData+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
-		15179EE82695B949008D3A46 /* AccountCoreData+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AccountCoreData+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
-		155F2FF626943573007EFBAC /* UserCoreData+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "UserCoreData+CoreDataClass.swift"; path = "Capstone/Model/Database/UserCoreData+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
-		155F2FF726943573007EFBAC /* UserCoreData+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "UserCoreData+CoreDataProperties.swift"; path = "Capstone/Model/Database/UserCoreData+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
+		15179EE72695B949008D3A46 /* AccountCoreData+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "AccountCoreData+CoreDataClass.swift"; path = "Capstone/Model/Database/Account/AccountCoreData+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
+		15179EE82695B949008D3A46 /* AccountCoreData+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "AccountCoreData+CoreDataProperties.swift"; path = "Capstone/Model/Database/Account/AccountCoreData+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
+		154A6364269BF253008E571C /* QuestionCoreData+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "QuestionCoreData+CoreDataClass.swift"; path = "Capstone/Model/Database/Question/QuestionCoreData+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
+		154A6365269BF253008E571C /* QuestionCoreData+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "QuestionCoreData+CoreDataProperties.swift"; path = "Capstone/Model/Database/Question/QuestionCoreData+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
+		154A637D269BF2D3008E571C /* AnswerCoreData+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "AnswerCoreData+CoreDataClass.swift"; path = "Capstone/Model/Database/Answer/AnswerCoreData+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
+		154A637E269BF2D3008E571C /* AnswerCoreData+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "AnswerCoreData+CoreDataProperties.swift"; path = "Capstone/Model/Database/Answer/AnswerCoreData+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
+		154A6387269BF30B008E571C /* AnswerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswerModel.swift; sourceTree = "<group>"; };
+		154A638C269BF498008E571C /* QuestionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionModel.swift; sourceTree = "<group>"; };
+		154A6395269BF9E0008E571C /* KnowledgeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KnowledgeViewModel.swift; sourceTree = "<group>"; };
+		154A639A269BFA2C008E571C /* KnowledgeRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KnowledgeRepository.swift; sourceTree = "<group>"; };
+		154A63A3269BFB2F008E571C /* InsertKnowledge.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = InsertKnowledge.storyboard; sourceTree = "<group>"; };
+		154A63A8269BFB58008E571C /* InsertKnowledgeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsertKnowledgeViewController.swift; sourceTree = "<group>"; };
+		154A63AE269C1E08008E571C /* KnowledgeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KnowledgeTableViewCell.swift; sourceTree = "<group>"; };
+		154A63AF269C1E08008E571C /* KnowledgeTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = KnowledgeTableViewCell.xib; sourceTree = "<group>"; };
+		154A63B5269C2384008E571C /* UITableViewCell+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableViewCell+Extension.swift"; sourceTree = "<group>"; };
+		154A63BD269C3BD5008E571C /* KnowledgeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KnowledgeModel.swift; sourceTree = "<group>"; };
+		155F2FF626943573007EFBAC /* UserCoreData+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "UserCoreData+CoreDataClass.swift"; path = "Capstone/Model/Database/User/UserCoreData+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
+		155F2FF726943573007EFBAC /* UserCoreData+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "UserCoreData+CoreDataProperties.swift"; path = "Capstone/Model/Database/User/UserCoreData+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
 		157F971C268EF131009BBF14 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		157F9721268EF141009BBF14 /* SignIn.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SignIn.storyboard; sourceTree = "<group>"; };
 		157F972C268EFAB2009BBF14 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
@@ -200,8 +228,66 @@
 			children = (
 				1507B20C268F13CE001945A8 /* UserModel.swift */,
 				15179EBE26958532008D3A46 /* AccountModel.swift */,
+				154A6387269BF30B008E571C /* AnswerModel.swift */,
+				154A638C269BF498008E571C /* QuestionModel.swift */,
+				154A63BD269C3BD5008E571C /* KnowledgeModel.swift */,
 			);
 			path = DAO;
+			sourceTree = "<group>";
+		};
+		154A6391269BF739008E571C /* Answer */ = {
+			isa = PBXGroup;
+			children = (
+				154A637D269BF2D3008E571C /* AnswerCoreData+CoreDataClass.swift */,
+				154A637E269BF2D3008E571C /* AnswerCoreData+CoreDataProperties.swift */,
+			);
+			path = Answer;
+			sourceTree = "<group>";
+		};
+		154A6392269BF746008E571C /* Question */ = {
+			isa = PBXGroup;
+			children = (
+				154A6364269BF253008E571C /* QuestionCoreData+CoreDataClass.swift */,
+				154A6365269BF253008E571C /* QuestionCoreData+CoreDataProperties.swift */,
+			);
+			path = Question;
+			sourceTree = "<group>";
+		};
+		154A6393269BF75A008E571C /* Account */ = {
+			isa = PBXGroup;
+			children = (
+				15179EE72695B949008D3A46 /* AccountCoreData+CoreDataClass.swift */,
+				15179EE82695B949008D3A46 /* AccountCoreData+CoreDataProperties.swift */,
+			);
+			path = Account;
+			sourceTree = "<group>";
+		};
+		154A6394269BF76E008E571C /* User */ = {
+			isa = PBXGroup;
+			children = (
+				155F2FF626943573007EFBAC /* UserCoreData+CoreDataClass.swift */,
+				155F2FF726943573007EFBAC /* UserCoreData+CoreDataProperties.swift */,
+			);
+			path = User;
+			sourceTree = "<group>";
+		};
+		154A639F269BFAB3008E571C /* InsertKnowledge */ = {
+			isa = PBXGroup;
+			children = (
+				154A63AD269C1D8D008E571C /* Cell */,
+				154A63A3269BFB2F008E571C /* InsertKnowledge.storyboard */,
+				154A63A8269BFB58008E571C /* InsertKnowledgeViewController.swift */,
+			);
+			path = InsertKnowledge;
+			sourceTree = "<group>";
+		};
+		154A63AD269C1D8D008E571C /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				154A63AE269C1E08008E571C /* KnowledgeTableViewCell.swift */,
+				154A63AF269C1E08008E571C /* KnowledgeTableViewCell.xib */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 		157F96E8268EBB08009BBF14 /* Model */ = {
@@ -227,6 +313,7 @@
 			isa = PBXGroup;
 			children = (
 				1507B211268F1412001945A8 /* BaseViewController */,
+				154A639F269BFAB3008E571C /* InsertKnowledge */,
 				1585AFE42696EE5D0073F89E /* Authentication */,
 				1585AFD52696E9670073F89E /* Home */,
 			);
@@ -237,6 +324,7 @@
 			isa = PBXGroup;
 			children = (
 				1585AFBA2696B1700073F89E /* AuthenticationViewModel.swift */,
+				154A6395269BF9E0008E571C /* KnowledgeViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -244,11 +332,11 @@
 		157F96EC268EBB30009BBF14 /* Database */ = {
 			isa = PBXGroup;
 			children = (
-				15179EE72695B949008D3A46 /* AccountCoreData+CoreDataClass.swift */,
-				15179EE82695B949008D3A46 /* AccountCoreData+CoreDataProperties.swift */,
+				154A6394269BF76E008E571C /* User */,
+				154A6393269BF75A008E571C /* Account */,
+				154A6392269BF746008E571C /* Question */,
+				154A6391269BF739008E571C /* Answer */,
 				15179EC926958640008D3A46 /* Capstone.xcdatamodeld */,
-				155F2FF626943573007EFBAC /* UserCoreData+CoreDataClass.swift */,
-				155F2FF726943573007EFBAC /* UserCoreData+CoreDataProperties.swift */,
 			);
 			path = Database;
 			sourceTree = "<group>";
@@ -261,6 +349,7 @@
 				157F973B268EFED5009BBF14 /* AccoutString.swift */,
 				1507B217268F14D6001945A8 /* UIViewController+Extension.swift */,
 				1507B21C268F1519001945A8 /* NSObject+Extension.swift */,
+				154A63B5269C2384008E571C /* UITableViewCell+Extension.swift */,
 			);
 			path = Resource;
 			sourceTree = "<group>";
@@ -303,6 +392,7 @@
 			isa = PBXGroup;
 			children = (
 				1585AFD02696DA750073F89E /* AuthenticationRepository.swift */,
+				154A639A269BFA2C008E571C /* KnowledgeRepository.swift */,
 			);
 			path = Repository;
 			sourceTree = "<group>";
@@ -458,9 +548,11 @@
 			files = (
 				15095E7E268DC8B400129B9C /* LaunchScreen.storyboard in Resources */,
 				1585AFDF2696EAA90073F89E /* Home.storyboard in Resources */,
+				154A63A4269BFB2F008E571C /* InsertKnowledge.storyboard in Resources */,
 				157F9732268EFAC0009BBF14 /* SignUp.storyboard in Resources */,
 				15095E7B268DC8B400129B9C /* Assets.xcassets in Resources */,
 				157F9722268EF141009BBF14 /* SignIn.storyboard in Resources */,
+				154A63B1269C1E08008E571C /* KnowledgeTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -589,25 +681,37 @@
 			buildActionMask = 2147483647;
 			files = (
 				1507B218268F14D6001945A8 /* UIViewController+Extension.swift in Sources */,
+				154A6388269BF30B008E571C /* AnswerModel.swift in Sources */,
+				154A63A9269BFB58008E571C /* InsertKnowledgeViewController.swift in Sources */,
+				154A63B6269C2384008E571C /* UITableViewCell+Extension.swift in Sources */,
 				157F971D268EF131009BBF14 /* SignInViewController.swift in Sources */,
+				154A63BE269C3BD5008E571C /* KnowledgeModel.swift in Sources */,
 				1585AFBB2696B1700073F89E /* AuthenticationViewModel.swift in Sources */,
 				1507B213268F1435001945A8 /* BaseVCViewController.swift in Sources */,
+				154A637F269BF2D3008E571C /* AnswerCoreData+CoreDataClass.swift in Sources */,
 				15179EB52695565F008D3A46 /* Convertible.swift in Sources */,
 				1585AFD72696EA9E0073F89E /* HomeViewController.swift in Sources */,
+				154A6367269BF253008E571C /* QuestionCoreData+CoreDataProperties.swift in Sources */,
+				154A6366269BF253008E571C /* QuestionCoreData+CoreDataClass.swift in Sources */,
+				154A6380269BF2D3008E571C /* AnswerCoreData+CoreDataProperties.swift in Sources */,
 				157F972D268EFAB2009BBF14 /* SignUpViewController.swift in Sources */,
 				15095E6F268DC8B100129B9C /* AppDelegate.swift in Sources */,
 				155F2FF926943573007EFBAC /* UserCoreData+CoreDataProperties.swift in Sources */,
 				15179EBF26958532008D3A46 /* AccountModel.swift in Sources */,
+				154A639B269BFA2C008E571C /* KnowledgeRepository.swift in Sources */,
 				15179EEA2695B949008D3A46 /* AccountCoreData+CoreDataProperties.swift in Sources */,
 				1507B21D268F1519001945A8 /* NSObject+Extension.swift in Sources */,
 				15095E71268DC8B100129B9C /* SceneDelegate.swift in Sources */,
 				15179ECB26958640008D3A46 /* Capstone.xcdatamodeld in Sources */,
+				154A6396269BF9E0008E571C /* KnowledgeViewModel.swift in Sources */,
 				1585AFD12696DA750073F89E /* AuthenticationRepository.swift in Sources */,
 				157F9737268EFEA4009BBF14 /* Color.swift in Sources */,
 				1507B20D268F13CE001945A8 /* UserModel.swift in Sources */,
 				15179EBA269557B2008D3A46 /* DatabaseConfig.swift in Sources */,
 				155F2FF826943573007EFBAC /* UserCoreData+CoreDataClass.swift in Sources */,
+				154A638D269BF498008E571C /* QuestionModel.swift in Sources */,
 				157F973C268EFED5009BBF14 /* AccoutString.swift in Sources */,
+				154A63B0269C1E08008E571C /* KnowledgeTableViewCell.swift in Sources */,
 				15179EE92695B949008D3A46 /* AccountCoreData+CoreDataClass.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

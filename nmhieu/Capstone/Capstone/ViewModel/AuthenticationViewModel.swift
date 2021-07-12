@@ -15,7 +15,7 @@ protocol AuthenticationViewModel {
 
 struct DefaultAuthenticationViewModel : AuthenticationViewModel {
     
-    var coreDataConfig = DefaultAuthenticationRepository()
+    var authenticationRepo = DefaultAuthenticationRepository()
     
     func signIn(username: String, password: String) -> Bool {
         if username.isEmpty || password.isEmpty {
@@ -26,7 +26,7 @@ struct DefaultAuthenticationViewModel : AuthenticationViewModel {
             account.username = username
             account.password = password
             account.email = username
-            return self.coreDataConfig.signIn(account: account) ?? false
+            return self.authenticationRepo.signIn(account: account) ?? false
         }
     }
 
@@ -42,7 +42,11 @@ struct DefaultAuthenticationViewModel : AuthenticationViewModel {
             account.username = username
             account.password = password
             account.email = username
-            return self.coreDataConfig.signUp(account: account) ?? false
+            return self.authenticationRepo.signUp(account: account) ?? false
         }
+    }
+    
+    func saveSecretAccout(username : String, password : String) {
+        
     }
 }

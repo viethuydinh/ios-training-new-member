@@ -14,7 +14,7 @@ class SignUpViewController: BaseVC {
     @IBOutlet weak var userNameTF: UITextField!
     @IBOutlet weak var paswordTF: UITextField!
     @IBOutlet weak var confirmPasswordTF: UITextField!
-    @IBOutlet weak var signUpBtn: UIButton!
+    @IBOutlet weak var signUpButton: UIButton!
     @IBOutlet weak var signInLabel: UILabel!
     
     var authenticationVM = DefaultAuthenticationViewModel()
@@ -22,14 +22,14 @@ class SignUpViewController: BaseVC {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.setUpUI()
+        self.event()
         self.setUpGesture()
     }
     
     //MARK: -UI
     fileprivate func setUpUI() {
-        self.signUpBtn.layer.cornerRadius = 10
+        self.signUpButton.layer.cornerRadius = 10
         self.setUpRegister()
-        
     }
     
     fileprivate func setUpRegister() {
@@ -48,6 +48,12 @@ class SignUpViewController: BaseVC {
     }
     
     //MARK: -Event
+    fileprivate func event() {
+        let notificationCenter = NotificationCenter.default
+        notificationCenter.addObserver(self, selector: #selector(self.keyboardWillShow(notification:)), name: UIResponder.keyboardWillShowNotification, object: nil)
+        notificationCenter.addObserver(self, selector: #selector(self.keyboardWillHide(notification:)), name: UIResponder.keyboardWillHideNotification, object: nil)
+    }
+    
     @IBAction func eventSignUp(_ sender: Any) {
         let a = self.authenticationVM.signUp(username: self.userNameTF.text ?? "",
                                               password: self.paswordTF.text ?? "",
@@ -59,9 +65,6 @@ class SignUpViewController: BaseVC {
         self.navigationController?.popViewController(animated: true)
     }
     
-    deinit {
-        print("deinit")
-    }
 }
 
 //MARK: -Gesture

@@ -7,7 +7,7 @@
 
 import UIKit
 
-class HomeViewController: UIViewController {
+class HomeViewController: BaseVC {
 
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var internButton: UIButton!
@@ -22,12 +22,17 @@ class HomeViewController: UIViewController {
     
     //MARK: -UI
     fileprivate func setUpUI() {
-        
+        self.internButton.layer.cornerRadius = 10
+        self.fresherButton.layer.cornerRadius = 10
+        self.juniorButton.layer.cornerRadius = 10
+        self.seniorButton.layer.cornerRadius = 10
     }
     
     //MARK: -Event
     @IBAction func eventInternButton() {
-        
+        guard let vc = UIStoryboard(name: "InsertKnowledge", bundle: nil).instantiateViewController(withIdentifier: InsertKnowledgeViewController.identifier) as? InsertKnowledgeViewController else { return }
+        vc.level = LevelInterView.intern
+        self.navigationController?.pushViewController(vc, animated: true)
     }
     
     @IBAction func eventFresherButton() {
@@ -41,5 +46,4 @@ class HomeViewController: UIViewController {
     @IBAction func eventSeniorButton() {
         
     }
-
 }

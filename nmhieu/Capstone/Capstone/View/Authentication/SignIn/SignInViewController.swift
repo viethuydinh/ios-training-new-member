@@ -13,7 +13,7 @@ class SignInViewController: BaseVC {
 
     @IBOutlet weak var userNameTF: UITextField!
     @IBOutlet weak var passwordTF: UITextField!
-    @IBOutlet weak var signInBtn: UIButton!
+    @IBOutlet weak var signInButton: UIButton!
     @IBOutlet weak var signUpLabel: UILabel!
     
     var authenticationVM = DefaultAuthenticationViewModel()
@@ -21,12 +21,13 @@ class SignInViewController: BaseVC {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.setUpUI()
+        self.event()
         self.setUpGesture()
     }
     
     //MARK: -UI
     fileprivate func setUpUI() {
-        self.signInBtn.layer.cornerRadius = 10
+        self.signInButton.layer.cornerRadius = 10
         self.setUpRegister()
     }
     
@@ -46,15 +47,23 @@ class SignInViewController: BaseVC {
     }
 
     //MARK: -Event
-    @IBAction func signInEvent() {
-        let a = self.authenticationVM.signIn(username: self.userNameTF.text ?? "",
+    fileprivate func event() {
+        let notificationCenter = NotificationCenter.default
+        notificationCenter.addObserver(self, selector: #selector(self.keyboardWillShow(notification:)), name: UIResponder.keyboardWillShowNotification, object: nil)
+        notificationCenter.addObserver(self, selector: #selector(self.keyboardWillHide(notification:)), name: UIResponder.keyboardWillHideNotification, object: nil)
+    }
+    
+    @IBAction func eventSignIn() {
+        let stateAuth = self.authenticationVM.signIn(username: self.userNameTF.text ?? "",
                                               password: self.passwordTF.text ?? "")
-        print(a)
+        if stateAuth {
+            guard let vc = UIStoryboard(name: "Home", bundle: nil).instantiateViewController(withIdentifier: HomeViewController.identifier) as? HomeViewController else { return }
+            self.navigationController?.pushViewController(vc, animated: true)
+        }
     }
     
     @objc fileprivate func eventSignUp() {
-        let sb = UIStoryboard.init(name: "SignUp", bundle: nil)
-        guard let vc = sb.instantiateViewController(identifier: SignUpViewController.identifier) as? SignUpViewController else { return }
+        guard let vc = UIStoryboard(name: "SignUp", bundle: nil).instantiateViewController(identifier: SignUpViewController.identifier) as? SignUpViewController else { return }
         self.navigationController?.pushViewController(vc, animated: true)
     }
 }
@@ -72,4 +81,5 @@ extension SignInViewController {
         self.signUpLabel.addGestureRecognizer(tapGesture)
     }
 }
+
 

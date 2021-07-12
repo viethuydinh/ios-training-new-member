@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="QGX-kw-W8m">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="fjq-kb-L0U">
     <device id="retina5_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
@@ -88,7 +88,7 @@
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
                                                 <connections>
-                                                    <action selector="signInEvent" destination="QGX-kw-W8m" eventType="touchUpInside" id="2ka-bc-p4H"/>
+                                                    <action selector="eventSignIn" destination="QGX-kw-W8m" eventType="touchUpInside" id="2ka-bc-p4H"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -128,7 +128,7 @@
                     <navigationItem key="navigationItem" id="yjK-Nn-fed"/>
                     <connections>
                         <outlet property="passwordTF" destination="PgQ-vF-lqc" id="04x-Le-gJf"/>
-                        <outlet property="signInBtn" destination="h0J-7d-04u" id="N0w-zW-Qce"/>
+                        <outlet property="signInButton" destination="h0J-7d-04u" id="N0w-zW-Qce"/>
                         <outlet property="signUpLabel" destination="Spx-F1-97z" id="aAA-ds-KNm"/>
                         <outlet property="userNameTF" destination="DRa-Gi-lXA" id="oZS-8y-oXW"/>
                     </connections>

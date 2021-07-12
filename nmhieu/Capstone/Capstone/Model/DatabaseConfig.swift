@@ -10,6 +10,7 @@ import CoreData
 import UIKit
 
 class CoreDataConfiguration {
+    
     static let shared = CoreDataConfiguration()
     
     private init() { }
@@ -79,7 +80,12 @@ struct CoreDataRepository<Domain: ObjectConvertible> {
         var newContext = Domain.Object(entity: entityInsert, insertInto: managedContext)
         newContext = domain.update(obj: newContext)
         print("create new" )
-        CoreDataConfiguration.shared.saveContext()
+        do {
+            try managedContext.save()
+        }
+        catch let error as NSError {
+            
+        }
     }
     
     func fetch(predicate: NSPredicate) -> Domain? {
@@ -108,15 +114,13 @@ struct CoreDataRepository<Domain: ObjectConvertible> {
         catch let error as NSError {
             NSLog(error.description)
         }
-        
+    
         do {
             try CoreDataConfiguration.shared.configure().save()
         }
         catch let error as NSError {
             NSLog(error.description)
         }
-        
     }
-    
 }
  

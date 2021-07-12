@@ -51,10 +51,13 @@
                                         <state key="normal" title="Intern">
                                             <color key="titleColor" name="AccentColor"/>
                                         </state>
+                                        <connections>
+                                            <action selector="eventInternButton" destination="Zdv-Bi-InI" eventType="touchUpInside" id="Sjm-hl-7P9"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gmv-SO-gu0">
                                         <rect key="frame" x="0.0" y="66" width="225" height="56"/>
-                                        <color key="backgroundColor" name="lightMustard"/>
+                                        <color key="backgroundColor" name="darkCoral"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="56" id="ecw-Wa-oOd"/>
                                         </constraints>
@@ -62,10 +65,13 @@
                                         <state key="normal" title="Fresher">
                                             <color key="titleColor" name="AccentColor"/>
                                         </state>
+                                        <connections>
+                                            <action selector="eventFresherButton" destination="Zdv-Bi-InI" eventType="touchUpInside" id="jB1-B4-67o"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Ug-B8-3mM">
                                         <rect key="frame" x="0.0" y="132" width="225" height="56"/>
-                                        <color key="backgroundColor" name="lightMustard"/>
+                                        <color key="backgroundColor" systemColor="systemPurpleColor"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="56" id="LhB-6T-BIo"/>
                                         </constraints>
@@ -73,10 +79,13 @@
                                         <state key="normal" title="Junior">
                                             <color key="titleColor" name="AccentColor"/>
                                         </state>
+                                        <connections>
+                                            <action selector="eventJuniorButton" destination="Zdv-Bi-InI" eventType="touchUpInside" id="G4S-12-rL8"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mYU-sf-ExQ">
                                         <rect key="frame" x="0.0" y="198" width="225" height="56"/>
-                                        <color key="backgroundColor" name="lightMustard"/>
+                                        <color key="backgroundColor" systemColor="systemOrangeColor"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="56" id="yz4-Ig-e2G"/>
                                         </constraints>
@@ -84,6 +93,9 @@
                                         <state key="normal" title="Senior">
                                             <color key="titleColor" name="AccentColor"/>
                                         </state>
+                                        <connections>
+                                            <action selector="eventSeniorButton" destination="Zdv-Bi-InI" eventType="touchUpInside" id="XSU-Qq-xFW"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -117,11 +129,20 @@
         <namedColor name="AccentColor">
             <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
+        <namedColor name="darkCoral">
+            <color red="0.86699998378753662" green="0.29800000786781311" blue="0.24300000071525574" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <namedColor name="lightMustard">
             <color red="0.97299998998641968" green="0.74900001287460327" blue="0.3880000114440918" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemOrangeColor">
+            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemPurpleColor">
+            <color red="0.68627450980392157" green="0.32156862745098042" blue="0.87058823529411766" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

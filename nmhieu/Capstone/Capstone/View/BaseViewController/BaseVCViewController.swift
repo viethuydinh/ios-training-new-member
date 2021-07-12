@@ -46,4 +46,18 @@ class BaseVC: UIViewController,UIGestureRecognizerDelegate {
         let storybroad = UIStoryboard(name: storybroadName, bundle: Bundle.main)
         return storybroad.instantiateViewController(withIdentifier: identifier)
     }
+    
+    @objc func keyboardWillShow(notification : Notification) {
+        if let keyboardSize = (notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue {
+            if view.frame.origin.y == 0 {
+                self.view.frame.origin.y -= keyboardSize.height/2
+            }
+        }
+    }
+    
+    @objc func keyboardWillHide(notification : Notification) {
+        if view.frame.origin.y != 0 {
+            self.view.frame.origin.y = 0
+        }
+    }
 }
