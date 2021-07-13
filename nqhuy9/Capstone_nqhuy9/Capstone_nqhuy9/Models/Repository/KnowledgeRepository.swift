@@ -9,11 +9,9 @@ import Foundation
 
 protocol KnowledgeRepository {
     
-    func createQuestion(question: Question)
+    func createListQuestion(questions: [Question])
     
-    func createAnswer(answer: Answer)
-    
-    func createKnowledge(knowledge: Knowledge)
+    func fetchListQuestion() -> [Question]
     
 }
 
@@ -21,28 +19,24 @@ struct DefaultKnowledgeRepository: KnowledgeRepository {
     
     var questionDAO = CoreDataRepository<Question>.shared
     
-    var answerDAO = CoreDataRepository<Answer>.shared
-    
-    func createKnowledge(knowledge: Knowledge) {
-        let result = questionDAO.fetchAll(predicate: nil)
-        let nextId: Int16 = Int16(result.count + 1)
-        guard var question = knowledge.question else { return }
-        question.id = nextId
-        let answers = knowledge.answers.map{ Answer(id: nextId, content: $0.content, accuracy: $0.accuracy) }
-        questionDAO.save(domain: question)
-        answerDAO.saveAll(domains: answers)
+    func createListQuestion(questions: [Question]) {
+        if questions.count > 0 {
+            let result = questionDAO.fetchAll(predicate: nil)
+            var id : Int16 = Int16(result.count)
+            
+            var transformQuestions: [Question] = []
+            for i in 1...questions.count {
+                var q = questions[i-1]
+                id += 1
+                q.id = id
+                transformQuestions.append(q)
+            }
+            questionDAO.saveAll(domains: transformQuestions)
+        }
     }
     
-    func createAnswer(answer: Answer) {
-        let result = questionDAO.fetchAll(predicate: nil)
-        let nextId: Int16 = Int16(result.count + 1)
-        answerDAO.save(domain: Answer(id: nextId, content: answer.content, accuracy: answer.accuracy))
-    }
-    
-    func createQuestion(question: Question) {
-        let result = questionDAO.fetchAll(predicate: nil)
-        let nextId: Int16 = Int16(result.count + 1)
-        questionDAO.save(domain: Question(id: nextId, content: question.content, level: question.level))
+    func fetchListQuestion() -> [Question] {
+        return questionDAO.fetchAll(predicate: nil)
     }
     
 }

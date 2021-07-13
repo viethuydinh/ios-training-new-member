@@ -8,29 +8,27 @@
 import Foundation
 
 protocol KnowledgeViewModel {
-    func createQuestion(question: Question)
+    var listQuestions: [Question] { get set }
     
-    func createAnswer(answer: Answer)
+    func createListQuestion(questions: [Question])
     
-    func createKnowledge(knowledge: Knowledge)
+    func fetchListQuestion() -> [Question]
 }
 
 struct DefaultKnowledgeViewModel : KnowledgeViewModel {
     var repository : DefaultKnowledgeRepository
     
+    var listQuestions: [Question] = []
+    
     init() {
         self.repository = DefaultKnowledgeRepository()
     }
     
-    func createAnswer(answer: Answer) {
-        self.repository.createAnswer(answer: answer)
+    func createListQuestion(questions: [Question]) {
+        self.repository.createListQuestion(questions: questions)
     }
     
-    func createQuestion(question: Question) {
-        self.repository.createQuestion(question: question)
-    }
-    
-    func createKnowledge(knowledge: Knowledge) {
-        self.repository.createKnowledge(knowledge: knowledge)
+    func fetchListQuestion() -> [Question] {
+        self.repository.fetchListQuestion()
     }
 }
