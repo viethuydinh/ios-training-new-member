@@ -18,7 +18,7 @@ extension Question : ObjectConvert {
     typealias Object = QuestionCoreData
     
     var key: [String : String] {
-        return ["content" : self.content ?? ""]
+        return ["id" : String(self.id ?? -1)]
     }
     
     func update(object: QuestionCoreData?) -> QuestionCoreData {
