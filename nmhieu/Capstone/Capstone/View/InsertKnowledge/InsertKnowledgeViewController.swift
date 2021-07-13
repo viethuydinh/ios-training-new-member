@@ -32,12 +32,12 @@ class InsertKnowledgeViewController: BaseVC {
     }
     
     //MARK: -Event
-    fileprivate func event() {
-        
+    @IBAction func eventBack() {
+        self.navigationController?.popViewController(animated: true)
     }
     
     @IBAction func eventDone() {
-        self.knowledgeVM.saveKnowledge()
+        self.knowledgeVM.saveKnowledge(tableView: self.knowledgeTableView)
         self.navigationController?.popViewController(animated: true)
     }
     
@@ -50,6 +50,7 @@ class InsertKnowledgeViewController: BaseVC {
     fileprivate func bindingData() {
         self.knowledgeVM.level = self.level ?? .intern
     }
+    
 }
 
 extension InsertKnowledgeViewController : UITableViewDataSource {
@@ -61,10 +62,6 @@ extension InsertKnowledgeViewController : UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: KnowledgeTableViewCell.identifier, for: indexPath) as? KnowledgeTableViewCell else {
             return UITableViewCell()
-        }
-        if cell.detectViewEndediting() {
-            
-            self.knowledgeVM.knowledge?.append(cell.knowledge ?? nil)
         }
         
         return cell

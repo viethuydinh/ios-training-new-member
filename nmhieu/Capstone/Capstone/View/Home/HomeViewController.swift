@@ -36,7 +36,7 @@ class HomeViewController: BaseVC {
     }
     
     @IBAction func eventFresherButton() {
-        
+    
     }
     
     @IBAction func eventJuniorButton() {

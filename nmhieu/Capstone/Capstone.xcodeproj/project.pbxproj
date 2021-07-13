@@ -25,9 +25,6 @@
 		15179EEA2695B949008D3A46 /* AccountCoreData+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15179EE82695B949008D3A46 /* AccountCoreData+CoreDataProperties.swift */; };
 		154A6366269BF253008E571C /* QuestionCoreData+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 154A6364269BF253008E571C /* QuestionCoreData+CoreDataClass.swift */; };
 		154A6367269BF253008E571C /* QuestionCoreData+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 154A6365269BF253008E571C /* QuestionCoreData+CoreDataProperties.swift */; };
-		154A637F269BF2D3008E571C /* AnswerCoreData+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 154A637D269BF2D3008E571C /* AnswerCoreData+CoreDataClass.swift */; };
-		154A6380269BF2D3008E571C /* AnswerCoreData+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 154A637E269BF2D3008E571C /* AnswerCoreData+CoreDataProperties.swift */; };
-		154A6388269BF30B008E571C /* AnswerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 154A6387269BF30B008E571C /* AnswerModel.swift */; };
 		154A638D269BF498008E571C /* QuestionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 154A638C269BF498008E571C /* QuestionModel.swift */; };
 		154A6396269BF9E0008E571C /* KnowledgeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 154A6395269BF9E0008E571C /* KnowledgeViewModel.swift */; };
 		154A639B269BFA2C008E571C /* KnowledgeRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 154A639A269BFA2C008E571C /* KnowledgeRepository.swift */; };
@@ -36,7 +33,6 @@
 		154A63B0269C1E08008E571C /* KnowledgeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 154A63AE269C1E08008E571C /* KnowledgeTableViewCell.swift */; };
 		154A63B1269C1E08008E571C /* KnowledgeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 154A63AF269C1E08008E571C /* KnowledgeTableViewCell.xib */; };
 		154A63B6269C2384008E571C /* UITableViewCell+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 154A63B5269C2384008E571C /* UITableViewCell+Extension.swift */; };
-		154A63BE269C3BD5008E571C /* KnowledgeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 154A63BD269C3BD5008E571C /* KnowledgeModel.swift */; };
 		155F2FF826943573007EFBAC /* UserCoreData+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 155F2FF626943573007EFBAC /* UserCoreData+CoreDataClass.swift */; };
 		155F2FF926943573007EFBAC /* UserCoreData+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 155F2FF726943573007EFBAC /* UserCoreData+CoreDataProperties.swift */; };
 		157F971D268EF131009BBF14 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 157F971C268EF131009BBF14 /* SignInViewController.swift */; };
@@ -97,9 +93,6 @@
 		15179EE82695B949008D3A46 /* AccountCoreData+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "AccountCoreData+CoreDataProperties.swift"; path = "Capstone/Model/Database/Account/AccountCoreData+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
 		154A6364269BF253008E571C /* QuestionCoreData+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "QuestionCoreData+CoreDataClass.swift"; path = "Capstone/Model/Database/Question/QuestionCoreData+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
 		154A6365269BF253008E571C /* QuestionCoreData+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "QuestionCoreData+CoreDataProperties.swift"; path = "Capstone/Model/Database/Question/QuestionCoreData+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
-		154A637D269BF2D3008E571C /* AnswerCoreData+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "AnswerCoreData+CoreDataClass.swift"; path = "Capstone/Model/Database/Answer/AnswerCoreData+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
-		154A637E269BF2D3008E571C /* AnswerCoreData+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "AnswerCoreData+CoreDataProperties.swift"; path = "Capstone/Model/Database/Answer/AnswerCoreData+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
-		154A6387269BF30B008E571C /* AnswerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswerModel.swift; sourceTree = "<group>"; };
 		154A638C269BF498008E571C /* QuestionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionModel.swift; sourceTree = "<group>"; };
 		154A6395269BF9E0008E571C /* KnowledgeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KnowledgeViewModel.swift; sourceTree = "<group>"; };
 		154A639A269BFA2C008E571C /* KnowledgeRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KnowledgeRepository.swift; sourceTree = "<group>"; };
@@ -108,7 +101,6 @@
 		154A63AE269C1E08008E571C /* KnowledgeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KnowledgeTableViewCell.swift; sourceTree = "<group>"; };
 		154A63AF269C1E08008E571C /* KnowledgeTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = KnowledgeTableViewCell.xib; sourceTree = "<group>"; };
 		154A63B5269C2384008E571C /* UITableViewCell+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableViewCell+Extension.swift"; sourceTree = "<group>"; };
-		154A63BD269C3BD5008E571C /* KnowledgeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KnowledgeModel.swift; sourceTree = "<group>"; };
 		155F2FF626943573007EFBAC /* UserCoreData+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "UserCoreData+CoreDataClass.swift"; path = "Capstone/Model/Database/User/UserCoreData+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
 		155F2FF726943573007EFBAC /* UserCoreData+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "UserCoreData+CoreDataProperties.swift"; path = "Capstone/Model/Database/User/UserCoreData+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
 		157F971C268EF131009BBF14 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
@@ -228,20 +220,9 @@
 			children = (
 				1507B20C268F13CE001945A8 /* UserModel.swift */,
 				15179EBE26958532008D3A46 /* AccountModel.swift */,
-				154A6387269BF30B008E571C /* AnswerModel.swift */,
 				154A638C269BF498008E571C /* QuestionModel.swift */,
-				154A63BD269C3BD5008E571C /* KnowledgeModel.swift */,
 			);
 			path = DAO;
-			sourceTree = "<group>";
-		};
-		154A6391269BF739008E571C /* Answer */ = {
-			isa = PBXGroup;
-			children = (
-				154A637D269BF2D3008E571C /* AnswerCoreData+CoreDataClass.swift */,
-				154A637E269BF2D3008E571C /* AnswerCoreData+CoreDataProperties.swift */,
-			);
-			path = Answer;
 			sourceTree = "<group>";
 		};
 		154A6392269BF746008E571C /* Question */ = {
@@ -335,7 +316,6 @@
 				154A6394269BF76E008E571C /* User */,
 				154A6393269BF75A008E571C /* Account */,
 				154A6392269BF746008E571C /* Question */,
-				154A6391269BF739008E571C /* Answer */,
 				15179EC926958640008D3A46 /* Capstone.xcdatamodeld */,
 			);
 			path = Database;
@@ -681,19 +661,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				1507B218268F14D6001945A8 /* UIViewController+Extension.swift in Sources */,
-				154A6388269BF30B008E571C /* AnswerModel.swift in Sources */,
 				154A63A9269BFB58008E571C /* InsertKnowledgeViewController.swift in Sources */,
 				154A63B6269C2384008E571C /* UITableViewCell+Extension.swift in Sources */,
 				157F971D268EF131009BBF14 /* SignInViewController.swift in Sources */,
-				154A63BE269C3BD5008E571C /* KnowledgeModel.swift in Sources */,
 				1585AFBB2696B1700073F89E /* AuthenticationViewModel.swift in Sources */,
 				1507B213268F1435001945A8 /* BaseVCViewController.swift in Sources */,
-				154A637F269BF2D3008E571C /* AnswerCoreData+CoreDataClass.swift in Sources */,
 				15179EB52695565F008D3A46 /* Convertible.swift in Sources */,
 				1585AFD72696EA9E0073F89E /* HomeViewController.swift in Sources */,
 				154A6367269BF253008E571C /* QuestionCoreData+CoreDataProperties.swift in Sources */,
 				154A6366269BF253008E571C /* QuestionCoreData+CoreDataClass.swift in Sources */,
-				154A6380269BF2D3008E571C /* AnswerCoreData+CoreDataProperties.swift in Sources */,
 				157F972D268EFAB2009BBF14 /* SignUpViewController.swift in Sources */,
 				15095E6F268DC8B100129B9C /* AppDelegate.swift in Sources */,
 				155F2FF926943573007EFBAC /* UserCoreData+CoreDataProperties.swift in Sources */,

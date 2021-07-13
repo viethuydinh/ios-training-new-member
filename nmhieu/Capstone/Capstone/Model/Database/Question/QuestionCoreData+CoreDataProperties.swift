@@ -19,7 +19,6 @@ extension QuestionCoreData {
     @NSManaged public var id: Int16
     @NSManaged public var content: String?
     @NSManaged public var level: Int16
-    @NSManaged public var newRelationship: AnswerCoreData?
 
 }
 

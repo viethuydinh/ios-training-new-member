@@ -6,17 +6,10 @@
         <attribute name="username" optional="YES" attributeType="String"/>
         <relationship name="newRelationship" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="UserCoreData" inverseName="newRelationship" inverseEntity="UserCoreData"/>
     </entity>
-    <entity name="AnswerCoreData" representedClassName=".AnswerCoreData" syncable="YES">
-        <attribute name="accuracy" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
-        <attribute name="content" optional="YES" attributeType="String"/>
-        <attribute name="id" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
-        <relationship name="newRelationship" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="QuestionCoreData" inverseName="newRelationship" inverseEntity="QuestionCoreData"/>
-    </entity>
     <entity name="QuestionCoreData" representedClassName=".QuestionCoreData" syncable="YES">
         <attribute name="content" optional="YES" attributeType="String"/>
         <attribute name="id" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="level" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
-        <relationship name="newRelationship" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="AnswerCoreData" inverseName="newRelationship" inverseEntity="AnswerCoreData"/>
     </entity>
     <entity name="UserCoreData" representedClassName=".UserCoreData" syncable="YES">
         <attribute name="dateOfBirth" optional="YES" attributeType="String"/>
@@ -31,8 +24,7 @@
     </entity>
     <elements>
         <element name="AccountCoreData" positionX="195.784423828125" positionY="-13.95783996582031" width="128" height="103"/>
+        <element name="QuestionCoreData" positionX="212.4491577148438" positionY="181.2802429199219" width="128" height="74"/>
         <element name="UserCoreData" positionX="-195.1996459960938" positionY="-88.77899169921875" width="126.4737548828125" height="178"/>
-        <element name="QuestionCoreData" positionX="212.4491577148438" positionY="181.2802429199219" width="128" height="103"/>
-        <element name="AnswerCoreData" positionX="-59.41033935546875" positionY="180.8115844726562" width="128" height="103"/>
     </elements>
 </model>

@@ -6,38 +6,48 @@
 //
 
 import Foundation
+import UIKit
 
 protocol KnowledgeViewModel {
-    
-    var knowledge : [KnowledgeModel]? { get set }
     
     var numberOfRow : Int { get set }
     
     var level : LevelInterView { get set }
     
-    func saveKnowledge()
+    func saveKnowledge(tableView : UITableView)
+    
+    func getQuestions(tableView : UITableView) -> [QuestionModel]
 }
 
 struct DefaultKnowledgeViewModel : KnowledgeViewModel {
-
+    
     var knowledgeRepo = DefaulKnowledgeRepository()
     
     var level: LevelInterView = .intern
     
-    var knowledge: [KnowledgeModel]? = []
-
     var numberOfRow: Int = 0
     
-    func saveKnowledge() {
-        guard let knowledegeData = self.knowledge else {
-            return
-        }
-        
-        knowledegeData.forEach { (data) in
-            guard let questionData = data.question else { return }
-            guard let answerData = data.answer else { return }
-            self.knowledgeRepo.insertKnowledge(question: questionData, answer: answerData)
+    func saveKnowledge(tableView : UITableView) {
+        let questions = self.getQuestions(tableView: tableView)
+        questions.forEach { (question) in
+            let result = knowledgeRepo.insertKnowledge(question: question)
+            print(result)
         }
     }
     
+    func getQuestions(tableView : UITableView) -> [QuestionModel] {
+        var questions : [QuestionModel] = []
+        for row in 0...self.numberOfRow {
+            let indexPath = IndexPath(row: row, section: 0)
+            
+            guard let cell = tableView.cellForRow(at: indexPath) as? KnowledgeTableViewCell else {
+                return questions
+            }
+            
+            guard let question = cell.getData() else { return questions }
+            questions.append(question)
+        }
+        
+        return questions
+    }
 }
