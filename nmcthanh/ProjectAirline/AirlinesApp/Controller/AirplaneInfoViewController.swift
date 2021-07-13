@@ -64,7 +64,7 @@ class AirplaneInfoViewController: UIViewController {
 }
 
 extension AirplaneInfoViewController: UITableViewDelegate, UITableViewDataSource {
-    
+
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 50
     }
@@ -89,15 +89,12 @@ extension AirplaneInfoViewController: UITableViewDelegate, UITableViewDataSource
     }
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-
         let myLabel = UILabel()
         myLabel.frame = CGRect(x: 20, y: 8, width: 320, height: 20)
         myLabel.font = UIFont.boldSystemFont(ofSize: 20)
         myLabel.text = self.tableView(tableView, titleForHeaderInSection: section)
-
         let headerView = UIView()
         headerView.addSubview(myLabel)
-
         return headerView
     }
 }

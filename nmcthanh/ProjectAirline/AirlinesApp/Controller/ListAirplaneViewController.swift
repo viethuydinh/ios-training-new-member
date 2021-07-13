@@ -20,28 +20,34 @@ class ListAirplaneController: UIViewController {
     
     func setupUI() {
         tableView.register(UINib(nibName: "AirplaneCell", bundle: nil), forCellReuseIdentifier: "AirplaneCell")
+        tableView.dataSource = self
+        tableView.delegate = self
         let logo = UIImage(named: "NavTitle")
         let imageView = UIImageView(image: logo)
         self.navigationItem.titleView = imageView
     }
 }
     
-extension ListAirplaneController: UITableViewDelegate, UITableViewDataSource {
+extension ListAirplaneController:  UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return list.count
     }
     
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        let height: CGFloat = 120
-        return height
-    }
-    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "AirplaneCell", for: indexPath) as? AirplaneCell else { return UITableViewCell() }
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "AirplaneCell", for: indexPath) as? AirplaneCell else {
+            return UITableViewCell()
+        }
         cell.configureCell(list: list, indexPath: indexPath)
         cell.configureContainerView()
         return cell
+    }
+}
+
+extension ListAirplaneController : UITableViewDelegate {
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        let height: CGFloat = 120
+        return height
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -50,7 +56,5 @@ extension ListAirplaneController: UITableViewDelegate, UITableViewDataSource {
         vc.configureView(list: list, indexPath: indexPath)
         self.navigationController?.pushViewController(vc, animated: true)
     }
-    
-
 }
 
