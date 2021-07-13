@@ -24,7 +24,7 @@ protocol KnowledgeViewModel : BaseViewModel {
 }
 
 struct DefaultKnowledgeViewModel : KnowledgeViewModel {
-
+    
     var knowledgeRepo = DefaulKnowledgeRepository()
     
     var level: LevelInterView = .intern

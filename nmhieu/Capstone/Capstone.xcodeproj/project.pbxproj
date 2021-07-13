@@ -18,15 +18,12 @@
 		15095E89268DC8B500129B9C /* CapstoneTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15095E88268DC8B500129B9C /* CapstoneTests.swift */; };
 		15095E94268DC8B500129B9C /* CapstoneUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15095E93268DC8B500129B9C /* CapstoneUITests.swift */; };
 		15179EB52695565F008D3A46 /* Convertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15179EB42695565F008D3A46 /* Convertible.swift */; };
-<<<<<<< HEAD
 		15179EBA269557B2008D3A46 /* DatabaseConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15179EB9269557B2008D3A46 /* DatabaseConfig.swift */; };
-=======
-		15179EBA269557B2008D3A46 /* BaseCoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15179EB9269557B2008D3A46 /* BaseCoreData.swift */; };
->>>>>>> 6807593 (config coredata)
 		15179EBF26958532008D3A46 /* AccountModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15179EBE26958532008D3A46 /* AccountModel.swift */; };
 		15179ECB26958640008D3A46 /* Capstone.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 15179EC926958640008D3A46 /* Capstone.xcdatamodeld */; };
 		15179EE92695B949008D3A46 /* AccountCoreData+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15179EE72695B949008D3A46 /* AccountCoreData+CoreDataClass.swift */; };
 		15179EEA2695B949008D3A46 /* AccountCoreData+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15179EE82695B949008D3A46 /* AccountCoreData+CoreDataProperties.swift */; };
+<<<<<<< HEAD
 <<<<<<< HEAD
 		151F2AF526A1246500C63F2C /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 151F2AF426A1246500C63F2C /* Date+Extension.swift */; };
 		151F2AF726A1291100C63F2C /* AuthenticationError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 151F2AF626A1291100C63F2C /* AuthenticationError.swift */; };
@@ -48,6 +45,11 @@
 		154A6366269BF253008E571C /* KnowledgeCoreData+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 154A6364269BF253008E571C /* KnowledgeCoreData+CoreDataClass.swift */; };
 		154A6367269BF253008E571C /* KnowledgeCoreData+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 154A6365269BF253008E571C /* KnowledgeCoreData+CoreDataProperties.swift */; };
 		154A638D269BF498008E571C /* KnowledgeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 154A638C269BF498008E571C /* KnowledgeModel.swift */; };
+=======
+		154A6366269BF253008E571C /* QuestionCoreData+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 154A6364269BF253008E571C /* QuestionCoreData+CoreDataClass.swift */; };
+		154A6367269BF253008E571C /* QuestionCoreData+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 154A6365269BF253008E571C /* QuestionCoreData+CoreDataProperties.swift */; };
+		154A638D269BF498008E571C /* QuestionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 154A638C269BF498008E571C /* QuestionModel.swift */; };
+>>>>>>> 88ef0f2 (refactor: refactor code in file InsertKnowledgeVC)
 		154A6396269BF9E0008E571C /* KnowledgeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 154A6395269BF9E0008E571C /* KnowledgeViewModel.swift */; };
 		154A639B269BFA2C008E571C /* KnowledgeRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 154A639A269BFA2C008E571C /* KnowledgeRepository.swift */; };
 		154A63A4269BFB2F008E571C /* InsertKnowledge.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 154A63A3269BFB2F008E571C /* InsertKnowledge.storyboard */; };
@@ -146,6 +148,7 @@
 		15179ECA26958640008D3A46 /* Capstone.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Capstone.xcdatamodel; sourceTree = "<group>"; };
 		15179EE72695B949008D3A46 /* AccountCoreData+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "AccountCoreData+CoreDataClass.swift"; path = "Capstone/Model/Database/Account/AccountCoreData+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
 		15179EE82695B949008D3A46 /* AccountCoreData+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "AccountCoreData+CoreDataProperties.swift"; path = "Capstone/Model/Database/Account/AccountCoreData+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
+<<<<<<< HEAD
 		151F2AF426A1246500C63F2C /* Date+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extension.swift"; sourceTree = "<group>"; };
 		151F2AF626A1291100C63F2C /* AuthenticationError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationError.swift; sourceTree = "<group>"; };
 		151F2AF826A1381700C63F2C /* CommonError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonError.swift; sourceTree = "<group>"; };
@@ -166,6 +169,11 @@
 		154A6364269BF253008E571C /* KnowledgeCoreData+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "KnowledgeCoreData+CoreDataClass.swift"; path = "Capstone/Model/Database/Question/KnowledgeCoreData+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
 		154A6365269BF253008E571C /* KnowledgeCoreData+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "KnowledgeCoreData+CoreDataProperties.swift"; path = "Capstone/Model/Database/Question/KnowledgeCoreData+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
 		154A638C269BF498008E571C /* KnowledgeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KnowledgeModel.swift; sourceTree = "<group>"; };
+=======
+		154A6364269BF253008E571C /* QuestionCoreData+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "QuestionCoreData+CoreDataClass.swift"; path = "Capstone/Model/Database/Question/QuestionCoreData+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
+		154A6365269BF253008E571C /* QuestionCoreData+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "QuestionCoreData+CoreDataProperties.swift"; path = "Capstone/Model/Database/Question/QuestionCoreData+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
+		154A638C269BF498008E571C /* QuestionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionModel.swift; sourceTree = "<group>"; };
+>>>>>>> 88ef0f2 (refactor: refactor code in file InsertKnowledgeVC)
 		154A6395269BF9E0008E571C /* KnowledgeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KnowledgeViewModel.swift; sourceTree = "<group>"; };
 		154A639A269BFA2C008E571C /* KnowledgeRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KnowledgeRepository.swift; sourceTree = "<group>"; };
 		154A63A3269BFB2F008E571C /* InsertKnowledge.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = InsertKnowledge.storyboard; sourceTree = "<group>"; };
@@ -336,10 +344,15 @@
 			children = (
 				1507B20C268F13CE001945A8 /* UserModel.swift */,
 				15179EBE26958532008D3A46 /* AccountModel.swift */,
+<<<<<<< HEAD
+=======
+				154A638C269BF498008E571C /* QuestionModel.swift */,
+>>>>>>> 88ef0f2 (refactor: refactor code in file InsertKnowledgeVC)
 			);
 			path = DAO;
 			sourceTree = "<group>";
 		};
+<<<<<<< HEAD
 		157F96E8268EBB08009BBF14 /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -390,6 +403,8 @@
 			path = Alert;
 			sourceTree = "<group>";
 		};
+=======
+>>>>>>> 88ef0f2 (refactor: refactor code in file InsertKnowledgeVC)
 		154A6392269BF746008E571C /* Question */ = {
 			isa = PBXGroup;
 			children = (
@@ -933,6 +948,7 @@
 			files = (
 				15A03881269EBF4D00D9D0FB /* QuestionTableViewCell.swift in Sources */,
 				1507B218268F14D6001945A8 /* UIViewController+Extension.swift in Sources */,
+<<<<<<< HEAD
 				1569490226A9D8F100EF8C3D /* BaseViewModel.swift in Sources */,
 				154A63A9269BFB58008E571C /* InsertKnowledgeViewController.swift in Sources */,
 				154A63B6269C2384008E571C /* UITableViewCell+Extension.swift in Sources */,
@@ -952,6 +968,17 @@
 				15A038BC269EF2C200D9D0FB /* InterviewRepository.swift in Sources */,
 				151F2AF926A1381700C63F2C /* CommonError.swift in Sources */,
 				1573548F26A024C900A5C59D /* OverviewModel.swift in Sources */,
+=======
+				154A63A9269BFB58008E571C /* InsertKnowledgeViewController.swift in Sources */,
+				154A63B6269C2384008E571C /* UITableViewCell+Extension.swift in Sources */,
+				157F971D268EF131009BBF14 /* SignInViewController.swift in Sources */,
+				1585AFBB2696B1700073F89E /* AuthenticationViewModel.swift in Sources */,
+				1507B213268F1435001945A8 /* BaseVCViewController.swift in Sources */,
+				15179EB52695565F008D3A46 /* Convertible.swift in Sources */,
+				1585AFD72696EA9E0073F89E /* HomeViewController.swift in Sources */,
+				154A6367269BF253008E571C /* QuestionCoreData+CoreDataProperties.swift in Sources */,
+				154A6366269BF253008E571C /* QuestionCoreData+CoreDataClass.swift in Sources */,
+>>>>>>> 88ef0f2 (refactor: refactor code in file InsertKnowledgeVC)
 				157F972D268EFAB2009BBF14 /* SignUpViewController.swift in Sources */,
 				15095E6F268DC8B100129B9C /* AppDelegate.swift in Sources */,
 				1526CA7F26A529FB0059619B /* OnboardingViewModel.swift in Sources */,

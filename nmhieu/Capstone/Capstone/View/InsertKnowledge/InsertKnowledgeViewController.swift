@@ -122,6 +122,7 @@ class InsertKnowledgeViewController: BaseVC {
     fileprivate func bindingData() {
         self.knowledgeVM.level = self.level ?? .intern
     }
+    
 }
 
 //MARK: -UITableViewDataSource
