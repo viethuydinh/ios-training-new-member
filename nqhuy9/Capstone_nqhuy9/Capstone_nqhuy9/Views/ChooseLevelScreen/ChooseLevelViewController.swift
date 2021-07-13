@@ -50,7 +50,7 @@ class ChooseLevelViewController: BaseVC {
             .rx
             .controlEvent(.touchUpInside)
             .subscribe { (_) in
-                guard let vc = self.getViewControllerFromStorybroad(storybroadName: "Main", identifier: InsertQuestionViewController.identifier) as? InsertQuestionViewController else { return }
+                guard let vc = self.getViewControllerFromStorybroad(storybroadName: "Main", identifier: InsertKnowledgeViewController.identifier) as? InsertKnowledgeViewController else { return }
                 vc.level = LevelKnowledge.fresher
                 self.navigationController?.pushViewController(vc, animated: true)
             } onError: { (_) in
@@ -67,7 +67,7 @@ class ChooseLevelViewController: BaseVC {
             .rx
             .controlEvent(.touchUpInside)
             .subscribe { (_) in
-                guard let vc = self.getViewControllerFromStorybroad(storybroadName: "Main", identifier: InsertQuestionViewController.identifier) as? InsertQuestionViewController else { return }
+                guard let vc = self.getViewControllerFromStorybroad(storybroadName: "Main", identifier: InsertKnowledgeViewController.identifier) as? InsertKnowledgeViewController else { return }
                 vc.level = LevelKnowledge.junior
                 self.navigationController?.pushViewController(vc, animated: true)
             } onError: { (_) in
@@ -84,7 +84,7 @@ class ChooseLevelViewController: BaseVC {
             .rx
             .controlEvent(.touchUpInside)
             .subscribe { (_) in
-                guard let vc = self.getViewControllerFromStorybroad(storybroadName: "Main", identifier: InsertQuestionViewController.identifier) as? InsertQuestionViewController else { return }
+                guard let vc = self.getViewControllerFromStorybroad(storybroadName: "Main", identifier: InsertKnowledgeViewController.identifier) as? InsertKnowledgeViewController else { return }
                 vc.level = LevelKnowledge.middle
                 self.navigationController?.pushViewController(vc, animated: true)
             } onError: { (_) in
@@ -101,7 +101,7 @@ class ChooseLevelViewController: BaseVC {
             .rx
             .controlEvent(.touchUpInside)
             .subscribe { (_) in
-                guard let vc = self.getViewControllerFromStorybroad(storybroadName: "Main", identifier: InsertQuestionViewController.identifier) as? InsertQuestionViewController else { return }
+                guard let vc = self.getViewControllerFromStorybroad(storybroadName: "Main", identifier: InsertKnowledgeViewController.identifier) as? InsertKnowledgeViewController else { return }
                 vc.level = LevelKnowledge.senior
                 self.navigationController?.pushViewController(vc, animated: true)
             } onError: { (_) in
