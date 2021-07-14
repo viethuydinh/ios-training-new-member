@@ -83,7 +83,7 @@ class SignUpViewController: BaseVC {
             .tapGesture()
             .when(.recognized)
             .subscribe { (_) in
-                let signInVC = self.getViewControllerFromStorybroad(storybroadName: "Authentication", identifier: SignInViewController.identifier)
+                guard let signInVC = self.getViewControllerFromStorybroad(storybroadName: "Authentication", identifier: SignInViewController.identifier) as? SignInViewController else { return }
                 self.navigationController?.pushViewController(signInVC, animated: true)
             } onError: { (_) in
                 
