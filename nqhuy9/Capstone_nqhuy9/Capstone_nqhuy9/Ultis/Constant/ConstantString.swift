@@ -26,3 +26,7 @@ class AccountString {
     static let SIGN_UP_TITLE = "Sign up"
     static let DONT_HAVE_ACCOUNT_TITLE = "Don't have an account? %@"
 }
+
+class NotificationKey {
+    static let SAVE_REVIEW_DONE_KEY = "SaveReviewDone"
+}
