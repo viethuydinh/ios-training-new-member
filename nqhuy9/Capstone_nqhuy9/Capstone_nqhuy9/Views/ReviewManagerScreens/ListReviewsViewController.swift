@@ -10,7 +10,6 @@ import RxSwift
 
 class ListReviewsViewController: BaseVC {
     
-    @IBOutlet weak var backButton : UIButton!
     @IBOutlet weak var tableViewReview : UITableView!
     @IBOutlet weak var addButton : UIButton!
     
@@ -36,7 +35,6 @@ class ListReviewsViewController: BaseVC {
     
     //MARK: -Event
     private func event() {
-        self.eventBack()
         self.eventAdd()
         self.observerNotificationCenter()
     }
@@ -47,22 +45,6 @@ class ListReviewsViewController: BaseVC {
     
     @objc func methodOfReceivedNotification(notification: Notification) {
         self.tableViewReview.reloadData()
-    }
-    
-    private func eventBack() {
-        self.backButton
-            .rx
-            .controlEvent(.touchUpInside)
-            .subscribe { (_) in
-                self.navigationController?.popViewController(animated: true)
-            } onError: { (_) in
-                
-            } onCompleted: {
-                
-            } onDisposed: {
-                
-            }.disposed(by: self.disposeBag)
-
     }
     
     private func eventAdd() {

@@ -7,6 +7,7 @@
 
 import UIKit
 import RxSwift
+import RxCocoa
 
 class InsertKnowledgeViewController: BaseVC {
     
@@ -14,8 +15,18 @@ class InsertKnowledgeViewController: BaseVC {
     @IBOutlet weak var backButton: UIButton!
     @IBOutlet weak var saveButton: UIButton!
     @IBOutlet weak var addButton: UIButton!
+    @IBOutlet weak var distanceButtonAddFromBottom: NSLayoutConstraint!
     
     var level: LevelKnowledge?
+    
+    var isHaveTabBar: BehaviorRelay<Bool> = .init(value: true)
+    
+//    var isHaveTabBar: Bool = true {
+//        didSet {
+//            self.backButton.isHidden = isHaveTabBar
+//            self.distanceButtonAddFromBottom.constant = isHaveTabBar ? 90.0 : 36.0
+//        }
+//    }
     
     var numberCell:Int = 1 {
         didSet {
@@ -34,6 +45,21 @@ class InsertKnowledgeViewController: BaseVC {
     //MARK: -UI
     private func setupUI() {
         self.setupTableView()
+        self.buttonHidden()
+    }
+    
+    private func buttonHidden() {
+        self.isHaveTabBar.subscribe { (isHave) in
+            self.backButton.isHidden = isHave
+            self.distanceButtonAddFromBottom.constant = isHave ? 90.0 : 36.0
+        } onError: { (_) in
+            
+        } onCompleted: {
+            
+        } onDisposed: {
+            
+        }.disposed(by: self.disposeBag)
+
     }
     
     private func setupTableView() {

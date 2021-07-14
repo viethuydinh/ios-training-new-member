@@ -51,6 +51,7 @@ class ChooseLevelViewController: BaseVC {
             .controlEvent(.touchUpInside)
             .subscribe { (_) in
                 guard let vc = self.getViewControllerFromStorybroad(storybroadName: "Main", identifier: InsertKnowledgeViewController.identifier) as? InsertKnowledgeViewController else { return }
+                vc.isHaveTabBar.accept(false)
                 vc.level = LevelKnowledge.fresher
                 self.navigationController?.pushViewController(vc, animated: true)
             } onError: { (_) in
@@ -68,6 +69,7 @@ class ChooseLevelViewController: BaseVC {
             .controlEvent(.touchUpInside)
             .subscribe { (_) in
                 guard let vc = self.getViewControllerFromStorybroad(storybroadName: "Main", identifier: InsertKnowledgeViewController.identifier) as? InsertKnowledgeViewController else { return }
+                vc.isHaveTabBar.accept(false)
                 vc.level = LevelKnowledge.junior
                 self.navigationController?.pushViewController(vc, animated: true)
             } onError: { (_) in
@@ -85,6 +87,7 @@ class ChooseLevelViewController: BaseVC {
             .controlEvent(.touchUpInside)
             .subscribe { (_) in
                 guard let vc = self.getViewControllerFromStorybroad(storybroadName: "Main", identifier: InsertKnowledgeViewController.identifier) as? InsertKnowledgeViewController else { return }
+                vc.isHaveTabBar.accept(false)
                 vc.level = LevelKnowledge.middle
                 self.navigationController?.pushViewController(vc, animated: true)
             } onError: { (_) in
@@ -102,6 +105,7 @@ class ChooseLevelViewController: BaseVC {
             .controlEvent(.touchUpInside)
             .subscribe { (_) in
                 guard let vc = self.getViewControllerFromStorybroad(storybroadName: "Main", identifier: InsertKnowledgeViewController.identifier) as? InsertKnowledgeViewController else { return }
+                vc.isHaveTabBar.accept(false)
                 vc.level = LevelKnowledge.senior
                 self.navigationController?.pushViewController(vc, animated: true)
             } onError: { (_) in
