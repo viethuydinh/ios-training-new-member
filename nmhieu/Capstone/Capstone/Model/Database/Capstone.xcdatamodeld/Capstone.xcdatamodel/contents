@@ -6,10 +6,25 @@
         <attribute name="username" optional="YES" attributeType="String"/>
         <relationship name="newRelationship" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="UserCoreData" inverseName="newRelationship" inverseEntity="UserCoreData"/>
     </entity>
+    <entity name="InterviewCoreData" representedClassName=".InterviewCoreData" syncable="YES">
+        <attribute name="age" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="date" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="id" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="image" optional="YES" attributeType="String"/>
+        <attribute name="level" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="name" optional="YES" attributeType="String"/>
+        <attribute name="overviewContent" optional="YES" attributeType="String"/>
+        <attribute name="result" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+    </entity>
     <entity name="QuestionCoreData" representedClassName=".QuestionCoreData" syncable="YES">
         <attribute name="content" optional="YES" attributeType="String"/>
         <attribute name="id" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="level" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+    </entity>
+    <entity name="QuestionInterViewCoreData" representedClassName=".QuestionInterViewCoreData" syncable="YES">
+        <attribute name="id" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="question" optional="YES" attributeType="String"/>
+        <attribute name="rate" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
     </entity>
     <entity name="UserCoreData" representedClassName=".UserCoreData" syncable="YES">
         <attribute name="dateOfBirth" optional="YES" attributeType="String"/>
@@ -24,7 +39,9 @@
     </entity>
     <elements>
         <element name="AccountCoreData" positionX="195.784423828125" positionY="-13.95783996582031" width="128" height="103"/>
+        <element name="InterviewCoreData" positionX="9" positionY="72" width="128" height="149"/>
         <element name="QuestionCoreData" positionX="212.4491577148438" positionY="181.2802429199219" width="128" height="74"/>
+        <element name="QuestionInterViewCoreData" positionX="18" positionY="81" width="128" height="74"/>
         <element name="UserCoreData" positionX="-195.1996459960938" positionY="-88.77899169921875" width="126.4737548828125" height="178"/>
     </elements>
 </model>

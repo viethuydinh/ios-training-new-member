@@ -13,11 +13,24 @@ struct QuestionModel {
     var level : LevelInterView?
 }
 
-enum LevelInterView : Int {
+enum LevelInterView : Int,Codable {
     case intern = 0
     case fresher = 1
     case junior = 2
     case senior = 3
+    
+    var title : String {
+        switch self {
+        case .intern:
+            return "Intern"
+        case .fresher:
+            return "Fresher"
+        case .junior:
+            return "Junior"
+        case .senior:
+            return "Senior"
+        }
+    }
 }
 
 extension QuestionModel : ObjectConvertible {

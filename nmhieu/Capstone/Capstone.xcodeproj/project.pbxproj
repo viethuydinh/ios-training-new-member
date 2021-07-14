@@ -45,6 +45,22 @@
 		1585AFD12696DA750073F89E /* AuthenticationRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1585AFD02696DA750073F89E /* AuthenticationRepository.swift */; };
 		1585AFD72696EA9E0073F89E /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1585AFD62696EA9E0073F89E /* HomeViewController.swift */; };
 		1585AFDF2696EAA90073F89E /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1585AFDE2696EAA90073F89E /* Home.storyboard */; };
+		15A03860269E97B900D9D0FB /* InterviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15A0385F269E97B900D9D0FB /* InterviewViewController.swift */; };
+		15A0386B269E97D500D9D0FB /* Interview.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 15A0386A269E97D500D9D0FB /* Interview.storyboard */; };
+		15A03871269E991E00D9D0FB /* ProfileCandidateTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15A0386F269E991E00D9D0FB /* ProfileCandidateTableViewCell.swift */; };
+		15A03872269E991E00D9D0FB /* ProfileCandidateTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 15A03870269E991E00D9D0FB /* ProfileCandidateTableViewCell.xib */; };
+		15A0387B269E9E3A00D9D0FB /* InterviewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15A0387A269E9E3A00D9D0FB /* InterviewViewModel.swift */; };
+		15A03881269EBF4D00D9D0FB /* QuestionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15A0387F269EBF4D00D9D0FB /* QuestionTableViewCell.swift */; };
+		15A03882269EBF4D00D9D0FB /* QuestionTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 15A03880269EBF4D00D9D0FB /* QuestionTableViewCell.xib */; };
+		15A03888269EC0C500D9D0FB /* OverviewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15A03886269EC0C500D9D0FB /* OverviewTableViewCell.swift */; };
+		15A03889269EC0C500D9D0FB /* OverviewTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 15A03887269EC0C500D9D0FB /* OverviewTableViewCell.xib */; };
+		15A0388E269EC97100D9D0FB /* InterviewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15A0388D269EC97100D9D0FB /* InterviewModel.swift */; };
+		15A0389C269ECD9A00D9D0FB /* InterviewCoreData+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15A0389A269ECD9A00D9D0FB /* InterviewCoreData+CoreDataClass.swift */; };
+		15A0389D269ECD9A00D9D0FB /* InterviewCoreData+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15A0389B269ECD9A00D9D0FB /* InterviewCoreData+CoreDataProperties.swift */; };
+		15A038A3269ED12E00D9D0FB /* QuestionInterviewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15A038A2269ED12E00D9D0FB /* QuestionInterviewModel.swift */; };
+		15A038B6269ED1FA00D9D0FB /* QuestionInterViewCoreData+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15A038B4269ED1FA00D9D0FB /* QuestionInterViewCoreData+CoreDataClass.swift */; };
+		15A038B7269ED1FA00D9D0FB /* QuestionInterViewCoreData+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15A038B5269ED1FA00D9D0FB /* QuestionInterViewCoreData+CoreDataProperties.swift */; };
+		15A038BC269EF2C200D9D0FB /* InterviewRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15A038BB269EF2C200D9D0FB /* InterviewRepository.swift */; };
 		17DCA4C5E48306770ED53512 /* Pods_CapstoneTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C57EF125C81F28DAD0D11FD /* Pods_CapstoneTests.framework */; };
 		45E19160B2B69DDB689A1456 /* Pods_Capstone_CapstoneUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D304FA87C63FB65B5C7B842 /* Pods_Capstone_CapstoneUITests.framework */; };
 		8CADBDA5078F84D6D1935E5F /* Pods_Capstone.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1425AABD8FCD33A9D5DF26EE /* Pods_Capstone.framework */; };
@@ -113,6 +129,22 @@
 		1585AFD02696DA750073F89E /* AuthenticationRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationRepository.swift; sourceTree = "<group>"; };
 		1585AFD62696EA9E0073F89E /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		1585AFDE2696EAA90073F89E /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
+		15A0385F269E97B900D9D0FB /* InterviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterviewViewController.swift; sourceTree = "<group>"; };
+		15A0386A269E97D500D9D0FB /* Interview.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Interview.storyboard; sourceTree = "<group>"; };
+		15A0386F269E991E00D9D0FB /* ProfileCandidateTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileCandidateTableViewCell.swift; sourceTree = "<group>"; };
+		15A03870269E991E00D9D0FB /* ProfileCandidateTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileCandidateTableViewCell.xib; sourceTree = "<group>"; };
+		15A0387A269E9E3A00D9D0FB /* InterviewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterviewViewModel.swift; sourceTree = "<group>"; };
+		15A0387F269EBF4D00D9D0FB /* QuestionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionTableViewCell.swift; sourceTree = "<group>"; };
+		15A03880269EBF4D00D9D0FB /* QuestionTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = QuestionTableViewCell.xib; sourceTree = "<group>"; };
+		15A03886269EC0C500D9D0FB /* OverviewTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverviewTableViewCell.swift; sourceTree = "<group>"; };
+		15A03887269EC0C500D9D0FB /* OverviewTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OverviewTableViewCell.xib; sourceTree = "<group>"; };
+		15A0388D269EC97100D9D0FB /* InterviewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterviewModel.swift; sourceTree = "<group>"; };
+		15A0389A269ECD9A00D9D0FB /* InterviewCoreData+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "InterviewCoreData+CoreDataClass.swift"; path = "Capstone/Model/Database/Interview/InterviewCoreData+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
+		15A0389B269ECD9A00D9D0FB /* InterviewCoreData+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "InterviewCoreData+CoreDataProperties.swift"; path = "Capstone/Model/Database/Interview/InterviewCoreData+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
+		15A038A2269ED12E00D9D0FB /* QuestionInterviewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionInterviewModel.swift; sourceTree = "<group>"; };
+		15A038B4269ED1FA00D9D0FB /* QuestionInterViewCoreData+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "QuestionInterViewCoreData+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
+		15A038B5269ED1FA00D9D0FB /* QuestionInterViewCoreData+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "QuestionInterViewCoreData+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
+		15A038BB269EF2C200D9D0FB /* InterviewRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterviewRepository.swift; sourceTree = "<group>"; };
 		3C57EF125C81F28DAD0D11FD /* Pods_CapstoneTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CapstoneTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F18C5BF9AEEFD3B9FC56A64 /* Pods-Capstone-CapstoneUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Capstone-CapstoneUITests.release.xcconfig"; path = "Target Support Files/Pods-Capstone-CapstoneUITests/Pods-Capstone-CapstoneUITests.release.xcconfig"; sourceTree = "<group>"; };
 		5A6BD8BB820596903C469AAB /* Pods-Capstone.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Capstone.debug.xcconfig"; path = "Target Support Files/Pods-Capstone/Pods-Capstone.debug.xcconfig"; sourceTree = "<group>"; };
@@ -187,7 +219,6 @@
 				157F96EE268EBB67009BBF14 /* Application */,
 				157F96EF268EBB7C009BBF14 /* Network */,
 				157F96ED268EBB4F009BBF14 /* Resource */,
-				157F96E9268EBB11009BBF14 /* Ultis */,
 				157F96E8268EBB08009BBF14 /* Model */,
 				157F96EA268EBB1B009BBF14 /* View */,
 				157F96EB268EBB21009BBF14 /* ViewModel */,
@@ -221,6 +252,8 @@
 				1507B20C268F13CE001945A8 /* UserModel.swift */,
 				15179EBE26958532008D3A46 /* AccountModel.swift */,
 				154A638C269BF498008E571C /* QuestionModel.swift */,
+				15A0388D269EC97100D9D0FB /* InterviewModel.swift */,
+				15A038A2269ED12E00D9D0FB /* QuestionInterviewModel.swift */,
 			);
 			path = DAO;
 			sourceTree = "<group>";
@@ -283,16 +316,10 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
-		157F96E9268EBB11009BBF14 /* Ultis */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Ultis;
-			sourceTree = "<group>";
-		};
 		157F96EA268EBB1B009BBF14 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				15A0385E269E978D00D9D0FB /* Interview */,
 				1507B211268F1412001945A8 /* BaseViewController */,
 				154A639F269BFAB3008E571C /* InsertKnowledge */,
 				1585AFE42696EE5D0073F89E /* Authentication */,
@@ -306,6 +333,7 @@
 			children = (
 				1585AFBA2696B1700073F89E /* AuthenticationViewModel.swift */,
 				154A6395269BF9E0008E571C /* KnowledgeViewModel.swift */,
+				15A0387A269E9E3A00D9D0FB /* InterviewViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -313,6 +341,7 @@
 		157F96EC268EBB30009BBF14 /* Database */ = {
 			isa = PBXGroup;
 			children = (
+				15A03892269ECBF600D9D0FB /* Interview */,
 				154A6394269BF76E008E571C /* User */,
 				154A6393269BF75A008E571C /* Account */,
 				154A6392269BF746008E571C /* Question */,
@@ -373,6 +402,7 @@
 			children = (
 				1585AFD02696DA750073F89E /* AuthenticationRepository.swift */,
 				154A639A269BFA2C008E571C /* KnowledgeRepository.swift */,
+				15A038BB269EF2C200D9D0FB /* InterviewRepository.swift */,
 			);
 			path = Repository;
 			sourceTree = "<group>";
@@ -393,6 +423,40 @@
 				157F971B268EF0DC009BBF14 /* SignIn */,
 			);
 			path = Authentication;
+			sourceTree = "<group>";
+		};
+		15A0385E269E978D00D9D0FB /* Interview */ = {
+			isa = PBXGroup;
+			children = (
+				15A03876269E992300D9D0FB /* Cell */,
+				15A0385F269E97B900D9D0FB /* InterviewViewController.swift */,
+				15A0386A269E97D500D9D0FB /* Interview.storyboard */,
+			);
+			path = Interview;
+			sourceTree = "<group>";
+		};
+		15A03876269E992300D9D0FB /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				15A0386F269E991E00D9D0FB /* ProfileCandidateTableViewCell.swift */,
+				15A03870269E991E00D9D0FB /* ProfileCandidateTableViewCell.xib */,
+				15A0387F269EBF4D00D9D0FB /* QuestionTableViewCell.swift */,
+				15A03880269EBF4D00D9D0FB /* QuestionTableViewCell.xib */,
+				15A03886269EC0C500D9D0FB /* OverviewTableViewCell.swift */,
+				15A03887269EC0C500D9D0FB /* OverviewTableViewCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		15A03892269ECBF600D9D0FB /* Interview */ = {
+			isa = PBXGroup;
+			children = (
+				15A038B4269ED1FA00D9D0FB /* QuestionInterViewCoreData+CoreDataClass.swift */,
+				15A038B5269ED1FA00D9D0FB /* QuestionInterViewCoreData+CoreDataProperties.swift */,
+				15A0389A269ECD9A00D9D0FB /* InterviewCoreData+CoreDataClass.swift */,
+				15A0389B269ECD9A00D9D0FB /* InterviewCoreData+CoreDataProperties.swift */,
+			);
+			path = Interview;
 			sourceTree = "<group>";
 		};
 		387F4C3CD5E6E9458DC272D1 /* Frameworks */ = {
@@ -526,9 +590,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				15A0386B269E97D500D9D0FB /* Interview.storyboard in Resources */,
 				15095E7E268DC8B400129B9C /* LaunchScreen.storyboard in Resources */,
 				1585AFDF2696EAA90073F89E /* Home.storyboard in Resources */,
+				15A03882269EBF4D00D9D0FB /* QuestionTableViewCell.xib in Resources */,
 				154A63A4269BFB2F008E571C /* InsertKnowledge.storyboard in Resources */,
+				15A03872269E991E00D9D0FB /* ProfileCandidateTableViewCell.xib in Resources */,
+				15A03889269EC0C500D9D0FB /* OverviewTableViewCell.xib in Resources */,
 				157F9732268EFAC0009BBF14 /* SignUp.storyboard in Resources */,
 				15095E7B268DC8B400129B9C /* Assets.xcassets in Resources */,
 				157F9722268EF141009BBF14 /* SignIn.storyboard in Resources */,
@@ -660,32 +728,44 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				15A03881269EBF4D00D9D0FB /* QuestionTableViewCell.swift in Sources */,
 				1507B218268F14D6001945A8 /* UIViewController+Extension.swift in Sources */,
 				154A63A9269BFB58008E571C /* InsertKnowledgeViewController.swift in Sources */,
 				154A63B6269C2384008E571C /* UITableViewCell+Extension.swift in Sources */,
 				157F971D268EF131009BBF14 /* SignInViewController.swift in Sources */,
+				15A038A3269ED12E00D9D0FB /* QuestionInterviewModel.swift in Sources */,
 				1585AFBB2696B1700073F89E /* AuthenticationViewModel.swift in Sources */,
 				1507B213268F1435001945A8 /* BaseVCViewController.swift in Sources */,
 				15179EB52695565F008D3A46 /* Convertible.swift in Sources */,
 				1585AFD72696EA9E0073F89E /* HomeViewController.swift in Sources */,
+				15A03860269E97B900D9D0FB /* InterviewViewController.swift in Sources */,
 				154A6367269BF253008E571C /* QuestionCoreData+CoreDataProperties.swift in Sources */,
 				154A6366269BF253008E571C /* QuestionCoreData+CoreDataClass.swift in Sources */,
+				15A038BC269EF2C200D9D0FB /* InterviewRepository.swift in Sources */,
 				157F972D268EFAB2009BBF14 /* SignUpViewController.swift in Sources */,
 				15095E6F268DC8B100129B9C /* AppDelegate.swift in Sources */,
+				15A0388E269EC97100D9D0FB /* InterviewModel.swift in Sources */,
 				155F2FF926943573007EFBAC /* UserCoreData+CoreDataProperties.swift in Sources */,
 				15179EBF26958532008D3A46 /* AccountModel.swift in Sources */,
+				15A0389C269ECD9A00D9D0FB /* InterviewCoreData+CoreDataClass.swift in Sources */,
 				154A639B269BFA2C008E571C /* KnowledgeRepository.swift in Sources */,
 				15179EEA2695B949008D3A46 /* AccountCoreData+CoreDataProperties.swift in Sources */,
 				1507B21D268F1519001945A8 /* NSObject+Extension.swift in Sources */,
 				15095E71268DC8B100129B9C /* SceneDelegate.swift in Sources */,
+				15A03871269E991E00D9D0FB /* ProfileCandidateTableViewCell.swift in Sources */,
+				15A0389D269ECD9A00D9D0FB /* InterviewCoreData+CoreDataProperties.swift in Sources */,
 				15179ECB26958640008D3A46 /* Capstone.xcdatamodeld in Sources */,
 				154A6396269BF9E0008E571C /* KnowledgeViewModel.swift in Sources */,
 				1585AFD12696DA750073F89E /* AuthenticationRepository.swift in Sources */,
 				157F9737268EFEA4009BBF14 /* Color.swift in Sources */,
+				15A038B6269ED1FA00D9D0FB /* QuestionInterViewCoreData+CoreDataClass.swift in Sources */,
 				1507B20D268F13CE001945A8 /* UserModel.swift in Sources */,
+				15A03888269EC0C500D9D0FB /* OverviewTableViewCell.swift in Sources */,
+				15A038B7269ED1FA00D9D0FB /* QuestionInterViewCoreData+CoreDataProperties.swift in Sources */,
 				15179EBA269557B2008D3A46 /* DatabaseConfig.swift in Sources */,
 				155F2FF826943573007EFBAC /* UserCoreData+CoreDataClass.swift in Sources */,
 				154A638D269BF498008E571C /* QuestionModel.swift in Sources */,
+				15A0387B269E9E3A00D9D0FB /* InterviewViewModel.swift in Sources */,
 				157F973C268EFED5009BBF14 /* AccoutString.swift in Sources */,
 				154A63B0269C1E08008E571C /* KnowledgeTableViewCell.swift in Sources */,
 				15179EE92695B949008D3A46 /* AccountCoreData+CoreDataClass.swift in Sources */,
