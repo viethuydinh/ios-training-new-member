@@ -87,8 +87,13 @@
 		1585AFDF2696EAA90073F89E /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1585AFDE2696EAA90073F89E /* Home.storyboard */; };
 		15A03860269E97B900D9D0FB /* InterviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15A0385F269E97B900D9D0FB /* InterviewViewController.swift */; };
 		15A0386B269E97D500D9D0FB /* Interview.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 15A0386A269E97D500D9D0FB /* Interview.storyboard */; };
+<<<<<<< HEAD
 		15A03871269E991E00D9D0FB /* CandidateInforTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15A0386F269E991E00D9D0FB /* CandidateInforTableViewCell.swift */; };
 		15A03872269E991E00D9D0FB /* CandidateInforTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 15A03870269E991E00D9D0FB /* CandidateInforTableViewCell.xib */; };
+=======
+		15A03871269E991E00D9D0FB /* ProfileCandidateTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15A0386F269E991E00D9D0FB /* ProfileCandidateTableViewCell.swift */; };
+		15A03872269E991E00D9D0FB /* ProfileCandidateTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 15A03870269E991E00D9D0FB /* ProfileCandidateTableViewCell.xib */; };
+>>>>>>> 0daedd9 (feat : implement Interview feature (UIInterview , logic interview in InterviewViewModel ))
 		15A0387B269E9E3A00D9D0FB /* InterviewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15A0387A269E9E3A00D9D0FB /* InterviewViewModel.swift */; };
 		15A03881269EBF4D00D9D0FB /* QuestionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15A0387F269EBF4D00D9D0FB /* QuestionTableViewCell.swift */; };
 		15A03882269EBF4D00D9D0FB /* QuestionTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 15A03880269EBF4D00D9D0FB /* QuestionTableViewCell.xib */; };
@@ -216,8 +221,13 @@
 		1585AFDE2696EAA90073F89E /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
 		15A0385F269E97B900D9D0FB /* InterviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterviewViewController.swift; sourceTree = "<group>"; };
 		15A0386A269E97D500D9D0FB /* Interview.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Interview.storyboard; sourceTree = "<group>"; };
+<<<<<<< HEAD
 		15A0386F269E991E00D9D0FB /* CandidateInforTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CandidateInforTableViewCell.swift; sourceTree = "<group>"; };
 		15A03870269E991E00D9D0FB /* CandidateInforTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CandidateInforTableViewCell.xib; sourceTree = "<group>"; };
+=======
+		15A0386F269E991E00D9D0FB /* ProfileCandidateTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileCandidateTableViewCell.swift; sourceTree = "<group>"; };
+		15A03870269E991E00D9D0FB /* ProfileCandidateTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileCandidateTableViewCell.xib; sourceTree = "<group>"; };
+>>>>>>> 0daedd9 (feat : implement Interview feature (UIInterview , logic interview in InterviewViewModel ))
 		15A0387A269E9E3A00D9D0FB /* InterviewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterviewViewModel.swift; sourceTree = "<group>"; };
 		15A0387F269EBF4D00D9D0FB /* QuestionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionTableViewCell.swift; sourceTree = "<group>"; };
 		15A03880269EBF4D00D9D0FB /* QuestionTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = QuestionTableViewCell.xib; sourceTree = "<group>"; };
@@ -347,7 +357,12 @@
 <<<<<<< HEAD
 =======
 				154A638C269BF498008E571C /* QuestionModel.swift */,
+<<<<<<< HEAD
 >>>>>>> 88ef0f2 (refactor: refactor code in file InsertKnowledgeVC)
+=======
+				15A0388D269EC97100D9D0FB /* InterviewModel.swift */,
+				15A038A2269ED12E00D9D0FB /* QuestionInterviewModel.swift */,
+>>>>>>> 0daedd9 (feat : implement Interview feature (UIInterview , logic interview in InterviewViewModel ))
 			);
 			path = DAO;
 			sourceTree = "<group>";
@@ -516,7 +531,11 @@
 		157F96EA268EBB1B009BBF14 /* View */ = {
 			isa = PBXGroup;
 			children = (
+<<<<<<< HEAD
 				151F2AFA26A16FB300C63F2C /* BaseTabbarController */,
+=======
+				15A0385E269E978D00D9D0FB /* Interview */,
+>>>>>>> 0daedd9 (feat : implement Interview feature (UIInterview , logic interview in InterviewViewModel ))
 				1507B211268F1412001945A8 /* BaseViewController */,
 				1526CA7926A522E60059619B /* Onboarding */,
 				1585AFE42696EE5D0073F89E /* Authentication */,
@@ -536,7 +555,10 @@
 				1585AFBA2696B1700073F89E /* AuthenticationViewModel.swift */,
 				154A6395269BF9E0008E571C /* KnowledgeViewModel.swift */,
 				15A0387A269E9E3A00D9D0FB /* InterviewViewModel.swift */,
+<<<<<<< HEAD
 				1526CA7E26A529FB0059619B /* OnboardingViewModel.swift */,
+=======
+>>>>>>> 0daedd9 (feat : implement Interview feature (UIInterview , logic interview in InterviewViewModel ))
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -545,6 +567,9 @@
 			isa = PBXGroup;
 			children = (
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0daedd9 (feat : implement Interview feature (UIInterview , logic interview in InterviewViewModel ))
 				15A03892269ECBF600D9D0FB /* Interview */,
 				154A6394269BF76E008E571C /* User */,
 				154A6393269BF75A008E571C /* Account */,
@@ -648,8 +673,13 @@
 		15A03876269E992300D9D0FB /* Cell */ = {
 			isa = PBXGroup;
 			children = (
+<<<<<<< HEAD
 				15A0386F269E991E00D9D0FB /* CandidateInforTableViewCell.swift */,
 				15A03870269E991E00D9D0FB /* CandidateInforTableViewCell.xib */,
+=======
+				15A0386F269E991E00D9D0FB /* ProfileCandidateTableViewCell.swift */,
+				15A03870269E991E00D9D0FB /* ProfileCandidateTableViewCell.xib */,
+>>>>>>> 0daedd9 (feat : implement Interview feature (UIInterview , logic interview in InterviewViewModel ))
 				15A0387F269EBF4D00D9D0FB /* QuestionTableViewCell.swift */,
 				15A03880269EBF4D00D9D0FB /* QuestionTableViewCell.xib */,
 				15A03886269EC0C500D9D0FB /* OverviewTableViewCell.swift */,
@@ -669,6 +699,7 @@
 			path = Interview;
 			sourceTree = "<group>";
 		};
+<<<<<<< HEAD
 		15C3C8D626A6D4E10056B106 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
@@ -702,6 +733,8 @@
 			path = Ultis;
 			sourceTree = "<group>";
 		};
+=======
+>>>>>>> 0daedd9 (feat : implement Interview feature (UIInterview , logic interview in InterviewViewModel ))
 		387F4C3CD5E6E9458DC272D1 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -832,16 +865,24 @@
 			buildActionMask = 2147483647;
 			files = (
 <<<<<<< HEAD
+<<<<<<< HEAD
 				15A0386B269E97D500D9D0FB /* Interview.storyboard in Resources */,
 =======
 >>>>>>> 6807593 (config coredata)
+=======
+				15A0386B269E97D500D9D0FB /* Interview.storyboard in Resources */,
+>>>>>>> 0daedd9 (feat : implement Interview feature (UIInterview , logic interview in InterviewViewModel ))
 				15095E7E268DC8B400129B9C /* LaunchScreen.storyboard in Resources */,
 				1532C0FB26AE9F55008003F7 /* AlertEditKnowledge.xib in Resources */,
 				1585AFDF2696EAA90073F89E /* Home.storyboard in Resources */,
 				15A03882269EBF4D00D9D0FB /* QuestionTableViewCell.xib in Resources */,
 				154A63A4269BFB2F008E571C /* InsertKnowledge.storyboard in Resources */,
+<<<<<<< HEAD
 				1526CA8D26A567EC0059619B /* GifOnboardingCollectionViewCell.xib in Resources */,
 				15A03872269E991E00D9D0FB /* CandidateInforTableViewCell.xib in Resources */,
+=======
+				15A03872269E991E00D9D0FB /* ProfileCandidateTableViewCell.xib in Resources */,
+>>>>>>> 0daedd9 (feat : implement Interview feature (UIInterview , logic interview in InterviewViewModel ))
 				15A03889269EC0C500D9D0FB /* OverviewTableViewCell.xib in Resources */,
 				157F9732268EFAC0009BBF14 /* SignUp.storyboard in Resources */,
 				156948FB26A9BFB000EF8C3D /* KnowledgeSetTableViewCell.xib in Resources */,
@@ -972,12 +1013,15 @@
 				154A63A9269BFB58008E571C /* InsertKnowledgeViewController.swift in Sources */,
 				154A63B6269C2384008E571C /* UITableViewCell+Extension.swift in Sources */,
 				157F971D268EF131009BBF14 /* SignInViewController.swift in Sources */,
+				15A038A3269ED12E00D9D0FB /* QuestionInterviewModel.swift in Sources */,
 				1585AFBB2696B1700073F89E /* AuthenticationViewModel.swift in Sources */,
 				1507B213268F1435001945A8 /* BaseVCViewController.swift in Sources */,
 				15179EB52695565F008D3A46 /* Convertible.swift in Sources */,
 				1585AFD72696EA9E0073F89E /* HomeViewController.swift in Sources */,
+				15A03860269E97B900D9D0FB /* InterviewViewController.swift in Sources */,
 				154A6367269BF253008E571C /* QuestionCoreData+CoreDataProperties.swift in Sources */,
 				154A6366269BF253008E571C /* QuestionCoreData+CoreDataClass.swift in Sources */,
+<<<<<<< HEAD
 >>>>>>> 88ef0f2 (refactor: refactor code in file InsertKnowledgeVC)
 				157F972D268EFAB2009BBF14 /* SignUpViewController.swift in Sources */,
 				15095E6F268DC8B100129B9C /* AppDelegate.swift in Sources */,
@@ -986,23 +1030,37 @@
 				155F2FF926943573007EFBAC /* UserCoreData+CoreDataProperties.swift in Sources */,
 				15179EBF26958532008D3A46 /* AccountModel.swift in Sources */,
 				151F2B0026A170CE00C63F2C /* TabBarItem.swift in Sources */,
+=======
+				15A038BC269EF2C200D9D0FB /* InterviewRepository.swift in Sources */,
+				157F972D268EFAB2009BBF14 /* SignUpViewController.swift in Sources */,
+				15095E6F268DC8B100129B9C /* AppDelegate.swift in Sources */,
+				15A0388E269EC97100D9D0FB /* InterviewModel.swift in Sources */,
+				155F2FF926943573007EFBAC /* UserCoreData+CoreDataProperties.swift in Sources */,
+				15179EBF26958532008D3A46 /* AccountModel.swift in Sources */,
+>>>>>>> 0daedd9 (feat : implement Interview feature (UIInterview , logic interview in InterviewViewModel ))
 				15A0389C269ECD9A00D9D0FB /* InterviewCoreData+CoreDataClass.swift in Sources */,
 				154A639B269BFA2C008E571C /* KnowledgeRepository.swift in Sources */,
 				15179EEA2695B949008D3A46 /* AccountCoreData+CoreDataProperties.swift in Sources */,
 				151F2AFE26A1709800C63F2C /* CustomTabBar.swift in Sources */,
 				1507B21D268F1519001945A8 /* NSObject+Extension.swift in Sources */,
 				15095E71268DC8B100129B9C /* SceneDelegate.swift in Sources */,
+<<<<<<< HEAD
 				15A03871269E991E00D9D0FB /* CandidateInforTableViewCell.swift in Sources */,
 				1569490026A9C4E500EF8C3D /* UILabel+Extension.swift in Sources */,
 				1573548C26A023FD00A5C59D /* CandidateInforModel.swift in Sources */,
 				15A0389D269ECD9A00D9D0FB /* InterviewCoreData+CoreDataProperties.swift in Sources */,
 				151F2B0226A1828200C63F2C /* Image.swift in Sources */,
+=======
+				15A03871269E991E00D9D0FB /* ProfileCandidateTableViewCell.swift in Sources */,
+				15A0389D269ECD9A00D9D0FB /* InterviewCoreData+CoreDataProperties.swift in Sources */,
+>>>>>>> 0daedd9 (feat : implement Interview feature (UIInterview , logic interview in InterviewViewModel ))
 				15179ECB26958640008D3A46 /* Capstone.xcdatamodeld in Sources */,
 				154A6396269BF9E0008E571C /* KnowledgeViewModel.swift in Sources */,
 				1585AFD12696DA750073F89E /* AuthenticationRepository.swift in Sources */,
 				151F2AFC26A1702300C63F2C /* BaseTabBarViewController.swift in Sources */,
 				157F9737268EFEA4009BBF14 /* Color.swift in Sources */,
 				15A038B6269ED1FA00D9D0FB /* QuestionInterViewCoreData+CoreDataClass.swift in Sources */,
+<<<<<<< HEAD
 				1573549426A030FE00A5C59D /* HistoryViewController.swift in Sources */,
 				1507B20D268F13CE001945A8 /* UserModel.swift in Sources */,
 				156948FA26A9BFB000EF8C3D /* KnowledgeSetTableViewCell.swift in Sources */,
@@ -1014,6 +1072,14 @@
 				155F2FF826943573007EFBAC /* UserCoreData+CoreDataClass.swift in Sources */,
 				154A638D269BF498008E571C /* KnowledgeModel.swift in Sources */,
 				1526CA8C26A567EC0059619B /* GifOnboardingCollectionViewCell.swift in Sources */,
+=======
+				1507B20D268F13CE001945A8 /* UserModel.swift in Sources */,
+				15A03888269EC0C500D9D0FB /* OverviewTableViewCell.swift in Sources */,
+				15A038B7269ED1FA00D9D0FB /* QuestionInterViewCoreData+CoreDataProperties.swift in Sources */,
+				15179EBA269557B2008D3A46 /* DatabaseConfig.swift in Sources */,
+				155F2FF826943573007EFBAC /* UserCoreData+CoreDataClass.swift in Sources */,
+				154A638D269BF498008E571C /* QuestionModel.swift in Sources */,
+>>>>>>> 0daedd9 (feat : implement Interview feature (UIInterview , logic interview in InterviewViewModel ))
 				15A0387B269E9E3A00D9D0FB /* InterviewViewModel.swift in Sources */,
 				157F973C268EFED5009BBF14 /* AccoutString.swift in Sources */,
 				154A63B0269C1E08008E571C /* KnowledgeTableViewCell.swift in Sources */,

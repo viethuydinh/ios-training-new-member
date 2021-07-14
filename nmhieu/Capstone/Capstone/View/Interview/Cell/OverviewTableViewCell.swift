@@ -10,6 +10,7 @@ import UIKit
 class OverviewTableViewCell: UITableViewCell {
 
     @IBOutlet weak var overViewTextView: UITextView!
+<<<<<<< HEAD
     @IBOutlet weak var statusImage: UIImageView!
     
     var status : StatusInterview = .pass
@@ -74,6 +75,19 @@ extension OverviewTableViewCell : UITextViewDelegate {
     func textViewDidEndEditing(_ textView: UITextView) {
         self.beginEditingTextView(statusEdit: !self.overViewTextView.text.isEmpty)
     }
+=======
+    
+    override func awakeFromNib() {
+        super.awakeFromNib()
+       
+    }
+
+    override func setSelected(_ selected: Bool, animated: Bool) {
+        super.setSelected(selected, animated: animated)
+
+    }
+    
+>>>>>>> 0daedd9 (feat : implement Interview feature (UIInterview , logic interview in InterviewViewModel ))
 }
 
 extension OverviewTableViewCell {

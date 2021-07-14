@@ -14,11 +14,14 @@ class QuestionTableViewCell: UITableViewCell {
     
     var status : RateAnswer = .good
     
+<<<<<<< HEAD
     override func awakeFromNib() {
         super.awakeFromNib()
         self.setUpUI()
     }
     
+=======
+>>>>>>> 0daedd9 (feat : implement Interview feature (UIInterview , logic interview in InterviewViewModel ))
     func getQuestion() -> QuestionInterviewModel {
         var question = QuestionInterviewModel()
         question.id = nil
@@ -26,6 +29,14 @@ class QuestionTableViewCell: UITableViewCell {
         question.rate = self.status
         return question
     }
+<<<<<<< HEAD
+=======
+
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        self.setUpUI()
+    }
+>>>>>>> 0daedd9 (feat : implement Interview feature (UIInterview , logic interview in InterviewViewModel ))
     
     func setUpUI() {
         self.rateAnswerButton.layer.cornerRadius = 10
@@ -50,6 +61,7 @@ class QuestionTableViewCell: UITableViewCell {
     func bindingData(question : String) {
         self.questionLabel.text = question
     }
+<<<<<<< HEAD
 }
 
 extension QuestionTableViewCell {
@@ -65,4 +77,11 @@ extension QuestionTableViewCell {
             }
         }
     }
+=======
+    
+}
+
+extension QuestionTableViewCell {
+    static let height : CGFloat = 56.0
+>>>>>>> 0daedd9 (feat : implement Interview feature (UIInterview , logic interview in InterviewViewModel ))
 }
