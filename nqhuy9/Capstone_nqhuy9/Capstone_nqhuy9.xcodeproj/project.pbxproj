@@ -15,6 +15,9 @@
 		F433BC6D269D3659002F5146 /* InsertQuestionTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F433BC6B269D3659002F5146 /* InsertQuestionTableViewCell.xib */; };
 		F433BC72269D39B6002F5146 /* InsertKnowledgeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F433BC71269D39B6002F5146 /* InsertKnowledgeViewController.swift */; };
 		F433BC77269D47A2002F5146 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F433BC76269D47A2002F5146 /* UIView+Extension.swift */; };
+		F433BC8F269D8F23002F5146 /* TabItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = F433BC8E269D8F23002F5146 /* TabItem.swift */; };
+		F433BC94269D9812002F5146 /* BaseTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F433BC93269D9812002F5146 /* BaseTabBarController.swift */; };
+		F433BC99269D9844002F5146 /* CustomTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = F433BC98269D9844002F5146 /* CustomTabBar.swift */; };
 		F4428148269BE7A900DB531B /* QuestionCoreData+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4428146269BE7A900DB531B /* QuestionCoreData+CoreDataClass.swift */; };
 		F4428149269BE7A900DB531B /* QuestionCoreData+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4428147269BE7A900DB531B /* QuestionCoreData+CoreDataProperties.swift */; };
 		F442815E269BEFF100DB531B /* KnowledgeRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = F442815D269BEFF100DB531B /* KnowledgeRepository.swift */; };
@@ -76,6 +79,9 @@
 		F433BC6B269D3659002F5146 /* InsertQuestionTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InsertQuestionTableViewCell.xib; sourceTree = "<group>"; };
 		F433BC71269D39B6002F5146 /* InsertKnowledgeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsertKnowledgeViewController.swift; sourceTree = "<group>"; };
 		F433BC76269D47A2002F5146 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
+		F433BC8E269D8F23002F5146 /* TabItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabItem.swift; sourceTree = "<group>"; };
+		F433BC93269D9812002F5146 /* BaseTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTabBarController.swift; sourceTree = "<group>"; };
+		F433BC98269D9844002F5146 /* CustomTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBar.swift; sourceTree = "<group>"; };
 		F4428146269BE7A900DB531B /* QuestionCoreData+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "QuestionCoreData+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
 		F4428147269BE7A900DB531B /* QuestionCoreData+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "QuestionCoreData+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
 		F442815D269BEFF100DB531B /* KnowledgeRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KnowledgeRepository.swift; sourceTree = "<group>"; };
@@ -171,6 +177,16 @@
 				F433BC6B269D3659002F5146 /* InsertQuestionTableViewCell.xib */,
 			);
 			path = InsertQuestionCell;
+			sourceTree = "<group>";
+		};
+		F433BC8D269D8F06002F5146 /* CustomTabbar */ = {
+			isa = PBXGroup;
+			children = (
+				F433BC8E269D8F23002F5146 /* TabItem.swift */,
+				F433BC93269D9812002F5146 /* BaseTabBarController.swift */,
+				F433BC98269D9844002F5146 /* CustomTabBar.swift */,
+			);
+			path = CustomTabbar;
 			sourceTree = "<group>";
 		};
 		F442814D269BEA4300DB531B /* ChooseLevelScreen */ = {
@@ -269,6 +285,7 @@
 		F4FDF597268EAB0D001B02D3 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				F433BC8D269D8F06002F5146 /* CustomTabbar */,
 				F442814E269BEA5F00DB531B /* InsertQuestionScreen */,
 				F442814D269BEA4300DB531B /* ChooseLevelScreen */,
 				F4FDF55F268EA6B7001B02D3 /* LaunchScreen.storyboard */,
@@ -627,6 +644,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F433BC94269D9812002F5146 /* BaseTabBarController.swift in Sources */,
 				F4FDF685268EFC94001B02D3 /* SignUpViewController.swift in Sources */,
 				F4FDF693268EFF6C001B02D3 /* UIViewController+Extension.swift in Sources */,
 				F433BC6C269D3659002F5146 /* InsertQuestionTableViewCell.swift in Sources */,
@@ -644,6 +662,7 @@
 				F4FDF680268EFA98001B02D3 /* Color.swift in Sources */,
 				F4CE76102694303800330A77 /* BaseCoreData.swift in Sources */,
 				F433BC77269D47A2002F5146 /* UIView+Extension.swift in Sources */,
+				F433BC8F269D8F23002F5146 /* TabItem.swift in Sources */,
 				F4FDF55C268EA6B4001B02D3 /* Capstone_nqhuy9.xcdatamodeld in Sources */,
 				F4FDA8262696974A0039E9B4 /* AccountCoreData+CoreDataClass.swift in Sources */,
 				F4FDF672268EF706001B02D3 /* SignInViewController.swift in Sources */,
@@ -653,6 +672,7 @@
 				F4FDF678268EF89B001B02D3 /* ConstantString.swift in Sources */,
 				F433BC72269D39B6002F5146 /* InsertKnowledgeViewController.swift in Sources */,
 				F4FDF698268EFF9A001B02D3 /* NSObject+Extension.swift in Sources */,
+				F433BC99269D9844002F5146 /* CustomTabBar.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -71,7 +71,7 @@ class SignInViewController: BaseVC {
             .map{ Account(username: $0, password: $1, repassword: nil) }
             .subscribe { (acc) in
                 if self.signInViewModel.signIn(account: Account(username: self.usernameTextField.text, password: self.passwordTextField.text, repassword: nil)) {
-                    guard let chooseLevelVC = self.getViewControllerFromStorybroad(storybroadName: "Main", identifier: ChooseLevelViewController.identifier) as? ChooseLevelViewController else { return }
+                    guard let chooseLevelVC = self.getViewControllerFromStorybroad(storybroadName: "Main", identifier: BaseTabBarController.identifier) as? BaseTabBarController else { return }
                     self.navigationController?.pushViewController(chooseLevelVC, animated: true)
                 } else {
                     print("Sign In Error")

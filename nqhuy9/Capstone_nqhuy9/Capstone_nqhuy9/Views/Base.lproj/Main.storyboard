@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="KFk-Fk-UlF">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="oKw-K3-cBz">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
@@ -9,7 +9,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Choose Level View Controller-->
+        <!--Item-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController storyboardIdentifier="ChooseLevelViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" customClass="ChooseLevelViewController" customModule="Capstone_nqhuy9" customModuleProvider="target" sceneMemberID="viewController">
@@ -95,6 +95,7 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="N7Y-Bx-O9M" secondAttribute="trailing" constant="24" id="shD-c5-YWy"/>
                         </constraints>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Item" id="Y3U-bZ-9L5"/>
                     <navigationItem key="navigationItem" id="60f-Qk-dfa"/>
                     <connections>
                         <outlet property="fresherButton" destination="fdo-Gp-lre" id="2ul-jn-wwT"/>
@@ -105,7 +106,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1013.0434782608696" y="85.714285714285708"/>
+            <point key="canvasLocation" x="1923.1884057971015" y="85.714285714285708"/>
         </scene>
         <!--Insert Knowledge View Controller-->
         <scene sceneID="4le-Gz-4ga">
@@ -191,24 +192,25 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LQO-gq-YbH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1881" y="86"/>
+            <point key="canvasLocation" x="2771.0144927536235" y="85.714285714285708"/>
         </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="3F7-SO-7of">
+        <!--Base Tab Bar Controller-->
+        <scene sceneID="7zh-dU-K3G">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="KFk-Fk-UlF" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="BaseTabBarController" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="oKw-K3-cBz" customClass="BaseTabBarController" customModule="Capstone_nqhuy9" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="AJq-fS-dvm">
+                    <navigationItem key="navigationItem" id="tVp-7u-cKp"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="pnl-D7-Jkq">
                         <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
                     <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="GjF-qG-kKH"/>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="mNO-7t-b6K"/>
                     </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="B25-KR-znw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="37l-pQ-tX9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="102.89855072463769" y="85.714285714285708"/>
+            <point key="canvasLocation" x="1013.0434782608696" y="85.714285714285708"/>
         </scene>
     </scenes>
     <resources>
