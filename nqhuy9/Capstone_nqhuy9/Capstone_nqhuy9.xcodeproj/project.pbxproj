@@ -21,6 +21,16 @@
 		F4428148269BE7A900DB531B /* QuestionCoreData+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4428146269BE7A900DB531B /* QuestionCoreData+CoreDataClass.swift */; };
 		F4428149269BE7A900DB531B /* QuestionCoreData+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4428147269BE7A900DB531B /* QuestionCoreData+CoreDataProperties.swift */; };
 		F442815E269BEFF100DB531B /* KnowledgeRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = F442815D269BEFF100DB531B /* KnowledgeRepository.swift */; };
+		F491ED1D269E8FA300A98D28 /* InsertReviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F491ED1C269E8FA300A98D28 /* InsertReviewViewController.swift */; };
+		F491ED22269E919B00A98D28 /* Review.swift in Sources */ = {isa = PBXBuildFile; fileRef = F491ED21269E919B00A98D28 /* Review.swift */; };
+		F491ED2F269E932600A98D28 /* ReviewRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = F491ED2E269E932600A98D28 /* ReviewRepository.swift */; };
+		F491ED34269E93E300A98D28 /* ReviewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F491ED33269E93E300A98D28 /* ReviewViewModel.swift */; };
+		F491ED39269E962800A98D28 /* ListReviewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F491ED38269E962800A98D28 /* ListReviewsViewController.swift */; };
+		F491ED40269E98C600A98D28 /* ReviewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F491ED3E269E98C600A98D28 /* ReviewTableViewCell.swift */; };
+		F491ED41269E98C600A98D28 /* ReviewTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F491ED3F269E98C600A98D28 /* ReviewTableViewCell.xib */; };
+		F491ED4D269E9AED00A98D28 /* ReviewCoreData+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = F491ED4B269E9AED00A98D28 /* ReviewCoreData+CoreDataClass.swift */; };
+		F491ED4E269E9AED00A98D28 /* ReviewCoreData+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = F491ED4C269E9AED00A98D28 /* ReviewCoreData+CoreDataProperties.swift */; };
+		F491ED54269E9DEF00A98D28 /* CheckBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = F491ED53269E9DEF00A98D28 /* CheckBox.swift */; };
 		F4CE76102694303800330A77 /* BaseCoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4CE760F2694303800330A77 /* BaseCoreData.swift */; };
 		F4FDA8262696974A0039E9B4 /* AccountCoreData+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4FDA8242696974A0039E9B4 /* AccountCoreData+CoreDataClass.swift */; };
 		F4FDA8272696974A0039E9B4 /* AccountCoreData+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4FDA8252696974A0039E9B4 /* AccountCoreData+CoreDataProperties.swift */; };
@@ -85,6 +95,16 @@
 		F4428146269BE7A900DB531B /* QuestionCoreData+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "QuestionCoreData+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
 		F4428147269BE7A900DB531B /* QuestionCoreData+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "QuestionCoreData+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
 		F442815D269BEFF100DB531B /* KnowledgeRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KnowledgeRepository.swift; sourceTree = "<group>"; };
+		F491ED1C269E8FA300A98D28 /* InsertReviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsertReviewViewController.swift; sourceTree = "<group>"; };
+		F491ED21269E919B00A98D28 /* Review.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Review.swift; sourceTree = "<group>"; };
+		F491ED2E269E932600A98D28 /* ReviewRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewRepository.swift; sourceTree = "<group>"; };
+		F491ED33269E93E300A98D28 /* ReviewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewViewModel.swift; sourceTree = "<group>"; };
+		F491ED38269E962800A98D28 /* ListReviewsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListReviewsViewController.swift; sourceTree = "<group>"; };
+		F491ED3E269E98C600A98D28 /* ReviewTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewTableViewCell.swift; sourceTree = "<group>"; };
+		F491ED3F269E98C600A98D28 /* ReviewTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ReviewTableViewCell.xib; sourceTree = "<group>"; };
+		F491ED4B269E9AED00A98D28 /* ReviewCoreData+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ReviewCoreData+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
+		F491ED4C269E9AED00A98D28 /* ReviewCoreData+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ReviewCoreData+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
+		F491ED53269E9DEF00A98D28 /* CheckBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckBox.swift; sourceTree = "<group>"; };
 		F4CE760F2694303800330A77 /* BaseCoreData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCoreData.swift; sourceTree = "<group>"; };
 		F4FDA8242696974A0039E9B4 /* AccountCoreData+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AccountCoreData+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
 		F4FDA8252696974A0039E9B4 /* AccountCoreData+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AccountCoreData+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
@@ -206,6 +226,42 @@
 			path = InsertQuestionScreen;
 			sourceTree = "<group>";
 		};
+		F491ED1B269E8F8300A98D28 /* ReviewManagerScreens */ = {
+			isa = PBXGroup;
+			children = (
+				F491ED3D269E98A700A98D28 /* ReviewCell */,
+				F491ED1C269E8FA300A98D28 /* InsertReviewViewController.swift */,
+				F491ED38269E962800A98D28 /* ListReviewsViewController.swift */,
+			);
+			path = ReviewManagerScreens;
+			sourceTree = "<group>";
+		};
+		F491ED26269E91F600A98D28 /* Review_CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				F491ED4B269E9AED00A98D28 /* ReviewCoreData+CoreDataClass.swift */,
+				F491ED4C269E9AED00A98D28 /* ReviewCoreData+CoreDataProperties.swift */,
+			);
+			path = Review_CoreData;
+			sourceTree = "<group>";
+		};
+		F491ED3D269E98A700A98D28 /* ReviewCell */ = {
+			isa = PBXGroup;
+			children = (
+				F491ED3E269E98C600A98D28 /* ReviewTableViewCell.swift */,
+				F491ED3F269E98C600A98D28 /* ReviewTableViewCell.xib */,
+			);
+			path = ReviewCell;
+			sourceTree = "<group>";
+		};
+		F491ED52269E9DE100A98D28 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				F491ED53269E9DEF00A98D28 /* CheckBox.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
 		F4FDA83D269703860039E9B4 /* Question_CoreData */ = {
 			isa = PBXGroup;
 			children = (
@@ -273,6 +329,7 @@
 		F4FDF596268EAB03001B02D3 /* Database */ = {
 			isa = PBXGroup;
 			children = (
+				F491ED26269E91F600A98D28 /* Review_CoreData */,
 				F4FDA83D269703860039E9B4 /* Question_CoreData */,
 				F4FDF55A268EA6B4001B02D3 /* Capstone_nqhuy9.xcdatamodeld */,
 				F4FDF6B2268F09C7001B02D3 /* Account_CoreData */,
@@ -285,6 +342,7 @@
 		F4FDF597268EAB0D001B02D3 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				F491ED1B269E8F8300A98D28 /* ReviewManagerScreens */,
 				F433BC8D269D8F06002F5146 /* CustomTabbar */,
 				F442814E269BEA5F00DB531B /* InsertQuestionScreen */,
 				F442814D269BEA4300DB531B /* ChooseLevelScreen */,
@@ -310,6 +368,7 @@
 			children = (
 				F4FDA82B2696D9C70039E9B4 /* AuthenticationViewModels.swift */,
 				F433BC53269BF5B5002F5146 /* KnowledgeViewModel.swift */,
+				F491ED33269E93E300A98D28 /* ReviewViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -326,6 +385,7 @@
 		F4FDF59B268EAB40001B02D3 /* Ultis */ = {
 			isa = PBXGroup;
 			children = (
+				F491ED52269E9DE100A98D28 /* Common */,
 				F4FDF676268EF864001B02D3 /* Constant */,
 				F4FDF59C268EAB4A001B02D3 /* Extension */,
 			);
@@ -382,6 +442,7 @@
 			children = (
 				F4FDF6AD268F06AE001B02D3 /* Account.swift */,
 				F4FDA833269702CC0039E9B4 /* Question.swift */,
+				F491ED21269E919B00A98D28 /* Review.swift */,
 			);
 			path = Domain;
 			sourceTree = "<group>";
@@ -391,6 +452,7 @@
 			children = (
 				F4FDF6A8268F066E001B02D3 /* AuthenticationRepository.swift */,
 				F442815D269BEFF100DB531B /* KnowledgeRepository.swift */,
+				F491ED2E269E932600A98D28 /* ReviewRepository.swift */,
 			);
 			path = Repository;
 			sourceTree = "<group>";
@@ -515,6 +577,7 @@
 				F4FDF66D268EF0BD001B02D3 /* Authentication.storyboard in Resources */,
 				F4FDF561268EA6B7001B02D3 /* LaunchScreen.storyboard in Resources */,
 				F433BC6D269D3659002F5146 /* InsertQuestionTableViewCell.xib in Resources */,
+				F491ED41269E98C600A98D28 /* ReviewTableViewCell.xib in Resources */,
 				F4FDF55E268EA6B7001B02D3 /* Assets.xcassets in Resources */,
 				F4FDF559268EA6B4001B02D3 /* Main.storyboard in Resources */,
 			);
@@ -653,12 +716,16 @@
 				F4FDF60D268EB624001B02D3 /* Convertable.swift in Sources */,
 				F4428149269BE7A900DB531B /* QuestionCoreData+CoreDataProperties.swift in Sources */,
 				F4428148269BE7A900DB531B /* QuestionCoreData+CoreDataClass.swift in Sources */,
+				F491ED34269E93E300A98D28 /* ReviewViewModel.swift in Sources */,
+				F491ED4E269E9AED00A98D28 /* ReviewCoreData+CoreDataProperties.swift in Sources */,
 				F4FDA834269702CC0039E9B4 /* Question.swift in Sources */,
 				F4FDF6AE268F06AE001B02D3 /* Account.swift in Sources */,
 				F4FDA8272696974A0039E9B4 /* AccountCoreData+CoreDataProperties.swift in Sources */,
 				F4FDF552268EA6B4001B02D3 /* AppDelegate.swift in Sources */,
 				F433BC54269BF5B5002F5146 /* KnowledgeViewModel.swift in Sources */,
+				F491ED40269E98C600A98D28 /* ReviewTableViewCell.swift in Sources */,
 				F4FDA82C2696D9C70039E9B4 /* AuthenticationViewModels.swift in Sources */,
+				F491ED39269E962800A98D28 /* ListReviewsViewController.swift in Sources */,
 				F4FDF680268EFA98001B02D3 /* Color.swift in Sources */,
 				F4CE76102694303800330A77 /* BaseCoreData.swift in Sources */,
 				F433BC77269D47A2002F5146 /* UIView+Extension.swift in Sources */,
@@ -666,12 +733,17 @@
 				F4FDF55C268EA6B4001B02D3 /* Capstone_nqhuy9.xcdatamodeld in Sources */,
 				F4FDA8262696974A0039E9B4 /* AccountCoreData+CoreDataClass.swift in Sources */,
 				F4FDF672268EF706001B02D3 /* SignInViewController.swift in Sources */,
+				F491ED54269E9DEF00A98D28 /* CheckBox.swift in Sources */,
 				F4FDF68B268EFEFA001B02D3 /* BaseVC.swift in Sources */,
 				F4FDF554268EA6B4001B02D3 /* SceneDelegate.swift in Sources */,
 				F442815E269BEFF100DB531B /* KnowledgeRepository.swift in Sources */,
+				F491ED22269E919B00A98D28 /* Review.swift in Sources */,
 				F4FDF678268EF89B001B02D3 /* ConstantString.swift in Sources */,
 				F433BC72269D39B6002F5146 /* InsertKnowledgeViewController.swift in Sources */,
 				F4FDF698268EFF9A001B02D3 /* NSObject+Extension.swift in Sources */,
+				F491ED2F269E932600A98D28 /* ReviewRepository.swift in Sources */,
+				F491ED1D269E8FA300A98D28 /* InsertReviewViewController.swift in Sources */,
+				F491ED4D269E9AED00A98D28 /* ReviewCoreData+CoreDataClass.swift in Sources */,
 				F433BC99269D9844002F5146 /* CustomTabBar.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
