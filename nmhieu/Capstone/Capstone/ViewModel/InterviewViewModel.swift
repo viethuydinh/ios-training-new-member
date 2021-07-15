@@ -13,9 +13,13 @@ protocol InterviewViewModel {
     
     var level : LevelInterView { get set }
     
+    var interviewHistory : [InterviewModel] { get set }
+    
     func recommentListQuestions() -> [QuestionInterviewModel]
     
     func saveInterView(tableView : UITableView)
+    
+    func fetchInterviewHistory() -> [InterviewModel]
     
     func getDataOnCadidateProfileSection(tableView : UITableView) -> CandidateInforModel
     
@@ -29,6 +33,8 @@ struct DefaultInterviewViewModel : InterviewViewModel {
     var interViewRepository = DefaultInterviewRepository()
     
     var image: UIImage?
+    
+    var interviewHistory : [InterviewModel] = []
     
     var level: LevelInterView = .intern
     
@@ -78,5 +84,9 @@ struct DefaultInterviewViewModel : InterviewViewModel {
         
         return overview
     }
-     
+    
+    func fetchInterviewHistory() -> [InterviewModel] {
+        return self.interViewRepository.fetchInterviewHistory()
+    }
+    
 }

@@ -38,6 +38,10 @@
 		155F2FF926943573007EFBAC /* UserCoreData+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 155F2FF726943573007EFBAC /* UserCoreData+CoreDataProperties.swift */; };
 		1573548C26A023FD00A5C59D /* CandidateInforModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1573548B26A023FD00A5C59D /* CandidateInforModel.swift */; };
 		1573548F26A024C900A5C59D /* OverviewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1573548E26A024C900A5C59D /* OverviewModel.swift */; };
+		1573549226A030E500A5C59D /* History.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1573549126A030E500A5C59D /* History.storyboard */; };
+		1573549426A030FE00A5C59D /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1573549326A030FE00A5C59D /* HistoryViewController.swift */; };
+		1573549826A031B000A5C59D /* HistoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1573549626A031B000A5C59D /* HistoryTableViewCell.swift */; };
+		1573549926A031B000A5C59D /* HistoryTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1573549726A031B000A5C59D /* HistoryTableViewCell.xib */; };
 		157F971D268EF131009BBF14 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 157F971C268EF131009BBF14 /* SignInViewController.swift */; };
 		157F9722268EF141009BBF14 /* SignIn.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 157F9721268EF141009BBF14 /* SignIn.storyboard */; };
 		157F972D268EFAB2009BBF14 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 157F972C268EFAB2009BBF14 /* SignUpViewController.swift */; };
@@ -125,6 +129,10 @@
 		155F2FF726943573007EFBAC /* UserCoreData+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "UserCoreData+CoreDataProperties.swift"; path = "Capstone/Model/Database/User/UserCoreData+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
 		1573548B26A023FD00A5C59D /* CandidateInforModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CandidateInforModel.swift; sourceTree = "<group>"; };
 		1573548E26A024C900A5C59D /* OverviewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverviewModel.swift; sourceTree = "<group>"; };
+		1573549126A030E500A5C59D /* History.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = History.storyboard; sourceTree = "<group>"; };
+		1573549326A030FE00A5C59D /* HistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
+		1573549626A031B000A5C59D /* HistoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryTableViewCell.swift; sourceTree = "<group>"; };
+		1573549726A031B000A5C59D /* HistoryTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HistoryTableViewCell.xib; sourceTree = "<group>"; };
 		157F971C268EF131009BBF14 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		157F9721268EF141009BBF14 /* SignIn.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SignIn.storyboard; sourceTree = "<group>"; };
 		157F972C268EFAB2009BBF14 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
@@ -320,6 +328,25 @@
 			path = Interview;
 			sourceTree = "<group>";
 		};
+		1573549026A0301F00A5C59D /* History */ = {
+			isa = PBXGroup;
+			children = (
+				1573549526A0319300A5C59D /* Cell */,
+				1573549126A030E500A5C59D /* History.storyboard */,
+				1573549326A030FE00A5C59D /* HistoryViewController.swift */,
+			);
+			path = History;
+			sourceTree = "<group>";
+		};
+		1573549526A0319300A5C59D /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				1573549626A031B000A5C59D /* HistoryTableViewCell.swift */,
+				1573549726A031B000A5C59D /* HistoryTableViewCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
 		157F96E8268EBB08009BBF14 /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -335,6 +362,7 @@
 		157F96EA268EBB1B009BBF14 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				1573549026A0301F00A5C59D /* History */,
 				15A0385E269E978D00D9D0FB /* Interview */,
 				1507B211268F1412001945A8 /* BaseViewController */,
 				154A639F269BFAB3008E571C /* InsertKnowledge */,
@@ -613,9 +641,11 @@
 				15A03872269E991E00D9D0FB /* CandidateInforTableViewCell.xib in Resources */,
 				15A03889269EC0C500D9D0FB /* OverviewTableViewCell.xib in Resources */,
 				157F9732268EFAC0009BBF14 /* SignUp.storyboard in Resources */,
+				1573549926A031B000A5C59D /* HistoryTableViewCell.xib in Resources */,
 				15095E7B268DC8B400129B9C /* Assets.xcassets in Resources */,
 				157F9722268EF141009BBF14 /* SignIn.storyboard in Resources */,
 				154A63B1269C1E08008E571C /* KnowledgeTableViewCell.xib in Resources */,
+				1573549226A030E500A5C59D /* History.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -717,6 +747,7 @@
 				15A038A3269ED12E00D9D0FB /* QuestionInterviewModel.swift in Sources */,
 				1585AFBB2696B1700073F89E /* AuthenticationViewModel.swift in Sources */,
 				1507B213268F1435001945A8 /* BaseVCViewController.swift in Sources */,
+				1573549826A031B000A5C59D /* HistoryTableViewCell.swift in Sources */,
 				15179EB52695565F008D3A46 /* Convertible.swift in Sources */,
 				1585AFD72696EA9E0073F89E /* HomeViewController.swift in Sources */,
 				15A03860269E97B900D9D0FB /* InterviewViewController.swift in Sources */,
@@ -742,6 +773,7 @@
 				1585AFD12696DA750073F89E /* AuthenticationRepository.swift in Sources */,
 				157F9737268EFEA4009BBF14 /* Color.swift in Sources */,
 				15A038B6269ED1FA00D9D0FB /* QuestionInterViewCoreData+CoreDataClass.swift in Sources */,
+				1573549426A030FE00A5C59D /* HistoryViewController.swift in Sources */,
 				1507B20D268F13CE001945A8 /* UserModel.swift in Sources */,
 				15344169269FE0150078660E /* NotificationKey.swift in Sources */,
 				15A03888269EC0C500D9D0FB /* OverviewTableViewCell.swift in Sources */,

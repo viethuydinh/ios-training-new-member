@@ -11,6 +11,8 @@ protocol InterviewRepository {
     func recommentQuestion(level : LevelInterView) -> [QuestionInterviewModel]
     
     func saveInterView(data : InterviewModel)
+    
+    func fetchInterviewHistory() -> [InterviewModel]
 }
 
 struct DefaultInterviewRepository : InterviewRepository {
@@ -49,5 +51,12 @@ struct DefaultInterviewRepository : InterviewRepository {
             questionInterview.id = id
             CoreDataRepository<QuestionInterviewModel>.shared.save(domain: questionInterview)
         })
+    }
+    
+    func fetchInterviewHistory() -> [InterviewModel] {
+        var historyInterview : [InterviewModel]  = []
+        guard let interview = CoreDataRepository<InterviewModel>.shared.fetchAll() else { return [] }
+        historyInterview = interview
+        return historyInterview
     }
 }
