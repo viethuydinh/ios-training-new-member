@@ -27,6 +27,15 @@ class InsertReviewViewController: BaseVC {
     //MARK: -UI
     private func setupUI() {
         self.saveButton.layer.cornerRadius = 10
+        self.setupView(backgroundColor: .white, view: self.reviewTextView, borderWidth: 1.0, borderColor: UIColor.gray.cgColor, cornerRadius: 8.0)
+        self.setupView(backgroundColor: .white, view: self.candidateNameTextField, borderWidth: 1.0, borderColor: UIColor.gray.cgColor, cornerRadius: 8.0)
+    }
+    
+    private func setupView(backgroundColor: UIColor,view: UIView, borderWidth: CGFloat, borderColor: CGColor, cornerRadius: CGFloat) {
+        view.backgroundColor = backgroundColor
+        view.layer.borderWidth = borderWidth
+        view.layer.borderColor = borderColor
+        view.layer.cornerRadius = cornerRadius
     }
     
     //MARK: -Event

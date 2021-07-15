@@ -22,6 +22,14 @@ class InsertQuestionTableViewCell: UITableViewCell, UITextFieldDelegate {
         self.questionTextField.delegate = self
         self.shadowView.addShadow(color: UIColor.black.cgColor, shadowOpacity: 0.5, shadowRadius: 2.0, shadowOffset: CGSize(width: 1.0, height: 1.0))
         self.shadowView.layer.cornerRadius = 10.0
+        self.setupView(backgroundColor: .white, view: self.questionTextField, borderWidth: 1.0, borderColor: UIColor.gray.cgColor, cornerRadius: 8.0)
+    }
+    
+    private func setupView(backgroundColor: UIColor,view: UIView, borderWidth: CGFloat, borderColor: CGColor, cornerRadius: CGFloat) {
+        view.backgroundColor = backgroundColor
+        view.layer.borderWidth = borderWidth
+        view.layer.borderColor = borderColor
+        view.layer.cornerRadius = cornerRadius
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {

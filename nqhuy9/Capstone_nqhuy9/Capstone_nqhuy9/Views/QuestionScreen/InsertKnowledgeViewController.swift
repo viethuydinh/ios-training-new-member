@@ -55,6 +55,7 @@ class InsertKnowledgeViewController: BaseVC {
         self.tableView.delegate = self
         self.tableView.dataSource = self
         self.tableView.contentInset = UIEdgeInsets(top: 16.0, left: .zero, bottom: .zero, right: .zero)
+        self.tableView.backgroundColor = .white
         self.tableView.register(UINib(nibName: InsertQuestionTableViewCell.name, bundle: nil), forCellReuseIdentifier: InsertQuestionTableViewCell.identifier)
     }
     

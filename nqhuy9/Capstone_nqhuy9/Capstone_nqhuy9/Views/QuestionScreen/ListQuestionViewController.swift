@@ -38,6 +38,7 @@ class ListQuestionViewController: BaseVC {
     private func setupTableView() {
         self.tableViewQuestion.delegate = self
         self.tableViewQuestion.dataSource = self
+        self.tableViewQuestion.backgroundColor = .white
         self.tableViewQuestion.contentInset = UIEdgeInsets(top: 16.0, left: .zero, bottom: .zero, right: .zero)
         self.tableViewQuestion.register(UINib(nibName: QuestionTableViewCell.name, bundle: nil), forCellReuseIdentifier: QuestionTableViewCell.identifier)
     }

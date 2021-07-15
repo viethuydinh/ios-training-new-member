@@ -32,6 +32,16 @@ class SignUpViewController: BaseVC {
         self.setupTextfield(textfield: self.usernameTextField, text: AccountString.PLACEHOLDER_USERNAME)
         self.setupTextfield(textfield: self.passwordTextField, text: AccountString.PLACEHOLDER_PASSWORD)
         self.setupTextfield(textfield: self.repasswordTextField, text: AccountString.PLACEHOLDER_RE_PASSWORD)
+        self.setupView(backgroundColor: .white, view: self.usernameTextField, borderWidth: 1.0, borderColor: UIColor.gray.cgColor, cornerRadius: 8.0)
+        self.setupView(backgroundColor: .white, view: self.passwordTextField, borderWidth: 1.0, borderColor: UIColor.gray.cgColor, cornerRadius: 8.0)
+        self.setupView(backgroundColor: .white, view: self.repasswordTextField, borderWidth: 1.0, borderColor: UIColor.gray.cgColor, cornerRadius: 8.0)
+    }
+    
+    private func setupView(backgroundColor: UIColor,view: UIView, borderWidth: CGFloat, borderColor: CGColor, cornerRadius: CGFloat) {
+        view.backgroundColor = backgroundColor
+        view.layer.borderWidth = borderWidth
+        view.layer.borderColor = borderColor
+        view.layer.cornerRadius = cornerRadius
     }
     
     private func setupTextfield(textfield:UITextField,text:String) {

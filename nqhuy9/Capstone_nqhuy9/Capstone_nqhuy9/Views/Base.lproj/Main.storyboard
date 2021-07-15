@@ -5,7 +5,6 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -169,7 +168,7 @@
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="PmE-dl-5U9"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="PmE-dl-5U9" firstAttribute="bottom" secondItem="D9o-wf-pBM" secondAttribute="bottom" constant="36" id="6hG-9J-7OX"/>
                             <constraint firstItem="wL1-A0-fDd" firstAttribute="top" secondItem="dXm-3c-LFS" secondAttribute="top" id="8SQ-8f-r6t"/>
@@ -249,6 +248,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="Lz8-9L-LUH"/>
                                 </constraints>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
@@ -260,7 +260,7 @@
                             </label>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="yJt-fY-ZsJ">
                                 <rect key="frame" x="24" y="366.5" width="366" height="269"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -376,7 +376,7 @@
                             </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="eQh-x8-lSU"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="DLU-bn-INo" firstAttribute="trailing" secondItem="eQh-x8-lSU" secondAttribute="trailing" id="SqZ-z2-wfi"/>
                             <constraint firstItem="rff-ed-Fxy" firstAttribute="leading" secondItem="eQh-x8-lSU" secondAttribute="leading" id="U4J-4D-SGi"/>
@@ -496,7 +496,7 @@
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="bPs-3l-qfX"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="XoX-Ua-buM" firstAttribute="top" secondItem="NSv-u7-2UG" secondAttribute="top" id="2tt-my-94J"/>
                             <constraint firstItem="wzx-GY-zhK" firstAttribute="top" secondItem="NSv-u7-2UG" secondAttribute="bottom" constant="24" id="8k2-Gr-xwV"/>
@@ -537,8 +537,5 @@
         <namedColor name="niceBlue">
             <color red="0.078431372549019607" green="0.42745098039215684" blue="0.74117647058823533" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
     </resources>
 </document>

@@ -31,6 +31,7 @@
                         <constraints>
                             <constraint firstAttribute="height" constant="48" id="ifs-rH-0EH"/>
                         </constraints>
+                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                         <textInputTraits key="textInputTraits"/>
                     </textField>
@@ -48,6 +49,7 @@
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <connections>
                 <outlet property="questionTextField" destination="dfN-ok-hwa" id="T8r-7v-yro"/>
                 <outlet property="shadowView" destination="g58-M3-0St" id="0ON-Cy-Jl1"/>

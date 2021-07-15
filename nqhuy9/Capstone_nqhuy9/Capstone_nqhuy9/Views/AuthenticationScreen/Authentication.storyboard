@@ -5,7 +5,6 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -40,6 +39,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="mLm-qQ-zRl"/>
                                 </constraints>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
@@ -48,6 +48,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="GcZ-lr-AgU"/>
                                 </constraints>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
@@ -70,7 +71,7 @@
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="SqV-0J-o5w"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="F3z-Gk-zYH" firstAttribute="centerX" secondItem="Tlo-Ep-sOc" secondAttribute="centerX" id="AsB-J7-ffd"/>
                             <constraint firstItem="WOu-jY-cUJ" firstAttribute="top" secondItem="KYV-Sm-adW" secondAttribute="bottom" constant="16" id="Exd-9E-mCx"/>
@@ -134,6 +135,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="dJ5-uG-IiZ"/>
                                 </constraints>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
@@ -142,6 +144,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="qUa-7z-ahv"/>
                                 </constraints>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
@@ -173,12 +176,13 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="QGl-Fk-Ejg"/>
                                 </constraints>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="khR-RW-kNh"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="QpE-9D-uoK" firstAttribute="centerX" secondItem="RTV-MY-CVr" secondAttribute="centerX" id="0FW-DO-wZG"/>
                             <constraint firstItem="JXl-PH-MYh" firstAttribute="centerX" secondItem="RTV-MY-CVr" secondAttribute="centerX" id="6EV-FR-7ux"/>
@@ -238,8 +242,5 @@
         <namedColor name="niceBlue">
             <color red="0.078431372549019607" green="0.42745098039215684" blue="0.74117647058823533" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
     </resources>
 </document>

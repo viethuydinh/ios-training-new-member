@@ -79,6 +79,7 @@
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <connections>
                 <outlet property="candidateNameLabel" destination="Zhw-To-7eX" id="hb3-PG-SFH"/>
                 <outlet property="reviewLabel" destination="FUd-vj-zPi" id="00U-9b-Lyn"/>

@@ -29,6 +29,7 @@ class ListReviewsViewController: BaseVC {
     private func setupTableView() {
         self.tableViewReview.delegate = self
         self.tableViewReview.dataSource = self
+        self.tableViewReview.backgroundColor = .white
         self.tableViewReview.contentInset = UIEdgeInsets(top: 16.0, left: .zero, bottom: .zero, right: .zero)
         self.tableViewReview.register(UINib(nibName: ReviewTableViewCell.name, bundle: nil), forCellReuseIdentifier: ReviewTableViewCell.identifier)
     }

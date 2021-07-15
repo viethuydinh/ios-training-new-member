@@ -57,6 +57,7 @@ class CustomTabBar: UIView {
 
         let itemTitleLabel = UILabel()
         itemTitleLabel.text = item.displayTitle
+        itemTitleLabel.textColor = .black
         itemTitleLabel.textAlignment = .center
         itemTitleLabel.translatesAutoresizingMaskIntoConstraints = false
         itemTitleLabel.clipsToBounds = true
