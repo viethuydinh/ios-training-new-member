@@ -33,12 +33,12 @@ extension InterviewCoreData : DomainConvertible{
     var asDomain: InterviewModel {
         var domain = Domain()
         domain.id = Int(self.id)
-        domain.name = self.name
-        domain.age = Int(self.age)
-        domain.image = UIImage(data: Data(base64Encoded: self.image ?? "" ) ?? Data())
-        domain.level = LevelInterView(rawValue: Int(self.level))
-        domain.overviewContent = self.overviewContent
-        domain.resultInterview = ResultInterview(rawValue: Int(self.result))
+        domain.candidateInfor?.name = self.name
+        domain.candidateInfor?.age = Int(self.age)
+        domain.candidateInfor?.image = UIImage(data: Data(base64Encoded: self.image ?? "" ) ?? Data())
+        domain.candidateInfor?.level = LevelInterView(rawValue: Int(self.level))
+        domain.overview?.content = self.overviewContent
+        domain.overview?.status = StatusInterview(rawValue: Int(self.result))
         domain.date = self.date
         return domain
         

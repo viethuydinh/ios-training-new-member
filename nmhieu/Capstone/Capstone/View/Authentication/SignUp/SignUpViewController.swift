@@ -6,8 +6,6 @@
 //
 
 import UIKit
-import RxSwift
-import RxCocoa
 
 class SignUpViewController: BaseVC {
     
@@ -58,7 +56,9 @@ class SignUpViewController: BaseVC {
         let a = self.authenticationVM.signUp(username: self.userNameTF.text ?? "",
                                               password: self.paswordTF.text ?? "",
                                               repassword: self.confirmPasswordTF.text ?? "")
-        print(a)
+        if a {
+            self.navigationController?.popViewController(animated: true)
+        }
     }
     
     @objc fileprivate func eventSignIn() {

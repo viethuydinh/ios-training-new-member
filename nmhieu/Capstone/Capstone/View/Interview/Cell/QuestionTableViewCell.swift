@@ -14,17 +14,17 @@ class QuestionTableViewCell: UITableViewCell {
     
     var status : RateAnswer = .good
     
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        self.setUpUI()
+    }
+    
     func getQuestion() -> QuestionInterviewModel {
         var question = QuestionInterviewModel()
         question.id = nil
         question.question = self.questionLabel.text
         question.rate = self.status
         return question
-    }
-
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        self.setUpUI()
     }
     
     func setUpUI() {
@@ -50,7 +50,6 @@ class QuestionTableViewCell: UITableViewCell {
     func bindingData(question : String) {
         self.questionLabel.text = question
     }
-    
 }
 
 extension QuestionTableViewCell {

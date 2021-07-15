@@ -1,11 +1,12 @@
 //
 //  InterviewViewController.swift
-//  Capstone
+//  Capstone  
 //
 //  Created by Nguyễn Minh Hiếu on 14/07/2021.
 //
 
 import UIKit
+import Photos
 
 enum InterviewSection : Int,Comparable,CaseIterable {
     case candidateInfor = 0
@@ -40,7 +41,7 @@ enum InterviewSection : Int,Comparable,CaseIterable {
 }
 
 
-class InterviewViewController: UIViewController {
+class InterviewViewController: BaseVC, UINavigationControllerDelegate {
 
     @IBOutlet weak var interViewTableView: UITableView!
     
@@ -56,7 +57,7 @@ class InterviewViewController: UIViewController {
     
     //MARK: -UI
     fileprivate func setUpUI() {
-        self.interViewTableView.register(UINib(nibName: ProfileCandidateTableViewCell.name, bundle: nil), forCellReuseIdentifier: ProfileCandidateTableViewCell.identifier)
+        self.interViewTableView.register(UINib(nibName: CandidateInforTableViewCell.name, bundle: nil), forCellReuseIdentifier: CandidateInforTableViewCell.identifier)
         self.interViewTableView.register(UINib(nibName: QuestionTableViewCell.name, bundle: nil), forCellReuseIdentifier: QuestionTableViewCell.identifier)
         self.interViewTableView.register(UINib(nibName: OverviewTableViewCell.name, bundle: nil), forCellReuseIdentifier: OverviewTableViewCell.identifier)
         self.interViewTableView.dataSource = self
@@ -65,12 +66,22 @@ class InterviewViewController: UIViewController {
     
     //MARK: -Event
     @IBAction func eventDone() {
-        
+        self.interviewVM.saveInterView(tableView: self.interViewTableView)
+        self.navigationController?.popViewController(animated: true)
     }
     
     @IBAction func eventBack() {
     
         self.navigationController?.popViewController(animated: true)
+    }
+    
+    fileprivate func eventPresentCamreraPicker(state : Bool) {
+        let picker = UIImagePickerController()
+        if UIImagePickerController.isSourceTypeAvailable(.camera) {
+            picker.sourceType = .camera
+        }
+        picker.delegate = self
+        self.present(picker, animated: true, completion: nil)
     }
     
     //MARK: -BindingData
@@ -101,8 +112,10 @@ extension InterviewViewController : UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         switch indexPath.section {
         case InterviewSection.candidateInfor.rawValue:
-            guard let cell = tableView.dequeueReusableCell(withIdentifier: ProfileCandidateTableViewCell.identifier) as? ProfileCandidateTableViewCell else { return UITableViewCell() }
-            cell.bindingData(level: self.interviewVM.level.title)
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: CandidateInforTableViewCell.identifier) as? CandidateInforTableViewCell else { return UITableViewCell() }
+            cell.bindingData(level: self.interviewVM.level, image: self.interviewVM.image ?? UIImage())
+            cell.selectCandidateImage = { self.eventPresentCamreraPicker(state:$0) }
+
             return cell
         case InterviewSection.questions.rawValue:
             guard let cell = tableView.dequeueReusableCell(withIdentifier: QuestionTableViewCell.identifier) as? QuestionTableViewCell else { return UITableViewCell() }
@@ -136,7 +149,7 @@ extension InterviewViewController : UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         switch indexPath.section {
         case InterviewSection.candidateInfor.rawValue:
-            return ProfileCandidateTableViewCell.height
+            return CandidateInforTableViewCell.height
         case InterviewSection.questions.rawValue:
             return QuestionTableViewCell.height
         case InterviewSection.overview.rawValue:
@@ -144,5 +157,17 @@ extension InterviewViewController : UITableViewDelegate {
         default:
             return 0
         }
+    }
+}
+
+extension InterviewViewController : UIImagePickerControllerDelegate {
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        picker.dismiss(animated: true)
+        guard let image = info[.originalImage] as? UIImage else {
+            return
+        }
+        
+        self.interviewVM.image = image
+        self.interViewTableView.reloadData()
     }
 }

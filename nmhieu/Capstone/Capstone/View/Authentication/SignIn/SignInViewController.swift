@@ -6,8 +6,6 @@
 //
 
 import UIKit
-import RxSwift
-import RxGesture
 
 class SignInViewController: BaseVC {
 

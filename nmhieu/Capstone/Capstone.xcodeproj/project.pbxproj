@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 51;
+	objectVersion = 50;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -23,6 +23,7 @@
 		15179ECB26958640008D3A46 /* Capstone.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 15179EC926958640008D3A46 /* Capstone.xcdatamodeld */; };
 		15179EE92695B949008D3A46 /* AccountCoreData+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15179EE72695B949008D3A46 /* AccountCoreData+CoreDataClass.swift */; };
 		15179EEA2695B949008D3A46 /* AccountCoreData+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15179EE82695B949008D3A46 /* AccountCoreData+CoreDataProperties.swift */; };
+		15344169269FE0150078660E /* NotificationKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15344168269FE0150078660E /* NotificationKey.swift */; };
 		154A6366269BF253008E571C /* QuestionCoreData+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 154A6364269BF253008E571C /* QuestionCoreData+CoreDataClass.swift */; };
 		154A6367269BF253008E571C /* QuestionCoreData+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 154A6365269BF253008E571C /* QuestionCoreData+CoreDataProperties.swift */; };
 		154A638D269BF498008E571C /* QuestionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 154A638C269BF498008E571C /* QuestionModel.swift */; };
@@ -35,6 +36,8 @@
 		154A63B6269C2384008E571C /* UITableViewCell+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 154A63B5269C2384008E571C /* UITableViewCell+Extension.swift */; };
 		155F2FF826943573007EFBAC /* UserCoreData+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 155F2FF626943573007EFBAC /* UserCoreData+CoreDataClass.swift */; };
 		155F2FF926943573007EFBAC /* UserCoreData+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 155F2FF726943573007EFBAC /* UserCoreData+CoreDataProperties.swift */; };
+		1573548C26A023FD00A5C59D /* CandidateInforModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1573548B26A023FD00A5C59D /* CandidateInforModel.swift */; };
+		1573548F26A024C900A5C59D /* OverviewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1573548E26A024C900A5C59D /* OverviewModel.swift */; };
 		157F971D268EF131009BBF14 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 157F971C268EF131009BBF14 /* SignInViewController.swift */; };
 		157F9722268EF141009BBF14 /* SignIn.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 157F9721268EF141009BBF14 /* SignIn.storyboard */; };
 		157F972D268EFAB2009BBF14 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 157F972C268EFAB2009BBF14 /* SignUpViewController.swift */; };
@@ -47,8 +50,8 @@
 		1585AFDF2696EAA90073F89E /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1585AFDE2696EAA90073F89E /* Home.storyboard */; };
 		15A03860269E97B900D9D0FB /* InterviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15A0385F269E97B900D9D0FB /* InterviewViewController.swift */; };
 		15A0386B269E97D500D9D0FB /* Interview.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 15A0386A269E97D500D9D0FB /* Interview.storyboard */; };
-		15A03871269E991E00D9D0FB /* ProfileCandidateTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15A0386F269E991E00D9D0FB /* ProfileCandidateTableViewCell.swift */; };
-		15A03872269E991E00D9D0FB /* ProfileCandidateTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 15A03870269E991E00D9D0FB /* ProfileCandidateTableViewCell.xib */; };
+		15A03871269E991E00D9D0FB /* CandidateInforTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15A0386F269E991E00D9D0FB /* CandidateInforTableViewCell.swift */; };
+		15A03872269E991E00D9D0FB /* CandidateInforTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 15A03870269E991E00D9D0FB /* CandidateInforTableViewCell.xib */; };
 		15A0387B269E9E3A00D9D0FB /* InterviewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15A0387A269E9E3A00D9D0FB /* InterviewViewModel.swift */; };
 		15A03881269EBF4D00D9D0FB /* QuestionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15A0387F269EBF4D00D9D0FB /* QuestionTableViewCell.swift */; };
 		15A03882269EBF4D00D9D0FB /* QuestionTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 15A03880269EBF4D00D9D0FB /* QuestionTableViewCell.xib */; };
@@ -107,6 +110,7 @@
 		15179ECA26958640008D3A46 /* Capstone.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Capstone.xcdatamodel; sourceTree = "<group>"; };
 		15179EE72695B949008D3A46 /* AccountCoreData+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "AccountCoreData+CoreDataClass.swift"; path = "Capstone/Model/Database/Account/AccountCoreData+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
 		15179EE82695B949008D3A46 /* AccountCoreData+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "AccountCoreData+CoreDataProperties.swift"; path = "Capstone/Model/Database/Account/AccountCoreData+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
+		15344168269FE0150078660E /* NotificationKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationKey.swift; sourceTree = "<group>"; };
 		154A6364269BF253008E571C /* QuestionCoreData+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "QuestionCoreData+CoreDataClass.swift"; path = "Capstone/Model/Database/Question/QuestionCoreData+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
 		154A6365269BF253008E571C /* QuestionCoreData+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "QuestionCoreData+CoreDataProperties.swift"; path = "Capstone/Model/Database/Question/QuestionCoreData+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
 		154A638C269BF498008E571C /* QuestionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionModel.swift; sourceTree = "<group>"; };
@@ -119,6 +123,8 @@
 		154A63B5269C2384008E571C /* UITableViewCell+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableViewCell+Extension.swift"; sourceTree = "<group>"; };
 		155F2FF626943573007EFBAC /* UserCoreData+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "UserCoreData+CoreDataClass.swift"; path = "Capstone/Model/Database/User/UserCoreData+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
 		155F2FF726943573007EFBAC /* UserCoreData+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "UserCoreData+CoreDataProperties.swift"; path = "Capstone/Model/Database/User/UserCoreData+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
+		1573548B26A023FD00A5C59D /* CandidateInforModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CandidateInforModel.swift; sourceTree = "<group>"; };
+		1573548E26A024C900A5C59D /* OverviewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverviewModel.swift; sourceTree = "<group>"; };
 		157F971C268EF131009BBF14 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		157F9721268EF141009BBF14 /* SignIn.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SignIn.storyboard; sourceTree = "<group>"; };
 		157F972C268EFAB2009BBF14 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
@@ -131,8 +137,8 @@
 		1585AFDE2696EAA90073F89E /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
 		15A0385F269E97B900D9D0FB /* InterviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterviewViewController.swift; sourceTree = "<group>"; };
 		15A0386A269E97D500D9D0FB /* Interview.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Interview.storyboard; sourceTree = "<group>"; };
-		15A0386F269E991E00D9D0FB /* ProfileCandidateTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileCandidateTableViewCell.swift; sourceTree = "<group>"; };
-		15A03870269E991E00D9D0FB /* ProfileCandidateTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileCandidateTableViewCell.xib; sourceTree = "<group>"; };
+		15A0386F269E991E00D9D0FB /* CandidateInforTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CandidateInforTableViewCell.swift; sourceTree = "<group>"; };
+		15A03870269E991E00D9D0FB /* CandidateInforTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CandidateInforTableViewCell.xib; sourceTree = "<group>"; };
 		15A0387A269E9E3A00D9D0FB /* InterviewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterviewViewModel.swift; sourceTree = "<group>"; };
 		15A0387F269EBF4D00D9D0FB /* QuestionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionTableViewCell.swift; sourceTree = "<group>"; };
 		15A03880269EBF4D00D9D0FB /* QuestionTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = QuestionTableViewCell.xib; sourceTree = "<group>"; };
@@ -249,11 +255,10 @@
 		15179ED6269586B6008D3A46 /* DAO */ = {
 			isa = PBXGroup;
 			children = (
+				1573548D26A0248D00A5C59D /* Interview */,
 				1507B20C268F13CE001945A8 /* UserModel.swift */,
 				15179EBE26958532008D3A46 /* AccountModel.swift */,
 				154A638C269BF498008E571C /* QuestionModel.swift */,
-				15A0388D269EC97100D9D0FB /* InterviewModel.swift */,
-				15A038A2269ED12E00D9D0FB /* QuestionInterviewModel.swift */,
 			);
 			path = DAO;
 			sourceTree = "<group>";
@@ -302,6 +307,17 @@
 				154A63AF269C1E08008E571C /* KnowledgeTableViewCell.xib */,
 			);
 			path = Cell;
+			sourceTree = "<group>";
+		};
+		1573548D26A0248D00A5C59D /* Interview */ = {
+			isa = PBXGroup;
+			children = (
+				15A0388D269EC97100D9D0FB /* InterviewModel.swift */,
+				15A038A2269ED12E00D9D0FB /* QuestionInterviewModel.swift */,
+				1573548B26A023FD00A5C59D /* CandidateInforModel.swift */,
+				1573548E26A024C900A5C59D /* OverviewModel.swift */,
+			);
+			path = Interview;
 			sourceTree = "<group>";
 		};
 		157F96E8268EBB08009BBF14 /* Model */ = {
@@ -359,6 +375,7 @@
 				1507B217268F14D6001945A8 /* UIViewController+Extension.swift */,
 				1507B21C268F1519001945A8 /* NSObject+Extension.swift */,
 				154A63B5269C2384008E571C /* UITableViewCell+Extension.swift */,
+				15344168269FE0150078660E /* NotificationKey.swift */,
 			);
 			path = Resource;
 			sourceTree = "<group>";
@@ -438,8 +455,8 @@
 		15A03876269E992300D9D0FB /* Cell */ = {
 			isa = PBXGroup;
 			children = (
-				15A0386F269E991E00D9D0FB /* ProfileCandidateTableViewCell.swift */,
-				15A03870269E991E00D9D0FB /* ProfileCandidateTableViewCell.xib */,
+				15A0386F269E991E00D9D0FB /* CandidateInforTableViewCell.swift */,
+				15A03870269E991E00D9D0FB /* CandidateInforTableViewCell.xib */,
 				15A0387F269EBF4D00D9D0FB /* QuestionTableViewCell.swift */,
 				15A03880269EBF4D00D9D0FB /* QuestionTableViewCell.xib */,
 				15A03886269EC0C500D9D0FB /* OverviewTableViewCell.swift */,
@@ -493,7 +510,6 @@
 				15095E67268DC8B100129B9C /* Sources */,
 				15095E68268DC8B100129B9C /* Frameworks */,
 				15095E69268DC8B100129B9C /* Resources */,
-				9D3EC3F7B7F9C4A90B7C86D5 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -531,7 +547,6 @@
 				15095E8B268DC8B500129B9C /* Sources */,
 				15095E8C268DC8B500129B9C /* Frameworks */,
 				15095E8D268DC8B500129B9C /* Resources */,
-				DC13BE6549CCFEB863DD54B3 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -595,7 +610,7 @@
 				1585AFDF2696EAA90073F89E /* Home.storyboard in Resources */,
 				15A03882269EBF4D00D9D0FB /* QuestionTableViewCell.xib in Resources */,
 				154A63A4269BFB2F008E571C /* InsertKnowledge.storyboard in Resources */,
-				15A03872269E991E00D9D0FB /* ProfileCandidateTableViewCell.xib in Resources */,
+				15A03872269E991E00D9D0FB /* CandidateInforTableViewCell.xib in Resources */,
 				15A03889269EC0C500D9D0FB /* OverviewTableViewCell.xib in Resources */,
 				157F9732268EFAC0009BBF14 /* SignUp.storyboard in Resources */,
 				15095E7B268DC8B400129B9C /* Assets.xcassets in Resources */,
@@ -665,23 +680,6 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		9D3EC3F7B7F9C4A90B7C86D5 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Capstone/Pods-Capstone-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Capstone/Pods-Capstone-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Capstone/Pods-Capstone-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		BDE8BD5273C59D58C03902E4 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -702,23 +700,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		DC13BE6549CCFEB863DD54B3 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Capstone-CapstoneUITests/Pods-Capstone-CapstoneUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Capstone-CapstoneUITests/Pods-Capstone-CapstoneUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Capstone-CapstoneUITests/Pods-Capstone-CapstoneUITests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -742,6 +723,7 @@
 				154A6367269BF253008E571C /* QuestionCoreData+CoreDataProperties.swift in Sources */,
 				154A6366269BF253008E571C /* QuestionCoreData+CoreDataClass.swift in Sources */,
 				15A038BC269EF2C200D9D0FB /* InterviewRepository.swift in Sources */,
+				1573548F26A024C900A5C59D /* OverviewModel.swift in Sources */,
 				157F972D268EFAB2009BBF14 /* SignUpViewController.swift in Sources */,
 				15095E6F268DC8B100129B9C /* AppDelegate.swift in Sources */,
 				15A0388E269EC97100D9D0FB /* InterviewModel.swift in Sources */,
@@ -752,7 +734,8 @@
 				15179EEA2695B949008D3A46 /* AccountCoreData+CoreDataProperties.swift in Sources */,
 				1507B21D268F1519001945A8 /* NSObject+Extension.swift in Sources */,
 				15095E71268DC8B100129B9C /* SceneDelegate.swift in Sources */,
-				15A03871269E991E00D9D0FB /* ProfileCandidateTableViewCell.swift in Sources */,
+				15A03871269E991E00D9D0FB /* CandidateInforTableViewCell.swift in Sources */,
+				1573548C26A023FD00A5C59D /* CandidateInforModel.swift in Sources */,
 				15A0389D269ECD9A00D9D0FB /* InterviewCoreData+CoreDataProperties.swift in Sources */,
 				15179ECB26958640008D3A46 /* Capstone.xcdatamodeld in Sources */,
 				154A6396269BF9E0008E571C /* KnowledgeViewModel.swift in Sources */,
@@ -760,6 +743,7 @@
 				157F9737268EFEA4009BBF14 /* Color.swift in Sources */,
 				15A038B6269ED1FA00D9D0FB /* QuestionInterViewCoreData+CoreDataClass.swift in Sources */,
 				1507B20D268F13CE001945A8 /* UserModel.swift in Sources */,
+				15344169269FE0150078660E /* NotificationKey.swift in Sources */,
 				15A03888269EC0C500D9D0FB /* OverviewTableViewCell.swift in Sources */,
 				15A038B7269ED1FA00D9D0FB /* QuestionInterViewCoreData+CoreDataProperties.swift in Sources */,
 				15179EBA269557B2008D3A46 /* DatabaseConfig.swift in Sources */,
@@ -940,6 +924,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = ABK98C7328;
 				INFOPLIST_FILE = Capstone/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -960,6 +945,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = ABK98C7328;
 				INFOPLIST_FILE = Capstone/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

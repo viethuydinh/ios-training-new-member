@@ -9,14 +9,17 @@ import Foundation
 
 protocol InterviewRepository {
     func recommentQuestion(level : LevelInterView) -> [QuestionInterviewModel]
+    
+    func saveInterView(data : InterviewModel)
 }
 
 struct DefaultInterviewRepository : InterviewRepository {
     
     func recommentQuestion(level : LevelInterView) -> [QuestionInterviewModel] {
         var results : [QuestionInterviewModel] = []
-        let predicateLevel : NSPredicate = .init(format: "level = %d", argumentArray: [level.rawValue])
-        guard let questions = CoreDataRepository<QuestionModel>.shared.fetch(predicate: predicateLevel) as? [QuestionModel] else { return [] }
+        let predicateLevel : NSPredicate = .init(format: "level == \(level.rawValue)")
+        
+        guard let questions = CoreDataRepository<QuestionModel>.shared.fetchList(predicate: predicateLevel) as? [QuestionModel] else { return [] }
         
         let idRandom : [Int] = (1...5).map{_ in .random(in: 0..<questions.count)}
         
@@ -29,5 +32,22 @@ struct DefaultInterviewRepository : InterviewRepository {
         }
 
         return results
+    }
+    
+    func saveInterView(data: InterviewModel) {
+        var id : Int = 0
+        id = CoreDataRepository<InterviewModel>.shared.fetchAll()?.count ?? 0
+        
+        var interviewData = data
+        interviewData.id = id
+        
+        let questionsInterviewData = data.listQuestions
+    
+        CoreDataRepository<InterviewModel>.shared.save(domain: interviewData)
+        questionsInterviewData?.forEach({ (question) in
+            var questionInterview = question
+            questionInterview.id = id
+            CoreDataRepository<QuestionInterviewModel>.shared.save(domain: questionInterview)
+        })
     }
 }

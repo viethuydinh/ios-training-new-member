@@ -6,13 +6,9 @@
 //
 
 import UIKit
-import RxSwift
-import RxCocoa
 
 class BaseVC: UIViewController,UIGestureRecognizerDelegate {
-
-    let disposeBag = DisposeBag()
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.hideKeyboardWhenTappedAround()

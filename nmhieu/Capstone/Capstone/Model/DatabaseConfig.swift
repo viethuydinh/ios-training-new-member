@@ -103,6 +103,23 @@ struct CoreDataRepository<Domain: ObjectConvertible> {
         return result
     }
     
+    func fetchList(predicate: NSPredicate) -> [Domain]? {
+        var results : [Domain]? = []
+        do {
+            var fetchRequest = NSFetchRequest<NSManagedObject>(entityName: Domain.name)
+            fetchRequest.predicate = predicate
+            guard let context = try CoreDataConfiguration.shared.configure().fetch(fetchRequest) as? [Domain.Object] else {
+                return nil
+            }
+            context.forEach { (domain) in
+                results?.append(domain.asDomain as! Domain)
+            }
+        } catch let error as NSError {
+            NSLog(error.description)
+        }
+        return results
+    }
+    
     func deleteAll() {
         var fetch = NSFetchRequest<NSManagedObject>(entityName: Domain.name)
         do {
