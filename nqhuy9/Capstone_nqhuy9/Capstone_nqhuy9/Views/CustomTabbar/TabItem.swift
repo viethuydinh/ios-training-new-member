@@ -21,7 +21,7 @@ enum TabItem: String, CaseIterable {
             return vc
         case .question:
             let sb = UIStoryboard(name: "Main", bundle: nil)
-            guard let vc = sb.instantiateViewController(withIdentifier: InsertKnowledgeViewController.identifier) as? InsertKnowledgeViewController else { return UIViewController() }
+            guard let vc = sb.instantiateViewController(withIdentifier: ListQuestionViewController.identifier) as? ListQuestionViewController else { return UIViewController() }
             return vc
         case .review:
             let sb = UIStoryboard(name: "Main", bundle: nil)

@@ -395,7 +395,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hdV-63-DYz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3019" y="798"/>
+            <point key="canvasLocation" x="2986" y="798"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="iyF-Hc-XKO">
@@ -422,6 +422,7 @@
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="Ud5-sO-74k"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="uh9-Ev-wh6">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
@@ -433,10 +434,105 @@
             </objects>
             <point key="canvasLocation" x="3743.4782608695655" y="85.714285714285708"/>
         </scene>
+        <!--List Question View Controller-->
+        <scene sceneID="KgZ-yF-YSJ">
+            <objects>
+                <viewController storyboardIdentifier="ListQuestionViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="9qq-ja-u4E" customClass="ListQuestionViewController" customModule="Capstone_nqhuy9" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Fh1-1S-D2e">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XiO-vf-rJi">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="107.5"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tg2-kd-68K">
+                                        <rect key="frame" x="0.0" y="43" width="414" height="64.5"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ohD-vG-g2j">
+                                                <rect key="frame" x="355" y="15.5" width="35" height="34"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                                <state key="normal" title="Add">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" name="niceBlue"/>
+                                        <constraints>
+                                            <constraint firstItem="ohD-vG-g2j" firstAttribute="centerY" secondItem="tg2-kd-68K" secondAttribute="centerY" id="PCV-Bd-prX"/>
+                                            <constraint firstAttribute="trailing" secondItem="ohD-vG-g2j" secondAttribute="trailing" constant="24" id="aa8-5L-53P"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" name="niceBlue"/>
+                                <constraints>
+                                    <constraint firstItem="tg2-kd-68K" firstAttribute="height" secondItem="XiO-vf-rJi" secondAttribute="height" multiplier="0.6" id="6CE-dr-VJy"/>
+                                    <constraint firstItem="tg2-kd-68K" firstAttribute="leading" secondItem="XiO-vf-rJi" secondAttribute="leading" id="AcI-EE-q2d"/>
+                                    <constraint firstAttribute="bottom" secondItem="tg2-kd-68K" secondAttribute="bottom" id="SjX-fE-oJy"/>
+                                    <constraint firstAttribute="trailing" secondItem="tg2-kd-68K" secondAttribute="trailing" id="Z8b-MW-fL4"/>
+                                </constraints>
+                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="wzx-GY-zhK">
+                                <rect key="frame" x="0.0" y="295" width="414" height="601"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vsg-va-DOZ">
+                                <rect key="frame" x="24" y="123.5" width="366" height="89.5"/>
+                            </pickerView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XoX-Ua-buM">
+                                <rect key="frame" x="246" y="229" width="42" height="42"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="42" id="BiC-Pd-BrW"/>
+                                    <constraint firstAttribute="width" constant="42" id="dFq-Dj-1IW"/>
+                                </constraints>
+                                <state key="normal" image="recommend"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NSv-u7-2UG">
+                                <rect key="frame" x="126" y="229" width="42" height="42"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="42" id="tkn-zT-P8X"/>
+                                    <constraint firstAttribute="height" constant="42" id="zQU-6K-yM6"/>
+                                </constraints>
+                                <state key="normal" image="search"/>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="bPs-3l-qfX"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="XoX-Ua-buM" firstAttribute="top" secondItem="NSv-u7-2UG" secondAttribute="top" id="2tt-my-94J"/>
+                            <constraint firstItem="wzx-GY-zhK" firstAttribute="top" secondItem="NSv-u7-2UG" secondAttribute="bottom" constant="24" id="8k2-Gr-xwV"/>
+                            <constraint firstItem="wzx-GY-zhK" firstAttribute="trailing" secondItem="bPs-3l-qfX" secondAttribute="trailing" id="Amy-Ni-NEV"/>
+                            <constraint firstItem="wzx-GY-zhK" firstAttribute="leading" secondItem="bPs-3l-qfX" secondAttribute="leading" id="DA2-xA-IKD"/>
+                            <constraint firstItem="XiO-vf-rJi" firstAttribute="top" secondItem="Fh1-1S-D2e" secondAttribute="top" id="Eh4-dC-lUe"/>
+                            <constraint firstAttribute="bottom" secondItem="wzx-GY-zhK" secondAttribute="bottom" id="F9u-mk-9wL"/>
+                            <constraint firstItem="XiO-vf-rJi" firstAttribute="height" secondItem="Fh1-1S-D2e" secondAttribute="height" multiplier="0.12" id="Od9-w8-QvA"/>
+                            <constraint firstItem="NSv-u7-2UG" firstAttribute="top" secondItem="vsg-va-DOZ" secondAttribute="bottom" constant="16" id="UlC-SK-iBS"/>
+                            <constraint firstItem="vsg-va-DOZ" firstAttribute="leading" secondItem="bPs-3l-qfX" secondAttribute="leading" constant="24" id="Yra-e4-cIh"/>
+                            <constraint firstItem="NSv-u7-2UG" firstAttribute="centerX" secondItem="Fh1-1S-D2e" secondAttribute="centerX" constant="-60" id="dCR-lc-Yse"/>
+                            <constraint firstItem="vsg-va-DOZ" firstAttribute="centerX" secondItem="Fh1-1S-D2e" secondAttribute="centerX" id="eOO-yN-sB4"/>
+                            <constraint firstItem="vsg-va-DOZ" firstAttribute="top" secondItem="XiO-vf-rJi" secondAttribute="bottom" constant="16" id="fa3-U2-q33"/>
+                            <constraint firstItem="XiO-vf-rJi" firstAttribute="leading" secondItem="bPs-3l-qfX" secondAttribute="leading" id="ts2-3K-iDl"/>
+                            <constraint firstItem="vsg-va-DOZ" firstAttribute="height" secondItem="Fh1-1S-D2e" secondAttribute="height" multiplier="0.1" id="uRV-It-Vmf"/>
+                            <constraint firstItem="XoX-Ua-buM" firstAttribute="centerX" secondItem="Fh1-1S-D2e" secondAttribute="centerX" constant="60" id="x3d-Dw-C2s"/>
+                            <constraint firstItem="XiO-vf-rJi" firstAttribute="trailing" secondItem="bPs-3l-qfX" secondAttribute="trailing" id="x91-d0-P7N"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="levelSelectPickerView" destination="vsg-va-DOZ" id="G3Y-TD-Ael"/>
+                        <outlet property="recommendButton" destination="XoX-Ua-buM" id="uxb-YI-UmP"/>
+                        <outlet property="searchButton" destination="NSv-u7-2UG" id="wMQ-tM-FVS"/>
+                        <outlet property="tableViewQuestion" destination="wzx-GY-zhK" id="SeP-HA-NxF"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Nib-Ms-V6c" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4695.652173913044" y="809.59821428571422"/>
+        </scene>
     </scenes>
     <resources>
         <image name="check" width="256" height="256"/>
         <image name="plus" width="256" height="256"/>
+        <image name="recommend" width="256" height="256"/>
+        <image name="search" width="256" height="256"/>
         <namedColor name="niceBlue">
             <color red="0.078431372549019607" green="0.42745098039215684" blue="0.74117647058823533" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

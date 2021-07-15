@@ -10,10 +10,10 @@ import RxSwift
 import RxCocoa
 
 enum LevelKnowledge: String {
-    case fresher = "fresher"
-    case junior = "junior"
-    case middle = "middle"
-    case senior = "senior"
+    case fresher = "Fresher"
+    case junior = "Junior"
+    case middle = "Middle"
+    case senior = "Senior"
 }
 
 class ChooseLevelViewController: BaseVC {

@@ -10,15 +10,25 @@ import Foundation
 protocol KnowledgeViewModel {
     var listQuestions: [Question] { get set }
     
+    var listLevel: [LevelKnowledge] { get set }
+    
+    var level: LevelKnowledge { get set }
+    
     func createListQuestion(questions: [Question])
     
     func fetchListQuestion() -> [Question]
+    
+    func fetchRecommendQuestion() -> [Question]
 }
 
 struct DefaultKnowledgeViewModel : KnowledgeViewModel {
     var repository : DefaultKnowledgeRepository
     
     var listQuestions: [Question] = []
+    
+    var listLevel: [LevelKnowledge] = [.fresher, .junior, .middle, .senior]
+    
+    var level: LevelKnowledge = .fresher
     
     init() {
         self.repository = DefaultKnowledgeRepository()
@@ -29,6 +39,10 @@ struct DefaultKnowledgeViewModel : KnowledgeViewModel {
     }
     
     func fetchListQuestion() -> [Question] {
-        self.repository.fetchListQuestion()
+        return self.repository.fetchListQuestion(predicate: .init(format: "level = %@", argumentArray: [self.level.rawValue]))
+    }
+    
+    func fetchRecommendQuestion() -> [Question] {
+        return self.repository.fetchRecommendQuestion(predicate: .init(format: "level = %@", argumentArray: [self.level.rawValue]))
     }
 }

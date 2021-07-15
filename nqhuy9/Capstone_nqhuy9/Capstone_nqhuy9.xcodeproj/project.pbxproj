@@ -10,6 +10,11 @@
 		281701568C76321EF7CB1708 /* Pods_Capstone_nqhuy9_Capstone_nqhuy9UITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA1FD1223A468E05C3D3EC07 /* Pods_Capstone_nqhuy9_Capstone_nqhuy9UITests.framework */; };
 		6E95F0CD1CA11F833E530BE2 /* Pods_Capstone_nqhuy9Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 358FEDF518254B81DC782BC8 /* Pods_Capstone_nqhuy9Tests.framework */; };
 		C009E5016078B88792495181 /* Pods_Capstone_nqhuy9.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D124386781458B5795EAF503 /* Pods_Capstone_nqhuy9.framework */; };
+		F4326668269FD36900A7AEB2 /* LevelPickerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F4326667269FD36900A7AEB2 /* LevelPickerView.xib */; };
+		F432666D269FD41400A7AEB2 /* LevelPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F432666C269FD41400A7AEB2 /* LevelPickerView.swift */; };
+		F4326674269FD94D00A7AEB2 /* QuestionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4326672269FD94D00A7AEB2 /* QuestionTableViewCell.swift */; };
+		F4326675269FD94D00A7AEB2 /* QuestionTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F4326673269FD94D00A7AEB2 /* QuestionTableViewCell.xib */; };
+		F432667A269FDCA200A7AEB2 /* Collection+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4326679269FDCA200A7AEB2 /* Collection+Extension.swift */; };
 		F433BC54269BF5B5002F5146 /* KnowledgeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F433BC53269BF5B5002F5146 /* KnowledgeViewModel.swift */; };
 		F433BC6C269D3659002F5146 /* InsertQuestionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F433BC6A269D3659002F5146 /* InsertQuestionTableViewCell.swift */; };
 		F433BC6D269D3659002F5146 /* InsertQuestionTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F433BC6B269D3659002F5146 /* InsertQuestionTableViewCell.xib */; };
@@ -31,6 +36,7 @@
 		F491ED4D269E9AED00A98D28 /* ReviewCoreData+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = F491ED4B269E9AED00A98D28 /* ReviewCoreData+CoreDataClass.swift */; };
 		F491ED4E269E9AED00A98D28 /* ReviewCoreData+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = F491ED4C269E9AED00A98D28 /* ReviewCoreData+CoreDataProperties.swift */; };
 		F491ED54269E9DEF00A98D28 /* CheckBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = F491ED53269E9DEF00A98D28 /* CheckBox.swift */; };
+		F491ED5A269EE70D00A98D28 /* ListQuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F491ED59269EE70D00A98D28 /* ListQuestionViewController.swift */; };
 		F4CE76102694303800330A77 /* BaseCoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4CE760F2694303800330A77 /* BaseCoreData.swift */; };
 		F4FDA8262696974A0039E9B4 /* AccountCoreData+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4FDA8242696974A0039E9B4 /* AccountCoreData+CoreDataClass.swift */; };
 		F4FDA8272696974A0039E9B4 /* AccountCoreData+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4FDA8252696974A0039E9B4 /* AccountCoreData+CoreDataProperties.swift */; };
@@ -84,6 +90,11 @@
 		903968BBE03725A7106E4558 /* Pods-Capstone_nqhuy9.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Capstone_nqhuy9.release.xcconfig"; path = "Target Support Files/Pods-Capstone_nqhuy9/Pods-Capstone_nqhuy9.release.xcconfig"; sourceTree = "<group>"; };
 		ADC657B9F9BBBDE0B85CBCC7 /* Pods-Capstone_nqhuy9Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Capstone_nqhuy9Tests.release.xcconfig"; path = "Target Support Files/Pods-Capstone_nqhuy9Tests/Pods-Capstone_nqhuy9Tests.release.xcconfig"; sourceTree = "<group>"; };
 		D124386781458B5795EAF503 /* Pods_Capstone_nqhuy9.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Capstone_nqhuy9.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F4326667269FD36900A7AEB2 /* LevelPickerView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LevelPickerView.xib; sourceTree = "<group>"; };
+		F432666C269FD41400A7AEB2 /* LevelPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelPickerView.swift; sourceTree = "<group>"; };
+		F4326672269FD94D00A7AEB2 /* QuestionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionTableViewCell.swift; sourceTree = "<group>"; };
+		F4326673269FD94D00A7AEB2 /* QuestionTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = QuestionTableViewCell.xib; sourceTree = "<group>"; };
+		F4326679269FDCA200A7AEB2 /* Collection+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Collection+Extension.swift"; sourceTree = "<group>"; };
 		F433BC53269BF5B5002F5146 /* KnowledgeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KnowledgeViewModel.swift; sourceTree = "<group>"; };
 		F433BC6A269D3659002F5146 /* InsertQuestionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsertQuestionTableViewCell.swift; sourceTree = "<group>"; };
 		F433BC6B269D3659002F5146 /* InsertQuestionTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InsertQuestionTableViewCell.xib; sourceTree = "<group>"; };
@@ -105,6 +116,7 @@
 		F491ED4B269E9AED00A98D28 /* ReviewCoreData+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ReviewCoreData+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
 		F491ED4C269E9AED00A98D28 /* ReviewCoreData+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ReviewCoreData+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
 		F491ED53269E9DEF00A98D28 /* CheckBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckBox.swift; sourceTree = "<group>"; };
+		F491ED59269EE70D00A98D28 /* ListQuestionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListQuestionViewController.swift; sourceTree = "<group>"; };
 		F4CE760F2694303800330A77 /* BaseCoreData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCoreData.swift; sourceTree = "<group>"; };
 		F4FDA8242696974A0039E9B4 /* AccountCoreData+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AccountCoreData+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
 		F4FDA8252696974A0039E9B4 /* AccountCoreData+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AccountCoreData+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
@@ -190,6 +202,24 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		F4326666269FD34500A7AEB2 /* ViewLevelPicker */ = {
+			isa = PBXGroup;
+			children = (
+				F4326667269FD36900A7AEB2 /* LevelPickerView.xib */,
+				F432666C269FD41400A7AEB2 /* LevelPickerView.swift */,
+			);
+			path = ViewLevelPicker;
+			sourceTree = "<group>";
+		};
+		F4326671269FD92400A7AEB2 /* QuestionCell */ = {
+			isa = PBXGroup;
+			children = (
+				F4326672269FD94D00A7AEB2 /* QuestionTableViewCell.swift */,
+				F4326673269FD94D00A7AEB2 /* QuestionTableViewCell.xib */,
+			);
+			path = QuestionCell;
+			sourceTree = "<group>";
+		};
 		F433BC66269D35AA002F5146 /* InsertQuestionCell */ = {
 			isa = PBXGroup;
 			children = (
@@ -217,13 +247,16 @@
 			path = ChooseLevelScreen;
 			sourceTree = "<group>";
 		};
-		F442814E269BEA5F00DB531B /* InsertQuestionScreen */ = {
+		F442814E269BEA5F00DB531B /* QuestionScreen */ = {
 			isa = PBXGroup;
 			children = (
+				F4326671269FD92400A7AEB2 /* QuestionCell */,
+				F4326666269FD34500A7AEB2 /* ViewLevelPicker */,
 				F433BC66269D35AA002F5146 /* InsertQuestionCell */,
 				F433BC71269D39B6002F5146 /* InsertKnowledgeViewController.swift */,
+				F491ED59269EE70D00A98D28 /* ListQuestionViewController.swift */,
 			);
-			path = InsertQuestionScreen;
+			path = QuestionScreen;
 			sourceTree = "<group>";
 		};
 		F491ED1B269E8F8300A98D28 /* ReviewManagerScreens */ = {
@@ -344,7 +377,7 @@
 			children = (
 				F491ED1B269E8F8300A98D28 /* ReviewManagerScreens */,
 				F433BC8D269D8F06002F5146 /* CustomTabbar */,
-				F442814E269BEA5F00DB531B /* InsertQuestionScreen */,
+				F442814E269BEA5F00DB531B /* QuestionScreen */,
 				F442814D269BEA4300DB531B /* ChooseLevelScreen */,
 				F4FDF55F268EA6B7001B02D3 /* LaunchScreen.storyboard */,
 				F4FDF689268EFEE1001B02D3 /* BaseViewController */,
@@ -398,6 +431,7 @@
 				F4FDF692268EFF6C001B02D3 /* UIViewController+Extension.swift */,
 				F4FDF697268EFF9A001B02D3 /* NSObject+Extension.swift */,
 				F433BC76269D47A2002F5146 /* UIView+Extension.swift */,
+				F4326679269FDCA200A7AEB2 /* Collection+Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -577,7 +611,9 @@
 				F4FDF66D268EF0BD001B02D3 /* Authentication.storyboard in Resources */,
 				F4FDF561268EA6B7001B02D3 /* LaunchScreen.storyboard in Resources */,
 				F433BC6D269D3659002F5146 /* InsertQuestionTableViewCell.xib in Resources */,
+				F4326668269FD36900A7AEB2 /* LevelPickerView.xib in Resources */,
 				F491ED41269E98C600A98D28 /* ReviewTableViewCell.xib in Resources */,
+				F4326675269FD94D00A7AEB2 /* QuestionTableViewCell.xib in Resources */,
 				F4FDF55E268EA6B7001B02D3 /* Assets.xcassets in Resources */,
 				F4FDF559268EA6B4001B02D3 /* Main.storyboard in Resources */,
 			);
@@ -708,6 +744,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F433BC94269D9812002F5146 /* BaseTabBarController.swift in Sources */,
+				F432667A269FDCA200A7AEB2 /* Collection+Extension.swift in Sources */,
 				F4FDF685268EFC94001B02D3 /* SignUpViewController.swift in Sources */,
 				F4FDF693268EFF6C001B02D3 /* UIViewController+Extension.swift in Sources */,
 				F433BC6C269D3659002F5146 /* InsertQuestionTableViewCell.swift in Sources */,
@@ -719,6 +756,7 @@
 				F491ED34269E93E300A98D28 /* ReviewViewModel.swift in Sources */,
 				F491ED4E269E9AED00A98D28 /* ReviewCoreData+CoreDataProperties.swift in Sources */,
 				F4FDA834269702CC0039E9B4 /* Question.swift in Sources */,
+				F4326674269FD94D00A7AEB2 /* QuestionTableViewCell.swift in Sources */,
 				F4FDF6AE268F06AE001B02D3 /* Account.swift in Sources */,
 				F4FDA8272696974A0039E9B4 /* AccountCoreData+CoreDataProperties.swift in Sources */,
 				F4FDF552268EA6B4001B02D3 /* AppDelegate.swift in Sources */,
@@ -732,6 +770,7 @@
 				F433BC8F269D8F23002F5146 /* TabItem.swift in Sources */,
 				F4FDF55C268EA6B4001B02D3 /* Capstone_nqhuy9.xcdatamodeld in Sources */,
 				F4FDA8262696974A0039E9B4 /* AccountCoreData+CoreDataClass.swift in Sources */,
+				F432666D269FD41400A7AEB2 /* LevelPickerView.swift in Sources */,
 				F4FDF672268EF706001B02D3 /* SignInViewController.swift in Sources */,
 				F491ED54269E9DEF00A98D28 /* CheckBox.swift in Sources */,
 				F4FDF68B268EFEFA001B02D3 /* BaseVC.swift in Sources */,
@@ -740,6 +779,7 @@
 				F491ED22269E919B00A98D28 /* Review.swift in Sources */,
 				F4FDF678268EF89B001B02D3 /* ConstantString.swift in Sources */,
 				F433BC72269D39B6002F5146 /* InsertKnowledgeViewController.swift in Sources */,
+				F491ED5A269EE70D00A98D28 /* ListQuestionViewController.swift in Sources */,
 				F4FDF698268EFF9A001B02D3 /* NSObject+Extension.swift in Sources */,
 				F491ED2F269E932600A98D28 /* ReviewRepository.swift in Sources */,
 				F491ED1D269E8FA300A98D28 /* InsertReviewViewController.swift in Sources */,

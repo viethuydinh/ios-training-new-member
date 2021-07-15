@@ -21,13 +21,6 @@ class InsertKnowledgeViewController: BaseVC {
     
     var isHaveTabBar: BehaviorRelay<Bool> = .init(value: true)
     
-//    var isHaveTabBar: Bool = true {
-//        didSet {
-//            self.backButton.isHidden = isHaveTabBar
-//            self.distanceButtonAddFromBottom.constant = isHaveTabBar ? 90.0 : 36.0
-//        }
-//    }
-    
     var numberCell:Int = 1 {
         didSet {
             self.tableView.reloadData()
@@ -97,7 +90,6 @@ class InsertKnowledgeViewController: BaseVC {
             .rx
             .controlEvent(.touchUpInside)
             .subscribe { (_) in
-                print(self.insertKnowledgeViewModel.fetchListQuestion())
                 self.navigationController?.popViewController(animated: true)
             } onError: { (_) in
                 

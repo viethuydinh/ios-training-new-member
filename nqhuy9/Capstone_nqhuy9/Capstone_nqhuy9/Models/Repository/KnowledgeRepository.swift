@@ -11,7 +11,9 @@ protocol KnowledgeRepository {
     
     func createListQuestion(questions: [Question])
     
-    func fetchListQuestion() -> [Question]
+    func fetchListQuestion(predicate: NSPredicate?) -> [Question]
+    
+    func fetchRecommendQuestion(predicate: NSPredicate?) -> [Question]
     
 }
 
@@ -35,8 +37,12 @@ struct DefaultKnowledgeRepository: KnowledgeRepository {
         }
     }
     
-    func fetchListQuestion() -> [Question] {
-        return questionDAO.fetchAll(predicate: nil)
+    func fetchListQuestion(predicate: NSPredicate?) -> [Question] {
+        return questionDAO.fetchAll(predicate: predicate)
+    }
+    
+    func fetchRecommendQuestion(predicate : NSPredicate?) -> [Question] {
+        return Array(self.fetchListQuestion(predicate: predicate).choose(8))
     }
     
 }
