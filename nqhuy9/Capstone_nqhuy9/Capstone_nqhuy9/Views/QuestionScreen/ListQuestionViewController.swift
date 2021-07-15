@@ -14,6 +14,7 @@ class ListQuestionViewController: BaseVC {
     @IBOutlet weak var searchButton: UIButton!
     @IBOutlet weak var recommendButton: UIButton!
     @IBOutlet weak var tableViewQuestion: UITableView!
+    @IBOutlet weak var addButton: UIButton!
     
     var questionViewModel = DefaultKnowledgeViewModel()
     
@@ -45,6 +46,7 @@ class ListQuestionViewController: BaseVC {
     private func event() {
         self.eventSearch()
         self.eventRecommend()
+        self.eventAdd()
     }
     
     private func eventSearch() {
@@ -77,6 +79,25 @@ class ListQuestionViewController: BaseVC {
             } onDisposed: {
                 
             }.disposed(by: self.disposeBag)
+    }
+    
+    private func eventAdd() {
+        self.addButton
+            .rx
+            .controlEvent(.touchUpInside)
+            .subscribe { (_) in
+                guard let vc = self.getViewControllerFromStorybroad(storybroadName: "Main", identifier: InsertKnowledgeViewController.identifier) as? InsertKnowledgeViewController else { return }
+                vc.insertKnowledgeViewModel.isHaveTabBar.onNext(false)
+                vc.insertKnowledgeViewModel.level = self.questionViewModel.level
+                self.navigationController?.pushViewController(vc, animated: true)
+            } onError: { (_) in
+                
+            } onCompleted: {
+                
+            } onDisposed: {
+                
+            }.disposed(by: self.disposeBag)
+
     }
 }
 

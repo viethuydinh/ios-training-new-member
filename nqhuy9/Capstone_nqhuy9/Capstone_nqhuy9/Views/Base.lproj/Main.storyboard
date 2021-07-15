@@ -517,6 +517,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="addButton" destination="ohD-vG-g2j" id="DYs-ev-r5l"/>
                         <outlet property="levelSelectPickerView" destination="vsg-va-DOZ" id="G3Y-TD-Ael"/>
                         <outlet property="recommendButton" destination="XoX-Ua-buM" id="uxb-YI-UmP"/>
                         <outlet property="searchButton" destination="NSv-u7-2UG" id="wMQ-tM-FVS"/>
