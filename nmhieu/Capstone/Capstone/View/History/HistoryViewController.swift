@@ -7,12 +7,17 @@
 
 import UIKit
 
+<<<<<<< HEAD
 class HistoryViewController: BaseVC {
+=======
+class HistoryViewController: UIViewController {
+>>>>>>> 6190db0 (feat : implement feature history interview)
     
     @IBOutlet weak var historyTableView: UITableView!
     
     var interviewVM = DefaultInterviewViewModel()
     
+<<<<<<< HEAD
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
         self.bindingData()
@@ -21,6 +26,12 @@ class HistoryViewController: BaseVC {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.setUpUI()
+=======
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        self.setUpUI()
+        self.bindingData()
+>>>>>>> 6190db0 (feat : implement feature history interview)
     }
     
     //MARK: -UI
@@ -28,11 +39,14 @@ class HistoryViewController: BaseVC {
         self.historyTableView.register(UINib(nibName: HistoryTableViewCell.name, bundle: nil), forCellReuseIdentifier: HistoryTableViewCell.identifier)
         self.historyTableView.dataSource = self
         self.historyTableView.delegate = self
+<<<<<<< HEAD
         self.historyTableView.contentInset = UIEdgeInsets(top: 0.0, left: 0.0, bottom: 80.0, right: 0.0)
     }
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent
+=======
+>>>>>>> 6190db0 (feat : implement feature history interview)
     }
     
     @IBAction func eventBack() {
@@ -42,11 +56,17 @@ class HistoryViewController: BaseVC {
     //MARK: -Data
     func bindingData() {
         self.interviewVM.interviewHistory = self.interviewVM.fetchInterviewHistory()
+<<<<<<< HEAD
         self.historyTableView.reloadData()
     }
 }
 
 //MARK: -UITableViewDataSource
+=======
+    }
+}
+
+>>>>>>> 6190db0 (feat : implement feature history interview)
 extension HistoryViewController : UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.interviewVM.interviewHistory.count
@@ -59,7 +79,10 @@ extension HistoryViewController : UITableViewDataSource {
     }
 }
 
+<<<<<<< HEAD
 //MARK: -UITableViewDelegate
+=======
+>>>>>>> 6190db0 (feat : implement feature history interview)
 extension HistoryViewController : UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return HistoryTableViewCell.height(tableView.bounds)

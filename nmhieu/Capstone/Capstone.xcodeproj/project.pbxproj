@@ -71,10 +71,13 @@
 		1573549426A030FE00A5C59D /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1573549326A030FE00A5C59D /* HistoryViewController.swift */; };
 		1573549826A031B000A5C59D /* HistoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1573549626A031B000A5C59D /* HistoryTableViewCell.swift */; };
 		1573549926A031B000A5C59D /* HistoryTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1573549726A031B000A5C59D /* HistoryTableViewCell.xib */; };
+<<<<<<< HEAD
 =======
 		155F2FF826943573007EFBAC /* UserCoreData+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 155F2FF626943573007EFBAC /* UserCoreData+CoreDataClass.swift */; };
 		155F2FF926943573007EFBAC /* UserCoreData+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 155F2FF726943573007EFBAC /* UserCoreData+CoreDataProperties.swift */; };
 >>>>>>> 6807593 (config coredata)
+=======
+>>>>>>> 6190db0 (feat : implement feature history interview)
 		157F971D268EF131009BBF14 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 157F971C268EF131009BBF14 /* SignInViewController.swift */; };
 		157F9722268EF141009BBF14 /* SignIn.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 157F9721268EF141009BBF14 /* SignIn.storyboard */; };
 		157F972D268EFAB2009BBF14 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 157F972C268EFAB2009BBF14 /* SignUpViewController.swift */; };
@@ -200,6 +203,7 @@
 		1573549326A030FE00A5C59D /* HistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
 		1573549626A031B000A5C59D /* HistoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryTableViewCell.swift; sourceTree = "<group>"; };
 		1573549726A031B000A5C59D /* HistoryTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HistoryTableViewCell.xib; sourceTree = "<group>"; };
+<<<<<<< HEAD
 =======
 		15179EB9269557B2008D3A46 /* BaseCoreData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCoreData.swift; sourceTree = "<group>"; };
 		15179EBE26958532008D3A46 /* AccountModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountModel.swift; sourceTree = "<group>"; };
@@ -209,6 +213,8 @@
 		155F2FF626943573007EFBAC /* UserCoreData+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "UserCoreData+CoreDataClass.swift"; path = "Capstone/Model/Database/UserCoreData+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
 		155F2FF726943573007EFBAC /* UserCoreData+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "UserCoreData+CoreDataProperties.swift"; path = "Capstone/Model/Database/UserCoreData+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
 >>>>>>> 6807593 (config coredata)
+=======
+>>>>>>> 6190db0 (feat : implement feature history interview)
 		157F971C268EF131009BBF14 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		157F9721268EF141009BBF14 /* SignIn.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SignIn.storyboard; sourceTree = "<group>"; };
 		157F972C268EFAB2009BBF14 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
@@ -501,8 +507,13 @@
 			isa = PBXGroup;
 			children = (
 				1573549526A0319300A5C59D /* Cell */,
+<<<<<<< HEAD
 				1573549326A030FE00A5C59D /* HistoryViewController.swift */,
 				1573549126A030E500A5C59D /* History.storyboard */,
+=======
+				1573549126A030E500A5C59D /* History.storyboard */,
+				1573549326A030FE00A5C59D /* HistoryViewController.swift */,
+>>>>>>> 6190db0 (feat : implement feature history interview)
 			);
 			path = History;
 			sourceTree = "<group>";
@@ -510,8 +521,13 @@
 		1573549526A0319300A5C59D /* Cell */ = {
 			isa = PBXGroup;
 			children = (
+<<<<<<< HEAD
 				1573549726A031B000A5C59D /* HistoryTableViewCell.xib */,
 				1573549626A031B000A5C59D /* HistoryTableViewCell.swift */,
+=======
+				1573549626A031B000A5C59D /* HistoryTableViewCell.swift */,
+				1573549726A031B000A5C59D /* HistoryTableViewCell.xib */,
+>>>>>>> 6190db0 (feat : implement feature history interview)
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -532,8 +548,12 @@
 			isa = PBXGroup;
 			children = (
 <<<<<<< HEAD
+<<<<<<< HEAD
 				151F2AFA26A16FB300C63F2C /* BaseTabbarController */,
 =======
+=======
+				1573549026A0301F00A5C59D /* History */,
+>>>>>>> 6190db0 (feat : implement feature history interview)
 				15A0385E269E978D00D9D0FB /* Interview */,
 >>>>>>> 0daedd9 (feat : implement Interview feature (UIInterview , logic interview in InterviewViewModel ))
 				1507B211268F1412001945A8 /* BaseViewController */,
@@ -885,9 +905,12 @@
 >>>>>>> 0daedd9 (feat : implement Interview feature (UIInterview , logic interview in InterviewViewModel ))
 				15A03889269EC0C500D9D0FB /* OverviewTableViewCell.xib in Resources */,
 				157F9732268EFAC0009BBF14 /* SignUp.storyboard in Resources */,
+<<<<<<< HEAD
 				156948FB26A9BFB000EF8C3D /* KnowledgeSetTableViewCell.xib in Resources */,
 				1526CA8F26A56DD70059619B /* InterviewGif1.gif in Resources */,
 				156948F726A97F7100EF8C3D /* KnowledgeSets.storyboard in Resources */,
+=======
+>>>>>>> 6190db0 (feat : implement feature history interview)
 				1573549926A031B000A5C59D /* HistoryTableViewCell.xib in Resources */,
 				15095E7B268DC8B400129B9C /* Assets.xcassets in Resources */,
 				157F9722268EF141009BBF14 /* SignIn.storyboard in Resources */,
@@ -1016,6 +1039,7 @@
 				15A038A3269ED12E00D9D0FB /* QuestionInterviewModel.swift in Sources */,
 				1585AFBB2696B1700073F89E /* AuthenticationViewModel.swift in Sources */,
 				1507B213268F1435001945A8 /* BaseVCViewController.swift in Sources */,
+				1573549826A031B000A5C59D /* HistoryTableViewCell.swift in Sources */,
 				15179EB52695565F008D3A46 /* Convertible.swift in Sources */,
 				1585AFD72696EA9E0073F89E /* HomeViewController.swift in Sources */,
 				15A03860269E97B900D9D0FB /* InterviewViewController.swift in Sources */,
@@ -1061,6 +1085,7 @@
 				157F9737268EFEA4009BBF14 /* Color.swift in Sources */,
 				15A038B6269ED1FA00D9D0FB /* QuestionInterViewCoreData+CoreDataClass.swift in Sources */,
 <<<<<<< HEAD
+<<<<<<< HEAD
 				1573549426A030FE00A5C59D /* HistoryViewController.swift in Sources */,
 				1507B20D268F13CE001945A8 /* UserModel.swift in Sources */,
 				156948FA26A9BFB000EF8C3D /* KnowledgeSetTableViewCell.swift in Sources */,
@@ -1073,6 +1098,9 @@
 				154A638D269BF498008E571C /* KnowledgeModel.swift in Sources */,
 				1526CA8C26A567EC0059619B /* GifOnboardingCollectionViewCell.swift in Sources */,
 =======
+=======
+				1573549426A030FE00A5C59D /* HistoryViewController.swift in Sources */,
+>>>>>>> 6190db0 (feat : implement feature history interview)
 				1507B20D268F13CE001945A8 /* UserModel.swift in Sources */,
 				15A03888269EC0C500D9D0FB /* OverviewTableViewCell.swift in Sources */,
 				15A038B7269ED1FA00D9D0FB /* QuestionInterViewCoreData+CoreDataProperties.swift in Sources */,

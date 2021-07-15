@@ -47,7 +47,6 @@ class HomeViewController: BaseVC {
         self.eventOverlayView(level: .senior)
     }
     
-    
     fileprivate func eventOverlayView(level : LevelInterView) {
         let actionSheet = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
         

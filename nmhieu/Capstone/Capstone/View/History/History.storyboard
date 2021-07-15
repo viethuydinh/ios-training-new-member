@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<<<<<<< HEAD
     <device id="ipad12_9rounded" orientation="portrait" layout="fullscreen" appearance="light"/>
+=======
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+>>>>>>> 6190db0 (feat : implement feature history interview)
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
@@ -14,6 +18,7 @@
             <objects>
                 <viewController storyboardIdentifier="HistoryViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="zdP-qp-OUf" customClass="HistoryViewController" customModule="Capstone" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Vpc-Pz-77f">
+<<<<<<< HEAD
                         <rect key="frame" x="0.0" y="0.0" width="1024" height="1366"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -31,28 +36,58 @@
                                     </label>
                                     <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S28-b7-5RR">
                                         <rect key="frame" x="930" y="34" width="62" height="42"/>
+=======
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="oWE-7X-nt9">
+                                <rect key="frame" x="0.0" y="100" width="414" height="796"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xBB-tO-ran">
+                                <rect key="frame" x="0.0" y="44" width="414" height="56"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Create set" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Bh-J3-5F2">
+                                        <rect key="frame" x="169" y="22" width="76" height="18"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S28-b7-5RR">
+                                        <rect key="frame" x="360" y="16" width="38" height="30"/>
+>>>>>>> 6190db0 (feat : implement feature history interview)
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                         <state key="normal" title="Done">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+<<<<<<< HEAD
                                         <variation key="heightClass=regular-widthClass=regular">
                                             <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
                                         </variation>
                                     </button>
                                     <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KYg-rh-ZSi">
                                         <rect key="frame" x="32" y="34" width="58" height="42"/>
+=======
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KYg-rh-ZSi">
+                                        <rect key="frame" x="16" y="16" width="37" height="30"/>
+>>>>>>> 6190db0 (feat : implement feature history interview)
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                         <state key="normal" title="Back">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+<<<<<<< HEAD
                                         <variation key="heightClass=regular-widthClass=regular">
                                             <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
                                         </variation>
+=======
+>>>>>>> 6190db0 (feat : implement feature history interview)
                                         <connections>
                                             <action selector="eventBack" destination="zdP-qp-OUf" eventType="touchUpInside" id="hmK-o5-s5E"/>
                                         </connections>
                                     </button>
                                 </subviews>
+<<<<<<< HEAD
                                 <color key="backgroundColor" name="navy"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="102" id="0hz-YP-WOQ"/>
@@ -95,6 +130,22 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Y45-gq-7cH"/>
                         <color key="backgroundColor" name="navy"/>
+=======
+                                <color key="backgroundColor" name="sapphire"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="56" id="0qW-Tg-2No"/>
+                                    <constraint firstItem="1Bh-J3-5F2" firstAttribute="centerX" secondItem="xBB-tO-ran" secondAttribute="centerX" id="GNC-Pn-x8T"/>
+                                    <constraint firstAttribute="bottom" secondItem="1Bh-J3-5F2" secondAttribute="bottom" constant="16" id="Hd0-OH-09P"/>
+                                    <constraint firstAttribute="trailing" secondItem="S28-b7-5RR" secondAttribute="trailing" constant="16" id="XYJ-Yi-4Rx"/>
+                                    <constraint firstItem="KYg-rh-ZSi" firstAttribute="leading" secondItem="xBB-tO-ran" secondAttribute="leading" constant="16" id="bIB-sc-9Hm"/>
+                                    <constraint firstItem="S28-b7-5RR" firstAttribute="centerY" secondItem="1Bh-J3-5F2" secondAttribute="centerY" id="bRd-D4-5CO"/>
+                                    <constraint firstItem="KYg-rh-ZSi" firstAttribute="centerY" secondItem="1Bh-J3-5F2" secondAttribute="centerY" id="ihc-j9-eDz"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Y45-gq-7cH"/>
+                        <color key="backgroundColor" name="sapphire"/>
+>>>>>>> 6190db0 (feat : implement feature history interview)
                         <constraints>
                             <constraint firstItem="oWE-7X-nt9" firstAttribute="leading" secondItem="Y45-gq-7cH" secondAttribute="leading" id="6V4-cd-bS1"/>
                             <constraint firstItem="Y45-gq-7cH" firstAttribute="trailing" secondItem="oWE-7X-nt9" secondAttribute="trailing" id="AKl-hq-79x"/>
@@ -116,8 +167,13 @@
         </scene>
     </scenes>
     <resources>
+<<<<<<< HEAD
         <namedColor name="navy">
             <color red="0.0" green="0.10199999809265137" blue="0.22400000691413879" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+=======
+        <namedColor name="sapphire">
+            <color red="0.12200000137090683" green="0.1289999932050705" blue="0.62400001287460327" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+>>>>>>> 6190db0 (feat : implement feature history interview)
         </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

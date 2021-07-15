@@ -195,6 +195,7 @@
                         <viewLayoutGuide key="safeArea" id="vPT-eT-D4k"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="87H-xY-nPK" firstAttribute="centerY" secondItem="vPT-eT-D4k" secondAttribute="centerY" multiplier="1.6" id="Frv-Ji-57M"/>
                             <constraint firstItem="Wmi-pP-t1k" firstAttribute="top" secondItem="rgw-tk-4vm" secondAttribute="bottom" id="G2y-ma-ZeC"/>
                             <constraint firstItem="rgw-tk-4vm" firstAttribute="leading" secondItem="vPT-eT-D4k" secondAttribute="leading" id="RW7-V4-brS"/>
                             <constraint firstItem="vPT-eT-D4k" firstAttribute="trailing" secondItem="Wmi-pP-t1k" secondAttribute="trailing" constant="16" id="WJm-v5-52H"/>
@@ -204,6 +205,7 @@
                             <constraint firstItem="rgw-tk-4vm" firstAttribute="height" secondItem="YnA-0X-2dd" secondAttribute="height" multiplier="0.1" id="fLE-Qp-QRf"/>
                             <constraint firstItem="vPT-eT-D4k" firstAttribute="trailing" secondItem="Wmi-pP-t1k" secondAttribute="trailing" constant="32" id="hwe-bd-Sc5"/>
                             <constraint firstItem="rgw-tk-4vm" firstAttribute="top" secondItem="vPT-eT-D4k" secondAttribute="top" id="phP-FT-rjT"/>
+                            <constraint firstItem="87H-xY-nPK" firstAttribute="centerX" secondItem="vPT-eT-D4k" secondAttribute="centerX" id="qnb-fR-VsW"/>
                             <constraint firstItem="rgw-tk-4vm" firstAttribute="height" secondItem="YnA-0X-2dd" secondAttribute="height" multiplier="0.2" id="tcH-zg-AMc"/>
                         </constraints>
                         <variation key="default">
