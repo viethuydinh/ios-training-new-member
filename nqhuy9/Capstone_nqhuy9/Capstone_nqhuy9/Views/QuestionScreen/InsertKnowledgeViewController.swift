@@ -16,11 +16,7 @@ class InsertKnowledgeViewController: BaseVC {
     @IBOutlet weak var saveButton: UIButton!
     @IBOutlet weak var addButton: UIButton!
     @IBOutlet weak var distanceButtonAddFromBottom: NSLayoutConstraint!
-    
-    var level: LevelKnowledge?
-    
-    var isHaveTabBar: BehaviorRelay<Bool> = .init(value: true)
-    
+            
     var numberCell:Int = 1 {
         didSet {
             self.tableView.reloadData()
@@ -42,7 +38,7 @@ class InsertKnowledgeViewController: BaseVC {
     }
     
     private func buttonHidden() {
-        self.isHaveTabBar.subscribe { (isHave) in
+        self.insertKnowledgeViewModel.isHaveTabBar.subscribe { (isHave) in
             self.backButton.isHidden = isHave
             self.distanceButtonAddFromBottom.constant = isHave ? 90.0 : 36.0
         } onError: { (_) in
@@ -126,8 +122,7 @@ extension InsertKnowledgeViewController : UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: InsertQuestionTableViewCell.identifier, for: indexPath) as? InsertQuestionTableViewCell else { return UITableViewCell() }
         cell.didEndEditAction = { [weak self] question in
-            guard let level = self!.level else { return }
-            self!.insertKnowledgeViewModel.listQuestions.append(Question(id: nil, content: question.content, level: level.rawValue))
+            self!.insertKnowledgeViewModel.listQuestions.append(Question(id: nil, content: question.content, level: self!.insertKnowledgeViewModel.level.rawValue))
         }
         return cell
     }

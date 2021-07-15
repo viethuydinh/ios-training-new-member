@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import RxSwift
 
 protocol KnowledgeViewModel {
     var listQuestions: [Question] { get set }
@@ -13,6 +14,8 @@ protocol KnowledgeViewModel {
     var listLevel: [LevelKnowledge] { get set }
     
     var level: LevelKnowledge { get set }
+    
+    var isHaveTabBar: BehaviorSubject<Bool> {get set}
     
     func createListQuestion(questions: [Question])
     
@@ -22,6 +25,9 @@ protocol KnowledgeViewModel {
 }
 
 struct DefaultKnowledgeViewModel : KnowledgeViewModel {
+    
+    var isHaveTabBar: BehaviorSubject<Bool> = .init(value: true)
+    
     var repository : DefaultKnowledgeRepository
     
     var listQuestions: [Question] = []

@@ -51,8 +51,8 @@ class ChooseLevelViewController: BaseVC {
             .controlEvent(.touchUpInside)
             .subscribe { (_) in
                 guard let vc = self.getViewControllerFromStorybroad(storybroadName: "Main", identifier: InsertKnowledgeViewController.identifier) as? InsertKnowledgeViewController else { return }
-                vc.isHaveTabBar.accept(false)
-                vc.level = LevelKnowledge.fresher
+                vc.insertKnowledgeViewModel.isHaveTabBar.onNext(false)
+                vc.insertKnowledgeViewModel.level = LevelKnowledge.fresher
                 self.navigationController?.pushViewController(vc, animated: true)
             } onError: { (_) in
                 
@@ -69,8 +69,8 @@ class ChooseLevelViewController: BaseVC {
             .controlEvent(.touchUpInside)
             .subscribe { (_) in
                 guard let vc = self.getViewControllerFromStorybroad(storybroadName: "Main", identifier: InsertKnowledgeViewController.identifier) as? InsertKnowledgeViewController else { return }
-                vc.isHaveTabBar.accept(false)
-                vc.level = LevelKnowledge.junior
+                vc.insertKnowledgeViewModel.isHaveTabBar.onNext(false)
+                vc.insertKnowledgeViewModel.level = LevelKnowledge.junior
                 self.navigationController?.pushViewController(vc, animated: true)
             } onError: { (_) in
                 
@@ -87,8 +87,8 @@ class ChooseLevelViewController: BaseVC {
             .controlEvent(.touchUpInside)
             .subscribe { (_) in
                 guard let vc = self.getViewControllerFromStorybroad(storybroadName: "Main", identifier: InsertKnowledgeViewController.identifier) as? InsertKnowledgeViewController else { return }
-                vc.isHaveTabBar.accept(false)
-                vc.level = LevelKnowledge.middle
+                vc.insertKnowledgeViewModel.isHaveTabBar.onNext(false)
+                vc.insertKnowledgeViewModel.level = LevelKnowledge.middle
                 self.navigationController?.pushViewController(vc, animated: true)
             } onError: { (_) in
                 
@@ -105,8 +105,8 @@ class ChooseLevelViewController: BaseVC {
             .controlEvent(.touchUpInside)
             .subscribe { (_) in
                 guard let vc = self.getViewControllerFromStorybroad(storybroadName: "Main", identifier: InsertKnowledgeViewController.identifier) as? InsertKnowledgeViewController else { return }
-                vc.isHaveTabBar.accept(false)
-                vc.level = LevelKnowledge.senior
+                vc.insertKnowledgeViewModel.isHaveTabBar.onNext(false)
+                vc.insertKnowledgeViewModel.level = LevelKnowledge.senior
                 self.navigationController?.pushViewController(vc, animated: true)
             } onError: { (_) in
                 
