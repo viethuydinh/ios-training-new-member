@@ -18,11 +18,15 @@ class HistoryViewController: UIViewController {
     var interviewVM = DefaultInterviewViewModel()
     
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> deb4dc0 (add : appicon)
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
         self.bindingData()
     }
     
+<<<<<<< HEAD
     override func viewDidLoad() {
         super.viewDidLoad()
         self.setUpUI()
@@ -32,6 +36,11 @@ class HistoryViewController: UIViewController {
         self.setUpUI()
         self.bindingData()
 >>>>>>> 6190db0 (feat : implement feature history interview)
+=======
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        self.setUpUI()
+>>>>>>> deb4dc0 (add : appicon)
     }
     
     //MARK: -UI
@@ -57,12 +66,16 @@ class HistoryViewController: UIViewController {
     func bindingData() {
         self.interviewVM.interviewHistory = self.interviewVM.fetchInterviewHistory()
 <<<<<<< HEAD
+<<<<<<< HEAD
         self.historyTableView.reloadData()
     }
 }
 
 //MARK: -UITableViewDataSource
 =======
+=======
+        self.historyTableView.reloadData()
+>>>>>>> deb4dc0 (add : appicon)
     }
 }
 

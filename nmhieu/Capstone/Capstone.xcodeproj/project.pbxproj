@@ -32,6 +32,7 @@
 		151F2AFE26A1709800C63F2C /* CustomTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 151F2AFD26A1709800C63F2C /* CustomTabBar.swift */; };
 		151F2B0026A170CE00C63F2C /* TabBarItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 151F2AFF26A170CE00C63F2C /* TabBarItem.swift */; };
 		151F2B0226A1828200C63F2C /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = 151F2B0126A1828200C63F2C /* Image.swift */; };
+<<<<<<< HEAD
 		1526CA7826A522E10059619B /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1526CA7726A522E10059619B /* OnboardingViewController.swift */; };
 		1526CA7B26A525360059619B /* Onboarding.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1526CA7A26A525360059619B /* Onboarding.storyboard */; };
 		1526CA7F26A529FB0059619B /* OnboardingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1526CA7E26A529FB0059619B /* OnboardingViewModel.swift */; };
@@ -46,6 +47,9 @@
 		154A6367269BF253008E571C /* KnowledgeCoreData+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 154A6365269BF253008E571C /* KnowledgeCoreData+CoreDataProperties.swift */; };
 		154A638D269BF498008E571C /* KnowledgeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 154A638C269BF498008E571C /* KnowledgeModel.swift */; };
 =======
+=======
+		15344169269FE0150078660E /* NotificationKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15344168269FE0150078660E /* NotificationKey.swift */; };
+>>>>>>> deb4dc0 (add : appicon)
 		154A6366269BF253008E571C /* QuestionCoreData+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 154A6364269BF253008E571C /* QuestionCoreData+CoreDataClass.swift */; };
 		154A6367269BF253008E571C /* QuestionCoreData+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 154A6365269BF253008E571C /* QuestionCoreData+CoreDataProperties.swift */; };
 		154A638D269BF498008E571C /* QuestionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 154A638C269BF498008E571C /* QuestionModel.swift */; };
@@ -164,6 +168,7 @@
 		151F2AFD26A1709800C63F2C /* CustomTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBar.swift; sourceTree = "<group>"; };
 		151F2AFF26A170CE00C63F2C /* TabBarItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarItem.swift; sourceTree = "<group>"; };
 		151F2B0126A1828200C63F2C /* Image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
+<<<<<<< HEAD
 		1526CA7726A522E10059619B /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
 		1526CA7A26A525360059619B /* Onboarding.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Onboarding.storyboard; sourceTree = "<group>"; };
 		1526CA7E26A529FB0059619B /* OnboardingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewModel.swift; sourceTree = "<group>"; };
@@ -178,6 +183,9 @@
 		154A6365269BF253008E571C /* KnowledgeCoreData+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "KnowledgeCoreData+CoreDataProperties.swift"; path = "Capstone/Model/Database/Question/KnowledgeCoreData+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
 		154A638C269BF498008E571C /* KnowledgeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KnowledgeModel.swift; sourceTree = "<group>"; };
 =======
+=======
+		15344168269FE0150078660E /* NotificationKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationKey.swift; sourceTree = "<group>"; };
+>>>>>>> deb4dc0 (add : appicon)
 		154A6364269BF253008E571C /* QuestionCoreData+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "QuestionCoreData+CoreDataClass.swift"; path = "Capstone/Model/Database/Question/QuestionCoreData+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
 		154A6365269BF253008E571C /* QuestionCoreData+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "QuestionCoreData+CoreDataProperties.swift"; path = "Capstone/Model/Database/Question/QuestionCoreData+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
 		154A638C269BF498008E571C /* QuestionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionModel.swift; sourceTree = "<group>"; };
@@ -613,7 +621,20 @@
 				15C3C8D726A6D4F60056B106 /* Error */,
 				15C3C8D626A6D4E10056B106 /* Extension */,
 				15095E7A268DC8B400129B9C /* Assets.xcassets */,
+<<<<<<< HEAD
 				1526CA8E26A56DD70059619B /* InterviewGif1.gif */,
+=======
+				157F9736268EFEA4009BBF14 /* Color.swift */,
+				157F973B268EFED5009BBF14 /* AccoutString.swift */,
+				1507B217268F14D6001945A8 /* UIViewController+Extension.swift */,
+				1507B21C268F1519001945A8 /* NSObject+Extension.swift */,
+				154A63B5269C2384008E571C /* UITableViewCell+Extension.swift */,
+				15344168269FE0150078660E /* NotificationKey.swift */,
+				151F2AF426A1246500C63F2C /* Date+Extension.swift */,
+				151F2AF626A1291100C63F2C /* AuthenticationError.swift */,
+				151F2AF826A1381700C63F2C /* CommonError.swift */,
+				151F2B0126A1828200C63F2C /* Image.swift */,
+>>>>>>> deb4dc0 (add : appicon)
 			);
 			path = Resource;
 			sourceTree = "<group>";
@@ -1074,10 +1095,13 @@
 				1573548C26A023FD00A5C59D /* CandidateInforModel.swift in Sources */,
 				15A0389D269ECD9A00D9D0FB /* InterviewCoreData+CoreDataProperties.swift in Sources */,
 				151F2B0226A1828200C63F2C /* Image.swift in Sources */,
+<<<<<<< HEAD
 =======
 				15A03871269E991E00D9D0FB /* ProfileCandidateTableViewCell.swift in Sources */,
 				15A0389D269ECD9A00D9D0FB /* InterviewCoreData+CoreDataProperties.swift in Sources */,
 >>>>>>> 0daedd9 (feat : implement Interview feature (UIInterview , logic interview in InterviewViewModel ))
+=======
+>>>>>>> deb4dc0 (add : appicon)
 				15179ECB26958640008D3A46 /* Capstone.xcdatamodeld in Sources */,
 				154A6396269BF9E0008E571C /* KnowledgeViewModel.swift in Sources */,
 				1585AFD12696DA750073F89E /* AuthenticationRepository.swift in Sources */,
