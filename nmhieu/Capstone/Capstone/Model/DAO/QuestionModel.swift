@@ -37,7 +37,7 @@ extension QuestionModel : ObjectConvertible {
     typealias Object = QuestionCoreData
     
     func update(obj: QuestionCoreData) -> QuestionCoreData {
-        var object = obj
+        let object = obj
         object.id = Int16(self.id ?? 0)
         object.content = self.content
         object.level = Int16(self.level?.rawValue ?? 0)

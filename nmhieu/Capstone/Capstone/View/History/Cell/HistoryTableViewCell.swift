@@ -16,6 +16,7 @@ class HistoryTableViewCell: UITableViewCell {
     @IBOutlet weak var ageLabel: UILabel!
     @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var statusLabel: UILabel!
+    @IBOutlet weak var statusView: UIView!
     
     
     override func awakeFromNib() {
@@ -25,7 +26,7 @@ class HistoryTableViewCell: UITableViewCell {
 
     //MARK: -UI
     fileprivate func setUpUI() {
-        self.statusLabel.layer.cornerRadius = 10
+        self.statusView.layer.cornerRadius = 10
     }
     
     //MARK: -BindingData
@@ -34,8 +35,8 @@ class HistoryTableViewCell: UITableViewCell {
         self.jobTitleLabel.text = data.candidateInfor?.jobTitle
         self.levelLabel.text = data.candidateInfor?.level?.title
         self.candidateImage.image = data.candidateInfor?.image
-        self.ageLabel.text = "\(data.candidateInfor?.age)"
-        self.dateLabel.text = "\(data.date)"
+        self.ageLabel.text = "\(data.candidateInfor?.age ?? 0)"
+        self.dateLabel.text = data.date?.string(format: "MMM dd,yyyy") ?? Date.now().string(format: "MMM dd,yyyy")
         self.statusLabel.text = data.overview?.status?.title
         self.statusLabel.backgroundColor = data.overview?.status?.iconStatus.color
     }

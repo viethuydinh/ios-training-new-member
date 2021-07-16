@@ -21,7 +21,7 @@ struct DefaultInterviewRepository : InterviewRepository {
         var results : [QuestionInterviewModel] = []
         let predicateLevel : NSPredicate = .init(format: "level == \(level.rawValue)")
         
-        guard let questions = CoreDataRepository<QuestionModel>.shared.fetchList(predicate: predicateLevel) as? [QuestionModel] else { return [] }
+        guard let questions = CoreDataRepository<QuestionModel>.shared.fetchList(predicate: predicateLevel) else { return [] }
         
         let idRandom : [Int] = (1...5).map{_ in .random(in: 0..<questions.count)}
         

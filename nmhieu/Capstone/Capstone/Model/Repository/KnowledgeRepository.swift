@@ -10,6 +10,8 @@ import Foundation
 protocol KnowledgeRepository {
     
     func insertKnowledge(question : QuestionModel) -> Bool
+    
+    func fetchQuestions(level : LevelInterView) -> [QuestionModel]
 }
 
 
@@ -25,11 +27,17 @@ struct DefaulKnowledgeRepository : KnowledgeRepository {
         questionData.level = question.level
         
         CoreDataRepository<QuestionModel>.shared.save(domain: questionData)
-//        CoreDataRepository<QuestionModel>.shared.fetchAll()?.forEach({ (quesion) in
-//            print(question)
-//        })
         return true
         
+    }
+    
+    func fetchQuestions(level: LevelInterView) -> [QuestionModel] {
+        let predicate = NSPredicate(format: "level == \(level.rawValue)")
+        
+        guard let quesions = CoreDataRepository<QuestionModel>.shared.fetchList(predicate : predicate) else {
+            return []
+        }
+        return quesions
     }
 
 }

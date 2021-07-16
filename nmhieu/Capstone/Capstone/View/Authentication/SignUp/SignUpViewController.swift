@@ -53,18 +53,20 @@ class SignUpViewController: BaseVC {
     }
     
     @IBAction func eventSignUp(_ sender: Any) {
-        let a = self.authenticationVM.signUp(username: self.userNameTF.text ?? "",
+        let state = self.authenticationVM.signUp(username: self.userNameTF.text ?? "",
                                               password: self.paswordTF.text ?? "",
                                               repassword: self.confirmPasswordTF.text ?? "")
-        if a {
+        if state.state {
             self.navigationController?.popViewController(animated: true)
+        }
+        else {
+            self.eventAlert(message: state.message)
         }
     }
     
     @objc fileprivate func eventSignIn() {
         self.navigationController?.popViewController(animated: true)
     }
-    
 }
 
 //MARK: -Gesture

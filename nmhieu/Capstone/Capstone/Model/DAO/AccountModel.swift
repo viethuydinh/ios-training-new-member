@@ -17,7 +17,7 @@ extension AccountModel : ObjectConvertible {
     typealias Object = AccountCoreData
 
     func update(obj: AccountCoreData) -> AccountCoreData {
-        var object = obj
+        let object = obj
         object.username = self.username
         object.password = self.password
         object.email = self.email

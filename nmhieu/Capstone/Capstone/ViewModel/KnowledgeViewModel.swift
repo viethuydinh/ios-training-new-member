@@ -17,6 +17,8 @@ protocol KnowledgeViewModel {
     func saveKnowledge(tableView : UITableView)
     
     func getQuestions(tableView : UITableView) -> [QuestionModel]
+    
+    func fetchQuestion(level : LevelInterView) -> [QuestionModel]
 }
 
 struct DefaultKnowledgeViewModel : KnowledgeViewModel {
@@ -49,5 +51,9 @@ struct DefaultKnowledgeViewModel : KnowledgeViewModel {
         }
         
         return questions
+    }
+    
+    func fetchQuestion(level: LevelInterView) -> [QuestionModel] {
+        return knowledgeRepo.fetchQuestions(level: level)
     }
 }

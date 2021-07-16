@@ -73,7 +73,7 @@ struct CoreDataRepository<Domain: ObjectConvertible> {
     }
     
     func save(domain : Domain) {
-        var managedContext = CoreDataConfiguration.shared.configure()
+        let managedContext = CoreDataConfiguration.shared.configure()
         guard let entityInsert = NSEntityDescription.entity(forEntityName: Domain.name , in: managedContext) else {
             return
         }
@@ -91,12 +91,12 @@ struct CoreDataRepository<Domain: ObjectConvertible> {
     func fetch(predicate: NSPredicate) -> Domain? {
         var result : Domain?
         do {
-            var fetchRequest = NSFetchRequest<NSManagedObject>(entityName: Domain.name)
+            let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: Domain.name)
             fetchRequest.predicate = predicate
             guard let context = try CoreDataConfiguration.shared.configure().fetch(fetchRequest).first as? Domain.Object else {
                 return nil
             }
-            result = context.asDomain as! Domain
+            result = context.asDomain as? Domain
         } catch let error as NSError {
             NSLog(error.description)
         }
@@ -106,7 +106,7 @@ struct CoreDataRepository<Domain: ObjectConvertible> {
     func fetchList(predicate: NSPredicate) -> [Domain]? {
         var results : [Domain]? = []
         do {
-            var fetchRequest = NSFetchRequest<NSManagedObject>(entityName: Domain.name)
+            let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: Domain.name)
             fetchRequest.predicate = predicate
             guard let context = try CoreDataConfiguration.shared.configure().fetch(fetchRequest) as? [Domain.Object] else {
                 return nil
@@ -121,7 +121,7 @@ struct CoreDataRepository<Domain: ObjectConvertible> {
     }
     
     func deleteAll() {
-        var fetch = NSFetchRequest<NSManagedObject>(entityName: Domain.name)
+        let fetch = NSFetchRequest<NSManagedObject>(entityName: Domain.name)
         do {
             let results = try CoreDataConfiguration.shared.configure().fetch(fetch)
             results.forEach { (object) in

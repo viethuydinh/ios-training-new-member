@@ -27,8 +27,8 @@ class KnowledgeTableViewCell: UITableViewCell {
         
         return question
     }
-}
+} 
 
 extension KnowledgeTableViewCell {
-    static let height : CGFloat = 56.0
+    static let height : CGFloat = 60.0
 }

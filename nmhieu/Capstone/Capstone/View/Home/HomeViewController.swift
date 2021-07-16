@@ -15,6 +15,8 @@ class HomeViewController: BaseVC {
     @IBOutlet weak var juniorButton: UIButton!
     @IBOutlet weak var seniorButton: UIButton!
     
+    var knowledgeVM = DefaultKnowledgeViewModel()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.setUpUI()
@@ -60,15 +62,20 @@ class HomeViewController: BaseVC {
         }
         
         let interViewAction = UIAlertAction(title: "Interview", style: .default) { (action) in
-            guard let vc = UIStoryboard(name: "Interview", bundle: nil).instantiateViewController(withIdentifier: InterviewViewController.identifier) as? InterviewViewController else { return }
-            vc.level = level
-            self.navigationController?.pushViewController(vc, animated: true)
+            let numberQuestions = self.knowledgeVM.fetchQuestion(level: level).count
+            if numberQuestions >= 5 {
+                guard let vc = UIStoryboard(name: "Interview", bundle: nil).instantiateViewController(withIdentifier: InterviewViewController.identifier) as? InterviewViewController else { return }
+                vc.level = level
+                self.navigationController?.pushViewController(vc, animated: true)
+            }
+            else {
+                self.eventAlert(message: CommonError.notEnoughQuestion.rawValue)
+            }
         }
         
         let cancelAction = UIAlertAction(title: "Cancel", style: .cancel) { (action) in
         
         }
-        
         actionSheet.addAction(createAction)
         actionSheet.addAction(interViewAction)
         actionSheet.addAction(cancelAction)

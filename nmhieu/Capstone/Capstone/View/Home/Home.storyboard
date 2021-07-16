@@ -9,7 +9,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Home View Controller-->
+        <!--Item-->
         <scene sceneID="Abz-wy-W0s">
             <objects>
                 <viewController storyboardIdentifier="HomeViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Zdv-Bi-InI" customClass="HomeViewController" customModule="Capstone" customModuleProvider="target" sceneMemberID="viewController">
@@ -21,20 +21,22 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="133.5"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Xgf-Ib-ncr">
-                                        <rect key="frame" x="16" y="56.5" width="56" height="20.5"/>
+                                        <rect key="frame" x="16" y="25" width="71" height="30"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hello e" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dEm-Wb-CLM">
-                                                <rect key="frame" x="0.0" y="0.0" width="56" height="20.5"/>
-                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ldK-FE-fb1">
+                                                <rect key="frame" x="0.0" y="0.0" width="71" height="30"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="30" id="Mzv-9E-M4N"/>
+                                                </constraints>
+                                                <color key="tintColor" name="navy"/>
+                                                <state key="normal" title="Button" image="hamburger"/>
+                                            </button>
                                         </subviews>
                                     </stackView>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstItem="Xgf-Ib-ncr" firstAttribute="centerY" secondItem="rgw-tk-4vm" secondAttribute="centerY" id="JfZ-bW-lOu"/>
+                                    <constraint firstItem="Xgf-Ib-ncr" firstAttribute="centerY" secondItem="rgw-tk-4vm" secondAttribute="centerY" multiplier="0.6" id="JfZ-bW-lOu"/>
                                     <constraint firstItem="Xgf-Ib-ncr" firstAttribute="leading" secondItem="rgw-tk-4vm" secondAttribute="leading" constant="16" id="nZ4-0r-DGd"/>
                                 </constraints>
                             </view>
@@ -100,7 +102,7 @@
                                 </subviews>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="87H-xY-nPK">
-                                <rect key="frame" x="162.5" y="518.5" width="50" height="30"/>
+                                <rect key="frame" x="162.5" y="479.5" width="50" height="30"/>
                                 <state key="normal" title="History"/>
                                 <connections>
                                     <action selector="eventHistory:" destination="Zdv-Bi-InI" eventType="touchUpInside" id="OwB-On-hYa"/>
@@ -121,20 +123,57 @@
                             <constraint firstItem="Wmi-pP-t1k" firstAttribute="centerX" secondItem="vPT-eT-D4k" secondAttribute="centerX" id="yNr-y5-N6S"/>
                         </constraints>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Item" id="u0z-JG-0l1"/>
+                    <navigationItem key="navigationItem" id="CSJ-57-zPH"/>
                     <connections>
                         <outlet property="fresherButton" destination="Gmv-SO-gu0" id="v9t-ci-nHs"/>
                         <outlet property="internButton" destination="ueO-x5-hCg" id="2qg-TY-DYR"/>
                         <outlet property="juniorButton" destination="6Ug-B8-3mM" id="zp8-sw-aBp"/>
-                        <outlet property="nameLabel" destination="dEm-Wb-CLM" id="jOf-Di-nzK"/>
                         <outlet property="seniorButton" destination="mYU-sf-ExQ" id="VpX-4n-Vbo"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="E5d-v8-qBu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-68" y="21"/>
+            <point key="canvasLocation" x="3688.8000000000002" y="20.239880059970016"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="1eL-GO-1ss">
+            <objects>
+                <navigationController storyboardIdentifier="NavigationMain" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" navigationBarHidden="YES" id="KpB-Tj-FKo" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="6t7-Al-Vej">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="or5-B5-JbR" kind="relationship" relationship="rootViewController" id="LaB-RF-4xJ"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pEl-8G-Hq8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1810.4000000000001" y="20.239880059970016"/>
+        </scene>
+        <!--Base Tab Bar View Controller-->
+        <scene sceneID="8Fr-a5-kEL">
+            <objects>
+                <tabBarController storyboardIdentifier="BaseTabBarViewController" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="or5-B5-JbR" customClass="BaseTabBarViewController" customModule="Capstone" customModuleProvider="target" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="bnY-jp-Yzr"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="naG-rj-mJh">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="Zdv-Bi-InI" kind="relationship" relationship="viewControllers" id="96e-D4-KJG"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5s8-92-VKe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2749.5999999999999" y="20.239880059970016"/>
         </scene>
     </scenes>
     <resources>
+        <image name="hamburger" width="17" height="15"/>
         <namedColor name="AccentColor">
             <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
@@ -143,6 +182,9 @@
         </namedColor>
         <namedColor name="lightMustard">
             <color red="0.97299998998641968" green="0.74900001287460327" blue="0.3880000114440918" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="navy">
+            <color red="0.0" green="0.10199999809265137" blue="0.22400000691413879" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

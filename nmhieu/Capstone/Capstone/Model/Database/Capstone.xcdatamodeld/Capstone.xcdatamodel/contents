@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="17709" systemVersion="20B29" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="18154" systemVersion="20B29" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
     <entity name="AccountCoreData" representedClassName=".AccountCoreData" syncable="YES">
         <attribute name="email" optional="YES" attributeType="String"/>
         <attribute name="password" optional="YES" attributeType="String"/>
@@ -11,6 +11,7 @@
         <attribute name="date" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
         <attribute name="id" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="image" optional="YES" attributeType="String"/>
+        <attribute name="jobTitle" optional="YES" attributeType="String"/>
         <attribute name="level" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="name" optional="YES" attributeType="String"/>
         <attribute name="overviewContent" optional="YES" attributeType="String"/>
@@ -39,7 +40,7 @@
     </entity>
     <elements>
         <element name="AccountCoreData" positionX="195.784423828125" positionY="-13.95783996582031" width="128" height="103"/>
-        <element name="InterviewCoreData" positionX="9" positionY="72" width="128" height="149"/>
+        <element name="InterviewCoreData" positionX="9" positionY="72" width="128" height="164"/>
         <element name="QuestionCoreData" positionX="212.4491577148438" positionY="181.2802429199219" width="128" height="74"/>
         <element name="QuestionInterViewCoreData" positionX="18" positionY="81" width="128" height="74"/>
         <element name="UserCoreData" positionX="-195.1996459960938" positionY="-88.77899169921875" width="126.4737548828125" height="178"/>

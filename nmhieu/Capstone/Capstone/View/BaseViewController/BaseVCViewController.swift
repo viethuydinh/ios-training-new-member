@@ -56,4 +56,13 @@ class BaseVC: UIViewController,UIGestureRecognizerDelegate {
             self.view.frame.origin.y = 0
         }
     }
+    
+    func eventAlert(message : String) {
+        let actionAlert = UIAlertController(title: nil, message: message, preferredStyle: .alert)
+        let cancelAction = UIAlertAction(title: "OK", style: .cancel) { (action) in
+        
+        }
+        actionAlert.addAction(cancelAction)
+        self.present(actionAlert, animated: true, completion: nil)
+    }
 }

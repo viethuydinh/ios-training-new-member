@@ -80,7 +80,7 @@ struct DefaultInterviewViewModel : InterviewViewModel {
         let indexPath = IndexPath(row: 0, section: InterviewSection.overview.rawValue)
         guard let cell = tableView.cellForRow(at: indexPath) as? OverviewTableViewCell else  { return OverviewModel() }
         
-        var overview = cell.getOverview()
+        let overview = cell.getOverview()
         
         return overview
     }

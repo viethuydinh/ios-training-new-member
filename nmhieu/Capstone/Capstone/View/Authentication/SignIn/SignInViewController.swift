@@ -54,9 +54,12 @@ class SignInViewController: BaseVC {
     @IBAction func eventSignIn() {
         let stateAuth = self.authenticationVM.signIn(username: self.userNameTF.text ?? "",
                                               password: self.passwordTF.text ?? "")
-        if stateAuth {
-            guard let vc = UIStoryboard(name: "Home", bundle: nil).instantiateViewController(withIdentifier: HomeViewController.identifier) as? HomeViewController else { return }
-            self.navigationController?.pushViewController(vc, animated: true)
+        if stateAuth.state {
+            guard let vc = UIStoryboard(name: "Home", bundle: nil).instantiateViewController(withIdentifier: "NavigationMain") as? UINavigationController else { return }
+            self.view.window?.rootViewController = vc
+        }
+        else {
+            self.eventAlert(message: stateAuth.message)
         }
     }
     
