@@ -47,10 +47,6 @@ class HomeViewController: BaseVC {
         self.eventOverlayView(level: .senior)
     }
     
-    @IBAction func eventHistory(_ sender: Any) {
-        guard let vc = UIStoryboard(name: "History", bundle: nil).instantiateViewController(withIdentifier: HistoryViewController.identifier) as? HistoryViewController else { return }
-        self.navigationController?.pushViewController(vc, animated: true)
-    }
     
     fileprivate func eventOverlayView(level : LevelInterView) {
         let actionSheet = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)

@@ -101,24 +101,15 @@
                                     </button>
                                 </subviews>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="87H-xY-nPK">
-                                <rect key="frame" x="162.5" y="479.5" width="50" height="30"/>
-                                <state key="normal" title="History"/>
-                                <connections>
-                                    <action selector="eventHistory:" destination="Zdv-Bi-InI" eventType="touchUpInside" id="OwB-On-hYa"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vPT-eT-D4k"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="87H-xY-nPK" firstAttribute="centerY" secondItem="vPT-eT-D4k" secondAttribute="centerY" multiplier="1.6" id="Frv-Ji-57M"/>
                             <constraint firstItem="Wmi-pP-t1k" firstAttribute="top" secondItem="rgw-tk-4vm" secondAttribute="bottom" id="G2y-ma-ZeC"/>
                             <constraint firstItem="mYU-sf-ExQ" firstAttribute="width" secondItem="YnA-0X-2dd" secondAttribute="width" multiplier="0.6" id="M1h-Gl-m4c"/>
                             <constraint firstItem="rgw-tk-4vm" firstAttribute="leading" secondItem="vPT-eT-D4k" secondAttribute="leading" id="RW7-V4-brS"/>
                             <constraint firstItem="vPT-eT-D4k" firstAttribute="trailing" secondItem="rgw-tk-4vm" secondAttribute="trailing" id="Yib-84-Qox"/>
                             <constraint firstItem="rgw-tk-4vm" firstAttribute="top" secondItem="vPT-eT-D4k" secondAttribute="top" id="phP-FT-rjT"/>
-                            <constraint firstItem="87H-xY-nPK" firstAttribute="centerX" secondItem="vPT-eT-D4k" secondAttribute="centerX" id="qnb-fR-VsW"/>
                             <constraint firstItem="rgw-tk-4vm" firstAttribute="height" secondItem="YnA-0X-2dd" secondAttribute="height" multiplier="0.2" id="tcH-zg-AMc"/>
                             <constraint firstItem="Wmi-pP-t1k" firstAttribute="centerX" secondItem="vPT-eT-D4k" secondAttribute="centerX" id="yNr-y5-N6S"/>
                         </constraints>
@@ -160,6 +151,7 @@
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="bnY-jp-Yzr"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="naG-rj-mJh">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>

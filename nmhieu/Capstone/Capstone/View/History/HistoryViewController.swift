@@ -13,10 +13,14 @@ class HistoryViewController: UIViewController {
     
     var interviewVM = DefaultInterviewViewModel()
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        self.bindingData()
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.setUpUI()
-        self.bindingData()
     }
     
     //MARK: -UI
@@ -33,6 +37,7 @@ class HistoryViewController: UIViewController {
     //MARK: -Data
     func bindingData() {
         self.interviewVM.interviewHistory = self.interviewVM.fetchInterviewHistory()
+        self.historyTableView.reloadData()
     }
 }
 

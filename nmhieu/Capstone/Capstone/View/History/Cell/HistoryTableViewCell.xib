@@ -159,6 +159,7 @@
                     <constraint firstItem="2op-Cd-eMz" firstAttribute="top" secondItem="54N-S9-oTi" secondAttribute="bottom" constant="8" id="aqL-6H-0nJ"/>
                 </constraints>
             </tableViewCellContentView>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <connections>
                 <outlet property="ageLabel" destination="pso-WQ-Q05" id="EjM-5Q-A5F"/>
                 <outlet property="candidateImage" destination="54N-S9-oTi" id="ZfD-MD-ocA"/>

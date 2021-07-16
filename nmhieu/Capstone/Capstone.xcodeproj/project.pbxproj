@@ -29,6 +29,7 @@
 		151F2AFC26A1702300C63F2C /* BaseTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 151F2AFB26A1702300C63F2C /* BaseTabBarViewController.swift */; };
 		151F2AFE26A1709800C63F2C /* CustomTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 151F2AFD26A1709800C63F2C /* CustomTabBar.swift */; };
 		151F2B0026A170CE00C63F2C /* TabBarItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 151F2AFF26A170CE00C63F2C /* TabBarItem.swift */; };
+		151F2B0226A1828200C63F2C /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = 151F2B0126A1828200C63F2C /* Image.swift */; };
 		15344169269FE0150078660E /* NotificationKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15344168269FE0150078660E /* NotificationKey.swift */; };
 		154A6366269BF253008E571C /* QuestionCoreData+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 154A6364269BF253008E571C /* QuestionCoreData+CoreDataClass.swift */; };
 		154A6367269BF253008E571C /* QuestionCoreData+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 154A6365269BF253008E571C /* QuestionCoreData+CoreDataProperties.swift */; };
@@ -126,6 +127,7 @@
 		151F2AFB26A1702300C63F2C /* BaseTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTabBarViewController.swift; sourceTree = "<group>"; };
 		151F2AFD26A1709800C63F2C /* CustomTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBar.swift; sourceTree = "<group>"; };
 		151F2AFF26A170CE00C63F2C /* TabBarItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarItem.swift; sourceTree = "<group>"; };
+		151F2B0126A1828200C63F2C /* Image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
 		15344168269FE0150078660E /* NotificationKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationKey.swift; sourceTree = "<group>"; };
 		154A6364269BF253008E571C /* QuestionCoreData+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "QuestionCoreData+CoreDataClass.swift"; path = "Capstone/Model/Database/Question/QuestionCoreData+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
 		154A6365269BF253008E571C /* QuestionCoreData+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "QuestionCoreData+CoreDataProperties.swift"; path = "Capstone/Model/Database/Question/QuestionCoreData+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
@@ -430,6 +432,7 @@
 				151F2AF426A1246500C63F2C /* Date+Extension.swift */,
 				151F2AF626A1291100C63F2C /* AuthenticationError.swift */,
 				151F2AF826A1381700C63F2C /* CommonError.swift */,
+				151F2B0126A1828200C63F2C /* Image.swift */,
 			);
 			path = Resource;
 			sourceTree = "<group>";
@@ -797,6 +800,7 @@
 				15A03871269E991E00D9D0FB /* CandidateInforTableViewCell.swift in Sources */,
 				1573548C26A023FD00A5C59D /* CandidateInforModel.swift in Sources */,
 				15A0389D269ECD9A00D9D0FB /* InterviewCoreData+CoreDataProperties.swift in Sources */,
+				151F2B0226A1828200C63F2C /* Image.swift in Sources */,
 				15179ECB26958640008D3A46 /* Capstone.xcdatamodeld in Sources */,
 				154A6396269BF9E0008E571C /* KnowledgeViewModel.swift in Sources */,
 				1585AFD12696DA750073F89E /* AuthenticationRepository.swift in Sources */,

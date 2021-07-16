@@ -27,7 +27,10 @@ enum TabItem: String, CaseIterable {
             }
             return historyVC
         case .profile:
-            return HomeViewController()
+            guard let historyVC = UIStoryboard(name: "History", bundle: nil).instantiateViewController(withIdentifier: HistoryViewController.identifier) as? HistoryViewController else {
+                return UIViewController()
+            }
+            return historyVC
 //        case .messages:
 //            return InboxViewController()
         }
@@ -36,11 +39,11 @@ enum TabItem: String, CaseIterable {
     var icon: UIImage {
         switch self {
         case .home:
-            return UIImage(named: "hamburger")!
+            return .homeIronMan
         case .history:
-            return UIImage(named: "hamburger")!
+            return .historyStarWar
         case .profile:
-            return UIImage(named: "hamburger")!
+            return .homeIronMan
 //        case .messages:
 //            return UIImage(named: "ic_message")!
         }

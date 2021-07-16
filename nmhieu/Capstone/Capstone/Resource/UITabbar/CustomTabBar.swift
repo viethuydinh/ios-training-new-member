@@ -37,6 +37,7 @@ class CustomTabBar: UIView {
 
             addSubview(itemView)
             NSLayoutConstraint.activate([
+                itemView.heightAnchor.constraint(equalTo: heightAnchor),
                 itemView.widthAnchor.constraint(equalToConstant: itemWidth),
                 itemView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: offsetX),
                 itemView.topAnchor.constraint(equalTo: topAnchor),
@@ -56,12 +57,13 @@ class CustomTabBar: UIView {
 
         let itemTitleLabel = UILabel()
         itemTitleLabel.text = item.displayTitle
+        itemTitleLabel.font = UIFont.boldSystemFont(ofSize: 12.0)
         itemTitleLabel.textAlignment = .center
         itemTitleLabel.translatesAutoresizingMaskIntoConstraints = false
         itemTitleLabel.clipsToBounds = true
 
         let itemImageView = UIImageView()
-//        itemImageView.tintColor = .aquaBlue
+        itemImageView.tintColor = .aquaBlue
         itemImageView.image = item.icon.withRenderingMode(.automatic)
         itemImageView.translatesAutoresizingMaskIntoConstraints = false
         itemImageView.clipsToBounds = true
@@ -71,13 +73,14 @@ class CustomTabBar: UIView {
 
         // Auto layout cho item title và item icon
         NSLayoutConstraint.activate([
+            itemImageView.heightAnchor.constraint(equalToConstant: 50),
+            itemImageView.widthAnchor.constraint(equalToConstant: 50),
             itemImageView.centerXAnchor.constraint(equalTo: tabBarItem.centerXAnchor),
             itemImageView.topAnchor.constraint(equalTo: tabBarItem.topAnchor, constant: 8),
             itemTitleLabel.heightAnchor.constraint(equalToConstant: 13),
             itemTitleLabel.widthAnchor.constraint(equalTo: tabBarItem.widthAnchor),
             itemTitleLabel.topAnchor.constraint(equalTo: itemImageView.bottomAnchor, constant: 6),
-            itemTitleLabel.centerXAnchor.constraint(equalTo: tabBarItem.centerXAnchor),
-            itemImageView.widthAnchor.constraint(equalToConstant: 25),
+            itemTitleLabel.centerXAnchor.constraint(equalTo: tabBarItem.centerXAnchor)
         ])
 
         // Thêm tap gesture recognizer để handle tap event
