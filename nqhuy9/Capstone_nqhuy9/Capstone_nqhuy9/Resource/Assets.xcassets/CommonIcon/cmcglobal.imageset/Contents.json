@@ -1,0 +1,23 @@
+{
+  "images" : [
+    {
+      "filename" : "cong-ty-tnhh-cmc-global-5e3dc09f007df09930dcb7b36f9cbd11-60c33177cb4c7.jpeg",
+      "idiom" : "universal",
+      "scale" : "1x"
+    },
+    {
+      "filename" : "cong-ty-tnhh-cmc-global-5e3dc09f007df09930dcb7b36f9cbd11-60c33177cb4c7-1.jpeg",
+      "idiom" : "universal",
+      "scale" : "2x"
+    },
+    {
+      "filename" : "cong-ty-tnhh-cmc-global-5e3dc09f007df09930dcb7b36f9cbd11-60c33177cb4c7-2.jpeg",
+      "idiom" : "universal",
+      "scale" : "3x"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}
