@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="GifOnboardingCollectionViewCell" customModule="Capstone" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="264" height="269"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="264" height="269"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cjN-og-cIl">
+                        <rect key="frame" x="0.0" y="0.0" width="264" height="269"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="NJh-Tb-lSS">
+                                <rect key="frame" x="0.0" y="0.0" width="264" height="269"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome to Capstone" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="msW-4w-9qF">
+                                <rect key="frame" x="20" y="27" width="224.5" height="26.5"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
+                                <color key="textColor" name="lightMustard"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="msW-4w-9qF" firstAttribute="centerY" secondItem="cjN-og-cIl" secondAttribute="centerY" multiplier="0.3" id="6Ee-a9-ppQ"/>
+                            <constraint firstItem="NJh-Tb-lSS" firstAttribute="top" secondItem="cjN-og-cIl" secondAttribute="top" id="O8n-ng-b6V"/>
+                            <constraint firstAttribute="trailing" secondItem="NJh-Tb-lSS" secondAttribute="trailing" id="b6R-47-XIx"/>
+                            <constraint firstAttribute="bottom" secondItem="NJh-Tb-lSS" secondAttribute="bottom" id="eOR-I1-Fv6"/>
+                            <constraint firstItem="NJh-Tb-lSS" firstAttribute="leading" secondItem="cjN-og-cIl" secondAttribute="leading" id="kEl-yd-aFe"/>
+                            <constraint firstItem="msW-4w-9qF" firstAttribute="centerX" secondItem="cjN-og-cIl" secondAttribute="centerX" id="t1y-te-bzs"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="cjN-og-cIl" secondAttribute="trailing" id="4vh-hM-vLz"/>
+                <constraint firstAttribute="bottom" secondItem="cjN-og-cIl" secondAttribute="bottom" id="Jro-Sw-koO"/>
+                <constraint firstItem="cjN-og-cIl" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="phB-mM-wQj"/>
+                <constraint firstItem="cjN-og-cIl" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="pub-M5-yI3"/>
+            </constraints>
+            <size key="customSize" width="264" height="269"/>
+            <connections>
+                <outlet property="gifImage" destination="NJh-Tb-lSS" id="6BY-0D-CL3"/>
+            </connections>
+            <point key="canvasLocation" x="179.71014492753625" y="122.87946428571428"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <namedColor name="lightMustard">
+            <color red="0.97299998998641968" green="0.74900001287460327" blue="0.3880000114440918" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

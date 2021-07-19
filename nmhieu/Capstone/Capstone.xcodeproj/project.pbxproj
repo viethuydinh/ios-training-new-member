@@ -30,6 +30,13 @@
 		151F2AFE26A1709800C63F2C /* CustomTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 151F2AFD26A1709800C63F2C /* CustomTabBar.swift */; };
 		151F2B0026A170CE00C63F2C /* TabBarItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 151F2AFF26A170CE00C63F2C /* TabBarItem.swift */; };
 		151F2B0226A1828200C63F2C /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = 151F2B0126A1828200C63F2C /* Image.swift */; };
+		1526CA7826A522E10059619B /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1526CA7726A522E10059619B /* OnboardingViewController.swift */; };
+		1526CA7B26A525360059619B /* Onboarding.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1526CA7A26A525360059619B /* Onboarding.storyboard */; };
+		1526CA7F26A529FB0059619B /* OnboardingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1526CA7E26A529FB0059619B /* OnboardingViewModel.swift */; };
+		1526CA8526A537B80059619B /* UIImage+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1526CA8426A537B80059619B /* UIImage+Extension.swift */; };
+		1526CA8C26A567EC0059619B /* GifOnboardingCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1526CA8A26A567EC0059619B /* GifOnboardingCollectionViewCell.swift */; };
+		1526CA8D26A567EC0059619B /* GifOnboardingCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1526CA8B26A567EC0059619B /* GifOnboardingCollectionViewCell.xib */; };
+		1526CA8F26A56DD70059619B /* InterviewGif1.gif in Resources */ = {isa = PBXBuildFile; fileRef = 1526CA8E26A56DD70059619B /* InterviewGif1.gif */; };
 		15344169269FE0150078660E /* NotificationKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15344168269FE0150078660E /* NotificationKey.swift */; };
 		154A6366269BF253008E571C /* QuestionCoreData+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 154A6364269BF253008E571C /* QuestionCoreData+CoreDataClass.swift */; };
 		154A6367269BF253008E571C /* QuestionCoreData+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 154A6365269BF253008E571C /* QuestionCoreData+CoreDataProperties.swift */; };
@@ -128,6 +135,13 @@
 		151F2AFD26A1709800C63F2C /* CustomTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBar.swift; sourceTree = "<group>"; };
 		151F2AFF26A170CE00C63F2C /* TabBarItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarItem.swift; sourceTree = "<group>"; };
 		151F2B0126A1828200C63F2C /* Image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
+		1526CA7726A522E10059619B /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
+		1526CA7A26A525360059619B /* Onboarding.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Onboarding.storyboard; sourceTree = "<group>"; };
+		1526CA7E26A529FB0059619B /* OnboardingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewModel.swift; sourceTree = "<group>"; };
+		1526CA8426A537B80059619B /* UIImage+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Extension.swift"; sourceTree = "<group>"; };
+		1526CA8A26A567EC0059619B /* GifOnboardingCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GifOnboardingCollectionViewCell.swift; sourceTree = "<group>"; };
+		1526CA8B26A567EC0059619B /* GifOnboardingCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GifOnboardingCollectionViewCell.xib; sourceTree = "<group>"; };
+		1526CA8E26A56DD70059619B /* InterviewGif1.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = InterviewGif1.gif; sourceTree = "<group>"; };
 		15344168269FE0150078660E /* NotificationKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationKey.swift; sourceTree = "<group>"; };
 		154A6364269BF253008E571C /* QuestionCoreData+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "QuestionCoreData+CoreDataClass.swift"; path = "Capstone/Model/Database/Question/QuestionCoreData+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
 		154A6365269BF253008E571C /* QuestionCoreData+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "QuestionCoreData+CoreDataProperties.swift"; path = "Capstone/Model/Database/Question/QuestionCoreData+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
@@ -295,6 +309,25 @@
 			path = UITabbar;
 			sourceTree = "<group>";
 		};
+		1526CA7926A522E60059619B /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				1526CA9026A56F510059619B /* Cell */,
+				1526CA7726A522E10059619B /* OnboardingViewController.swift */,
+				1526CA7A26A525360059619B /* Onboarding.storyboard */,
+			);
+			path = Onboarding;
+			sourceTree = "<group>";
+		};
+		1526CA9026A56F510059619B /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				1526CA8A26A567EC0059619B /* GifOnboardingCollectionViewCell.swift */,
+				1526CA8B26A567EC0059619B /* GifOnboardingCollectionViewCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
 		154A6392269BF746008E571C /* Question */ = {
 			isa = PBXGroup;
 			children = (
@@ -386,6 +419,8 @@
 		157F96EA268EBB1B009BBF14 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				1526CA7926A522E60059619B /* Onboarding */,
+				151F2AFA26A16FB300C63F2C /* UITabbar */,
 				1507B211268F1412001945A8 /* BaseViewController */,
 				1573549026A0301F00A5C59D /* History */,
 				15A0385E269E978D00D9D0FB /* Interview */,
@@ -402,6 +437,7 @@
 				1585AFBA2696B1700073F89E /* AuthenticationViewModel.swift */,
 				154A6395269BF9E0008E571C /* KnowledgeViewModel.swift */,
 				15A0387A269E9E3A00D9D0FB /* InterviewViewModel.swift */,
+				1526CA7E26A529FB0059619B /* OnboardingViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -421,9 +457,9 @@
 		157F96ED268EBB4F009BBF14 /* Resource */ = {
 			isa = PBXGroup;
 			children = (
-				151F2AFA26A16FB300C63F2C /* UITabbar */,
 				15095E7A268DC8B400129B9C /* Assets.xcassets */,
 				157F9736268EFEA4009BBF14 /* Color.swift */,
+				1526CA8E26A56DD70059619B /* InterviewGif1.gif */,
 				157F973B268EFED5009BBF14 /* AccoutString.swift */,
 				1507B217268F14D6001945A8 /* UIViewController+Extension.swift */,
 				1507B21C268F1519001945A8 /* NSObject+Extension.swift */,
@@ -433,6 +469,7 @@
 				151F2AF626A1291100C63F2C /* AuthenticationError.swift */,
 				151F2AF826A1381700C63F2C /* CommonError.swift */,
 				151F2B0126A1828200C63F2C /* Image.swift */,
+				1526CA8426A537B80059619B /* UIImage+Extension.swift */,
 			);
 			path = Resource;
 			sourceTree = "<group>";
@@ -667,12 +704,15 @@
 				1585AFDF2696EAA90073F89E /* Home.storyboard in Resources */,
 				15A03882269EBF4D00D9D0FB /* QuestionTableViewCell.xib in Resources */,
 				154A63A4269BFB2F008E571C /* InsertKnowledge.storyboard in Resources */,
+				1526CA8D26A567EC0059619B /* GifOnboardingCollectionViewCell.xib in Resources */,
 				15A03872269E991E00D9D0FB /* CandidateInforTableViewCell.xib in Resources */,
 				15A03889269EC0C500D9D0FB /* OverviewTableViewCell.xib in Resources */,
 				157F9732268EFAC0009BBF14 /* SignUp.storyboard in Resources */,
+				1526CA8F26A56DD70059619B /* InterviewGif1.gif in Resources */,
 				1573549926A031B000A5C59D /* HistoryTableViewCell.xib in Resources */,
 				15095E7B268DC8B400129B9C /* Assets.xcassets in Resources */,
 				157F9722268EF141009BBF14 /* SignIn.storyboard in Resources */,
+				1526CA7B26A525360059619B /* Onboarding.storyboard in Resources */,
 				154A63B1269C1E08008E571C /* KnowledgeTableViewCell.xib in Resources */,
 				1573549226A030E500A5C59D /* History.storyboard in Resources */,
 			);
@@ -787,6 +827,7 @@
 				1573548F26A024C900A5C59D /* OverviewModel.swift in Sources */,
 				157F972D268EFAB2009BBF14 /* SignUpViewController.swift in Sources */,
 				15095E6F268DC8B100129B9C /* AppDelegate.swift in Sources */,
+				1526CA7F26A529FB0059619B /* OnboardingViewModel.swift in Sources */,
 				15A0388E269EC97100D9D0FB /* InterviewModel.swift in Sources */,
 				155F2FF926943573007EFBAC /* UserCoreData+CoreDataProperties.swift in Sources */,
 				15179EBF26958532008D3A46 /* AccountModel.swift in Sources */,
@@ -811,14 +852,17 @@
 				1507B20D268F13CE001945A8 /* UserModel.swift in Sources */,
 				15344169269FE0150078660E /* NotificationKey.swift in Sources */,
 				15A03888269EC0C500D9D0FB /* OverviewTableViewCell.swift in Sources */,
+				1526CA7826A522E10059619B /* OnboardingViewController.swift in Sources */,
 				15A038B7269ED1FA00D9D0FB /* QuestionInterViewCoreData+CoreDataProperties.swift in Sources */,
 				15179EBA269557B2008D3A46 /* DatabaseConfig.swift in Sources */,
 				155F2FF826943573007EFBAC /* UserCoreData+CoreDataClass.swift in Sources */,
 				154A638D269BF498008E571C /* QuestionModel.swift in Sources */,
+				1526CA8C26A567EC0059619B /* GifOnboardingCollectionViewCell.swift in Sources */,
 				15A0387B269E9E3A00D9D0FB /* InterviewViewModel.swift in Sources */,
 				157F973C268EFED5009BBF14 /* AccoutString.swift in Sources */,
 				154A63B0269C1E08008E571C /* KnowledgeTableViewCell.swift in Sources */,
 				151F2AF526A1246500C63F2C /* Date+Extension.swift in Sources */,
+				1526CA8526A537B80059619B /* UIImage+Extension.swift in Sources */,
 				151F2AF726A1291100C63F2C /* AuthenticationError.swift in Sources */,
 				15179EE92695B949008D3A46 /* AccountCoreData+CoreDataClass.swift in Sources */,
 			);
