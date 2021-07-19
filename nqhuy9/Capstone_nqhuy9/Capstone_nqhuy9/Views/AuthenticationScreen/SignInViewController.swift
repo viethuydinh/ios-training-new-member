@@ -16,6 +16,14 @@ class SignInViewController: BaseVC {
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var signInButton: UIButton!
     @IBOutlet weak var noAccountLabel : UILabel!
+    @IBOutlet weak var eyeImage: UIImageView!
+    
+    var isHidePass: Bool = true {
+        didSet {
+            self.eyeImage.image = isHidePass ? UIImage(named: "eye") : UIImage(named: "invisible")
+            self.passwordTextField.isSecureTextEntry = isHidePass
+        }
+    }
     
     var signInViewModel = DefaultAuthenticationViewModel()
     
@@ -67,6 +75,7 @@ class SignInViewController: BaseVC {
     private func event() {
         self.eventGoRegister()
         self.eventSignIn()
+        self.eventHidePassword()
     }
     
     private func eventSignIn() {
@@ -109,6 +118,22 @@ class SignInViewController: BaseVC {
             } onDisposed: {
                 
             }.disposed(by: self.disposeBag)
+    }
+    
+    private func eventHidePassword() {
+        self.eyeImage
+            .rx
+            .tapGesture()
+            .subscribe { _ in
+                self.isHidePass = !self.isHidePass
+            } onError: { _ in
+                
+            } onCompleted: {
+                
+            } onDisposed: {
+                
+            }.disposed(by: self.disposeBag)
+
     }
 
 }

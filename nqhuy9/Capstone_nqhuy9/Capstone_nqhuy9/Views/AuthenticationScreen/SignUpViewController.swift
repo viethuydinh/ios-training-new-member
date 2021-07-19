@@ -16,8 +16,19 @@ class SignUpViewController: BaseVC {
     @IBOutlet weak var repasswordTextField: UITextField!
     @IBOutlet weak var signUpButton: UIButton!
     @IBOutlet weak var haveAccountLabel : UILabel!
+    @IBOutlet weak var eyePasswordImage : UIImageView!
+    @IBOutlet weak var eyeRePasswordImage : UIImageView!
     
     var signUpViewModel = DefaultAuthenticationViewModel()
+    
+    var isHidePass: Bool = true {
+        didSet {
+            self.eyePasswordImage.image = isHidePass ? UIImage(named: "eye") : UIImage(named: "invisible")
+            self.eyeRePasswordImage.image = isHidePass ? UIImage(named: "eye") : UIImage(named: "invisible")
+            self.passwordTextField.isSecureTextEntry = isHidePass
+            self.repasswordTextField.isSecureTextEntry = isHidePass
+        }
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -69,6 +80,8 @@ class SignUpViewController: BaseVC {
     private func event() {
         self.eventGoSignIn()
         self.eventSignUp()
+        self.eventHidePassword()
+        self.eventHideRePassword()
     }
     
     private func eventSignUp() {
@@ -102,6 +115,38 @@ class SignUpViewController: BaseVC {
             } onDisposed: {
                 
             }.disposed(by: self.disposeBag)
+    }
+    
+    private func eventHidePassword() {
+        self.eyePasswordImage
+            .rx
+            .tapGesture()
+            .subscribe { _ in
+                self.isHidePass = !self.isHidePass
+            } onError: { _ in
+                
+            } onCompleted: {
+                
+            } onDisposed: {
+                
+            }.disposed(by: self.disposeBag)
+
+    }
+    
+    private func eventHideRePassword() {
+        self.eyeRePasswordImage
+            .rx
+            .tapGesture()
+            .subscribe { _ in
+                self.isHidePass = !self.isHidePass
+            } onError: { _ in
+                
+            } onCompleted: {
+                
+            } onDisposed: {
+                
+            }.disposed(by: self.disposeBag)
+
     }
 
 }
