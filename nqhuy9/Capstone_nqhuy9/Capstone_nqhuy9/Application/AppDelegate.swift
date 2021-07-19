@@ -69,7 +69,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 extension AppDelegate {
     fileprivate func rootViewController() {
         self.window = UIWindow(frame: UIScreen.main.bounds)
-        guard let navigationAccount = UIStoryboard(name: "Authentication", bundle: nil).instantiateViewController(withIdentifier: "navigationAccount") as? UINavigationController else { return }
+        guard let navigationAccount = UIStoryboard(name: "Splash", bundle: nil).instantiateViewController(withIdentifier: "navigationSplash") as? UINavigationController else { return }
         window?.rootViewController = navigationAccount
         window?.backgroundColor = .white
         self.window?.makeKeyAndVisible()
