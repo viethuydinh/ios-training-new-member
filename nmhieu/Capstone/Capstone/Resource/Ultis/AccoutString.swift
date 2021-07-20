@@ -6,7 +6,7 @@
 //
 
 import Foundation
-
+      
 class AccountString {
     static let ERROR_PASSWORD = "Mật khẩu không hợp lệ"
     static let ERROR_USERNAME = "Tên đăng nhập không hợp lệ"

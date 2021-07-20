@@ -20,7 +20,7 @@
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3IW-1v-VjL">
                                 <rect key="frame" x="-225" y="-225" width="450" height="450"/>
-                                <color key="backgroundColor" name="lightMustard"/>
+                                <color key="backgroundColor" name="pastelRed"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="450" id="Ie2-Mk-f8a"/>
                                     <constraint firstAttribute="height" constant="450" id="dRi-q4-MDn"/>
@@ -28,7 +28,7 @@
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h0J-7d-04u">
                                 <rect key="frame" x="318" y="475.33333333333326" width="80" height="80"/>
-                                <color key="backgroundColor" name="lightMustard"/>
+                                <color key="backgroundColor" name="navy"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="h0J-7d-04u" secondAttribute="height" id="CVp-6g-qbZ"/>
                                     <constraint firstAttribute="height" constant="80" id="o1O-by-frb"/>
@@ -46,18 +46,18 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="294.33333333333331"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="qO4-TT-22U">
-                                        <rect key="frame" x="16" y="104.33333333333331" width="151.33333333333334" height="86"/>
+                                        <rect key="frame" x="16" y="45.333333333333343" width="151.33333333333334" height="86"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="quI-Bp-2kA">
                                                 <rect key="frame" x="0.0" y="0.0" width="151.33333333333334" height="43"/>
                                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="36"/>
-                                                <color key="textColor" name="navy"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Back" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ebO-E7-kPW">
-                                                <rect key="frame" x="0.0" y="43.000000000000014" width="151.33333333333334" height="43"/>
+                                                <rect key="frame" x="0.0" y="43" width="151.33333333333334" height="43"/>
                                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="36"/>
-                                                <color key="textColor" name="navy"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
@@ -66,7 +66,7 @@
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstItem="qO4-TT-22U" firstAttribute="leading" secondItem="PUL-Hj-a1L" secondAttribute="leading" constant="16" id="Lhz-XD-Rxz"/>
-                                    <constraint firstItem="qO4-TT-22U" firstAttribute="centerY" secondItem="PUL-Hj-a1L" secondAttribute="centerY" id="U7p-wr-oGf"/>
+                                    <constraint firstItem="qO4-TT-22U" firstAttribute="centerY" secondItem="PUL-Hj-a1L" secondAttribute="centerY" multiplier="0.6" id="U7p-wr-oGf"/>
                                 </constraints>
                             </view>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="SDT-Iw-xg2">
@@ -195,11 +195,11 @@
         <namedColor name="lightGreyBlue">
             <color red="0.66299998760223389" green="0.67500001192092896" blue="0.6940000057220459" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
-        <namedColor name="lightMustard">
-            <color red="0.97299998998641968" green="0.74900001287460327" blue="0.3880000114440918" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
         <namedColor name="navy">
             <color red="0.0" green="0.10199999809265137" blue="0.22400000691413879" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="pastelRed">
+            <color red="0.92500001192092896" green="0.32199999690055847" blue="0.32199999690055847" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

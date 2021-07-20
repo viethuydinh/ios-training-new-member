@@ -26,7 +26,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome to Capstone" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="msW-4w-9qF">
                                 <rect key="frame" x="20" y="27" width="224.5" height="26.5"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
-                                <color key="textColor" name="lightMustard"/>
+                                <color key="textColor" name="navy"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
@@ -56,8 +56,8 @@
         </collectionViewCell>
     </objects>
     <resources>
-        <namedColor name="lightMustard">
-            <color red="0.97299998998641968" green="0.74900001287460327" blue="0.3880000114440918" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        <namedColor name="navy">
+            <color red="0.0" green="0.10199999809265137" blue="0.22400000691413879" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

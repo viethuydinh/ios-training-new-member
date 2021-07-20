@@ -33,7 +33,7 @@
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gIM-fu-043">
                                         <rect key="frame" x="209" y="25" width="150" height="50"/>
-                                        <color key="backgroundColor" name="lightMustard"/>
+                                        <color key="backgroundColor" name="navy"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="gIM-fu-043" secondAttribute="height" multiplier="3:1" id="o3k-h9-vOJ"/>
                                         </constraints>
@@ -47,7 +47,7 @@
                                     <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="xvA-b0-a3Y">
                                         <rect key="frame" x="16" y="36" width="122" height="28"/>
                                         <color key="pageIndicatorTintColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <color key="currentPageIndicatorTintColor" name="lightMustard"/>
+                                        <color key="currentPageIndicatorTintColor" name="navy"/>
                                     </pageControl>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -86,8 +86,8 @@
         </scene>
     </scenes>
     <resources>
-        <namedColor name="lightMustard">
-            <color red="0.97299998998641968" green="0.74900001287460327" blue="0.3880000114440918" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        <namedColor name="navy">
+            <color red="0.0" green="0.10199999809265137" blue="0.22400000691413879" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

@@ -30,6 +30,10 @@ class HistoryViewController: UIViewController {
         self.historyTableView.delegate = self
     }
     
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
+    
     @IBAction func eventBack() {
         self.navigationController?.popViewController(animated: true)
     }

@@ -299,14 +299,14 @@
 			path = DAO;
 			sourceTree = "<group>";
 		};
-		151F2AFA26A16FB300C63F2C /* UITabbar */ = {
+		151F2AFA26A16FB300C63F2C /* BaseTabbarController */ = {
 			isa = PBXGroup;
 			children = (
 				151F2AFB26A1702300C63F2C /* BaseTabBarViewController.swift */,
 				151F2AFD26A1709800C63F2C /* CustomTabBar.swift */,
 				151F2AFF26A170CE00C63F2C /* TabBarItem.swift */,
 			);
-			path = UITabbar;
+			path = BaseTabbarController;
 			sourceTree = "<group>";
 		};
 		1526CA7926A522E60059619B /* Onboarding */ = {
@@ -419,9 +419,9 @@
 		157F96EA268EBB1B009BBF14 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				1526CA7926A522E60059619B /* Onboarding */,
-				151F2AFA26A16FB300C63F2C /* UITabbar */,
+				151F2AFA26A16FB300C63F2C /* BaseTabbarController */,
 				1507B211268F1412001945A8 /* BaseViewController */,
+				1526CA7926A522E60059619B /* Onboarding */,
 				1573549026A0301F00A5C59D /* History */,
 				15A0385E269E978D00D9D0FB /* Interview */,
 				154A639F269BFAB3008E571C /* InsertKnowledge */,
@@ -457,19 +457,11 @@
 		157F96ED268EBB4F009BBF14 /* Resource */ = {
 			isa = PBXGroup;
 			children = (
+				15C3C8D826A6D5100056B106 /* Ultis */,
+				15C3C8D726A6D4F60056B106 /* Error */,
+				15C3C8D626A6D4E10056B106 /* Extension */,
 				15095E7A268DC8B400129B9C /* Assets.xcassets */,
-				157F9736268EFEA4009BBF14 /* Color.swift */,
 				1526CA8E26A56DD70059619B /* InterviewGif1.gif */,
-				157F973B268EFED5009BBF14 /* AccoutString.swift */,
-				1507B217268F14D6001945A8 /* UIViewController+Extension.swift */,
-				1507B21C268F1519001945A8 /* NSObject+Extension.swift */,
-				154A63B5269C2384008E571C /* UITableViewCell+Extension.swift */,
-				15344168269FE0150078660E /* NotificationKey.swift */,
-				151F2AF426A1246500C63F2C /* Date+Extension.swift */,
-				151F2AF626A1291100C63F2C /* AuthenticationError.swift */,
-				151F2AF826A1381700C63F2C /* CommonError.swift */,
-				151F2B0126A1828200C63F2C /* Image.swift */,
-				1526CA8426A537B80059619B /* UIImage+Extension.swift */,
 			);
 			path = Resource;
 			sourceTree = "<group>";
@@ -568,6 +560,38 @@
 				15A0389B269ECD9A00D9D0FB /* InterviewCoreData+CoreDataProperties.swift */,
 			);
 			path = Interview;
+			sourceTree = "<group>";
+		};
+		15C3C8D626A6D4E10056B106 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				1507B217268F14D6001945A8 /* UIViewController+Extension.swift */,
+				151F2AF426A1246500C63F2C /* Date+Extension.swift */,
+				1507B21C268F1519001945A8 /* NSObject+Extension.swift */,
+				154A63B5269C2384008E571C /* UITableViewCell+Extension.swift */,
+				1526CA8426A537B80059619B /* UIImage+Extension.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		15C3C8D726A6D4F60056B106 /* Error */ = {
+			isa = PBXGroup;
+			children = (
+				151F2AF626A1291100C63F2C /* AuthenticationError.swift */,
+				151F2AF826A1381700C63F2C /* CommonError.swift */,
+			);
+			path = Error;
+			sourceTree = "<group>";
+		};
+		15C3C8D826A6D5100056B106 /* Ultis */ = {
+			isa = PBXGroup;
+			children = (
+				157F9736268EFEA4009BBF14 /* Color.swift */,
+				157F973B268EFED5009BBF14 /* AccoutString.swift */,
+				15344168269FE0150078660E /* NotificationKey.swift */,
+				151F2B0126A1828200C63F2C /* Image.swift */,
+			);
+			path = Ultis;
 			sourceTree = "<group>";
 		};
 		387F4C3CD5E6E9458DC272D1 /* Frameworks */ = {

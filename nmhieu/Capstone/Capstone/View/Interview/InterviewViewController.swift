@@ -64,6 +64,10 @@ class InterviewViewController: BaseVC, UINavigationControllerDelegate {
         self.interViewTableView.delegate = self
     }
     
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
+    
     //MARK: -Event
     @IBAction func eventDone() {
         self.interviewVM.saveInterView(tableView: self.interViewTableView)

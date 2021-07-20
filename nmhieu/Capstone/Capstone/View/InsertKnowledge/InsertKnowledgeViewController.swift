@@ -31,6 +31,10 @@ class InsertKnowledgeViewController: BaseVC {
         self.addButton.layer.cornerRadius = 25
     }
     
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
+    
     //MARK: -Event
     @IBAction func eventBack() {
         self.navigationController?.popViewController(animated: true)

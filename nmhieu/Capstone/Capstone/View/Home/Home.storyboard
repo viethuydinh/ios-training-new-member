@@ -48,65 +48,113 @@
                                     <constraint firstAttribute="trailing" secondItem="YIF-1g-Kkb" secondAttribute="trailing" constant="16" id="p2X-x5-cBP"/>
                                 </constraints>
                             </view>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Wmi-pP-t1k">
-                                <rect key="frame" x="75" y="133.5" width="225" height="254"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="Wmi-pP-t1k">
+                                <rect key="frame" x="16" y="133.5" width="343" height="343"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ueO-x5-hCg">
-                                        <rect key="frame" x="0.0" y="0.0" width="225" height="56"/>
-                                        <color key="backgroundColor" name="lightMustard"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="56" id="Pli-5B-JbJ"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
-                                        <state key="normal" title="Intern">
-                                            <color key="titleColor" name="AccentColor"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="eventInternButton" destination="Zdv-Bi-InI" eventType="touchUpInside" id="Sjm-hl-7P9"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gmv-SO-gu0">
-                                        <rect key="frame" x="0.0" y="66" width="225" height="56"/>
-                                        <color key="backgroundColor" name="darkCoral"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="56" id="ecw-Wa-oOd"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
-                                        <state key="normal" title="Fresher">
-                                            <color key="titleColor" name="AccentColor"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="eventFresherButton" destination="Zdv-Bi-InI" eventType="touchUpInside" id="jB1-B4-67o"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Ug-B8-3mM">
-                                        <rect key="frame" x="0.0" y="132" width="225" height="56"/>
-                                        <color key="backgroundColor" systemColor="systemPurpleColor"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="56" id="LhB-6T-BIo"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
-                                        <state key="normal" title="Junior">
-                                            <color key="titleColor" name="AccentColor"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="eventJuniorButton" destination="Zdv-Bi-InI" eventType="touchUpInside" id="G4S-12-rL8"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mYU-sf-ExQ">
-                                        <rect key="frame" x="0.0" y="198" width="225" height="56"/>
-                                        <color key="backgroundColor" systemColor="systemOrangeColor"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="56" id="yz4-Ig-e2G"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
-                                        <state key="normal" title="Senior">
-                                            <color key="titleColor" name="AccentColor"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="eventSeniorButton" destination="Zdv-Bi-InI" eventType="touchUpInside" id="XSU-Qq-xFW"/>
-                                        </connections>
-                                    </button>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="mON-nW-iHy">
+                                        <rect key="frame" x="0.0" y="0.0" width="343" height="161.5"/>
+                                        <subviews>
+                                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ctf-T7-gBK">
+                                                <rect key="frame" x="0.0" y="0.0" width="161.5" height="161.5"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ueO-x5-hCg">
+                                                        <rect key="frame" x="0.0" y="0.0" width="161.5" height="161.5"/>
+                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
+                                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <state key="normal" title="Intern">
+                                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="eventInternButton" destination="Zdv-Bi-InI" eventType="touchUpInside" id="Sjm-hl-7P9"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                                <color key="backgroundColor" name="navy"/>
+                                                <constraints>
+                                                    <constraint firstItem="ueO-x5-hCg" firstAttribute="top" secondItem="ctf-T7-gBK" secondAttribute="top" id="BwR-ej-Smw"/>
+                                                    <constraint firstItem="ueO-x5-hCg" firstAttribute="leading" secondItem="ctf-T7-gBK" secondAttribute="leading" id="DtL-KZ-Uax"/>
+                                                    <constraint firstAttribute="trailing" secondItem="ueO-x5-hCg" secondAttribute="trailing" id="LZD-Yu-bsN"/>
+                                                    <constraint firstAttribute="bottom" secondItem="ueO-x5-hCg" secondAttribute="bottom" id="bTL-pi-kzO"/>
+                                                    <constraint firstAttribute="width" secondItem="ctf-T7-gBK" secondAttribute="height" id="qeE-f5-lcu"/>
+                                                </constraints>
+                                            </view>
+                                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ePy-53-Af1">
+                                                <rect key="frame" x="181.5" y="0.0" width="161.5" height="161.5"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gmv-SO-gu0">
+                                                        <rect key="frame" x="0.0" y="0.0" width="161.5" height="161.5"/>
+                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
+                                                        <state key="normal" title="Fresher">
+                                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="eventFresherButton" destination="Zdv-Bi-InI" eventType="touchUpInside" id="jB1-B4-67o"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                                <color key="backgroundColor" name="navy"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="bottom" secondItem="Gmv-SO-gu0" secondAttribute="bottom" id="SpL-Pq-zjn"/>
+                                                    <constraint firstAttribute="trailing" secondItem="Gmv-SO-gu0" secondAttribute="trailing" id="URL-Qd-kqQ"/>
+                                                    <constraint firstItem="Gmv-SO-gu0" firstAttribute="leading" secondItem="ePy-53-Af1" secondAttribute="leading" id="ZPH-3k-HbZ"/>
+                                                    <constraint firstItem="Gmv-SO-gu0" firstAttribute="top" secondItem="ePy-53-Af1" secondAttribute="top" id="hOa-Sp-oNQ"/>
+                                                </constraints>
+                                            </view>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="I3S-k4-e5P">
+                                        <rect key="frame" x="0.0" y="181.5" width="343" height="161.5"/>
+                                        <subviews>
+                                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RgT-DV-BTw">
+                                                <rect key="frame" x="0.0" y="0.0" width="161.5" height="161.5"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Ug-B8-3mM">
+                                                        <rect key="frame" x="0.0" y="0.0" width="161.5" height="161.5"/>
+                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
+                                                        <state key="normal" title="Junior">
+                                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="eventJuniorButton" destination="Zdv-Bi-InI" eventType="touchUpInside" id="G4S-12-rL8"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                                <color key="backgroundColor" name="navy"/>
+                                                <constraints>
+                                                    <constraint firstItem="6Ug-B8-3mM" firstAttribute="top" secondItem="RgT-DV-BTw" secondAttribute="top" id="3EY-wa-mAH"/>
+                                                    <constraint firstAttribute="bottom" secondItem="6Ug-B8-3mM" secondAttribute="bottom" id="AEK-NJ-2zl"/>
+                                                    <constraint firstItem="6Ug-B8-3mM" firstAttribute="leading" secondItem="RgT-DV-BTw" secondAttribute="leading" id="FU6-bZ-4qE"/>
+                                                    <constraint firstAttribute="trailing" secondItem="6Ug-B8-3mM" secondAttribute="trailing" id="vDd-nu-DZ0"/>
+                                                </constraints>
+                                            </view>
+                                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LML-d8-IsY">
+                                                <rect key="frame" x="181.5" y="0.0" width="161.5" height="161.5"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mYU-sf-ExQ">
+                                                        <rect key="frame" x="0.0" y="0.0" width="161.5" height="161.5"/>
+                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
+                                                        <state key="normal" title="Senior">
+                                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="eventSeniorButton" destination="Zdv-Bi-InI" eventType="touchUpInside" id="XSU-Qq-xFW"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                                <color key="backgroundColor" name="navy"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="bottom" secondItem="mYU-sf-ExQ" secondAttribute="bottom" id="513-nc-x5W"/>
+                                                    <constraint firstAttribute="trailing" secondItem="mYU-sf-ExQ" secondAttribute="trailing" id="6mx-vy-FCX"/>
+                                                    <constraint firstItem="mYU-sf-ExQ" firstAttribute="leading" secondItem="LML-d8-IsY" secondAttribute="leading" id="nQZ-MM-2ow"/>
+                                                    <constraint firstItem="mYU-sf-ExQ" firstAttribute="top" secondItem="LML-d8-IsY" secondAttribute="top" id="qb8-rv-kPX"/>
+                                                </constraints>
+                                            </view>
+                                        </subviews>
+                                    </stackView>
                                 </subviews>
                             </stackView>
                         </subviews>
@@ -114,12 +162,12 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="Wmi-pP-t1k" firstAttribute="top" secondItem="rgw-tk-4vm" secondAttribute="bottom" id="G2y-ma-ZeC"/>
-                            <constraint firstItem="mYU-sf-ExQ" firstAttribute="width" secondItem="YnA-0X-2dd" secondAttribute="width" multiplier="0.6" id="M1h-Gl-m4c"/>
                             <constraint firstItem="rgw-tk-4vm" firstAttribute="leading" secondItem="vPT-eT-D4k" secondAttribute="leading" id="RW7-V4-brS"/>
+                            <constraint firstItem="vPT-eT-D4k" firstAttribute="trailing" secondItem="Wmi-pP-t1k" secondAttribute="trailing" constant="16" id="WJm-v5-52H"/>
                             <constraint firstItem="vPT-eT-D4k" firstAttribute="trailing" secondItem="rgw-tk-4vm" secondAttribute="trailing" id="Yib-84-Qox"/>
+                            <constraint firstItem="Wmi-pP-t1k" firstAttribute="leading" secondItem="vPT-eT-D4k" secondAttribute="leading" constant="16" id="erL-Gm-UcE"/>
                             <constraint firstItem="rgw-tk-4vm" firstAttribute="top" secondItem="vPT-eT-D4k" secondAttribute="top" id="phP-FT-rjT"/>
                             <constraint firstItem="rgw-tk-4vm" firstAttribute="height" secondItem="YnA-0X-2dd" secondAttribute="height" multiplier="0.2" id="tcH-zg-AMc"/>
-                            <constraint firstItem="Wmi-pP-t1k" firstAttribute="centerX" secondItem="vPT-eT-D4k" secondAttribute="centerX" id="yNr-y5-N6S"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item" id="u0z-JG-0l1"/>
@@ -174,26 +222,11 @@
     </scenes>
     <resources>
         <image name="hamburger" width="17" height="15"/>
-        <namedColor name="AccentColor">
-            <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
-        <namedColor name="darkCoral">
-            <color red="0.86699998378753662" green="0.29800000786781311" blue="0.24300000071525574" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
-        <namedColor name="lightMustard">
-            <color red="0.97299998998641968" green="0.74900001287460327" blue="0.3880000114440918" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
         <namedColor name="navy">
             <color red="0.0" green="0.10199999809265137" blue="0.22400000691413879" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemOrangeColor">
-            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemPurpleColor">
-            <color red="0.68627450980392157" green="0.32156862745098042" blue="0.87058823529411766" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

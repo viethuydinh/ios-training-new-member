@@ -51,7 +51,7 @@
                                         </connections>
                                     </button>
                                 </subviews>
-                                <color key="backgroundColor" name="sapphire"/>
+                                <color key="backgroundColor" name="navy"/>
                                 <constraints>
                                     <constraint firstItem="HaD-3V-2aL" firstAttribute="centerY" secondItem="rPc-ec-gcN" secondAttribute="centerY" id="H9I-Bb-gu9"/>
                                     <constraint firstItem="rPc-ec-gcN" firstAttribute="centerX" secondItem="WU2-3F-iUW" secondAttribute="centerX" id="PrZ-LH-9MB"/>
@@ -64,7 +64,7 @@
                             </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="HcP-yw-dbM"/>
-                        <color key="backgroundColor" name="sapphire"/>
+                        <color key="backgroundColor" name="navy"/>
                         <constraints>
                             <constraint firstAttribute="bottom" secondItem="D4v-Te-nvm" secondAttribute="bottom" id="E0I-NE-hjW"/>
                             <constraint firstItem="HcP-yw-dbM" firstAttribute="trailing" secondItem="D4v-Te-nvm" secondAttribute="trailing" id="IGC-wc-TnO"/>
@@ -86,8 +86,8 @@
         </scene>
     </scenes>
     <resources>
-        <namedColor name="sapphire">
-            <color red="0.12200000137090683" green="0.1289999932050705" blue="0.62400001287460327" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        <namedColor name="navy">
+            <color red="0.0" green="0.10199999809265137" blue="0.22400000691413879" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

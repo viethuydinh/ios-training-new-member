@@ -24,10 +24,10 @@ class HomeViewController: BaseVC {
     
     //MARK: -UI
     fileprivate func setUpUI() {
-        self.internButton.layer.cornerRadius = 10
-        self.fresherButton.layer.cornerRadius = 10
-        self.juniorButton.layer.cornerRadius = 10
-        self.seniorButton.layer.cornerRadius = 10
+        self.internButton.superview!.layer.cornerRadius = 10
+        self.fresherButton.superview!.layer.cornerRadius = 10
+        self.juniorButton.superview!.layer.cornerRadius = 10
+        self.seniorButton.superview!.layer.cornerRadius = 10
     }
     
     //MARK: -Event

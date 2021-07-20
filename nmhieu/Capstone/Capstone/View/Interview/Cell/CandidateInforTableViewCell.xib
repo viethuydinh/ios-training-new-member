@@ -15,9 +15,17 @@
                 <rect key="frame" x="0.0" y="0.0" width="434" height="232"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="UdW-u6-D8F">
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cQ8-7k-nAP">
                         <rect key="frame" x="16" y="8" width="144" height="216"/>
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </view>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fq0-Mi-Uv2">
+                        <rect key="frame" x="76" y="105" width="24.5" height="22"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <state key="normal" image="camera.fill" catalog="system"/>
+                    </button>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="UdW-u6-D8F">
+                        <rect key="frame" x="16" y="8" width="144" height="216"/>
                         <constraints>
                             <constraint firstAttribute="width" secondItem="UdW-u6-D8F" secondAttribute="height" multiplier="4:6" id="APc-KZ-Cof"/>
                         </constraints>
@@ -52,12 +60,18 @@
                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 <constraints>
                     <constraint firstItem="UdW-u6-D8F" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="7YY-bk-fVN"/>
+                    <constraint firstItem="Fq0-Mi-Uv2" firstAttribute="centerY" secondItem="UdW-u6-D8F" secondAttribute="centerY" id="DBx-G0-0Bb"/>
                     <constraint firstAttribute="trailing" secondItem="O2E-pY-3Sg" secondAttribute="trailing" constant="16" id="Fxy-QY-Zxh"/>
+                    <constraint firstItem="Fq0-Mi-Uv2" firstAttribute="centerX" secondItem="UdW-u6-D8F" secondAttribute="centerX" id="JFw-sp-fcB"/>
+                    <constraint firstItem="cQ8-7k-nAP" firstAttribute="centerX" secondItem="UdW-u6-D8F" secondAttribute="centerX" id="Lib-zE-VUH"/>
                     <constraint firstAttribute="bottom" secondItem="O2E-pY-3Sg" secondAttribute="bottom" constant="16" id="MlJ-7Y-G2I"/>
                     <constraint firstItem="UdW-u6-D8F" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="Pxb-Nn-V1g"/>
+                    <constraint firstItem="cQ8-7k-nAP" firstAttribute="height" secondItem="UdW-u6-D8F" secondAttribute="height" id="UlA-Vi-dnE"/>
                     <constraint firstAttribute="bottom" secondItem="UdW-u6-D8F" secondAttribute="bottom" constant="8" id="dRZ-Dw-ejg"/>
                     <constraint firstItem="O2E-pY-3Sg" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="16" id="feg-Z8-Psb"/>
+                    <constraint firstItem="cQ8-7k-nAP" firstAttribute="centerY" secondItem="UdW-u6-D8F" secondAttribute="centerY" id="oql-vg-Qa9"/>
                     <constraint firstItem="O2E-pY-3Sg" firstAttribute="leading" secondItem="UdW-u6-D8F" secondAttribute="trailing" constant="10" id="qEe-fk-DgV"/>
+                    <constraint firstItem="cQ8-7k-nAP" firstAttribute="width" secondItem="UdW-u6-D8F" secondAttribute="width" id="vEO-5o-k87"/>
                 </constraints>
             </tableViewCellContentView>
             <connections>
@@ -70,4 +84,7 @@
             <point key="canvasLocation" x="124.6376811594203" y="102.45535714285714"/>
         </tableViewCell>
     </objects>
+    <resources>
+        <image name="camera.fill" catalog="system" width="128" height="94"/>
+    </resources>
 </document>

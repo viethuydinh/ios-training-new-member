@@ -52,7 +52,7 @@
                                         </connections>
                                     </button>
                                 </subviews>
-                                <color key="backgroundColor" name="sapphire"/>
+                                <color key="backgroundColor" name="navy"/>
                                 <constraints>
                                     <constraint firstAttribute="bottom" secondItem="m1N-8z-ruw" secondAttribute="bottom" constant="16" id="1cD-tR-LTP"/>
                                     <constraint firstItem="m1N-8z-ruw" firstAttribute="centerX" secondItem="wyl-xC-Hrs" secondAttribute="centerX" id="Ioy-N6-3M1"/>
@@ -80,7 +80,7 @@
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="rZY-Eq-4ui"/>
-                        <color key="backgroundColor" name="sapphire"/>
+                        <color key="backgroundColor" name="navy"/>
                         <constraints>
                             <constraint firstItem="rZY-Eq-4ui" firstAttribute="bottom" secondItem="tXF-Nr-dE6" secondAttribute="bottom" constant="20" id="6l4-Jk-Wsf"/>
                             <constraint firstItem="rZY-Eq-4ui" firstAttribute="trailing" secondItem="wyl-xC-Hrs" secondAttribute="trailing" id="Byf-Ri-qvJ"/>
@@ -107,11 +107,11 @@
     </scenes>
     <resources>
         <image name="plus" catalog="system" width="128" height="113"/>
+        <namedColor name="navy">
+            <color red="0.0" green="0.10199999809265137" blue="0.22400000691413879" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <namedColor name="pastelRed">
             <color red="0.92500001192092896" green="0.32199999690055847" blue="0.32199999690055847" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
-        <namedColor name="sapphire">
-            <color red="0.12200000137090683" green="0.1289999932050705" blue="0.62400001287460327" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

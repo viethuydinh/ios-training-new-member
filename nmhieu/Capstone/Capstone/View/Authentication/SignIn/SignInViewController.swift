@@ -122,9 +122,4 @@ extension SignInViewController {
     }
 }
 
-//MARK: -Animation
-extension SignInViewController {
-   
-}
-
 

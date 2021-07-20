@@ -12,7 +12,6 @@ enum TabItem: String, CaseIterable {
     case home = "home"
     case history = "history"
     case profile = "profile"
-//    case messages = "messages"
 
     var viewController: UIViewController {
         switch self {
@@ -31,21 +30,17 @@ enum TabItem: String, CaseIterable {
                 return UIViewController()
             }
             return historyVC
-//        case .messages:
-//            return InboxViewController()
         }
     }
 
     var icon: UIImage {
         switch self {
         case .home:
-            return .homeIronMan
+            return .home
         case .history:
-            return .historyStarWar
+            return .history
         case .profile:
-            return .homeIronMan
-//        case .messages:
-//            return UIImage(named: "ic_message")!
+            return .profile
         }
     }
 

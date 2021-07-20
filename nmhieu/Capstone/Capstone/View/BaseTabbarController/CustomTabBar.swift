@@ -25,7 +25,6 @@ class CustomTabBar: UIView {
 
         layer.backgroundColor = UIColor.white.cgColor
 
-        // Khởi tạo từng tab bar item
         for index in 0 ..< menuItems.count {
             let itemWidth = frame.width / CGFloat(menuItems.count)
             let offsetX = itemWidth * CGFloat(index)
@@ -63,7 +62,7 @@ class CustomTabBar: UIView {
         itemTitleLabel.clipsToBounds = true
 
         let itemImageView = UIImageView()
-        itemImageView.tintColor = .aquaBlue
+        itemImageView.tintColor = .navy
         itemImageView.image = item.icon.withRenderingMode(.automatic)
         itemImageView.translatesAutoresizingMaskIntoConstraints = false
         itemImageView.clipsToBounds = true
@@ -71,10 +70,9 @@ class CustomTabBar: UIView {
         tabBarItem.addSubview(itemTitleLabel)
         tabBarItem.addSubview(itemImageView)
 
-        // Auto layout cho item title và item icon
         NSLayoutConstraint.activate([
-            itemImageView.heightAnchor.constraint(equalToConstant: 50),
-            itemImageView.widthAnchor.constraint(equalToConstant: 50),
+            itemImageView.heightAnchor.constraint(equalToConstant:25),
+            itemImageView.widthAnchor.constraint(equalToConstant: 25),
             itemImageView.centerXAnchor.constraint(equalTo: tabBarItem.centerXAnchor),
             itemImageView.topAnchor.constraint(equalTo: tabBarItem.topAnchor, constant: 8),
             itemTitleLabel.heightAnchor.constraint(equalToConstant: 13),
@@ -83,7 +81,6 @@ class CustomTabBar: UIView {
             itemTitleLabel.centerXAnchor.constraint(equalTo: tabBarItem.centerXAnchor)
         ])
 
-        // Thêm tap gesture recognizer để handle tap event
         tabBarItem.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(handleTap(_:))))
 
         return tabBarItem
@@ -102,7 +99,7 @@ class CustomTabBar: UIView {
         let tabToActivate = subviews[tab]
         let borderWidth = tabToActivate.frame.width - 20
         let borderLayer = CALayer()
-        borderLayer.backgroundColor = UIColor.red.cgColor
+        borderLayer.backgroundColor = UIColor.navy.cgColor
         borderLayer.name = "Active Border"
         borderLayer.frame = CGRect(x: 10, y: 0, width: borderWidth, height: 2)
 

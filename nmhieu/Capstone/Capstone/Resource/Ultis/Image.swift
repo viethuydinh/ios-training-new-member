@@ -10,5 +10,8 @@ import UIKit
 
 extension UIImage {
     static let homeIronMan = UIImage(named: "IronManHome")!
+    static let home = UIImage(systemName: "house.fill")!
+    static let history = UIImage(systemName: "clock.fill")!
+    static let profile = UIImage(systemName: "person.fill")!
     static let historyStarWar = UIImage(named: "StartWarHistory")!
 }

@@ -29,13 +29,13 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L78-bS-69U">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L78-bS-69U">
                                         <rect key="frame" x="256" y="8" width="56" height="86"/>
                                         <color key="backgroundColor" name="appleGreen"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="56" id="Loh-ff-lVY"/>
                                         </constraints>
-                                        <state key="normal" title="Good">
+                                        <state key="normal" title="Good" image="cloc">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <connections>
@@ -71,6 +71,7 @@
         </tableViewCell>
     </objects>
     <resources>
+        <image name="cloc" width="128" height="128"/>
         <namedColor name="appleGreen">
             <color red="0.49399998784065247" green="0.82700002193450928" blue="0.1289999932050705" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
