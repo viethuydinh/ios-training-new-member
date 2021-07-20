@@ -116,6 +116,22 @@ class SignInViewController: BaseVC {
             self.view.sendSubviewToBack(self.animationView)
         }
     }
+    
+    @objc private func eventUserName() {
+        UIView.animate(withDuration: 0.5) {
+            self.userNameTF.isHidden = false
+        } completion: { _ in
+            self.userNameTF.becomeFirstResponder()
+        }
+    }
+    
+    @objc private func eventPassword() {
+        UIView.animate(withDuration: 0.5) {
+            self.passwordTF.isHidden = false
+        } completion: { _ in
+            self.passwordTF.becomeFirstResponder()
+        }
+    }
 }
 
 //MARK: -Gesture
