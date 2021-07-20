@@ -109,14 +109,16 @@ struct CoreDataRepository<Domain : ObjectConvert> {
     func deleteAll(predicate: NSPredicate? = nil) {
         let fetch: NSFetchRequest<Domain.Object> = NSFetchRequest<Domain.Object>(entityName: String(describing: Domain.Object.self))
         fetch.predicate = predicate
+        
+        let objects = try! CoreDataConfiguration.shared.context().fetch(fetch)
+        for obj in objects {
+            CoreDataConfiguration.shared.context().delete(obj)
+        }
+        
         do {
-            let results = try CoreDataConfiguration.shared.persistentContainer.viewContext.fetch(fetch)
-            results.forEach { (object) in
-                CoreDataConfiguration.shared.persistentContainer.viewContext.delete(object)
-                CoreDataConfiguration.shared.saveContext()
-            }
+            try CoreDataConfiguration.shared.context().save()
         } catch {
-        print("Delete Fail")
+            print("Delete Fail")
         }
     }
 }
