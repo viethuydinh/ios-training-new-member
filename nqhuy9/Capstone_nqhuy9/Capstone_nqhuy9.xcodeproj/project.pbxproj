@@ -47,9 +47,10 @@
 		F491ED4E269E9AED00A98D28 /* ReviewCoreData+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = F491ED4C269E9AED00A98D28 /* ReviewCoreData+CoreDataProperties.swift */; };
 		F491ED54269E9DEF00A98D28 /* CheckBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = F491ED53269E9DEF00A98D28 /* CheckBox.swift */; };
 		F491ED5A269EE70D00A98D28 /* ListQuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F491ED59269EE70D00A98D28 /* ListQuestionViewController.swift */; };
-		F49723DC26A51D8000886321 /* interview2.gif in Resources */ = {isa = PBXBuildFile; fileRef = F49723DA26A51D8000886321 /* interview2.gif */; };
 		F49723DD26A51D8000886321 /* interview1.gif in Resources */ = {isa = PBXBuildFile; fileRef = F49723DB26A51D8000886321 /* interview1.gif */; };
 		F49723E326A524A000886321 /* interview3.gif in Resources */ = {isa = PBXBuildFile; fileRef = F49723E226A524A000886321 /* interview3.gif */; };
+		F49723E926A58A7A00886321 /* UITableView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F49723E826A58A7A00886321 /* UITableView+Extension.swift */; };
+		F4A0AFE226A671E500AAE6B9 /* interview2.gif in Resources */ = {isa = PBXBuildFile; fileRef = F4A0AFE126A671E500AAE6B9 /* interview2.gif */; };
 		F4CE76102694303800330A77 /* BaseCoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4CE760F2694303800330A77 /* BaseCoreData.swift */; };
 		F4FDA8262696974A0039E9B4 /* AccountCoreData+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4FDA8242696974A0039E9B4 /* AccountCoreData+CoreDataClass.swift */; };
 		F4FDA8272696974A0039E9B4 /* AccountCoreData+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4FDA8252696974A0039E9B4 /* AccountCoreData+CoreDataProperties.swift */; };
@@ -140,9 +141,10 @@
 		F491ED4C269E9AED00A98D28 /* ReviewCoreData+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ReviewCoreData+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
 		F491ED53269E9DEF00A98D28 /* CheckBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckBox.swift; sourceTree = "<group>"; };
 		F491ED59269EE70D00A98D28 /* ListQuestionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListQuestionViewController.swift; sourceTree = "<group>"; };
-		F49723DA26A51D8000886321 /* interview2.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = interview2.gif; sourceTree = "<group>"; };
 		F49723DB26A51D8000886321 /* interview1.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = interview1.gif; sourceTree = "<group>"; };
 		F49723E226A524A000886321 /* interview3.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = interview3.gif; sourceTree = "<group>"; };
+		F49723E826A58A7A00886321 /* UITableView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Extension.swift"; sourceTree = "<group>"; };
+		F4A0AFE126A671E500AAE6B9 /* interview2.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = interview2.gif; sourceTree = "<group>"; };
 		F4CE760F2694303800330A77 /* BaseCoreData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCoreData.swift; sourceTree = "<group>"; };
 		F4FDA8242696974A0039E9B4 /* AccountCoreData+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AccountCoreData+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
 		F4FDA8252696974A0039E9B4 /* AccountCoreData+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AccountCoreData+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
@@ -492,6 +494,7 @@
 				F433BC76269D47A2002F5146 /* UIView+Extension.swift */,
 				F4326679269FDCA200A7AEB2 /* Collection+Extension.swift */,
 				F43266BB26A12EE000A7AEB2 /* UIImage+Extension.swift */,
+				F49723E826A58A7A00886321 /* UITableView+Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -499,9 +502,9 @@
 		F4FDF59D268EAB5B001B02D3 /* Resource */ = {
 			isa = PBXGroup;
 			children = (
+				F4A0AFE126A671E500AAE6B9 /* interview2.gif */,
 				F49723E226A524A000886321 /* interview3.gif */,
 				F49723DB26A51D8000886321 /* interview1.gif */,
-				F49723DA26A51D8000886321 /* interview2.gif */,
 				F4FDF55D268EA6B7001B02D3 /* Assets.xcassets */,
 				F4FDF67F268EFA98001B02D3 /* Color.swift */,
 			);
@@ -671,9 +674,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F4A0AFE226A671E500AAE6B9 /* interview2.gif in Resources */,
 				F4FDF66D268EF0BD001B02D3 /* Authentication.storyboard in Resources */,
 				F4FDF561268EA6B7001B02D3 /* LaunchScreen.storyboard in Resources */,
-				F49723DC26A51D8000886321 /* interview2.gif in Resources */,
 				F433BC6D269D3659002F5146 /* InsertQuestionTableViewCell.xib in Resources */,
 				F4326668269FD36900A7AEB2 /* LevelPickerView.xib in Resources */,
 				F491ED41269E98C600A98D28 /* ReviewTableViewCell.xib in Resources */,
@@ -834,6 +837,7 @@
 				F433BC54269BF5B5002F5146 /* KnowledgeViewModel.swift in Sources */,
 				F43266A026A03D2000A7AEB2 /* AdvancePageControlView.swift in Sources */,
 				F432669126A03BFF00A7AEB2 /* SplashViewController.swift in Sources */,
+				F49723E926A58A7A00886321 /* UITableView+Extension.swift in Sources */,
 				F491ED40269E98C600A98D28 /* ReviewTableViewCell.swift in Sources */,
 				F4FDA82C2696D9C70039E9B4 /* AuthenticationViewModels.swift in Sources */,
 				F491ED39269E962800A98D28 /* ListReviewsViewController.swift in Sources */,
