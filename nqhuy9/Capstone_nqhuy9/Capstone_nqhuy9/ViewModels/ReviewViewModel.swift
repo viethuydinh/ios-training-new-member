@@ -10,14 +10,20 @@ import Foundation
 protocol ReviewViewModel {
     var review: Review? { get set }
     
+    var reviewList: [Review] { get set }
+    
     func createReview(review : Review)
     
     func fetchAllReview() -> [Review]
+    
+    func deleteReview(id : Int16?)
 }
 
 struct DefaultReviewViewModel : ReviewViewModel {
     
     var review: Review?
+    
+    var reviewList: [Review] = []
     
     var repository = DefaultReviewRepository()
     
@@ -27,5 +33,9 @@ struct DefaultReviewViewModel : ReviewViewModel {
     
     func fetchAllReview() -> [Review] {
         self.repository.fetchAllReview()
+    }
+    
+    func deleteReview(id: Int16?) {
+        self.repository.deleteReview(id: id)
     }
 }

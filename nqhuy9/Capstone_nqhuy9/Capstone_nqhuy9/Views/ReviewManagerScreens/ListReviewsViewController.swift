@@ -14,11 +14,21 @@ class ListReviewsViewController: BaseVC {
     @IBOutlet weak var addButton : UIButton!
     
     var reviewViewModel = DefaultReviewViewModel()
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        self.bindData()
+        self.tableViewReview.reloadData()
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
         self.setupUI()
         self.event()
+    }
+    
+    private func bindData() {
+        self.reviewViewModel.reviewList = self.reviewViewModel.fetchAllReview()
     }
     
     //MARK: -UI
@@ -37,15 +47,6 @@ class ListReviewsViewController: BaseVC {
     //MARK: -Event
     private func event() {
         self.eventAdd()
-        self.observerNotificationCenter()
-    }
-    
-    private func observerNotificationCenter() {
-        NotificationCenter.default.addObserver(self, selector: #selector(self.methodOfReceivedNotification(notification:)), name: Notification.Name(NotificationKey.SAVE_REVIEW_DONE_KEY), object: nil)
-    }
-    
-    @objc func methodOfReceivedNotification(notification: Notification) {
-        self.tableViewReview.reloadData()
     }
     
     private func eventAdd() {
@@ -68,12 +69,12 @@ class ListReviewsViewController: BaseVC {
 
 extension ListReviewsViewController : UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.reviewViewModel.fetchAllReview().count
+        return self.reviewViewModel.reviewList.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: ReviewTableViewCell.identifier, for: indexPath) as? ReviewTableViewCell else { return UITableViewCell() }
-        cell.review = self.reviewViewModel.fetchAllReview()[indexPath.row]
+        cell.review = self.reviewViewModel.reviewList[indexPath.row]
         return cell
     }
 }
@@ -82,5 +83,17 @@ extension ListReviewsViewController : UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         guard let content = self.reviewViewModel.fetchAllReview()[indexPath.row].content else { return .zero }
         return ReviewTableViewCell.height(bounds: UIScreen.main.bounds, content: content)
+    }
+    
+    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+        return true
+    }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if (editingStyle == UITableViewCell.EditingStyle.delete) {
+            self.reviewViewModel.deleteReview(id: self.reviewViewModel.reviewList[indexPath.row].id)
+            self.reviewViewModel.reviewList.remove(at: indexPath.row)
+            self.tableViewReview.reloadData()
+        }
     }
 }

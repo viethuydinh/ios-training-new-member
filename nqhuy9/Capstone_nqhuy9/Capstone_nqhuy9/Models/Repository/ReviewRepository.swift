@@ -11,6 +11,8 @@ protocol ReviewRepository {
     func createReview(review : Review)
     
     func fetchAllReview() -> [Review]
+    
+    func deleteReview(id : Int16?)
 }
 
 struct DefaultReviewRepository : ReviewRepository {
@@ -26,5 +28,10 @@ struct DefaultReviewRepository : ReviewRepository {
     
     func fetchAllReview() -> [Review] {
         return reviewDAO.fetchAll(predicate: nil)
+    }
+    
+    func deleteReview(id : Int16?) {
+        guard let idDelete = id else { return }
+        reviewDAO.deleteAll(predicate: .init(format: "id = %@", argumentArray: [String(idDelete)]))
     }
 }
