@@ -145,4 +145,16 @@ extension ListQuestionViewController : UITableViewDelegate {
         guard let content = self.questionViewModel.listQuestions[indexPath.row].content else { return .zero }
         return QuestionTableViewCell.height(bounds: UIScreen.main.bounds, content: content)
     }
+    
+    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+        return true
+    }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if (editingStyle == UITableViewCell.EditingStyle.delete) {
+            self.questionViewModel.deleteQuestion(id: self.questionViewModel.listQuestions[indexPath.row].id)
+            self.questionViewModel.listQuestions.remove(at: indexPath.row)
+            self.tableViewQuestion.reloadData()
+        }
+    }
 }

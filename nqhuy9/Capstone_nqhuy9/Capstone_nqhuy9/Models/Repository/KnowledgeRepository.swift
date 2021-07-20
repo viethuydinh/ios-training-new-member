@@ -15,6 +15,8 @@ protocol KnowledgeRepository {
     
     func fetchRecommendQuestion(predicate: NSPredicate?) -> [Question]
     
+    func deleteQuestion(id: Int16?)
+    
 }
 
 struct DefaultKnowledgeRepository: KnowledgeRepository {
@@ -43,6 +45,11 @@ struct DefaultKnowledgeRepository: KnowledgeRepository {
     
     func fetchRecommendQuestion(predicate : NSPredicate?) -> [Question] {
         return Array(self.fetchListQuestion(predicate: predicate).choose(8))
+    }
+    
+    func deleteQuestion(id: Int16?) {
+        guard let idDelete = id else { return }
+        self.questionDAO.deleteAll(predicate: .init(format: "id = %@", argumentArray: [String(idDelete)]))
     }
     
 }
