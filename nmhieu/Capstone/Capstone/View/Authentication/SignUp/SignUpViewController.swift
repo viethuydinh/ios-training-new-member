@@ -54,8 +54,8 @@ class SignUpViewController: BaseVC {
     
     @IBAction func eventSignUp(_ sender: Any) {
         let state = self.authenticationVM.signUp(username: self.userNameTF.text ?? "",
-                                              password: self.paswordTF.text ?? "",
-                                              repassword: self.confirmPasswordTF.text ?? "")
+                                                 password: self.paswordTF.text ?? "",
+                                                 repassword: self.confirmPasswordTF.text ?? "")
         if state.state {
             self.navigationController?.popViewController(animated: true)
         }
