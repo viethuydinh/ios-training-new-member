@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="dVJ-tA-LhG">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="dVJ-tA-LhG">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -154,7 +154,7 @@
                                 </constraints>
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="E2C-OS-YyQ">
-                                <rect key="frame" x="0.0" y="107.5" width="414" height="788.5"/>
+                                <rect key="frame" x="0.0" y="107.5" width="414" height="748.5"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D9o-wf-pBM">
@@ -179,12 +179,13 @@
                             <constraint firstItem="wL1-A0-fDd" firstAttribute="height" secondItem="dXm-3c-LFS" secondAttribute="height" multiplier="0.12" id="Zug-D3-spG"/>
                             <constraint firstItem="wL1-A0-fDd" firstAttribute="leading" secondItem="PmE-dl-5U9" secondAttribute="leading" id="gMj-8Q-PKK"/>
                             <constraint firstItem="D9o-wf-pBM" firstAttribute="centerX" secondItem="dXm-3c-LFS" secondAttribute="centerX" id="kUT-hb-9mW"/>
-                            <constraint firstAttribute="bottom" secondItem="E2C-OS-YyQ" secondAttribute="bottom" id="wLZ-JR-QJO"/>
+                            <constraint firstAttribute="bottom" secondItem="E2C-OS-YyQ" secondAttribute="bottom" constant="40" id="wLZ-JR-QJO"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="addButton" destination="D9o-wf-pBM" id="9lC-Uw-NmR"/>
                         <outlet property="backButton" destination="41e-s1-5rZ" id="v6h-Yi-5NV"/>
+                        <outlet property="distanceBottomTableView" destination="wLZ-JR-QJO" id="g7V-cI-Tcc"/>
                         <outlet property="distanceButtonAddFromBottom" destination="6hG-9J-7OX" id="Qsy-Sf-zHi"/>
                         <outlet property="saveButton" destination="oWS-Y5-nw5" id="nIC-nc-a7X"/>
                         <outlet property="tableView" destination="E2C-OS-YyQ" id="9sb-9D-sFU"/>

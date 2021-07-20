@@ -16,7 +16,8 @@ class InsertKnowledgeViewController: BaseVC {
     @IBOutlet weak var saveButton: UIButton!
     @IBOutlet weak var addButton: UIButton!
     @IBOutlet weak var distanceButtonAddFromBottom: NSLayoutConstraint!
-            
+    @IBOutlet weak var distanceBottomTableView: NSLayoutConstraint!
+        
     var numberCell:Int = 1 {
         didSet {
             self.tableView.reloadData()
@@ -59,6 +60,31 @@ class InsertKnowledgeViewController: BaseVC {
         self.tableView.register(UINib(nibName: InsertQuestionTableViewCell.name, bundle: nil), forCellReuseIdentifier: InsertQuestionTableViewCell.identifier)
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillDisappear), name: UIResponder.keyboardWillHideNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillAppear), name: UIResponder.keyboardWillShowNotification, object: nil)
+    }
+
+    @objc func keyboardWillAppear(_ notification: Notification) {
+        if let keyboardFrame: NSValue = notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue {
+                let keyboardRectangle = keyboardFrame.cgRectValue
+                let keyboardHeight = keyboardRectangle.height
+                self.distanceButtonAddFromBottom.constant = keyboardHeight + 18.0
+                self.distanceBottomTableView.constant = keyboardHeight - 10.0
+            }
+    }
+
+    @objc func keyboardWillDisappear() {
+        self.distanceButtonAddFromBottom.constant = 36.0
+        self.distanceBottomTableView.constant = .zero
+    }
+
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        NotificationCenter.default.removeObserver(self)
+    }
+    
     //MARK: -Event
     private func event() {
         self.eventAddRow()
@@ -72,6 +98,8 @@ class InsertKnowledgeViewController: BaseVC {
             .controlEvent(.touchUpInside)
             .subscribe { (_) in
                 self.numberCell += 1
+                self.tableView.reloadData()
+                self.tableView.scrollToBottom()
             } onError: { (_) in
                 
             } onCompleted: {

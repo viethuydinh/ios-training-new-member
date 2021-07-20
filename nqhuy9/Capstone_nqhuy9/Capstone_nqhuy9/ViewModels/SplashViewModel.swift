@@ -13,5 +13,5 @@ protocol SplashViewModel {
 }
 
 struct DefaultSplashViewModel : SplashViewModel {
-    var listSplashImage: [UIImage?] = [UIImage.gif(name: "interview1"), UIImage.gif(name: "interview3")]
+    var listSplashImage: [UIImage?] = [UIImage.gif(name: "interview1"), UIImage.gif(name: "interview3"),UIImage.gif(name: "interview2")]
 }

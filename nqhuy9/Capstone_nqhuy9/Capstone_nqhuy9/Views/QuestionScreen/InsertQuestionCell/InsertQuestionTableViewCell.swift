@@ -15,7 +15,6 @@ class InsertQuestionTableViewCell: UITableViewCell, UITextFieldDelegate {
     @IBOutlet weak var shadowView: UIView!
     
     var didEndEditAction : ((Question)->())?
-    var didEndEditAction1 : ((String)->())?
     
     override func awakeFromNib() {
         super.awakeFromNib()
