@@ -17,13 +17,14 @@
         <attribute name="overviewContent" optional="YES" attributeType="String"/>
         <attribute name="result" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
     </entity>
-    <entity name="KnowledgeCoreData" representedClassName=".QuestionCoreData" syncable="YES">
+    <entity name="KnowledgeCoreData" representedClassName=".KnowledgeCoreData" syncable="YES">
         <attribute name="answer" optional="YES" attributeType="String"/>
         <attribute name="content" optional="YES" attributeType="String"/>
         <attribute name="id" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="level" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
     </entity>
     <entity name="QuestionInterViewCoreData" representedClassName=".QuestionInterViewCoreData" syncable="YES">
+        <attribute name="answer" optional="YES" attributeType="String"/>
         <attribute name="id" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="question" optional="YES" attributeType="String"/>
         <attribute name="rate" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
@@ -43,7 +44,7 @@
         <element name="AccountCoreData" positionX="195.784423828125" positionY="-13.95783996582031" width="128" height="103"/>
         <element name="InterviewCoreData" positionX="9" positionY="72" width="128" height="164"/>
         <element name="KnowledgeCoreData" positionX="212.4491577148438" positionY="181.2802429199219" width="128" height="89"/>
-        <element name="QuestionInterViewCoreData" positionX="18" positionY="81" width="128" height="74"/>
+        <element name="QuestionInterViewCoreData" positionX="18" positionY="81" width="128" height="89"/>
         <element name="UserCoreData" positionX="-195.1996459960938" positionY="-88.77899169921875" width="126.4737548828125" height="178"/>
     </elements>
 </model>

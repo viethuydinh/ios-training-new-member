@@ -18,6 +18,7 @@ extension QuestionInterViewCoreData {
 
     @NSManaged public var id: Int16
     @NSManaged public var question: String?
+    @NSManaged public var answer: String?
     @NSManaged public var rate: Int16
 
 }
@@ -29,6 +30,7 @@ extension QuestionInterViewCoreData : DomainConvertible {
         var domain = Domain()
         domain.id = Int(self.id)
         domain.question = self.question
+        domain.answer = self.answer
         domain.rate = RateAnswer(rawValue: Int(self.rate))
         return domain
     }

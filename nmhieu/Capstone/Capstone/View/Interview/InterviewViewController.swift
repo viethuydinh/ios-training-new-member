@@ -49,10 +49,20 @@ class InterviewViewController: BaseVC {
     
     var level : LevelInterView?
     
+    var editingOverview : Bool? {
+        didSet {
+            self.event()
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.setUpUI()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
         self.bindingData()
+        self.configData()
     }
     
     //MARK: -UI
@@ -69,6 +79,12 @@ class InterviewViewController: BaseVC {
     }
     
     //MARK: -Event
+    private func event() {
+        let notificationCenter = NotificationCenter.default
+        notificationCenter.addObserver(self, selector: #selector(self.eventKeyboardShow(notification:)), name: UIResponder.keyboardDidShowNotification, object: nil)
+        notificationCenter.addObserver(self, selector: #selector(self.eventKeyboardHide(notification:)), name: UIResponder.keyboardWillHideNotification, object: nil)
+    }
+    
     @IBAction func eventDone() {
         self.interviewVM.saveInterView(tableView: self.interViewTableView)
         self.navigationController?.popViewController(animated: true)
@@ -76,6 +92,22 @@ class InterviewViewController: BaseVC {
     
     @IBAction func eventBack() {
         self.navigationController?.popViewController(animated: true)
+    }
+    
+    @objc func eventKeyboardShow(notification : Notification) {
+        if let keyboardSize = (notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue {
+            if self.editingOverview ?? false  {
+                self.interViewTableView.contentInset = UIEdgeInsets(top: 0.0, left: 0.0, bottom:  keyboardSize.height, right: 0.0)
+                self.interViewTableView.scrollToRow(at: IndexPath(row: 0, section: InterviewSection.overview.rawValue), at: .middle, animated: true)
+            }
+        }
+    }
+    
+    @objc func eventKeyboardHide(notification : Notification ){
+        if self.editingOverview ?? false {
+            self.interViewTableView.contentInset = UIEdgeInsets(top: 0.0, left: 0.0, bottom:  0.0, right: 0.0)
+            self.editingOverview = false
+        }
     }
     
     fileprivate func eventPresentCamreraPicker(state : Bool) {
@@ -90,6 +122,11 @@ class InterviewViewController: BaseVC {
     //MARK: -BindingData
     fileprivate func bindingData() {
         self.interviewVM.level = self.level ?? .intern
+    }
+    
+    //MARK: -ConfigData
+    private func configData() {
+        self.interviewVM.questions = self.interviewVM.recommentListQuestions()
     }
 }
 
@@ -115,7 +152,7 @@ extension InterviewViewController : UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         switch indexPath.section {
-        case InterviewSection.candidateInfor.rawValue:
+        case InterviewSection.candidateInfor.rawValue: 
             guard let cell = tableView.dequeueReusableCell(withIdentifier: CandidateInforTableViewCell.identifier) as? CandidateInforTableViewCell else { return UITableViewCell() }
             cell.bindingData(level: self.interviewVM.level, image: self.interviewVM.image ?? UIImage())
             cell.selectCandidateImage = { self.eventPresentCamreraPicker(state:$0) }
@@ -123,11 +160,14 @@ extension InterviewViewController : UITableViewDataSource {
             
         case InterviewSection.questions.rawValue:
             guard let cell = tableView.dequeueReusableCell(withIdentifier: QuestionTableViewCell.identifier) as? QuestionTableViewCell else { return UITableViewCell() }
-            cell.bindingData(question: self.interviewVM.recommentListQuestions()[indexPath.row].question ?? "")
+            cell.bindingData(question: self.interviewVM.questions[indexPath.row].question ?? "")
             return cell
             
         case InterviewSection.overview.rawValue:
             guard let cell = tableView.dequeueReusableCell(withIdentifier: OverviewTableViewCell.identifier) as? OverviewTableViewCell else { return UITableViewCell() }
+            cell.editingOverviewTextview = {
+                self.editingOverview = $0
+            }
             return cell
             
         default:
@@ -162,6 +202,12 @@ extension InterviewViewController : UITableViewDelegate {
             return OverviewTableViewCell.height
         default:
             return .zero
+        }
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if indexPath.section == InterviewSection.questions.rawValue {
+            self.eventAlert(message: self.interviewVM.questions[indexPath.row].answer ?? "")
         }
     }
 }

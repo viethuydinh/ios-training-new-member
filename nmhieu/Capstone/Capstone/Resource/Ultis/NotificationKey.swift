@@ -10,4 +10,5 @@ import Foundation
 struct NotificationKey {
     static var cameraNotifi = "cameraNotification"
     static let enterKnowledge = "Enter Knowledge"
+    static let enterOverview = "Enter Overview"
 }

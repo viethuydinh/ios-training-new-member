@@ -10,6 +10,7 @@ import Foundation
 struct QuestionInterviewModel {
     var id : Int?
     var question : String?
+    var answer : String?
     var rate : RateAnswer?
 }
 
@@ -37,6 +38,7 @@ extension QuestionInterviewModel : ObjectConvertible {
         let object = obj
         object.id = Int16(self.id ?? 0)
         object.question = self.question
+        object.answer = self.answer
         object.rate = Int16(self.rate?.rawValue ?? 0)
         return object
     }

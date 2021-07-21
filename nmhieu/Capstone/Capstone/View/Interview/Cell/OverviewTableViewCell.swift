@@ -13,10 +13,16 @@ class OverviewTableViewCell: UITableViewCell {
     @IBOutlet weak var statusImage: UIImageView!
     
     var status : StatusInterview = .pass
-    
+    var editingOverviewTextview : ((Bool) -> ())?
     override func awakeFromNib() {
         super.awakeFromNib()
+        self.setUpUI()
         self.setUpGesture()
+    }
+    
+    //MARK: -UI
+    private func setUpUI() {
+        self.overViewTextView.delegate = self
     }
     
     func getOverview() -> OverviewModel {
@@ -42,6 +48,31 @@ class OverviewTableViewCell: UITableViewCell {
         }
         self.statusImage.image = self.status.iconStatus.icon
         self.statusImage.tintColor = self.status.iconStatus.color
+    }
+    
+    private func beginEditingTextView(statusEdit : Bool) {
+        if statusEdit {
+            if self.overViewTextView.text == "Overview" {
+                self.overViewTextView.text = ""
+            }
+            self.overViewTextView.textColor = .navy
+        }
+        else {
+            self.overViewTextView.text = "Overview"
+            self.overViewTextView.textColor = .lightGray
+        }
+    }
+}
+
+extension OverviewTableViewCell : UITextViewDelegate {
+    
+    func textViewDidBeginEditing(_ textView: UITextView) {
+        self.editingOverviewTextview?(true)
+        self.beginEditingTextView(statusEdit: true)
+    }
+    
+    func textViewDidEndEditing(_ textView: UITextView) {
+        self.beginEditingTextView(statusEdit: !self.overViewTextView.text.isEmpty)
     }
 }
 

@@ -29,6 +29,7 @@ struct DefaultInterviewRepository : InterviewRepository {
             var result = QuestionInterviewModel()
             result.id = questions[id].id
             result.question = questions[id].content
+            result.answer = questions[id].answer
             result.rate = .good
             results.append(result)
         }

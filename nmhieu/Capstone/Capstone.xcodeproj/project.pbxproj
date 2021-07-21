@@ -359,8 +359,8 @@
 			isa = PBXGroup;
 			children = (
 				154A63AD269C1D8D008E571C /* Cell */,
-				154A63A3269BFB2F008E571C /* InsertKnowledge.storyboard */,
 				154A63A8269BFB58008E571C /* InsertKnowledgeViewController.swift */,
+				154A63A3269BFB2F008E571C /* InsertKnowledge.storyboard */,
 			);
 			path = InsertKnowledge;
 			sourceTree = "<group>";

@@ -15,6 +15,8 @@ protocol InterviewViewModel {
     
     var interviewHistory : [InterviewModel] { get set }
     
+    var questions : [QuestionInterviewModel] { get set }
+    
     func recommentListQuestions() -> [QuestionInterviewModel]
     
     func saveInterView(tableView : UITableView)
@@ -35,6 +37,8 @@ struct DefaultInterviewViewModel : InterviewViewModel {
     var image: UIImage?
     
     var interviewHistory : [InterviewModel] = []
+    
+    var questions: [QuestionInterviewModel] = []
     
     var level: LevelInterView = .intern
     
