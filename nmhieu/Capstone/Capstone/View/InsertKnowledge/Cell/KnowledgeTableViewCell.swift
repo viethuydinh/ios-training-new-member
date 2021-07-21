@@ -14,7 +14,7 @@ class KnowledgeTableViewCell: UITableViewCell {
     
     var knowledgeVM = DefaultKnowledgeViewModel()
     
-    var knowledgeClosure : ((KnowledgeModel) -> ())?
+    var knowledgeClosure : (KnowledgeModel) -> () = { _ in }
     
     var indexPath : IndexPath = .init(row: 0, section: 0)
     
@@ -31,14 +31,14 @@ class KnowledgeTableViewCell: UITableViewCell {
 
     func getKnowlege() -> KnowledgeModel? {
         var question : KnowledgeModel? = KnowledgeModel()
-        if (self.questionTF.text?.isEmpty ?? false) && (self.answerTF.text?.isEmpty ?? false) {
-            question?.content = self.questionTF.text
-            question?.answer  = self.answerTF.text
-            question?.id = nil
-            question?.level = self.knowledgeVM.level
+        if (self.questionTF.text?.isEmpty ?? true) || (self.answerTF.text?.isEmpty ?? true) {
+            return nil
         }
         else {
-            return nil
+            question?.content = self.questionTF.text
+            question?.answer  = self.answerTF.text
+            question?.level = self.knowledgeVM.level
+            question?.id = nil
         }
         return question
     }
@@ -50,23 +50,26 @@ class KnowledgeTableViewCell: UITableViewCell {
 
 extension KnowledgeTableViewCell : UITextFieldDelegate {
     
-    func textFieldDidEndEditing(_ textField: UITextField, reason: UITextField.DidEndEditingReason) {
-        guard let knowledge = self.getKnowlege() else { return }
-        self.knowledgeClosure?(knowledge)
-        
-        let beginEditing  : [String : Any] = ["beginEditing" : false, "indexPath" : self.indexPath]
-        let notificationCenter = NotificationCenter.default
-        notificationCenter.post(name: NSNotification.Name(NotificationKey.enterKnowledge),
-                                object: nil,
-                                userInfo: beginEditing)
-    }
-    
     func textFieldDidBeginEditing(_ textField: UITextField) {
         let beginEditing: [String : Any] = ["beginEditing" : true, "indexPath" : self.indexPath]
         let notificationCenter = NotificationCenter.default
         notificationCenter.post(name: NSNotification.Name(NotificationKey.enterKnowledge),
                                 object: nil,
                                 userInfo: beginEditing)
+    }
+    
+    func textFieldShouldEndEditing(_ textField: UITextField) -> Bool {
+        if let knowledge = self.getKnowlege() {
+            self.knowledgeClosure(knowledge)
+            
+        }
+        return true
+        
+//        let beginEditing  : [String : Any] = ["beginEditing" : false, "indexPath" : self.indexPath]
+//        let notificationCenter = NotificationCenter.default
+//        notificationCenter.post(name: NSNotification.Name(NotificationKey.enterKnowledge),
+//                                object: nil,
+//                                userInfo: beginEditing)
     }
 }
 

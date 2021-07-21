@@ -128,7 +128,7 @@ extension InsertKnowledgeViewController : UITableViewDataSource {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: KnowledgeTableViewCell.identifier, for: indexPath) as? KnowledgeTableViewCell else {
             return UITableViewCell()
         }
-        cell.knowledgeClosure? = { knowledge in
+        cell.knowledgeClosure = { knowledge in
             self.appendKnowledge(knowledge: knowledge)
         }
         cell.bindingData(indexPath: indexPath)
