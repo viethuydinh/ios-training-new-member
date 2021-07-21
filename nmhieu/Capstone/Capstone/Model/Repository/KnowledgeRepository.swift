@@ -9,32 +9,28 @@ import Foundation
 
 protocol KnowledgeRepository {
     
-    func insertKnowledge(question : QuestionModel) -> Bool
+    func insertKnowledge(knowledge : KnowledgeModel)
     
-    func fetchQuestions(level : LevelInterView) -> [QuestionModel]
+    func fetchQuestions(level : LevelInterView) -> [KnowledgeModel]
 }
 
 
 struct DefaulKnowledgeRepository : KnowledgeRepository {
     
-    func insertKnowledge(question: QuestionModel) -> Bool {
-        var id : Int = 0
-        id = CoreDataRepository<QuestionModel>.shared.fetchAll()?.count ?? 0
+    func insertKnowledge(knowledge: KnowledgeModel) {
+        var id : Int?
+        id = CoreDataRepository<KnowledgeModel>.shared.fetchAll()?.count ?? -1 + 1
         
-        var questionData = question
+        var questionData = knowledge
         questionData.id = id
-        questionData.content = question.content
-        questionData.level = question.level
         
-        CoreDataRepository<QuestionModel>.shared.save(domain: questionData)
-        return true
-        
+        CoreDataRepository<KnowledgeModel>.shared.save(domain: questionData)
     }
     
-    func fetchQuestions(level: LevelInterView) -> [QuestionModel] {
+    func fetchQuestions(level: LevelInterView) -> [KnowledgeModel] {
         let predicate = NSPredicate(format: "level == \(level.rawValue)")
         
-        guard let quesions = CoreDataRepository<QuestionModel>.shared.fetchList(predicate : predicate) else {
+        guard let quesions = CoreDataRepository<KnowledgeModel>.shared.fetchList(predicate : predicate) else {
             return []
         }
         return quesions

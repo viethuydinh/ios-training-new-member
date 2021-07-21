@@ -41,7 +41,7 @@ enum InterviewSection : Int,Comparable,CaseIterable {
 }
 
 
-class InterviewViewController: BaseVC, UINavigationControllerDelegate {
+class InterviewViewController: BaseVC {
 
     @IBOutlet weak var interViewTableView: UITableView!
     
@@ -75,7 +75,6 @@ class InterviewViewController: BaseVC, UINavigationControllerDelegate {
     }
     
     @IBAction func eventBack() {
-    
         self.navigationController?.popViewController(animated: true)
     }
     
@@ -94,6 +93,7 @@ class InterviewViewController: BaseVC, UINavigationControllerDelegate {
     }
 }
 
+//MARK: -UITableViewDataSource
 extension InterviewViewController : UITableViewDataSource {
     
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -109,7 +109,7 @@ extension InterviewViewController : UITableViewDataSource {
         case InterviewSection.overview.rawValue:
             return InterviewSection.overview.row
         default:
-            return 0
+            return .zero
         }
     }
     
@@ -119,15 +119,17 @@ extension InterviewViewController : UITableViewDataSource {
             guard let cell = tableView.dequeueReusableCell(withIdentifier: CandidateInforTableViewCell.identifier) as? CandidateInforTableViewCell else { return UITableViewCell() }
             cell.bindingData(level: self.interviewVM.level, image: self.interviewVM.image ?? UIImage())
             cell.selectCandidateImage = { self.eventPresentCamreraPicker(state:$0) }
-
             return cell
+            
         case InterviewSection.questions.rawValue:
             guard let cell = tableView.dequeueReusableCell(withIdentifier: QuestionTableViewCell.identifier) as? QuestionTableViewCell else { return UITableViewCell() }
             cell.bindingData(question: self.interviewVM.recommentListQuestions()[indexPath.row].question ?? "")
             return cell
+            
         case InterviewSection.overview.rawValue:
             guard let cell = tableView.dequeueReusableCell(withIdentifier: OverviewTableViewCell.identifier) as? OverviewTableViewCell else { return UITableViewCell() }
             return cell
+            
         default:
             return UITableViewCell()
         }
@@ -147,7 +149,7 @@ extension InterviewViewController : UITableViewDataSource {
     }
     
 }
-
+//MARK: -UITableViewDelegate
 extension InterviewViewController : UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -159,12 +161,13 @@ extension InterviewViewController : UITableViewDelegate {
         case InterviewSection.overview.rawValue:
             return OverviewTableViewCell.height
         default:
-            return 0
+            return .zero
         }
     }
 }
 
-extension InterviewViewController : UIImagePickerControllerDelegate {
+//MARK: -UIImagePickerDelegate
+extension InterviewViewController : UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         picker.dismiss(animated: true)
         guard let image = info[.originalImage] as? UIImage else {

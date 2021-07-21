@@ -14,31 +14,43 @@ protocol KnowledgeViewModel {
     
     var level : LevelInterView { get set }
     
+    var listKnowledges : [KnowledgeModel]  { get set }
+    
     func saveKnowledge(tableView : UITableView)
     
-    func getQuestions(tableView : UITableView) -> [QuestionModel]
+    func saveListKnowledges()
     
-    func fetchQuestion(level : LevelInterView) -> [QuestionModel]
+    func getQuestions(tableView : UITableView) -> [KnowledgeModel]
+    
+    func fetchQuestion(level : LevelInterView) -> [KnowledgeModel]
 }
 
 struct DefaultKnowledgeViewModel : KnowledgeViewModel {
-    
+
     var knowledgeRepo = DefaulKnowledgeRepository()
     
     var level: LevelInterView = .intern
     
+    var listKnowledges: [KnowledgeModel] = []
+    
     var numberOfRow: Int = 0
     
     func saveKnowledge(tableView : UITableView) {
-        let questions = self.getQuestions(tableView: tableView)
-        questions.forEach { (question) in
-            let result = knowledgeRepo.insertKnowledge(question: question)
-            print(result)
+//        let questions = self.getQuestions(tableView: tableView)
+//        questions.forEach { (question) in
+//            let result = knowledgeRepo.insertKnowledge(knowledge: question)
+//            print(result)
+//        }
+    }
+    
+    func saveListKnowledges() {
+        self.listKnowledges.forEach { knowledge in
+            self.knowledgeRepo.insertKnowledge(knowledge: knowledge)
         }
     }
     
-    func getQuestions(tableView : UITableView) -> [QuestionModel] {
-        var questions : [QuestionModel] = []
+    func getQuestions(tableView : UITableView) -> [KnowledgeModel] {
+        var questions : [KnowledgeModel] = []
         for row in 0...self.numberOfRow {
             let indexPath = IndexPath(row: row, section: 0)
             
@@ -46,14 +58,14 @@ struct DefaultKnowledgeViewModel : KnowledgeViewModel {
                 return questions
             }
             
-            guard let question = cell.getData() else { return questions }
+            guard let question = cell.getKnowlege() else { return questions }
             questions.append(question)
         }
         
         return questions
     }
     
-    func fetchQuestion(level: LevelInterView) -> [QuestionModel] {
+    func fetchQuestion(level: LevelInterView) -> [KnowledgeModel] {
         return knowledgeRepo.fetchQuestions(level: level)
     }
 }

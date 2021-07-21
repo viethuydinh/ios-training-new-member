@@ -1,5 +1,5 @@
 //
-//  QuestionCoreData+CoreDataClass.swift
+//  KnowledgeCoreData+CoreDataClass.swift
 //  Capstone
 //
 //  Created by Nguyễn Minh Hiếu on 12/07/2021.
@@ -10,6 +10,6 @@ import Foundation
 import CoreData
 
 
-public class QuestionCoreData: NSManagedObject {
+public class KnowledgeCoreData: NSManagedObject {
 
 }

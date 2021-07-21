@@ -1,5 +1,5 @@
 //
-//  QuestionModel.swift
+//  KnowledgeModel.swift
 //  Capstone
 //
 //  Created by Nguyễn Minh Hiếu on 12/07/2021.
@@ -7,9 +7,10 @@
 
 import Foundation
 
-struct QuestionModel {
+struct KnowledgeModel {
     var id : Int?
     var content : String?
+    var answer : String?
     var level : LevelInterView?
 }
 
@@ -33,13 +34,14 @@ enum LevelInterView : Int,Codable {
     }
 }
 
-extension QuestionModel : ObjectConvertible {
-    typealias Object = QuestionCoreData
+extension KnowledgeModel : ObjectConvertible {
+    typealias Object = KnowledgeCoreData
     
-    func update(obj: QuestionCoreData) -> QuestionCoreData {
+    func update(obj: KnowledgeCoreData) -> KnowledgeCoreData {
         let object = obj
         object.id = Int16(self.id ?? 0)
         object.content = self.content
+        object.answer = self.answer
         object.level = Int16(self.level?.rawValue ?? 0)
         return object
     }
