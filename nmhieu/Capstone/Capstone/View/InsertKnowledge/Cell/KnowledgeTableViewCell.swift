@@ -40,6 +40,10 @@ class KnowledgeTableViewCell: UITableViewCell {
         self.questionTF.text = listKnowledge[indexPath.row].content
         self.answerTF.text = listKnowledge[indexPath.row].answer
     }
+    
+    func bindingData(indexPath : IndexPath) {
+        self.indexPath = indexPath
+    }
 } 
 
 //MARK: -UITextFeildDelegate

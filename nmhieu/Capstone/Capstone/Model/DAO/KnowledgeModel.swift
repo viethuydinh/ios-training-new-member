@@ -35,11 +35,23 @@ enum LevelInterView : Int,Codable {
 }
 
 extension KnowledgeModel : ObjectConvertible {
+<<<<<<< HEAD
     
     typealias Object = KnowledgeCoreData
     
     func update(obj: KnowledgeCoreData) -> KnowledgeCoreData {
         let object = obj
+=======
+    typealias Object = KnowledgeCoreData
+    
+<<<<<<<< HEAD:nmhieu/Capstone/Capstone/Model/DAO/KnowledgeModel.swift
+    func update(obj: KnowledgeCoreData) -> KnowledgeCoreData {
+        let object = obj
+========
+    func update(obj: QuestionCoreData) -> QuestionCoreData {
+        var object = obj
+>>>>>>>> 6342643 (refactor : add answer and change UI knowledge feature):nmhieu/Capstone/Capstone/Model/DAO/QuestionModel.swift
+>>>>>>> 6342643 (refactor : add answer and change UI knowledge feature)
         object.id = Int16(self.id ?? 0)
         object.content = self.content
         object.answer = self.answer

@@ -49,11 +49,17 @@
 =======
 =======
 		15344169269FE0150078660E /* NotificationKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15344168269FE0150078660E /* NotificationKey.swift */; };
+<<<<<<< HEAD
 >>>>>>> deb4dc0 (add : appicon)
 		154A6366269BF253008E571C /* QuestionCoreData+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 154A6364269BF253008E571C /* QuestionCoreData+CoreDataClass.swift */; };
 		154A6367269BF253008E571C /* QuestionCoreData+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 154A6365269BF253008E571C /* QuestionCoreData+CoreDataProperties.swift */; };
 		154A638D269BF498008E571C /* QuestionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 154A638C269BF498008E571C /* QuestionModel.swift */; };
 >>>>>>> 88ef0f2 (refactor: refactor code in file InsertKnowledgeVC)
+=======
+		154A6366269BF253008E571C /* KnowledgeCoreData+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 154A6364269BF253008E571C /* KnowledgeCoreData+CoreDataClass.swift */; };
+		154A6367269BF253008E571C /* KnowledgeCoreData+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 154A6365269BF253008E571C /* KnowledgeCoreData+CoreDataProperties.swift */; };
+		154A638D269BF498008E571C /* KnowledgeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 154A638C269BF498008E571C /* KnowledgeModel.swift */; };
+>>>>>>> 6342643 (refactor : add answer and change UI knowledge feature)
 		154A6396269BF9E0008E571C /* KnowledgeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 154A6395269BF9E0008E571C /* KnowledgeViewModel.swift */; };
 		154A639B269BFA2C008E571C /* KnowledgeRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 154A639A269BFA2C008E571C /* KnowledgeRepository.swift */; };
 		154A63A4269BFB2F008E571C /* InsertKnowledge.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 154A63A3269BFB2F008E571C /* InsertKnowledge.storyboard */; };
@@ -185,11 +191,17 @@
 =======
 =======
 		15344168269FE0150078660E /* NotificationKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationKey.swift; sourceTree = "<group>"; };
+<<<<<<< HEAD
 >>>>>>> deb4dc0 (add : appicon)
 		154A6364269BF253008E571C /* QuestionCoreData+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "QuestionCoreData+CoreDataClass.swift"; path = "Capstone/Model/Database/Question/QuestionCoreData+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
 		154A6365269BF253008E571C /* QuestionCoreData+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "QuestionCoreData+CoreDataProperties.swift"; path = "Capstone/Model/Database/Question/QuestionCoreData+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
 		154A638C269BF498008E571C /* QuestionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionModel.swift; sourceTree = "<group>"; };
 >>>>>>> 88ef0f2 (refactor: refactor code in file InsertKnowledgeVC)
+=======
+		154A6364269BF253008E571C /* KnowledgeCoreData+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "KnowledgeCoreData+CoreDataClass.swift"; path = "Capstone/Model/Database/Question/KnowledgeCoreData+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
+		154A6365269BF253008E571C /* KnowledgeCoreData+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "KnowledgeCoreData+CoreDataProperties.swift"; path = "Capstone/Model/Database/Question/KnowledgeCoreData+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
+		154A638C269BF498008E571C /* KnowledgeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KnowledgeModel.swift; sourceTree = "<group>"; };
+>>>>>>> 6342643 (refactor : add answer and change UI knowledge feature)
 		154A6395269BF9E0008E571C /* KnowledgeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KnowledgeViewModel.swift; sourceTree = "<group>"; };
 		154A639A269BFA2C008E571C /* KnowledgeRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KnowledgeRepository.swift; sourceTree = "<group>"; };
 		154A63A3269BFB2F008E571C /* InsertKnowledge.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = InsertKnowledge.storyboard; sourceTree = "<group>"; };
@@ -363,6 +375,7 @@
 				1507B20C268F13CE001945A8 /* UserModel.swift */,
 				15179EBE26958532008D3A46 /* AccountModel.swift */,
 				154A638C269BF498008E571C /* KnowledgeModel.swift */,
+<<<<<<< HEAD
 =======
 			isa = PBXGroup;
 			children = (
@@ -390,6 +403,8 @@
 				15179EB42695565F008D3A46 /* Convertible.swift */,
 				15179EB9269557B2008D3A46 /* BaseCoreData.swift */,
 >>>>>>> 6807593 (config coredata)
+=======
+>>>>>>> 6342643 (refactor : add answer and change UI knowledge feature)
 			);
 			path = DAO;
 			sourceTree = "<group>";

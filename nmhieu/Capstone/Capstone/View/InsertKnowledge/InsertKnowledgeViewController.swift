@@ -7,7 +7,7 @@
 
 import UIKit
 
-class InsertKnowledgeViewController: BaseVC {
+class InsertKnowledgeViewController: UIViewController {
 
     @IBOutlet weak var knowledgeTableView: UITableView!
     @IBOutlet weak var doneButton: UIButton!
@@ -123,6 +123,9 @@ class InsertKnowledgeViewController: BaseVC {
         self.knowledgeVM.level = self.level ?? .intern
     }
     
+    private func appendKnowledge(knowledge : KnowledgeModel) {
+        self.knowledgeVM.listKnowledges.append(knowledge)
+    }
 }
 
 //MARK: -UITableViewDataSource

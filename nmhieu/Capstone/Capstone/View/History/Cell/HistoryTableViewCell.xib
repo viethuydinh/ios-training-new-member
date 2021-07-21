@@ -1,10 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-<<<<<<< HEAD
     <device id="ipad12_9rounded" orientation="portrait" layout="fullscreen" appearance="light"/>
-=======
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
->>>>>>> 6190db0 (feat : implement feature history interview)
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
@@ -17,12 +13,6 @@
         <array key="SF-Pro-Display-Medium.otf">
             <string>SFProDisplay-Medium</string>
         </array>
-<<<<<<< HEAD
-=======
-        <array key="SF-Pro-Display-Regular.otf">
-            <string>SFProDisplay-Regular</string>
-        </array>
->>>>>>> 6190db0 (feat : implement feature history interview)
     </customFonts>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
@@ -45,14 +35,20 @@
                 <rect key="frame" x="0.0" y="0.0" width="555" height="185"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
+<<<<<<< HEAD
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="54N-S9-oTi">
                         <rect key="frame" x="16" y="8" width="112" height="168"/>
 >>>>>>> 6190db0 (feat : implement feature history interview)
+=======
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="54N-S9-oTi">
+                        <rect key="frame" x="16" y="16" width="101.5" height="152"/>
+>>>>>>> 6342643 (refactor : add answer and change UI knowledge feature)
                         <constraints>
                             <constraint firstAttribute="width" secondItem="54N-S9-oTi" secondAttribute="height" multiplier="4:6" id="YJx-a2-Dy4"/>
                         </constraints>
                     </imageView>
                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="xv8-gM-Qfr">
+<<<<<<< HEAD
 <<<<<<< HEAD
                         <rect key="frame" x="168" y="30" width="371" height="189.5"/>
                         <subviews>
@@ -87,15 +83,18 @@
                                         </variation>
 =======
                         <rect key="frame" x="136" y="28" width="404" height="129"/>
+=======
+                        <rect key="frame" x="125.5" y="28" width="413.5" height="129"/>
+>>>>>>> 6342643 (refactor : add answer and change UI knowledge feature)
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nguyen Minh Hieu" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y3S-12-6h1">
-                                <rect key="frame" x="0.0" y="0.0" width="404" height="19"/>
+                                <rect key="frame" x="0.0" y="0.0" width="413.5" height="19"/>
                                 <fontDescription key="fontDescription" name="SFProDisplay-Bold" family="SF Pro Display" pointSize="16"/>
                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="Cs3-GW-Pp3">
-                                <rect key="frame" x="0.0" y="31" width="404" height="15.5"/>
+                                <rect key="frame" x="0.0" y="31" width="413.5" height="15.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Job title:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ugn-xg-uD3">
                                         <rect key="frame" x="0.0" y="0.0" width="50.5" height="15.5"/>
@@ -103,8 +102,13 @@
                                         <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+<<<<<<< HEAD
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="ios developer" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d18-Ri-NIu">
                                         <rect key="frame" x="55.5" y="0.0" width="348.5" height="15.5"/>
+=======
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="ios developer" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d18-Ri-NIu">
+                                        <rect key="frame" x="55.5" y="0.0" width="358" height="15.5"/>
+>>>>>>> 6342643 (refactor : add answer and change UI knowledge feature)
                                         <fontDescription key="fontDescription" name="SFProDisplay-Medium" family="SF Pro Display" pointSize="13"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -113,6 +117,7 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="OuZ-K7-n3z">
+<<<<<<< HEAD
 <<<<<<< HEAD
                                 <rect key="frame" x="0.0" y="83" width="371" height="27.5"/>
                                 <subviews>
@@ -135,6 +140,9 @@
                                         </variation>
 =======
                                 <rect key="frame" x="0.0" y="58.5" width="404" height="15.5"/>
+=======
+                                <rect key="frame" x="0.0" y="58.5" width="413.5" height="15.5"/>
+>>>>>>> 6342643 (refactor : add answer and change UI knowledge feature)
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Level :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bpe-2U-8PL">
                                         <rect key="frame" x="0.0" y="0.0" width="38" height="15.5"/>
@@ -143,7 +151,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Intern" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yer-d3-rAZ">
-                                        <rect key="frame" x="43" y="0.0" width="361" height="15.5"/>
+                                        <rect key="frame" x="43" y="0.0" width="370.5" height="15.5"/>
                                         <fontDescription key="fontDescription" name="SFProDisplay-Medium" family="SF Pro Display" pointSize="13"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -152,6 +160,7 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="X7s-A5-EkH">
+<<<<<<< HEAD
 <<<<<<< HEAD
                                 <rect key="frame" x="0.0" y="122.5" width="371" height="27.5"/>
                                 <subviews>
@@ -174,6 +183,9 @@
                                         </variation>
 =======
                                 <rect key="frame" x="0.0" y="86" width="404" height="15.5"/>
+=======
+                                <rect key="frame" x="0.0" y="86" width="413.5" height="15.5"/>
+>>>>>>> 6342643 (refactor : add answer and change UI knowledge feature)
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Age:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TLx-XK-Ohc">
                                         <rect key="frame" x="0.0" y="0.0" width="26.5" height="15.5"/>
@@ -182,7 +194,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="19" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pso-WQ-Q05">
-                                        <rect key="frame" x="31.5" y="0.0" width="372.5" height="15.5"/>
+                                        <rect key="frame" x="31.5" y="0.0" width="382" height="15.5"/>
                                         <fontDescription key="fontDescription" name="SFProDisplay-Medium" family="SF Pro Display" pointSize="13"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -191,6 +203,7 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="xNO-nc-xNe">
+<<<<<<< HEAD
 <<<<<<< HEAD
                                 <rect key="frame" x="0.0" y="162" width="371" height="27.5"/>
                                 <subviews>
@@ -213,6 +226,9 @@
                                         </variation>
 =======
                                 <rect key="frame" x="0.0" y="113.5" width="404" height="15.5"/>
+=======
+                                <rect key="frame" x="0.0" y="113.5" width="413.5" height="15.5"/>
+>>>>>>> 6342643 (refactor : add answer and change UI knowledge feature)
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wVU-GZ-788">
                                         <rect key="frame" x="0.0" y="0.0" width="31" height="15.5"/>
@@ -221,7 +237,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="4/3/2020" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HNs-2p-zFS">
-                                        <rect key="frame" x="36" y="0.0" width="368" height="15.5"/>
+                                        <rect key="frame" x="36" y="0.0" width="377.5" height="15.5"/>
                                         <fontDescription key="fontDescription" name="SFProDisplay-Medium" family="SF Pro Display" pointSize="13"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -233,6 +249,7 @@
                     </stackView>
 <<<<<<< HEAD
                     <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bIM-KY-nAI">
+<<<<<<< HEAD
                         <rect key="frame" x="477" y="93.5" width="62" height="62"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Good" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fOx-Vp-QJQ">
@@ -240,6 +257,9 @@
 =======
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bIM-KY-nAI">
                         <rect key="frame" x="494" y="69.5" width="46" height="46"/>
+=======
+                        <rect key="frame" x="493" y="69.5" width="46" height="46"/>
+>>>>>>> 6342643 (refactor : add answer and change UI knowledge feature)
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Good" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fOx-Vp-QJQ">
                                 <rect key="frame" x="0.0" y="0.0" width="46" height="46"/>
@@ -270,10 +290,14 @@
                     </view>
                     <view alpha="0.5" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2op-Cd-eMz">
 <<<<<<< HEAD
+<<<<<<< HEAD
                         <rect key="frame" x="16" y="248" width="523" height="1"/>
 =======
                         <rect key="frame" x="16" y="184" width="524" height="1"/>
 >>>>>>> 6190db0 (feat : implement feature history interview)
+=======
+                        <rect key="frame" x="16" y="184" width="523" height="1"/>
+>>>>>>> 6342643 (refactor : add answer and change UI knowledge feature)
                         <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="1" id="4R2-KR-doa"/>
@@ -285,6 +309,7 @@
                     <constraint firstItem="bIM-KY-nAI" firstAttribute="height" secondItem="seo-fz-pPq" secondAttribute="height" multiplier="0.25" id="0li-oV-HGM"/>
                     <constraint firstItem="2op-Cd-eMz" firstAttribute="trailing" secondItem="xv8-gM-Qfr" secondAttribute="trailing" id="155-XI-c3R"/>
 <<<<<<< HEAD
+<<<<<<< HEAD
                     <constraint firstAttribute="trailing" secondItem="bIM-KY-nAI" secondAttribute="trailing" constant="16" id="2LB-Ix-GRh"/>
                     <constraint firstAttribute="bottom" secondItem="2op-Cd-eMz" secondAttribute="bottom" id="2PQ-Xc-2Vm"/>
                     <constraint firstAttribute="trailing" secondItem="xv8-gM-Qfr" secondAttribute="trailing" constant="16" id="39M-40-bK8"/>
@@ -295,11 +320,18 @@
                     <constraint firstAttribute="trailing" secondItem="xv8-gM-Qfr" secondAttribute="trailing" constant="15" id="39M-40-bK8"/>
                     <constraint firstItem="54N-S9-oTi" firstAttribute="top" secondItem="seo-fz-pPq" secondAttribute="top" constant="8" id="6uB-QQ-Ez1"/>
 >>>>>>> 6190db0 (feat : implement feature history interview)
+=======
+                    <constraint firstAttribute="trailing" secondItem="bIM-KY-nAI" secondAttribute="trailing" constant="16" id="2LB-Ix-GRh"/>
+                    <constraint firstAttribute="bottom" secondItem="2op-Cd-eMz" secondAttribute="bottom" id="2PQ-Xc-2Vm"/>
+                    <constraint firstAttribute="trailing" secondItem="xv8-gM-Qfr" secondAttribute="trailing" constant="16" id="39M-40-bK8"/>
+                    <constraint firstItem="54N-S9-oTi" firstAttribute="top" secondItem="seo-fz-pPq" secondAttribute="top" constant="16" id="6uB-QQ-Ez1"/>
+>>>>>>> 6342643 (refactor : add answer and change UI knowledge feature)
                     <constraint firstItem="xv8-gM-Qfr" firstAttribute="centerY" secondItem="seo-fz-pPq" secondAttribute="centerY" id="78H-w5-MaV"/>
                     <constraint firstItem="xv8-gM-Qfr" firstAttribute="leading" secondItem="54N-S9-oTi" secondAttribute="trailing" constant="8" id="HOD-Ku-8SK"/>
                     <constraint firstItem="bIM-KY-nAI" firstAttribute="centerY" secondItem="seo-fz-pPq" secondAttribute="centerY" id="QEm-x6-azs"/>
                     <constraint firstItem="54N-S9-oTi" firstAttribute="leading" secondItem="seo-fz-pPq" secondAttribute="leading" constant="16" id="QZn-ae-gwl"/>
                     <constraint firstItem="2op-Cd-eMz" firstAttribute="leading" secondItem="54N-S9-oTi" secondAttribute="leading" id="YJW-M1-AoY"/>
+<<<<<<< HEAD
 <<<<<<< HEAD
                     <constraint firstItem="2op-Cd-eMz" firstAttribute="top" secondItem="54N-S9-oTi" secondAttribute="bottom" constant="16" id="aqL-6H-0nJ"/>
                 </constraints>
@@ -307,6 +339,9 @@
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
 =======
                     <constraint firstItem="2op-Cd-eMz" firstAttribute="top" secondItem="54N-S9-oTi" secondAttribute="bottom" constant="8" id="aqL-6H-0nJ"/>
+=======
+                    <constraint firstItem="2op-Cd-eMz" firstAttribute="top" secondItem="54N-S9-oTi" secondAttribute="bottom" constant="16" id="aqL-6H-0nJ"/>
+>>>>>>> 6342643 (refactor : add answer and change UI knowledge feature)
                 </constraints>
             </tableViewCellContentView>
 <<<<<<< HEAD

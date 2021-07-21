@@ -7,11 +7,7 @@
 
 import UIKit
 
-<<<<<<< HEAD
 class HistoryViewController: BaseVC {
-=======
-class HistoryViewController: UIViewController {
->>>>>>> 6190db0 (feat : implement feature history interview)
     
     @IBOutlet weak var historyTableView: UITableView!
     
@@ -49,6 +45,9 @@ class HistoryViewController: UIViewController {
         self.historyTableView.dataSource = self
         self.historyTableView.delegate = self
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 6342643 (refactor : add answer and change UI knowledge feature)
         self.historyTableView.contentInset = UIEdgeInsets(top: 0.0, left: 0.0, bottom: 80.0, right: 0.0)
     }
     
