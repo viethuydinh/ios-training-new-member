@@ -41,19 +41,21 @@
 		F491ED39269E962800A98D28 /* ListReviewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F491ED38269E962800A98D28 /* ListReviewsViewController.swift */; };
 		F491ED40269E98C600A98D28 /* ReviewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F491ED3E269E98C600A98D28 /* ReviewTableViewCell.swift */; };
 		F491ED41269E98C600A98D28 /* ReviewTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F491ED3F269E98C600A98D28 /* ReviewTableViewCell.xib */; };
-		F491ED4D269E9AED00A98D28 /* ReviewCoreData+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = F491ED4B269E9AED00A98D28 /* ReviewCoreData+CoreDataClass.swift */; };
-		F491ED4E269E9AED00A98D28 /* ReviewCoreData+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = F491ED4C269E9AED00A98D28 /* ReviewCoreData+CoreDataProperties.swift */; };
 		F491ED54269E9DEF00A98D28 /* CheckBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = F491ED53269E9DEF00A98D28 /* CheckBox.swift */; };
 		F491ED5A269EE70D00A98D28 /* ListQuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F491ED59269EE70D00A98D28 /* ListQuestionViewController.swift */; };
 		F49723DD26A51D8000886321 /* interview1.gif in Resources */ = {isa = PBXBuildFile; fileRef = F49723DB26A51D8000886321 /* interview1.gif */; };
 		F49723E326A524A000886321 /* interview3.gif in Resources */ = {isa = PBXBuildFile; fileRef = F49723E226A524A000886321 /* interview3.gif */; };
 		F49723E926A58A7A00886321 /* UITableView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F49723E826A58A7A00886321 /* UITableView+Extension.swift */; };
 		F4A0AFE226A671E500AAE6B9 /* interview2.gif in Resources */ = {isa = PBXBuildFile; fileRef = F4A0AFE126A671E500AAE6B9 /* interview2.gif */; };
-		F4B3921E26A85F6B00C105EE /* QuestionCoreData+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4B3921C26A85F6B00C105EE /* QuestionCoreData+CoreDataClass.swift */; };
-		F4B3921F26A85F6B00C105EE /* QuestionCoreData+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4B3921D26A85F6B00C105EE /* QuestionCoreData+CoreDataProperties.swift */; };
+		F4B3922226A918A700C105EE /* AlertCustomView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F4B3922126A918A700C105EE /* AlertCustomView.xib */; };
+		F4B3922626A91D3800C105EE /* AlertCustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4B3922526A91D3800C105EE /* AlertCustomView.swift */; };
+		F4B3922B26A9202000C105EE /* ReviewCoreData+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4B3922926A9201F00C105EE /* ReviewCoreData+CoreDataProperties.swift */; };
+		F4B3922C26A9202000C105EE /* ReviewCoreData+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4B3922A26A9201F00C105EE /* ReviewCoreData+CoreDataClass.swift */; };
+		F4B3922F26A9202B00C105EE /* QuestionCoreData+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4B3922D26A9202B00C105EE /* QuestionCoreData+CoreDataProperties.swift */; };
+		F4B3923026A9202B00C105EE /* QuestionCoreData+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4B3922E26A9202B00C105EE /* QuestionCoreData+CoreDataClass.swift */; };
+		F4B3923326A9203500C105EE /* AccountCoreData+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4B3923126A9203500C105EE /* AccountCoreData+CoreDataProperties.swift */; };
+		F4B3923426A9203500C105EE /* AccountCoreData+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4B3923226A9203500C105EE /* AccountCoreData+CoreDataClass.swift */; };
 		F4CE76102694303800330A77 /* BaseCoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4CE760F2694303800330A77 /* BaseCoreData.swift */; };
-		F4FDA8262696974A0039E9B4 /* AccountCoreData+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4FDA8242696974A0039E9B4 /* AccountCoreData+CoreDataClass.swift */; };
-		F4FDA8272696974A0039E9B4 /* AccountCoreData+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4FDA8252696974A0039E9B4 /* AccountCoreData+CoreDataProperties.swift */; };
 		F4FDA82C2696D9C70039E9B4 /* AuthenticationViewModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4FDA82B2696D9C70039E9B4 /* AuthenticationViewModels.swift */; };
 		F4FDA834269702CC0039E9B4 /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4FDA833269702CC0039E9B4 /* Question.swift */; };
 		F4FDF552268EA6B4001B02D3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4FDF551268EA6B4001B02D3 /* AppDelegate.swift */; };
@@ -135,19 +137,21 @@
 		F491ED38269E962800A98D28 /* ListReviewsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListReviewsViewController.swift; sourceTree = "<group>"; };
 		F491ED3E269E98C600A98D28 /* ReviewTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewTableViewCell.swift; sourceTree = "<group>"; };
 		F491ED3F269E98C600A98D28 /* ReviewTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ReviewTableViewCell.xib; sourceTree = "<group>"; };
-		F491ED4B269E9AED00A98D28 /* ReviewCoreData+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ReviewCoreData+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
-		F491ED4C269E9AED00A98D28 /* ReviewCoreData+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ReviewCoreData+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
 		F491ED53269E9DEF00A98D28 /* CheckBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckBox.swift; sourceTree = "<group>"; };
 		F491ED59269EE70D00A98D28 /* ListQuestionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListQuestionViewController.swift; sourceTree = "<group>"; };
 		F49723DB26A51D8000886321 /* interview1.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = interview1.gif; sourceTree = "<group>"; };
 		F49723E226A524A000886321 /* interview3.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = interview3.gif; sourceTree = "<group>"; };
 		F49723E826A58A7A00886321 /* UITableView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Extension.swift"; sourceTree = "<group>"; };
 		F4A0AFE126A671E500AAE6B9 /* interview2.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = interview2.gif; sourceTree = "<group>"; };
-		F4B3921C26A85F6B00C105EE /* QuestionCoreData+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "QuestionCoreData+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
-		F4B3921D26A85F6B00C105EE /* QuestionCoreData+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "QuestionCoreData+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
+		F4B3922126A918A700C105EE /* AlertCustomView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AlertCustomView.xib; sourceTree = "<group>"; };
+		F4B3922526A91D3800C105EE /* AlertCustomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertCustomView.swift; sourceTree = "<group>"; };
+		F4B3922926A9201F00C105EE /* ReviewCoreData+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ReviewCoreData+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		F4B3922A26A9201F00C105EE /* ReviewCoreData+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ReviewCoreData+CoreDataClass.swift"; sourceTree = "<group>"; };
+		F4B3922D26A9202B00C105EE /* QuestionCoreData+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "QuestionCoreData+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		F4B3922E26A9202B00C105EE /* QuestionCoreData+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "QuestionCoreData+CoreDataClass.swift"; sourceTree = "<group>"; };
+		F4B3923126A9203500C105EE /* AccountCoreData+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AccountCoreData+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		F4B3923226A9203500C105EE /* AccountCoreData+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AccountCoreData+CoreDataClass.swift"; sourceTree = "<group>"; };
 		F4CE760F2694303800330A77 /* BaseCoreData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCoreData.swift; sourceTree = "<group>"; };
-		F4FDA8242696974A0039E9B4 /* AccountCoreData+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AccountCoreData+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
-		F4FDA8252696974A0039E9B4 /* AccountCoreData+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AccountCoreData+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
 		F4FDA82B2696D9C70039E9B4 /* AuthenticationViewModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationViewModels.swift; sourceTree = "<group>"; };
 		F4FDA833269702CC0039E9B4 /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
 		F4FDF54E268EA6B4001B02D3 /* Capstone_nqhuy9.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Capstone_nqhuy9.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -329,8 +333,8 @@
 		F491ED26269E91F600A98D28 /* Review_CoreData */ = {
 			isa = PBXGroup;
 			children = (
-				F491ED4B269E9AED00A98D28 /* ReviewCoreData+CoreDataClass.swift */,
-				F491ED4C269E9AED00A98D28 /* ReviewCoreData+CoreDataProperties.swift */,
+				F4B3922A26A9201F00C105EE /* ReviewCoreData+CoreDataClass.swift */,
+				F4B3922926A9201F00C105EE /* ReviewCoreData+CoreDataProperties.swift */,
 			);
 			path = Review_CoreData;
 			sourceTree = "<group>";
@@ -354,11 +358,20 @@
 			path = Common;
 			sourceTree = "<group>";
 		};
+		F4B3922026A916D900C105EE /* CustomAlert */ = {
+			isa = PBXGroup;
+			children = (
+				F4B3922126A918A700C105EE /* AlertCustomView.xib */,
+				F4B3922526A91D3800C105EE /* AlertCustomView.swift */,
+			);
+			path = CustomAlert;
+			sourceTree = "<group>";
+		};
 		F4FDA83D269703860039E9B4 /* Question_CoreData */ = {
 			isa = PBXGroup;
 			children = (
-				F4B3921C26A85F6B00C105EE /* QuestionCoreData+CoreDataClass.swift */,
-				F4B3921D26A85F6B00C105EE /* QuestionCoreData+CoreDataProperties.swift */,
+				F4B3922E26A9202B00C105EE /* QuestionCoreData+CoreDataClass.swift */,
+				F4B3922D26A9202B00C105EE /* QuestionCoreData+CoreDataProperties.swift */,
 			);
 			path = Question_CoreData;
 			sourceTree = "<group>";
@@ -434,6 +447,7 @@
 		F4FDF597268EAB0D001B02D3 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				F4B3922026A916D900C105EE /* CustomAlert */,
 				F432668A26A0364900A7AEB2 /* SplashScreen */,
 				F491ED1B269E8F8300A98D28 /* ReviewManagerScreens */,
 				F433BC8D269D8F06002F5146 /* CustomTabbar */,
@@ -560,8 +574,8 @@
 		F4FDF6B2268F09C7001B02D3 /* Account_CoreData */ = {
 			isa = PBXGroup;
 			children = (
-				F4FDA8242696974A0039E9B4 /* AccountCoreData+CoreDataClass.swift */,
-				F4FDA8252696974A0039E9B4 /* AccountCoreData+CoreDataProperties.swift */,
+				F4B3923226A9203500C105EE /* AccountCoreData+CoreDataClass.swift */,
+				F4B3923126A9203500C105EE /* AccountCoreData+CoreDataProperties.swift */,
 			);
 			path = Account_CoreData;
 			sourceTree = "<group>";
@@ -674,6 +688,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F4B3922226A918A700C105EE /* AlertCustomView.xib in Resources */,
 				F4A0AFE226A671E500AAE6B9 /* interview2.gif in Resources */,
 				F4FDF66D268EF0BD001B02D3 /* Authentication.storyboard in Resources */,
 				F4FDF561268EA6B7001B02D3 /* LaunchScreen.storyboard in Resources */,
@@ -816,6 +831,7 @@
 			files = (
 				F433BC94269D9812002F5146 /* BaseTabBarController.swift in Sources */,
 				F432667A269FDCA200A7AEB2 /* Collection+Extension.swift in Sources */,
+				F4B3923326A9203500C105EE /* AccountCoreData+CoreDataProperties.swift in Sources */,
 				F4FDF685268EFC94001B02D3 /* SignUpViewController.swift in Sources */,
 				F4FDF693268EFF6C001B02D3 /* UIViewController+Extension.swift in Sources */,
 				F433BC6C269D3659002F5146 /* InsertQuestionTableViewCell.swift in Sources */,
@@ -825,13 +841,12 @@
 				F432669A26A03D1600A7AEB2 /* DrawerProtocol.swift in Sources */,
 				F43266A726A1228300A7AEB2 /* SplashCollectionViewCell.swift in Sources */,
 				F491ED34269E93E300A98D28 /* ReviewViewModel.swift in Sources */,
-				F491ED4E269E9AED00A98D28 /* ReviewCoreData+CoreDataProperties.swift in Sources */,
 				F4FDA834269702CC0039E9B4 /* Question.swift in Sources */,
 				F4326674269FD94D00A7AEB2 /* QuestionTableViewCell.swift in Sources */,
 				F4FDF6AE268F06AE001B02D3 /* Account.swift in Sources */,
 				F43266BC26A12EE000A7AEB2 /* UIImage+Extension.swift in Sources */,
-				F4FDA8272696974A0039E9B4 /* AccountCoreData+CoreDataProperties.swift in Sources */,
 				F4FDF552268EA6B4001B02D3 /* AppDelegate.swift in Sources */,
+				F4B3922626A91D3800C105EE /* AlertCustomView.swift in Sources */,
 				F433BC54269BF5B5002F5146 /* KnowledgeViewModel.swift in Sources */,
 				F43266A026A03D2000A7AEB2 /* AdvancePageControlView.swift in Sources */,
 				F432669126A03BFF00A7AEB2 /* SplashViewController.swift in Sources */,
@@ -840,30 +855,31 @@
 				F4FDA82C2696D9C70039E9B4 /* AuthenticationViewModels.swift in Sources */,
 				F491ED39269E962800A98D28 /* ListReviewsViewController.swift in Sources */,
 				F4FDF680268EFA98001B02D3 /* Color.swift in Sources */,
-				F4B3921E26A85F6B00C105EE /* QuestionCoreData+CoreDataClass.swift in Sources */,
 				F4CE76102694303800330A77 /* BaseCoreData.swift in Sources */,
+				F4B3923026A9202B00C105EE /* QuestionCoreData+CoreDataClass.swift in Sources */,
 				F433BC77269D47A2002F5146 /* UIView+Extension.swift in Sources */,
 				F433BC8F269D8F23002F5146 /* TabItem.swift in Sources */,
 				F4FDF55C268EA6B4001B02D3 /* Capstone_nqhuy9.xcdatamodeld in Sources */,
-				F4FDA8262696974A0039E9B4 /* AccountCoreData+CoreDataClass.swift in Sources */,
 				F432666D269FD41400A7AEB2 /* LevelPickerView.swift in Sources */,
 				F4FDF672268EF706001B02D3 /* SignInViewController.swift in Sources */,
 				F491ED54269E9DEF00A98D28 /* CheckBox.swift in Sources */,
 				F4FDF68B268EFEFA001B02D3 /* BaseVC.swift in Sources */,
 				F432669B26A03D1600A7AEB2 /* ExtendedDotDrawer.swift in Sources */,
 				F4FDF554268EA6B4001B02D3 /* SceneDelegate.swift in Sources */,
-				F4B3921F26A85F6B00C105EE /* QuestionCoreData+CoreDataProperties.swift in Sources */,
 				F442815E269BEFF100DB531B /* KnowledgeRepository.swift in Sources */,
 				F491ED22269E919B00A98D28 /* Review.swift in Sources */,
+				F4B3922F26A9202B00C105EE /* QuestionCoreData+CoreDataProperties.swift in Sources */,
 				F4FDF678268EF89B001B02D3 /* ConstantString.swift in Sources */,
 				F433BC72269D39B6002F5146 /* InsertKnowledgeViewController.swift in Sources */,
+				F4B3923426A9203500C105EE /* AccountCoreData+CoreDataClass.swift in Sources */,
 				F491ED5A269EE70D00A98D28 /* ListQuestionViewController.swift in Sources */,
 				F432669926A03D1600A7AEB2 /* SlideDrawer.swift in Sources */,
 				F4FDF698268EFF9A001B02D3 /* NSObject+Extension.swift in Sources */,
+				F4B3922B26A9202000C105EE /* ReviewCoreData+CoreDataProperties.swift in Sources */,
 				F491ED2F269E932600A98D28 /* ReviewRepository.swift in Sources */,
 				F43266AD26A12A3400A7AEB2 /* SplashViewModel.swift in Sources */,
 				F491ED1D269E8FA300A98D28 /* InsertReviewViewController.swift in Sources */,
-				F491ED4D269E9AED00A98D28 /* ReviewCoreData+CoreDataClass.swift in Sources */,
+				F4B3922C26A9202000C105EE /* ReviewCoreData+CoreDataClass.swift in Sources */,
 				F433BC99269D9844002F5146 /* CustomTabBar.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
