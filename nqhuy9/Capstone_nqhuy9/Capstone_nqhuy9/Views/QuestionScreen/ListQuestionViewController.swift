@@ -153,9 +153,17 @@ extension ListQuestionViewController : UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if (editingStyle == UITableViewCell.EditingStyle.delete) {
-            self.questionViewModel.deleteQuestion(id: self.questionViewModel.listQuestions[indexPath.row].id)
-            self.questionViewModel.listQuestions.remove(at: indexPath.row)
-            self.tableViewQuestion.reloadData()
+            let dialog = AlertCustomView.init(title: "Delete Alert", content: "Are you sure to delete?", isHiddenCancel: false) {
+                if !self.questionViewModel.deleteQuestion(id: self.questionViewModel.listQuestions[indexPath.row].id) {
+                    let dialog = AlertCustomView.init(title: "Fail", content: "Delete Fail", isHiddenCancel: true) {
+                        return
+                    }
+                    dialog.show(superView: self.view)
+                }
+                self.questionViewModel.listQuestions.remove(at: indexPath.row)
+                self.tableViewQuestion.reloadData()
+            }
+            dialog.show(superView: self.view)
         }
     }
 }

@@ -17,13 +17,13 @@ protocol KnowledgeViewModel {
     
     var isHaveTabBar: BehaviorSubject<Bool> {get set}
     
-    func createListQuestion(questions: [Question])
+    func createListQuestion(questions: [Question]) -> Bool
     
     func fetchListQuestion() -> [Question]
     
     func fetchRecommendQuestion() -> [Question]
     
-    func deleteQuestion(id: Int16?)
+    func deleteQuestion(id: Int16?) -> Bool
 }
 
 struct DefaultKnowledgeViewModel : KnowledgeViewModel {
@@ -42,8 +42,8 @@ struct DefaultKnowledgeViewModel : KnowledgeViewModel {
         self.repository = DefaultKnowledgeRepository()
     }
     
-    func createListQuestion(questions: [Question]) {
-        self.repository.createListQuestion(questions: questions)
+    func createListQuestion(questions: [Question]) -> Bool {
+        return self.repository.createListQuestion(questions: questions)
     }
     
     func fetchListQuestion() -> [Question] {
@@ -54,7 +54,7 @@ struct DefaultKnowledgeViewModel : KnowledgeViewModel {
         return self.repository.fetchRecommendQuestion(predicate: .init(format: "level = %@", argumentArray: [self.level.rawValue]))
     }
     
-    func deleteQuestion(id: Int16?) {
-        self.repository.deleteQuestion(id: id)
+    func deleteQuestion(id: Int16?) -> Bool {
+        return self.repository.deleteQuestion(id: id)
     }
 }

@@ -91,9 +91,17 @@ extension ListReviewsViewController : UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if (editingStyle == UITableViewCell.EditingStyle.delete) {
-            self.reviewViewModel.deleteReview(id: self.reviewViewModel.reviewList[indexPath.row].id)
-            self.reviewViewModel.reviewList.remove(at: indexPath.row)
-            self.tableViewReview.reloadData()
+            let dialog = AlertCustomView.init(title: "Delete Alert", content: "Are you sure to delete?", isHiddenCancel: false) {
+                if !self.reviewViewModel.deleteReview(id: self.reviewViewModel.reviewList[indexPath.row].id) {
+                    let dialog = AlertCustomView.init(title: "Fail", content: "Delete Fail", isHiddenCancel: true) {
+                        return
+                    }
+                    dialog.show(superView: self.view)
+                }
+                self.reviewViewModel.reviewList.remove(at: indexPath.row)
+                self.tableViewReview.reloadData()
+            }
+            dialog.show(superView: self.view)
         }
     }
 }

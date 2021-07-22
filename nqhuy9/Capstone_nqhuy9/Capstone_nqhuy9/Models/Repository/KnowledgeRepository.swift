@@ -9,13 +9,13 @@ import Foundation
 
 protocol KnowledgeRepository {
     
-    func createListQuestion(questions: [Question])
+    func createListQuestion(questions: [Question]) -> Bool
     
     func fetchListQuestion(predicate: NSPredicate?) -> [Question]
     
     func fetchRecommendQuestion(predicate: NSPredicate?) -> [Question]
     
-    func deleteQuestion(id: Int16?)
+    func deleteQuestion(id: Int16?) -> Bool
     
 }
 
@@ -23,7 +23,7 @@ struct DefaultKnowledgeRepository: KnowledgeRepository {
     
     var questionDAO = CoreDataRepository<Question>.shared
     
-    func createListQuestion(questions: [Question]) {
+    func createListQuestion(questions: [Question]) -> Bool {
         if questions.count > 0 {
             let result = questionDAO.fetchAll(predicate: nil)
             var id : Int16 = Int16(result.count)
@@ -33,9 +33,13 @@ struct DefaultKnowledgeRepository: KnowledgeRepository {
                 var q = questions[i-1]
                 id += 1
                 q.id = id
-                transformQuestions.append(q)
+                if q.answer != "" && q.content != "" {
+                    transformQuestions.append(q)
+                }
             }
-            questionDAO.saveAll(domains: transformQuestions)
+            return questionDAO.saveAll(domains: transformQuestions)
+        } else {
+            return false
         }
     }
     
@@ -47,9 +51,9 @@ struct DefaultKnowledgeRepository: KnowledgeRepository {
         return Array(self.fetchListQuestion(predicate: predicate).choose(8))
     }
     
-    func deleteQuestion(id: Int16?) {
-        guard let idDelete = id else { return }
-        self.questionDAO.deleteAll(predicate: .init(format: "id = %@", argumentArray: [String(idDelete)]))
+    func deleteQuestion(id: Int16?) -> Bool {
+        guard let idDelete = id else { return false }
+        return self.questionDAO.deleteAll(predicate: .init(format: "id = %@", argumentArray: [String(idDelete)]))
     }
     
 }

@@ -12,11 +12,11 @@ protocol ReviewViewModel {
     
     var reviewList: [Review] { get set }
     
-    func createReview(review : Review)
+    func createReview(review : Review) -> Bool
     
     func fetchAllReview() -> [Review]
     
-    func deleteReview(id : Int16?)
+    func deleteReview(id : Int16?) -> Bool
 }
 
 struct DefaultReviewViewModel : ReviewViewModel {
@@ -27,15 +27,15 @@ struct DefaultReviewViewModel : ReviewViewModel {
     
     var repository = DefaultReviewRepository()
     
-    func createReview(review: Review) {
-        self.repository.createReview(review: review)
+    func createReview(review: Review) -> Bool {
+        return self.repository.createReview(review: review)
     }
     
     func fetchAllReview() -> [Review] {
         self.repository.fetchAllReview()
     }
     
-    func deleteReview(id: Int16?) {
-        self.repository.deleteReview(id: id)
+    func deleteReview(id: Int16?) -> Bool {
+        return self.repository.deleteReview(id: id)
     }
 }

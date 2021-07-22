@@ -10,7 +10,7 @@ import Foundation
 protocol AuthenticationViewModels {
     func signIn(account: Account) -> Bool
     
-    func signUp(account: Account)
+    func signUp(account: Account) -> Bool
 }
 
 struct DefaultAuthenticationViewModel: AuthenticationViewModels {
@@ -25,7 +25,7 @@ struct DefaultAuthenticationViewModel: AuthenticationViewModels {
         return repository.signIn(account: account)
     }
     
-    func signUp(account: Account) {
+    func signUp(account: Account) -> Bool {
         repository.signUp(account: account)
     }
 }

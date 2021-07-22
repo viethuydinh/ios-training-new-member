@@ -12,7 +12,7 @@ import RxCocoa
 protocol AuthenticationRepository {
     func signIn(account: Account) -> Bool
     
-    func signUp(account: Account)
+    func signUp(account: Account) -> Bool
 }
 
 struct DefaultAuthenticationRepository : AuthenticationRepository {
@@ -30,7 +30,7 @@ struct DefaultAuthenticationRepository : AuthenticationRepository {
         }
     }
     
-    func signUp(account: Account) {
+    func signUp(account: Account) -> Bool {
         accountDAO.save(domain: account)
     }
 }

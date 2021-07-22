@@ -92,7 +92,10 @@ class SignInViewController: BaseVC {
                     guard let chooseLevelVC = self.getViewControllerFromStorybroad(storybroadName: "Main", identifier: "NavigationMain") as? UINavigationController else { return }
                     self.view.window!.rootViewController = chooseLevelVC
                 } else {
-                    print("Sign In Error")
+                    let dialog = AlertCustomView.init(title: "Fail", content: "Sign In Error", isHiddenCancel: true) {
+                        return
+                    }
+                    dialog.show(superView: self.view)
                 }
             } onError: { (_) in
                 

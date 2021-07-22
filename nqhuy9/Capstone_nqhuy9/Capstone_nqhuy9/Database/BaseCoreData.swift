@@ -78,7 +78,8 @@ struct CoreDataRepository<Domain : ObjectConvert> {
         return self.fetchAll(predicate: predicate).first
     }
     
-    func save(domain : Domain) {
+    func save(domain : Domain) -> Bool {
+        var errorCount: Int = 0
         let entity = NSEntityDescription.entity(forEntityName: String(describing: Domain.Object.self), in: CoreDataConfiguration.shared.context())!
         var newObject = Domain.Object(entity: entity, insertInto: CoreDataConfiguration.shared.context())
         if self.fetch(predicate: .init(format: "\(domain.key.keys.first!) = %@", argumentArray: [domain.key.values.first!])) == nil {
@@ -98,15 +99,35 @@ struct CoreDataRepository<Domain : ObjectConvert> {
         do {
             try CoreDataConfiguration.shared.context().save()
         } catch {
+            errorCount += 1
             print("Save Fail")
+        }
+        
+        if errorCount != 0 {
+            return false
+        } else {
+            return true
         }
     }
     
-    func saveAll(domains: [Domain]) {
-        domains.forEach(self.save(domain:))
+    func saveAll(domains: [Domain]) -> Bool {
+        var errorCount: Int = 0
+        domains.forEach { domain in
+            if !self.save(domain: domain) {
+                errorCount += 1
+            }
+        }
+        
+        if errorCount != 0 {
+            return false
+        } else {
+            return true
+        }
+        
     }
     
-    func deleteAll(predicate: NSPredicate? = nil) {
+    func deleteAll(predicate: NSPredicate? = nil) -> Bool {
+        var errorCount: Int = 0
         let fetch: NSFetchRequest<Domain.Object> = NSFetchRequest<Domain.Object>(entityName: String(describing: Domain.Object.self))
         fetch.predicate = predicate
         
@@ -118,7 +139,14 @@ struct CoreDataRepository<Domain : ObjectConvert> {
         do {
             try CoreDataConfiguration.shared.context().save()
         } catch {
+            errorCount += 1
             print("Delete Fail")
+        }
+        
+        if errorCount != 0 {
+            return false
+        } else {
+            return true
         }
     }
 }

@@ -64,9 +64,17 @@ class InsertReviewViewController: BaseVC {
             .rx
             .controlEvent(.touchUpInside)
             .subscribe { (_) in
-                self.insertReviewViewModel.createReview(review: Review(id: nil, candidateName: self.candidateNameTextField.text, content: self.reviewTextView.text, status: self.statusButton.isChecked))
-                NotificationCenter.default.post(name: Notification.Name(NotificationKey.SAVE_REVIEW_DONE_KEY), object: nil)
-                self.navigationController?.popViewController(animated: true)
+                if self.insertReviewViewModel.createReview(review: Review(id: nil, candidateName: self.candidateNameTextField.text, content: self.reviewTextView.text, status: self.statusButton.isChecked)) {
+                    let dialog = AlertCustomView.init(title: "Success", content: "Create Review Success", isHiddenCancel: true) {
+                        self.navigationController?.popViewController(animated: true)
+                    }
+                    dialog.show(superView: self.view)
+                } else {
+                    let dialog = AlertCustomView.init(title: "Fail", content: "Create Review Fail", isHiddenCancel: true) {
+                        self.navigationController?.popViewController(animated: true)
+                    }
+                    dialog.show(superView: self.view)
+                }
             } onError: { (_) in
                 
             } onCompleted: {

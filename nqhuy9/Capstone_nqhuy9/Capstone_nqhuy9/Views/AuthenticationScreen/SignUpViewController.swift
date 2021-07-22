@@ -95,7 +95,13 @@ class SignUpViewController: BaseVC {
             
             .map { Account(username: $0, password: $1, repassword: $2) }
             .subscribe(onNext: { (acc) in
-                self.signUpViewModel.signUp(account: acc)
+                if self.signUpViewModel.signUp(account: acc) {
+                    let dialog = AlertCustomView.init(title: "Successful", content: "You have done your signing up", isHiddenCancel: true) {
+                        guard let signInVC = self.getViewControllerFromStorybroad(storybroadName: "Authentication", identifier: SignInViewController.identifier) as? SignInViewController else { return }
+                        self.navigationController?.pushViewController(signInVC, animated: true)
+                    }
+                    dialog.show(superView: self.view)
+                }
             })
             .disposed(by: self.disposeBag)
     }
