@@ -184,7 +184,7 @@ extension InterviewViewController : UITableViewDataSource {
         case InterviewSection.overview.rawValue:
             return InterviewSection.overview.title
         default:
-            return ""
+            return .none
         }
     }
     

@@ -10,8 +10,6 @@ import UIKit
 
 protocol KnowledgeViewModel {
     
-    var numberOfRow : Int { get set }
-    
     var level : LevelInterView { get set }
     
     var listKnowledges : [KnowledgeModel]  { get set }
@@ -29,11 +27,11 @@ struct DefaultKnowledgeViewModel : KnowledgeViewModel {
     
     var listKnowledges: [KnowledgeModel] = []
     
-    var numberOfRow: Int = 0
-    
     func saveListKnowledges() {
         self.listKnowledges.forEach { knowledge in
-            self.knowledgeRepo.insertKnowledge(knowledge: knowledge)
+            if !(knowledge.answer?.isEmpty ?? true)  && !(knowledge.content?.isEmpty ?? true){
+                self.knowledgeRepo.insertKnowledge(knowledge: knowledge)
+            }
         }
     }
     

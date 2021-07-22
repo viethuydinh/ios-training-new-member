@@ -7,7 +7,7 @@
 
 import UIKit
 
-class InsertKnowledgeViewController: UIViewController {
+class InsertKnowledgeViewController: BaseVC {
 
     @IBOutlet weak var knowledgeTableView: UITableView!
     @IBOutlet weak var doneButton: UIButton!
@@ -18,6 +18,14 @@ class InsertKnowledgeViewController: UIViewController {
     var level : LevelInterView? 
     
     var knowledgeVM = DefaultKnowledgeViewModel()
+    
+    var numberOfRow: Int = 0 {
+        didSet {
+            self.knowledgeVM.listKnowledges.append(KnowledgeModel(id: nil, content: "", answer: "", level: self.level))
+            self.knowledgeTableView.reloadData()
+            self.knowledgeTableView.scrollToRow(at: .init(row: self.numberOfRow - 1, section: 0), at: .bottom, animated: true)
+        }
+    }
     
     var originYBottomView : CGFloat = .zero
     
@@ -55,7 +63,7 @@ class InsertKnowledgeViewController: UIViewController {
     //MARK: -Event
     private func event() {
         let notificationCenter = NotificationCenter.default
-        notificationCenter.addObserver(self, selector: #selector(self.eventKeyboardShow(notification:)), name: UIResponder.keyboardWillShowNotification, object: nil)
+        notificationCenter.addObserver(self, selector: #selector(self.eventKeyboardShow(notification:)), name: UIResponder.keyboardDidShowNotification, object: nil)
         notificationCenter.addObserver(self, selector: #selector(self.eventKeyboardHide(notification:)), name: UIResponder.keyboardWillHideNotification, object: nil)
         notificationCenter.addObserver(self, selector: #selector(self.eventEnterKnowledge(notification:)), name: NSNotification.Name(rawValue: NotificationKey.enterKnowledge), object: nil)
     }
@@ -70,23 +78,15 @@ class InsertKnowledgeViewController: UIViewController {
     }
     
     @IBAction func eventAdd() {
-        self.knowledgeVM.numberOfRow += 1
-        self.knowledgeTableView.reloadData()
-        let row = self.knowledgeVM.numberOfRow - 1
-        let indexPath : IndexPath = .init(row: row, section: 0)
-        self.scrollToRow(indexPath: indexPath)
-    }
-    
-    private func scrollToRow(indexPath : IndexPath) {
-        self.knowledgeTableView.scrollToRow(at: indexPath, at: .middle, animated: true)
+        self.numberOfRow += 1
     }
     
     @objc func eventEnterKnowledge(notification : Notification) {
         if let beginEditing = notification.userInfo?["beginEditing"] as? Bool {
             if beginEditing {
                 let indexPath = notification.userInfo?["indexPath"] as! IndexPath
-//                self.orderLabel.text = "\(indexPath.row)/\(self.knowledgeVM.numberOfRow)"
-                self.scrollToRow(indexPath: indexPath)
+                self.orderLabel.text = "\(indexPath.row)/\(self.numberOfRow)"
+                self.knowledgeTableView.scrollToRow(at: indexPath, at: .middle, animated: true)
             }
         }
     }
@@ -97,7 +97,7 @@ class InsertKnowledgeViewController: UIViewController {
                 let bottomChange = keyboardSize.height - self.bottomHeightSafeArea
                 self.bottomView.frame.origin.y -= bottomChange
                 self.knowledgeTableView.contentInset = UIEdgeInsets(top: 0.0, left: 0.0, bottom: bottomChange, right: 0.0)
-//                self.orderLabel.isHidden = false
+                self.orderLabel.isHidden = false
             }
         }
     }
@@ -106,7 +106,7 @@ class InsertKnowledgeViewController: UIViewController {
         if self.bottomView.frame.origin.y != self.originYBottomView {
             self.bottomView.frame.origin.y = self.originYBottomView
             self.knowledgeTableView.contentInset = UIEdgeInsets(top: 0.0, left: 0.0, bottom: 0.0, right: 0.0)
-//            self.orderLabel.isHidden = true
+            self.orderLabel.isHidden = true
         }
     }
     
@@ -114,16 +114,12 @@ class InsertKnowledgeViewController: UIViewController {
     fileprivate func bindingData() {
         self.knowledgeVM.level = self.level ?? .intern
     }
-    
-    private func appendKnowledge(knowledge : KnowledgeModel) {
-        self.knowledgeVM.listKnowledges.append(knowledge)
-    }
 }
 
 extension InsertKnowledgeViewController : UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.knowledgeVM.numberOfRow 
+        return self.numberOfRow
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -131,9 +127,10 @@ extension InsertKnowledgeViewController : UITableViewDataSource {
             return UITableViewCell()
         }
         cell.knowledgeClosure = { knowledge in
-            self.appendKnowledge(knowledge: knowledge)
+            self.knowledgeVM.listKnowledges[indexPath.row].content = knowledge.content
+            self.knowledgeVM.listKnowledges[indexPath.row].answer = knowledge.answer
         }
-        cell.bindingData(indexPath: indexPath)
+        cell.bindingData(indexPath: indexPath, listKnowledge: self.knowledgeVM.listKnowledges)
         return cell
     }
 }
@@ -146,7 +143,7 @@ extension InsertKnowledgeViewController : UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
-            self.knowledgeVM.numberOfRow -= 1
+            self.numberOfRow -= 1
             self.knowledgeTableView.deleteRows(at: [indexPath], with: .automatic)
         }
     }

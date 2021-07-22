@@ -22,7 +22,7 @@ class SignInViewController: BaseVC {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.setUpUI()
-        self.event()
+//        self.event()
         self.setUpGesture()
     }
     
@@ -49,11 +49,11 @@ class SignInViewController: BaseVC {
     }
     
     //MARK: -Event
-    private func event() {
-        let notificationCenter = NotificationCenter.default
-        notificationCenter.addObserver(self, selector: #selector(self.keyboardWillShow(notification:)), name: UIResponder.keyboardWillShowNotification, object: nil)
-        notificationCenter.addObserver(self, selector: #selector(self.keyboardWillHide(notification:)), name: UIResponder.keyboardWillHideNotification, object: nil)
-    }
+//    private func event() {
+//        let notificationCenter = NotificationCenter.default
+//        notificationCenter.addObserver(self, selector: #selector(self.keyboardWillShow(notification:)), name: UIResponder.keyboardWillShowNotification, object: nil)
+//        notificationCenter.addObserver(self, selector: #selector(self.keyboardWillHide(notification:)), name: UIResponder.keyboardWillHideNotification, object: nil)
+//    }
     
     @IBAction func eventSignIn() {
         let stateAuth = self.authenticationVM.signIn(username: self.userNameTF.text ?? "",

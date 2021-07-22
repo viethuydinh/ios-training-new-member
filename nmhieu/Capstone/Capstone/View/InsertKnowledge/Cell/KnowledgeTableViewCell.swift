@@ -28,23 +28,17 @@ class KnowledgeTableViewCell: UITableViewCell {
         self.answerTF.delegate = self
         self.questionTF.delegate = self
     }
-
-    func getKnowlege() -> KnowledgeModel? {
-        var question : KnowledgeModel? = KnowledgeModel()
-        if (self.questionTF.text?.isEmpty ?? true) || (self.answerTF.text?.isEmpty ?? true) {
-            return nil
-        }
-        else {
-            question?.content = self.questionTF.text
-            question?.answer  = self.answerTF.text
-            question?.level = self.knowledgeVM.level
-            question?.id = nil
-        }
-        return question
+    
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        self.questionTF.text = ""
+        self.answerTF.text = ""
     }
     
-    func bindingData(indexPath : IndexPath) {
+    func bindingData(indexPath : IndexPath, listKnowledge : [KnowledgeModel]) {
         self.indexPath = indexPath
+        self.questionTF.text = listKnowledge[indexPath.row].content
+        self.answerTF.text = listKnowledge[indexPath.row].answer
     }
 } 
 
@@ -59,17 +53,11 @@ extension KnowledgeTableViewCell : UITextFieldDelegate {
     }
     
     func textFieldShouldEndEditing(_ textField: UITextField) -> Bool {
-        if let knowledge = self.getKnowlege() {
-            self.knowledgeClosure(knowledge)
-            
-        }
+        var knowledge : KnowledgeModel = KnowledgeModel()
+        knowledge.content = self.questionTF.text
+        knowledge.answer = self.answerTF.text
+        self.knowledgeClosure(knowledge)
         return true
-        
-//        let beginEditing  : [String : Any] = ["beginEditing" : false, "indexPath" : self.indexPath]
-//        let notificationCenter = NotificationCenter.default
-//        notificationCenter.post(name: NSNotification.Name(NotificationKey.enterKnowledge),
-//                                object: nil,
-//                                userInfo: beginEditing)
     }
 }
 

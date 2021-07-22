@@ -26,8 +26,9 @@ struct DefaultAuthenticationViewModel : AuthenticationViewModel {
             account.username = username
             account.password = password
             account.email = username
-            let message = self.authenticationRepo.signIn(account: account) ? ("") : (AuthenticationError.inforNotfound.rawValue)
-            return (self.authenticationRepo.signIn(account: account), message)
+            let state = self.authenticationRepo.signIn(account: account)
+            let message = state ? ("") : (AuthenticationError.inforNotfound.rawValue)
+            return (state, message)
         }
     }
 
@@ -43,8 +44,9 @@ struct DefaultAuthenticationViewModel : AuthenticationViewModel {
             account.username = username
             account.password = password
             account.email = username
-            let message = self.authenticationRepo.signUp(account: account) ? ("") : (AuthenticationError.notAvailableUsername.rawValue)
-            return (self.authenticationRepo.signUp(account: account) ,message)
+            let state = self.authenticationRepo.signUp(account: account)
+            let message = state ? ("") : (AuthenticationError.notAvailableUsername.rawValue)
+            return (state ,message)
         }
     }
     
