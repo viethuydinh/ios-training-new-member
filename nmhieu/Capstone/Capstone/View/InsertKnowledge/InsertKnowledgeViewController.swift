@@ -42,11 +42,17 @@ class InsertKnowledgeViewController: BaseVC {
         self.getFrameOfContent()
     }
     
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        self.knowledgeVM.clear()
+    }
+    
     //MARK: -UI
     fileprivate func setUpUI() {
         self.knowledgeTableView.register(UINib(nibName: KnowledgeTableViewCell.name, bundle: nil), forCellReuseIdentifier: KnowledgeTableViewCell.identifier)
         self.knowledgeTableView.dataSource = self
         self.knowledgeTableView.delegate = self
+        self.knowledgeTableView.contentInset = .init(top: 10.0, left: 0.0, bottom: 0.0, right: 0.0)
         self.addButton.layer.cornerRadius = self.addButton.bounds.height/2
     }
     
@@ -96,7 +102,7 @@ class InsertKnowledgeViewController: BaseVC {
             if self.bottomView.frame.origin.y == self.originYBottomView {
                 let bottomChange = keyboardSize.height - self.bottomHeightSafeArea
                 self.bottomView.frame.origin.y -= bottomChange
-                self.knowledgeTableView.contentInset = UIEdgeInsets(top: 0.0, left: 0.0, bottom: bottomChange, right: 0.0)
+                self.knowledgeTableView.contentInset = UIEdgeInsets(top: 10.0, left: 0.0, bottom: bottomChange, right: 0.0)
                 self.orderLabel.isHidden = false
             }
         }
@@ -105,7 +111,7 @@ class InsertKnowledgeViewController: BaseVC {
     @objc func eventKeyboardHide(notification : Notification ){
         if self.bottomView.frame.origin.y != self.originYBottomView {
             self.bottomView.frame.origin.y = self.originYBottomView
-            self.knowledgeTableView.contentInset = UIEdgeInsets(top: 0.0, left: 0.0, bottom: 0.0, right: 0.0)
+            self.knowledgeTableView.contentInset = UIEdgeInsets(top: 10.0, left: 0.0, bottom: 0.0, right: 0.0)
             self.orderLabel.isHidden = true
         }
     }

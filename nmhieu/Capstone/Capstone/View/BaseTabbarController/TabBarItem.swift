@@ -11,7 +11,7 @@ import UIKit
 enum TabItem: String, CaseIterable {
     case home = "home"
     case history = "history"
-    case profile = "profile"
+    case sets = "sets"
 
     var viewController: UIViewController {
         switch self {
@@ -25,11 +25,11 @@ enum TabItem: String, CaseIterable {
                 return UIViewController()
             }
             return historyVC
-        case .profile:
-            guard let historyVC = UIStoryboard(name: "History", bundle: nil).instantiateViewController(withIdentifier: HistoryViewController.identifier) as? HistoryViewController else {
+        case .sets:
+            guard let setsVC = UIStoryboard(name: "KnowledgeSets", bundle: nil).instantiateViewController(withIdentifier: KnowledgeSetsViewController.identifier) as? KnowledgeSetsViewController else {
                 return UIViewController()
             }
-            return historyVC
+            return setsVC
         }
     }
 
@@ -39,7 +39,7 @@ enum TabItem: String, CaseIterable {
             return .home
         case .history:
             return .history
-        case .profile:
+        case .sets:
             return .profile
         }
     }

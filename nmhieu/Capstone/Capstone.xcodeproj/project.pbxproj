@@ -50,6 +50,12 @@
 		154A63B6269C2384008E571C /* UITableViewCell+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 154A63B5269C2384008E571C /* UITableViewCell+Extension.swift */; };
 		155F2FF826943573007EFBAC /* UserCoreData+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 155F2FF626943573007EFBAC /* UserCoreData+CoreDataClass.swift */; };
 		155F2FF926943573007EFBAC /* UserCoreData+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 155F2FF726943573007EFBAC /* UserCoreData+CoreDataProperties.swift */; };
+		156948F426A97F1F00EF8C3D /* KnowledgeSetsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 156948F326A97F1F00EF8C3D /* KnowledgeSetsViewController.swift */; };
+		156948F726A97F7100EF8C3D /* KnowledgeSets.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 156948F626A97F7100EF8C3D /* KnowledgeSets.storyboard */; };
+		156948FA26A9BFB000EF8C3D /* KnowledgeSetTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 156948F826A9BFB000EF8C3D /* KnowledgeSetTableViewCell.swift */; };
+		156948FB26A9BFB000EF8C3D /* KnowledgeSetTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 156948F926A9BFB000EF8C3D /* KnowledgeSetTableViewCell.xib */; };
+		1569490026A9C4E500EF8C3D /* UILabel+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 156948FF26A9C4E500EF8C3D /* UILabel+Extension.swift */; };
+		1569490226A9D8F100EF8C3D /* BaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1569490126A9D8F100EF8C3D /* BaseViewModel.swift */; };
 		1573548C26A023FD00A5C59D /* CandidateInforModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1573548B26A023FD00A5C59D /* CandidateInforModel.swift */; };
 		1573548F26A024C900A5C59D /* OverviewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1573548E26A024C900A5C59D /* OverviewModel.swift */; };
 		1573549226A030E500A5C59D /* History.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1573549126A030E500A5C59D /* History.storyboard */; };
@@ -155,6 +161,12 @@
 		154A63B5269C2384008E571C /* UITableViewCell+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableViewCell+Extension.swift"; sourceTree = "<group>"; };
 		155F2FF626943573007EFBAC /* UserCoreData+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "UserCoreData+CoreDataClass.swift"; path = "Capstone/Model/Database/User/UserCoreData+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
 		155F2FF726943573007EFBAC /* UserCoreData+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "UserCoreData+CoreDataProperties.swift"; path = "Capstone/Model/Database/User/UserCoreData+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
+		156948F326A97F1F00EF8C3D /* KnowledgeSetsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KnowledgeSetsViewController.swift; sourceTree = "<group>"; };
+		156948F626A97F7100EF8C3D /* KnowledgeSets.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = KnowledgeSets.storyboard; sourceTree = "<group>"; };
+		156948F826A9BFB000EF8C3D /* KnowledgeSetTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KnowledgeSetTableViewCell.swift; sourceTree = "<group>"; };
+		156948F926A9BFB000EF8C3D /* KnowledgeSetTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = KnowledgeSetTableViewCell.xib; sourceTree = "<group>"; };
+		156948FF26A9C4E500EF8C3D /* UILabel+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+Extension.swift"; sourceTree = "<group>"; };
+		1569490126A9D8F100EF8C3D /* BaseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewModel.swift; sourceTree = "<group>"; };
 		1573548B26A023FD00A5C59D /* CandidateInforModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CandidateInforModel.swift; sourceTree = "<group>"; };
 		1573548E26A024C900A5C59D /* OverviewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverviewModel.swift; sourceTree = "<group>"; };
 		1573549126A030E500A5C59D /* History.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = History.storyboard; sourceTree = "<group>"; };
@@ -374,6 +386,25 @@
 			path = Cell;
 			sourceTree = "<group>";
 		};
+		156948F526A97F2500EF8C3D /* KnowledgeSets */ = {
+			isa = PBXGroup;
+			children = (
+				156948FC26A9BFB500EF8C3D /* Cell */,
+				156948F326A97F1F00EF8C3D /* KnowledgeSetsViewController.swift */,
+				156948F626A97F7100EF8C3D /* KnowledgeSets.storyboard */,
+			);
+			path = KnowledgeSets;
+			sourceTree = "<group>";
+		};
+		156948FC26A9BFB500EF8C3D /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				156948F826A9BFB000EF8C3D /* KnowledgeSetTableViewCell.swift */,
+				156948F926A9BFB000EF8C3D /* KnowledgeSetTableViewCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
 		1573548D26A0248D00A5C59D /* Interview */ = {
 			isa = PBXGroup;
 			children = (
@@ -419,6 +450,7 @@
 		157F96EA268EBB1B009BBF14 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				156948F526A97F2500EF8C3D /* KnowledgeSets */,
 				151F2AFA26A16FB300C63F2C /* BaseTabbarController */,
 				1507B211268F1412001945A8 /* BaseViewController */,
 				1526CA7926A522E60059619B /* Onboarding */,
@@ -434,6 +466,7 @@
 		157F96EB268EBB21009BBF14 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				1569490126A9D8F100EF8C3D /* BaseViewModel.swift */,
 				1585AFBA2696B1700073F89E /* AuthenticationViewModel.swift */,
 				154A6395269BF9E0008E571C /* KnowledgeViewModel.swift */,
 				15A0387A269E9E3A00D9D0FB /* InterviewViewModel.swift */,
@@ -570,6 +603,7 @@
 				1507B21C268F1519001945A8 /* NSObject+Extension.swift */,
 				154A63B5269C2384008E571C /* UITableViewCell+Extension.swift */,
 				1526CA8426A537B80059619B /* UIImage+Extension.swift */,
+				156948FF26A9C4E500EF8C3D /* UILabel+Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -732,7 +766,9 @@
 				15A03872269E991E00D9D0FB /* CandidateInforTableViewCell.xib in Resources */,
 				15A03889269EC0C500D9D0FB /* OverviewTableViewCell.xib in Resources */,
 				157F9732268EFAC0009BBF14 /* SignUp.storyboard in Resources */,
+				156948FB26A9BFB000EF8C3D /* KnowledgeSetTableViewCell.xib in Resources */,
 				1526CA8F26A56DD70059619B /* InterviewGif1.gif in Resources */,
+				156948F726A97F7100EF8C3D /* KnowledgeSets.storyboard in Resources */,
 				1573549926A031B000A5C59D /* HistoryTableViewCell.xib in Resources */,
 				15095E7B268DC8B400129B9C /* Assets.xcassets in Resources */,
 				157F9722268EF141009BBF14 /* SignIn.storyboard in Resources */,
@@ -834,12 +870,14 @@
 			files = (
 				15A03881269EBF4D00D9D0FB /* QuestionTableViewCell.swift in Sources */,
 				1507B218268F14D6001945A8 /* UIViewController+Extension.swift in Sources */,
+				1569490226A9D8F100EF8C3D /* BaseViewModel.swift in Sources */,
 				154A63A9269BFB58008E571C /* InsertKnowledgeViewController.swift in Sources */,
 				154A63B6269C2384008E571C /* UITableViewCell+Extension.swift in Sources */,
 				157F971D268EF131009BBF14 /* SignInViewController.swift in Sources */,
 				15A038A3269ED12E00D9D0FB /* QuestionInterviewModel.swift in Sources */,
 				1585AFBB2696B1700073F89E /* AuthenticationViewModel.swift in Sources */,
 				1507B213268F1435001945A8 /* BaseVCViewController.swift in Sources */,
+				156948F426A97F1F00EF8C3D /* KnowledgeSetsViewController.swift in Sources */,
 				1573549826A031B000A5C59D /* HistoryTableViewCell.swift in Sources */,
 				15179EB52695565F008D3A46 /* Convertible.swift in Sources */,
 				1585AFD72696EA9E0073F89E /* HomeViewController.swift in Sources */,
@@ -863,6 +901,7 @@
 				1507B21D268F1519001945A8 /* NSObject+Extension.swift in Sources */,
 				15095E71268DC8B100129B9C /* SceneDelegate.swift in Sources */,
 				15A03871269E991E00D9D0FB /* CandidateInforTableViewCell.swift in Sources */,
+				1569490026A9C4E500EF8C3D /* UILabel+Extension.swift in Sources */,
 				1573548C26A023FD00A5C59D /* CandidateInforModel.swift in Sources */,
 				15A0389D269ECD9A00D9D0FB /* InterviewCoreData+CoreDataProperties.swift in Sources */,
 				151F2B0226A1828200C63F2C /* Image.swift in Sources */,
@@ -874,6 +913,7 @@
 				15A038B6269ED1FA00D9D0FB /* QuestionInterViewCoreData+CoreDataClass.swift in Sources */,
 				1573549426A030FE00A5C59D /* HistoryViewController.swift in Sources */,
 				1507B20D268F13CE001945A8 /* UserModel.swift in Sources */,
+				156948FA26A9BFB000EF8C3D /* KnowledgeSetTableViewCell.swift in Sources */,
 				15344169269FE0150078660E /* NotificationKey.swift in Sources */,
 				15A03888269EC0C500D9D0FB /* OverviewTableViewCell.swift in Sources */,
 				1526CA7826A522E10059619B /* OnboardingViewController.swift in Sources */,

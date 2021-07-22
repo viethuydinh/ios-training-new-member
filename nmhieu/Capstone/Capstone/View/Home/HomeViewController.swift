@@ -58,7 +58,7 @@ class HomeViewController: BaseVC {
         }
         
         let interViewAction = UIAlertAction(title: "Interview", style: .default) { (action) in
-            let numberQuestions = self.knowledgeVM.fetchQuestion(level: level).count
+            let numberQuestions = self.knowledgeVM.fetchKnowledge(level: level).count
             if numberQuestions >= 5 {
                 guard let vc = UIStoryboard(name: "Interview", bundle: nil).instantiateViewController(withIdentifier: InterviewViewController.identifier) as? InterviewViewController else { return }
                 vc.level = level
@@ -77,5 +77,4 @@ class HomeViewController: BaseVC {
         actionSheet.addAction(cancelAction)
         self.present(actionSheet, animated: true, completion: nil)
     }
-    
 }

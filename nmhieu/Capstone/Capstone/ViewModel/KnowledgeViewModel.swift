@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-protocol KnowledgeViewModel {
+protocol KnowledgeViewModel : BaseViewModel {
     
     var level : LevelInterView { get set }
     
@@ -16,7 +16,7 @@ protocol KnowledgeViewModel {
     
     func saveListKnowledges()
     
-    func fetchQuestion(level : LevelInterView) -> [KnowledgeModel]
+    func fetchKnowledge(level : LevelInterView) -> [KnowledgeModel]
 }
 
 struct DefaultKnowledgeViewModel : KnowledgeViewModel {
@@ -35,7 +35,13 @@ struct DefaultKnowledgeViewModel : KnowledgeViewModel {
         }
     }
     
-    func fetchQuestion(level: LevelInterView) -> [KnowledgeModel] {
+    func fetchKnowledge(level: LevelInterView) -> [KnowledgeModel] {
         return knowledgeRepo.fetchQuestions(level: level)
     }
+    
+    mutating func clear() {
+        self.listKnowledges.removeAll()
+        self.level  = .intern
+    }
+    
 }
