@@ -12,6 +12,7 @@ class QuestionTableViewCell: UITableViewCell {
     static var identifier : String { "QuestionTableViewCell" }
     
     @IBOutlet weak var contentLabel: UILabel!
+    @IBOutlet weak var correctAnswerLabel : UILabel!
     @IBOutlet weak var levelLabel: UILabel!
     @IBOutlet weak var shadowView: UIView!
     
@@ -20,6 +21,7 @@ class QuestionTableViewCell: UITableViewCell {
             guard let question = self.question else { return }
             self.contentLabel.text = question.content
             self.levelLabel.text = question.level
+            self.correctAnswerLabel.text = question.answer
         }
     }
 
@@ -40,8 +42,7 @@ extension QuestionTableViewCell {
         label.font = .systemFont(ofSize: 15.0)
         label.text = content
         label.numberOfLines = 0
-        var size: CGSize = label.sizeThatFits(.init(width: bounds.width - 32.0, height: .infinity))
-        size.height = size.height + 140.0
+        let size: CGSize = label.sizeThatFits(.init(width: bounds.width - 32.0, height: .infinity))
         return size.height
         }
 }

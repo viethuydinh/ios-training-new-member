@@ -151,7 +151,9 @@ extension InsertKnowledgeViewController : UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: InsertQuestionTableViewCell.identifier, for: indexPath) as? InsertQuestionTableViewCell else { return UITableViewCell() }
         cell.didEndEditAction = { [weak self] question in
-            self!.insertKnowledgeViewModel.listQuestions.append(Question(id: nil, content: question.content, level: self!.insertKnowledgeViewModel.level.rawValue))
+            self!.insertKnowledgeViewModel.listQuestions.append(Question(id: nil, content: question.content, level: self!.insertKnowledgeViewModel.level.rawValue, answer: question.answer))
+            cell.questionTextField.text = self?.insertKnowledgeViewModel.listQuestions[indexPath.row].content
+            cell.answerTextField.text = self?.insertKnowledgeViewModel.listQuestions[indexPath.row].answer
         }
         return cell
     }

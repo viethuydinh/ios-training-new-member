@@ -143,7 +143,8 @@ extension ListQuestionViewController : UITableViewDataSource {
 extension ListQuestionViewController : UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         guard let content = self.questionViewModel.listQuestions[indexPath.row].content else { return .zero }
-        return QuestionTableViewCell.height(bounds: UIScreen.main.bounds, content: content)
+        guard let answer = self.questionViewModel.listQuestions[indexPath.row].answer else { return .zero }
+        return QuestionTableViewCell.height(bounds: UIScreen.main.bounds, content: content) + QuestionTableViewCell.height(bounds: UIScreen.main.bounds, content: answer) + 168.0
     }
     
     func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
