@@ -14,12 +14,12 @@ public protocol AdvancedPageControlDraw {
 }
 
 public class AdvancedPageControlDrawerParent {
-   public var numberOfPages:Int
+    public var numberOfPages:Int
     var height: CGFloat
     var width: CGFloat
     var space: CGFloat
     var radius: CGFloat
-   public var currentItem:CGFloat
+    public var currentItem:CGFloat
     var indicatorColor:UIColor
     var dotsColor:UIColor
     var isBordered:Bool

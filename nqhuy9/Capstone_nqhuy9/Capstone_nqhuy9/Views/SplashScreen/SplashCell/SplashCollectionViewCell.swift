@@ -32,6 +32,11 @@ class SplashCollectionViewCell: UICollectionViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
     }
+    
+    func configureCell(image : UIImage?, size: CGSize) {
+        self.imageSplash.image = image
+        self.size = size
+    }
 }
 
 extension SplashCollectionViewCell {

@@ -25,7 +25,6 @@ class CustomTabBar: UIView {
 
         layer.backgroundColor = UIColor.white.cgColor
 
-        // Khởi tạo từng tab bar item
         for index in 0 ..< menuItems.count {
             let itemWidth = frame.width / CGFloat(menuItems.count)
             let offsetX = itemWidth * CGFloat(index)
@@ -70,7 +69,6 @@ class CustomTabBar: UIView {
         tabBarItem.addSubview(itemTitleLabel)
         tabBarItem.addSubview(itemImageView)
 
-        // Auto layout cho item title và item icon
         NSLayoutConstraint.activate([
             itemImageView.heightAnchor.constraint(equalToConstant: 25),
             itemImageView.widthAnchor.constraint(equalToConstant: 25),
@@ -82,7 +80,6 @@ class CustomTabBar: UIView {
             itemTitleLabel.centerXAnchor.constraint(equalTo: tabBarItem.centerXAnchor)
         ])
 
-        // Thêm tap gesture recognizer để handle tap event
         tabBarItem.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(handleTap(_:))))
 
         return tabBarItem

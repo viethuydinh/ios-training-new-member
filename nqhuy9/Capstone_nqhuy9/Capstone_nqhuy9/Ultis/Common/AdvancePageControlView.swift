@@ -9,7 +9,14 @@ import Foundation
 import UIKit
 
 public class AdvancedPageControlView: UIView{
-    public var numberOfPages:Int {get {return drawer.numberOfPages} set(val){ drawer.numberOfPages = val }}
+    public var numberOfPages:Int {
+        get {
+            return drawer.numberOfPages
+        }
+        set(val) {
+            drawer.numberOfPages = val
+        }
+    }
 
     public var drawer:AdvancedPageControlDraw = SlideDrawer()
     

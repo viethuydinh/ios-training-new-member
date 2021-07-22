@@ -80,8 +80,7 @@ extension SplashViewController : UICollectionViewDataSource {
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: SplashCollectionViewCell.identifier, for: indexPath) as? SplashCollectionViewCell else { return UICollectionViewCell() }
-        cell.imageSplash.image = self.splashViewModel.listSplashImage[indexPath.item]
-        cell.size = CGSize(width: self.collectionView.frame.size.width, height: self.collectionView.frame.size.height * 0.9)
+        cell.configureCell(image: self.splashViewModel.listSplashImage[indexPath.item], size: CGSize(width: self.collectionView.frame.size.width, height: self.collectionView.frame.size.height * 0.9))
         return cell
     }
 }
