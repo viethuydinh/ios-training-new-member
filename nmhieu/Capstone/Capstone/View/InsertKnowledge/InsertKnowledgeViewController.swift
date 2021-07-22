@@ -7,7 +7,7 @@
 
 import UIKit
 
-class InsertKnowledgeViewController: UIViewController {
+class InsertKnowledgeViewController: BaseVC {
 
     @IBOutlet weak var knowledgeTableView: UITableView!
     @IBOutlet weak var doneButton: UIButton!
@@ -19,6 +19,14 @@ class InsertKnowledgeViewController: UIViewController {
     var level : LevelInterView? 
     
     var knowledgeVM = DefaultKnowledgeViewModel()
+    
+    var numberOfRow: Int = 0 {
+        didSet {
+            self.knowledgeVM.listKnowledges.append(KnowledgeModel(id: nil, content: "", answer: "", level: self.level))
+            self.knowledgeTableView.reloadData()
+            self.knowledgeTableView.scrollToRow(at: .init(row: self.numberOfRow - 1, section: 0), at: .bottom, animated: true)
+        }
+    }
     
     var originYBottomView : CGFloat = .zero
     
@@ -121,10 +129,6 @@ class InsertKnowledgeViewController: UIViewController {
     //MARK: -BindingData
     fileprivate func bindingData() {
         self.knowledgeVM.level = self.level ?? .intern
-    }
-    
-    private func appendKnowledge(knowledge : KnowledgeModel) {
-        self.knowledgeVM.listKnowledges.append(knowledge)
     }
 }
 

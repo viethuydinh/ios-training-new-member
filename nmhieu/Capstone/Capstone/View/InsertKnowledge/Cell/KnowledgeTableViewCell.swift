@@ -41,8 +41,10 @@ class KnowledgeTableViewCell: UITableViewCell {
         self.answerTF.text = listKnowledge[indexPath.row].answer
     }
     
-    func bindingData(indexPath : IndexPath) {
+    func bindingData(indexPath : IndexPath, listKnowledge : [KnowledgeModel]) {
         self.indexPath = indexPath
+        self.questionTF.text = listKnowledge[indexPath.row].content
+        self.answerTF.text = listKnowledge[indexPath.row].answer
     }
 } 
 

@@ -28,7 +28,11 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "114"
             endingLineNumber = "114"
+<<<<<<< HEAD
             landmarkName = "eventAnimationView()"
+=======
+            landmarkName = "setUpGestureUserNameLabel()"
+>>>>>>> 1877ef1 (fix : fix bug reuse cell in insertknowledge feature)
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -175,22 +179,33 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
+<<<<<<< HEAD
             uuid = "32CD2295-C9C5-461D-8DE7-686E5DE5FB12"
+=======
+            uuid = "5209603F-615F-4378-B323-44808EB48ABA"
+>>>>>>> 1877ef1 (fix : fix bug reuse cell in insertknowledge feature)
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Capstone/View/InsertKnowledge/InsertKnowledgeViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
+<<<<<<< HEAD
             startingLineNumber = "88"
             endingLineNumber = "88"
             landmarkName = "eventAdd()"
+=======
+            startingLineNumber = "97"
+            endingLineNumber = "97"
+            landmarkName = "eventKeyboardShow(notification:)"
+>>>>>>> 1877ef1 (fix : fix bug reuse cell in insertknowledge feature)
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
+<<<<<<< HEAD
             uuid = "7A30F732-D7AD-4A23-8D7C-8C2E4C2A6D09"
             shouldBeEnabled = "No"
             ignoreCount = "0"
@@ -201,6 +216,18 @@
             startingLineNumber = "114"
             endingLineNumber = "114"
             landmarkName = "setUpGestureUserNameLabel()"
+=======
+            uuid = "32CD2295-C9C5-461D-8DE7-686E5DE5FB12"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Capstone/View/InsertKnowledge/InsertKnowledgeViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "87"
+            endingLineNumber = "87"
+            landmarkName = "eventEnterKnowledge(notification:)"
+>>>>>>> 1877ef1 (fix : fix bug reuse cell in insertknowledge feature)
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
