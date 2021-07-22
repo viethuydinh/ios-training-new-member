@@ -2,7 +2,7 @@
 //  QuestionCoreData+CoreDataProperties.swift
 //  Capstone_nqhuy9
 //
-//  Created by Nghiêm Huy on 7/12/21.
+//  Created by Nghiêm Huy on 21/07/2021.
 //
 //
 
@@ -19,15 +19,12 @@ extension QuestionCoreData {
     @NSManaged public var content: String?
     @NSManaged public var id: Int16
     @NSManaged public var level: String?
-
-}
-
-extension QuestionCoreData : Identifiable {
+    @NSManaged public var answer: String?
 
 }
 
 extension QuestionCoreData : DomainConvert {
     var asDomain: Question {
-        Question(id: self.id, content: self.content, level: self.level)
+        Question(id: self.id, content: self.content, level: self.level,answer: self.answer)
     }
 }

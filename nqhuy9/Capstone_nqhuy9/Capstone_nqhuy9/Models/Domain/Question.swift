@@ -11,6 +11,7 @@ struct Question {
     var id: Int16?
     var content: String?
     var level: String?
+    var answer: String?
 }
 
 extension Question : ObjectConvert {
@@ -27,6 +28,7 @@ extension Question : ObjectConvert {
         value?.content = self.content
         value?.id = self.id ?? -1
         value?.level = self.level
+        value?.answer = self.answer
         return value!
     }
 }
