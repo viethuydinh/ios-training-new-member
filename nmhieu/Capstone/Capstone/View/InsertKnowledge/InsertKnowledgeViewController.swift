@@ -30,14 +30,16 @@ class InsertKnowledgeViewController: UIViewController {
         self.bindingData()
     }
     
+    override func viewDidLayoutSubviews() {
+        self.getFrameOfContent()
+    }
+    
     //MARK: -UI
     fileprivate func setUpUI() {
         self.knowledgeTableView.register(UINib(nibName: KnowledgeTableViewCell.name, bundle: nil), forCellReuseIdentifier: KnowledgeTableViewCell.identifier)
         self.knowledgeTableView.dataSource = self
         self.knowledgeTableView.delegate = self
         self.addButton.layer.cornerRadius = self.addButton.bounds.height/2
-        
-        self.getFrameOfContent()
     }
     
     private func getFrameOfContent() {
