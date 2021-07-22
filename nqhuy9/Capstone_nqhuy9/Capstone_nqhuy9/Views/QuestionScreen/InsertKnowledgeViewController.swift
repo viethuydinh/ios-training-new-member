@@ -18,9 +18,11 @@ class InsertKnowledgeViewController: BaseVC {
     @IBOutlet weak var distanceButtonAddFromBottom: NSLayoutConstraint!
     @IBOutlet weak var distanceBottomTableView: NSLayoutConstraint!
         
-    var numberCell:Int = 1 {
+    var numberCell:Int = 0 {
         didSet {
+            self.insertKnowledgeViewModel.listQuestions.append(Question(id: nil, content: "", level: self.insertKnowledgeViewModel.level.rawValue, answer: ""))
             self.tableView.reloadData()
+            self.tableView.scrollToBottom()
         }
     }
     
@@ -98,8 +100,6 @@ class InsertKnowledgeViewController: BaseVC {
             .controlEvent(.touchUpInside)
             .subscribe { (_) in
                 self.numberCell += 1
-                self.tableView.reloadData()
-                self.tableView.scrollToBottom()
             } onError: { (_) in
                 
             } onCompleted: {
@@ -131,8 +131,17 @@ class InsertKnowledgeViewController: BaseVC {
             .rx
             .controlEvent(.touchUpInside)
             .subscribe { (_) in
-                self.insertKnowledgeViewModel.createListQuestion(questions: self.insertKnowledgeViewModel.listQuestions)
-                self.navigationController?.popViewController(animated: true)
+                if self.insertKnowledgeViewModel.createListQuestion(questions: self.insertKnowledgeViewModel.listQuestions) {
+                    let dialog = AlertCustomView.init(title: "Success", content: "Create Question Success", isHiddenCancel: true) {
+                        self.navigationController?.popViewController(animated: true)
+                    }
+                    dialog.show(superView: self.view)
+                } else {
+                    let dialog = AlertCustomView.init(title: "Fail", content: "Create Question Fail", isHiddenCancel: true) {
+                        self.navigationController?.popViewController(animated: true)
+                    }
+                    dialog.show(superView: self.view)
+                }
             } onError: { (_) in
                 
             } onCompleted: {
@@ -151,10 +160,11 @@ extension InsertKnowledgeViewController : UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: InsertQuestionTableViewCell.identifier, for: indexPath) as? InsertQuestionTableViewCell else { return UITableViewCell() }
         cell.didEndEditAction = { [weak self] question in
-            self!.insertKnowledgeViewModel.listQuestions.append(Question(id: nil, content: question.content, level: self!.insertKnowledgeViewModel.level.rawValue, answer: question.answer))
-            cell.questionTextField.text = self?.insertKnowledgeViewModel.listQuestions[indexPath.row].content
-            cell.answerTextField.text = self?.insertKnowledgeViewModel.listQuestions[indexPath.row].answer
+            self?.insertKnowledgeViewModel.listQuestions[indexPath.row].content = question.content
+            self?.insertKnowledgeViewModel.listQuestions[indexPath.row].answer = question.answer
         }
+        cell.questionTextField.text = self.insertKnowledgeViewModel.listQuestions[indexPath.row].content
+        cell.answerTextField.text = self.insertKnowledgeViewModel.listQuestions[indexPath.row].answer
         return cell
     }
 }
