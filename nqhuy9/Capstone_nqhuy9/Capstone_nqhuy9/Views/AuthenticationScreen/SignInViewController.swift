@@ -17,6 +17,10 @@ class SignInViewController: BaseVC {
     @IBOutlet weak var signInButton: UIButton!
     @IBOutlet weak var noAccountLabel : UILabel!
     @IBOutlet weak var eyeImage: UIImageView!
+    @IBOutlet weak var errorUsernameImage: UIImageView!
+    @IBOutlet weak var errorPasswordImage: UIImageView!
+    @IBOutlet weak var errorUsernameLabel: UILabel!
+    @IBOutlet weak var errorPasswordLabel: UILabel!
     
     var isHidePass: Bool = true {
         didSet {

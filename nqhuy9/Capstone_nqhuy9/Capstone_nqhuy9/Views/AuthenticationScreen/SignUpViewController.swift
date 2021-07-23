@@ -18,6 +18,13 @@ class SignUpViewController: BaseVC {
     @IBOutlet weak var haveAccountLabel : UILabel!
     @IBOutlet weak var eyePasswordImage : UIImageView!
     @IBOutlet weak var eyeRePasswordImage : UIImageView!
+    @IBOutlet weak var errorUsernameImage: UIImageView!
+    @IBOutlet weak var errorPasswordImage: UIImageView!
+    @IBOutlet weak var errorRePasswordImage: UIImageView!
+    @IBOutlet weak var errorUsernameLabel: UILabel!
+    @IBOutlet weak var errorPasswordLabel: UILabel!
+    @IBOutlet weak var errorRePasswordLabel: UILabel!
+    
     
     var signUpViewModel = DefaultAuthenticationViewModel()
     
