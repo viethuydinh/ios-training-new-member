@@ -40,6 +40,7 @@
 		1526CA8C26A567EC0059619B /* GifOnboardingCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1526CA8A26A567EC0059619B /* GifOnboardingCollectionViewCell.swift */; };
 		1526CA8D26A567EC0059619B /* GifOnboardingCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1526CA8B26A567EC0059619B /* GifOnboardingCollectionViewCell.xib */; };
 		1526CA8F26A56DD70059619B /* InterviewGif1.gif in Resources */ = {isa = PBXBuildFile; fileRef = 1526CA8E26A56DD70059619B /* InterviewGif1.gif */; };
+<<<<<<< HEAD
 		1532C0F826AE9F38008003F7 /* AlertEditKnowledge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1532C0F726AE9F38008003F7 /* AlertEditKnowledge.swift */; };
 		1532C0FB26AE9F55008003F7 /* AlertEditKnowledge.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1532C0FA26AE9F55008003F7 /* AlertEditKnowledge.xib */; };
 		15344169269FE0150078660E /* Key.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15344168269FE0150078660E /* Key.swift */; };
@@ -56,6 +57,9 @@
 		154A638D269BF498008E571C /* QuestionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 154A638C269BF498008E571C /* QuestionModel.swift */; };
 >>>>>>> 88ef0f2 (refactor: refactor code in file InsertKnowledgeVC)
 =======
+=======
+		15344169269FE0150078660E /* Key.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15344168269FE0150078660E /* Key.swift */; };
+>>>>>>> 195eece (refactor : handle rootview)
 		154A6366269BF253008E571C /* KnowledgeCoreData+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 154A6364269BF253008E571C /* KnowledgeCoreData+CoreDataClass.swift */; };
 		154A6367269BF253008E571C /* KnowledgeCoreData+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 154A6365269BF253008E571C /* KnowledgeCoreData+CoreDataProperties.swift */; };
 		154A638D269BF498008E571C /* KnowledgeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 154A638C269BF498008E571C /* KnowledgeModel.swift */; };
@@ -182,6 +186,7 @@
 		1526CA8A26A567EC0059619B /* GifOnboardingCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GifOnboardingCollectionViewCell.swift; sourceTree = "<group>"; };
 		1526CA8B26A567EC0059619B /* GifOnboardingCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GifOnboardingCollectionViewCell.xib; sourceTree = "<group>"; };
 		1526CA8E26A56DD70059619B /* InterviewGif1.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = InterviewGif1.gif; sourceTree = "<group>"; };
+<<<<<<< HEAD
 		1532C0F726AE9F38008003F7 /* AlertEditKnowledge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertEditKnowledge.swift; sourceTree = "<group>"; };
 		1532C0FA26AE9F55008003F7 /* AlertEditKnowledge.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AlertEditKnowledge.xib; sourceTree = "<group>"; };
 		15344168269FE0150078660E /* Key.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Key.swift; sourceTree = "<group>"; };
@@ -198,6 +203,9 @@
 		154A638C269BF498008E571C /* QuestionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionModel.swift; sourceTree = "<group>"; };
 >>>>>>> 88ef0f2 (refactor: refactor code in file InsertKnowledgeVC)
 =======
+=======
+		15344168269FE0150078660E /* Key.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Key.swift; sourceTree = "<group>"; };
+>>>>>>> 195eece (refactor : handle rootview)
 		154A6364269BF253008E571C /* KnowledgeCoreData+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "KnowledgeCoreData+CoreDataClass.swift"; path = "Capstone/Model/Database/Question/KnowledgeCoreData+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
 		154A6365269BF253008E571C /* KnowledgeCoreData+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "KnowledgeCoreData+CoreDataProperties.swift"; path = "Capstone/Model/Database/Question/KnowledgeCoreData+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
 		154A638C269BF498008E571C /* KnowledgeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KnowledgeModel.swift; sourceTree = "<group>"; };
@@ -572,6 +580,9 @@
 			children = (
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 195eece (refactor : handle rootview)
 				151F2AFA26A16FB300C63F2C /* BaseTabbarController */,
 =======
 =======

@@ -20,7 +20,7 @@ class InsertKnowledgeViewController: BaseVC {
     
     var knowledgeVM = DefaultKnowledgeViewModel()
     
-    var numberOfRow: Int = 0 {
+    var numberOfRow : Int = 0 {
         didSet {
             self.knowledgeVM.listKnowledges.append(KnowledgeModel(id: nil, content: "", answer: "", level: self.level))
             self.knowledgeTableView.reloadData()
