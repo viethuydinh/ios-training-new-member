@@ -22,7 +22,7 @@ class SignInViewController: BaseVC {
     @IBOutlet weak var errorUsernameLabel: UILabel!
     @IBOutlet weak var errorPasswordLabel: UILabel!
     
-    var isHidePass: Bool = true {
+    var isHidePass: Bool = false {
         didSet {
             self.eyeImage.image = isHidePass ? UIImage(named: "eye") : UIImage(named: "invisible")
             self.passwordTextField.isSecureTextEntry = isHidePass
@@ -40,11 +40,20 @@ class SignInViewController: BaseVC {
 //MARK: -UI
     private func setupUI() {
         self.setupRegister()
+        self.setupError()
+        self.setupHiddenError()
         self.signInButton.layer.cornerRadius = 10.0
         self.setupTextfield(textfield: self.passwordTextField, text: AccountString.PLACEHOLDER_PASSWORD)
         self.setupTextfield(textfield: self.usernameTextField, text: AccountString.PLACEHOLDER_USERNAME)
         self.setupView(backgroundColor: .white, view: self.usernameTextField, borderWidth: 1.0, borderColor: UIColor.gray.cgColor, cornerRadius: 8.0)
         self.setupView(backgroundColor: .white, view: self.passwordTextField, borderWidth: 1.0, borderColor: UIColor.gray.cgColor, cornerRadius: 8.0)
+    }
+    
+    private func setupHiddenError() {
+        self.errorUsernameLabel.isHidden = true
+        self.errorPasswordLabel.isHidden = true
+        self.errorUsernameImage.isHidden = true
+        self.errorPasswordImage.isHidden = true
     }
     
     private func setupView(backgroundColor: UIColor,view: UIView, borderWidth: CGFloat, borderColor: CGColor, cornerRadius: CGFloat) {
@@ -73,6 +82,29 @@ class SignInViewController: BaseVC {
             .foregroundColor: UIColor.niceBlue
         ], range: (text as NSString).range(of: textSignUp))
         self.noAccountLabel.attributedText = attributedString
+    }
+    
+    private func setupError() {
+        self.setupErrorUsername()
+        self.setupErrorPassword()
+    }
+    
+    private func setupErrorUsername() {
+        self.usernameTextField.addTarget(self, action: #selector(checkErrorUsername), for: .editingDidEnd)
+    }
+    
+    @objc func checkErrorUsername() {
+        self.errorUsernameLabel.isHidden = self.signInViewModel.emailValidate(email: self.usernameTextField.text)
+        self.errorUsernameImage.isHidden = self.signInViewModel.emailValidate(email: self.usernameTextField.text)
+    }
+    
+    private func setupErrorPassword() {
+        self.passwordTextField.addTarget(self, action: #selector(checkErrorPassword), for: .editingDidEnd)
+    }
+    
+    @objc func checkErrorPassword() {
+        self.errorPasswordLabel.isHidden = self.signInViewModel.passwordValidate(password: self.passwordTextField.text)
+        self.errorPasswordImage.isHidden = self.signInViewModel.passwordValidate(password: self.passwordTextField.text)
     }
 
 //MARK: -Event

@@ -83,13 +83,13 @@
                                     <constraint firstAttribute="width" constant="14" id="qFr-sT-3qW"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PcL-bq-rnx">
-                                <rect key="frame" x="42" y="301" width="29" height="14"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email is not correct syntax" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PcL-bq-rnx">
+                                <rect key="frame" x="42" y="301" width="139" height="14"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="11"/>
                                 <color key="textColor" name="darkCoral"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Password must be more than 6 characters, at least one capital" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kuG-iZ-6IE">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Password is not correct syntax" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kuG-iZ-6IE">
                                 <rect key="frame" x="42" y="424.5" width="348" height="13.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="11"/>
                                 <color key="textColor" name="darkCoral"/>
@@ -250,8 +250,8 @@
                                     <constraint firstAttribute="height" constant="14" id="s7v-zP-44H"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pd6-Bv-iVp">
-                                <rect key="frame" x="42" y="291" width="29" height="14"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email is not correct syntax" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pd6-Bv-iVp">
+                                <rect key="frame" x="42" y="291" width="139" height="14"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="11"/>
                                 <color key="textColor" name="darkCoral"/>
                                 <nil key="highlightedColor"/>
@@ -263,7 +263,7 @@
                                     <constraint firstAttribute="width" constant="14" id="bOT-aX-AwH"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Password must be more than 6 characters, at least one capital" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lY3-d4-clt">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Password is not correct syntax" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lY3-d4-clt">
                                 <rect key="frame" x="42" y="414" width="348" height="14"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="11"/>
                                 <color key="textColor" name="darkCoral"/>
@@ -276,7 +276,7 @@
                                     <constraint firstAttribute="height" constant="14" id="qeI-lZ-yTp"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Password must be more than 6 characters, at least one capital" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C2S-7n-ua4">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Password is not match" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C2S-7n-ua4">
                                 <rect key="frame" x="42" y="537" width="348" height="14"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="11"/>
                                 <color key="textColor" name="darkCoral"/>
@@ -329,6 +329,12 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="errorPasswordImage" destination="agR-qk-acp" id="JuU-WI-WQv"/>
+                        <outlet property="errorPasswordLabel" destination="lY3-d4-clt" id="SYj-JJ-0uO"/>
+                        <outlet property="errorRePasswordImage" destination="xh5-Kf-dog" id="yNH-FE-NPg"/>
+                        <outlet property="errorRePasswordLabel" destination="C2S-7n-ua4" id="gzk-eI-79Z"/>
+                        <outlet property="errorUsernameImage" destination="LXC-DH-bj9" id="6oJ-57-Ufp"/>
+                        <outlet property="errorUsernameLabel" destination="Pd6-Bv-iVp" id="7JB-aa-kBj"/>
                         <outlet property="eyePasswordImage" destination="AbQ-mf-6bl" id="OmU-OV-vvb"/>
                         <outlet property="eyeRePasswordImage" destination="aDD-EI-my1" id="Z7P-qd-mtb"/>
                         <outlet property="haveAccountLabel" destination="38n-jN-VF3" id="n62-xk-Mnd"/>

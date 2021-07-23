@@ -47,12 +47,23 @@ class SignUpViewController: BaseVC {
     private func setupUI() {
         self.signUpButton.layer.cornerRadius = 10.0
         self.setupSignInLabel()
+        self.setupError()
+        self.setupHiddenError()
         self.setupTextfield(textfield: self.usernameTextField, text: AccountString.PLACEHOLDER_USERNAME)
         self.setupTextfield(textfield: self.passwordTextField, text: AccountString.PLACEHOLDER_PASSWORD)
         self.setupTextfield(textfield: self.repasswordTextField, text: AccountString.PLACEHOLDER_RE_PASSWORD)
         self.setupView(backgroundColor: .white, view: self.usernameTextField, borderWidth: 1.0, borderColor: UIColor.gray.cgColor, cornerRadius: 8.0)
         self.setupView(backgroundColor: .white, view: self.passwordTextField, borderWidth: 1.0, borderColor: UIColor.gray.cgColor, cornerRadius: 8.0)
         self.setupView(backgroundColor: .white, view: self.repasswordTextField, borderWidth: 1.0, borderColor: UIColor.gray.cgColor, cornerRadius: 8.0)
+    }
+    
+    private func setupHiddenError() {
+        self.errorUsernameLabel.isHidden = true
+        self.errorPasswordLabel.isHidden = true
+        self.errorUsernameImage.isHidden = true
+        self.errorPasswordImage.isHidden = true
+        self.errorRePasswordImage.isHidden = true
+        self.errorRePasswordLabel.isHidden = true
     }
     
     private func setupView(backgroundColor: UIColor,view: UIView, borderWidth: CGFloat, borderColor: CGColor, cornerRadius: CGFloat) {
@@ -81,6 +92,39 @@ class SignUpViewController: BaseVC {
             .foregroundColor: UIColor.niceBlue
         ], range: (text as NSString).range(of: textSignUp))
         self.haveAccountLabel.attributedText = attributedString
+    }
+    
+    private func setupError() {
+        self.setupErrorUsername()
+        self.setupErrorPassword()
+        self.setupErrorRePassword()
+    }
+    
+    private func setupErrorUsername() {
+        self.usernameTextField.addTarget(self, action: #selector(checkErrorUsername), for: .editingDidEnd)
+    }
+    
+    @objc func checkErrorUsername() {
+        self.errorUsernameLabel.isHidden = self.signUpViewModel.emailValidate(email: self.usernameTextField.text)
+        self.errorUsernameImage.isHidden = self.signUpViewModel.emailValidate(email: self.usernameTextField.text)
+    }
+    
+    private func setupErrorPassword() {
+        self.passwordTextField.addTarget(self, action: #selector(checkErrorPassword), for: .editingDidEnd)
+    }
+    
+    @objc func checkErrorPassword() {
+        self.errorPasswordLabel.isHidden = self.signUpViewModel.passwordValidate(password: self.passwordTextField.text)
+        self.errorPasswordImage.isHidden = self.signUpViewModel.passwordValidate(password: self.passwordTextField.text)
+    }
+    
+    private func setupErrorRePassword() {
+        self.passwordTextField.addTarget(self, action: #selector(checkErrorRePassword), for: .editingDidEnd)
+    }
+    
+    @objc func checkErrorRePassword() {
+        self.errorRePasswordImage.isHidden = self.signUpViewModel.repasswordValidate(password: self.passwordTextField.text, repassword: self.repasswordTextField.text)
+        self.errorRePasswordLabel.isHidden = self.signUpViewModel.repasswordValidate(password: self.passwordTextField.text, repassword: self.repasswordTextField.text)
     }
 
 //MARK: -Event
