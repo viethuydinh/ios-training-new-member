@@ -8,5 +8,5 @@
 import Foundation
 
 protocol BaseViewModel {
-    mutating func clear() 
+    func clear() 
 }

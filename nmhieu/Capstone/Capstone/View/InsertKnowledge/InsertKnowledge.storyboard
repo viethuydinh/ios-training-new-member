@@ -124,6 +124,7 @@
                     </view>
                     <connections>
                         <outlet property="addButton" destination="tXF-Nr-dE6" id="glZ-28-e0O"/>
+                        <outlet property="bottomConstraintsTableView" destination="HNT-Cg-1gc" id="Wpf-Gh-Lkl"/>
                         <outlet property="bottomView" destination="Mup-4i-Q9R" id="DCs-2S-W5X"/>
                         <outlet property="doneButton" destination="keZ-lN-Cch" id="fyb-UY-v5t"/>
                         <outlet property="knowledgeTableView" destination="Jmo-Y1-hxT" id="xVN-dx-FgO"/>

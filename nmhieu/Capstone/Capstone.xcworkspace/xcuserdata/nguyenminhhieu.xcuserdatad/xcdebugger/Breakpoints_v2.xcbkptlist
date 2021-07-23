@@ -175,22 +175,6 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "5209603F-615F-4378-B323-44808EB48ABA"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Capstone/View/InsertKnowledge/InsertKnowledgeViewController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "103"
-            endingLineNumber = "103"
-            landmarkName = "eventKeyboardShow(notification:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             uuid = "32CD2295-C9C5-461D-8DE7-686E5DE5FB12"
             shouldBeEnabled = "No"
             ignoreCount = "0"
@@ -198,8 +182,8 @@
             filePath = "Capstone/View/InsertKnowledge/InsertKnowledgeViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "93"
-            endingLineNumber = "93"
+            startingLineNumber = "94"
+            endingLineNumber = "94"
             landmarkName = "eventEnterKnowledge(notification:)"
             landmarkType = "7">
          </BreakpointContent>

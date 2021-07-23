@@ -37,7 +37,7 @@
 		1526CA8C26A567EC0059619B /* GifOnboardingCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1526CA8A26A567EC0059619B /* GifOnboardingCollectionViewCell.swift */; };
 		1526CA8D26A567EC0059619B /* GifOnboardingCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1526CA8B26A567EC0059619B /* GifOnboardingCollectionViewCell.xib */; };
 		1526CA8F26A56DD70059619B /* InterviewGif1.gif in Resources */ = {isa = PBXBuildFile; fileRef = 1526CA8E26A56DD70059619B /* InterviewGif1.gif */; };
-		15344169269FE0150078660E /* NotificationKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15344168269FE0150078660E /* NotificationKey.swift */; };
+		15344169269FE0150078660E /* Key.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15344168269FE0150078660E /* Key.swift */; };
 		154A6366269BF253008E571C /* KnowledgeCoreData+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 154A6364269BF253008E571C /* KnowledgeCoreData+CoreDataClass.swift */; };
 		154A6367269BF253008E571C /* KnowledgeCoreData+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 154A6365269BF253008E571C /* KnowledgeCoreData+CoreDataProperties.swift */; };
 		154A638D269BF498008E571C /* KnowledgeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 154A638C269BF498008E571C /* KnowledgeModel.swift */; };
@@ -148,7 +148,7 @@
 		1526CA8A26A567EC0059619B /* GifOnboardingCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GifOnboardingCollectionViewCell.swift; sourceTree = "<group>"; };
 		1526CA8B26A567EC0059619B /* GifOnboardingCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GifOnboardingCollectionViewCell.xib; sourceTree = "<group>"; };
 		1526CA8E26A56DD70059619B /* InterviewGif1.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = InterviewGif1.gif; sourceTree = "<group>"; };
-		15344168269FE0150078660E /* NotificationKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationKey.swift; sourceTree = "<group>"; };
+		15344168269FE0150078660E /* Key.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Key.swift; sourceTree = "<group>"; };
 		154A6364269BF253008E571C /* KnowledgeCoreData+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "KnowledgeCoreData+CoreDataClass.swift"; path = "Capstone/Model/Database/Question/KnowledgeCoreData+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
 		154A6365269BF253008E571C /* KnowledgeCoreData+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "KnowledgeCoreData+CoreDataProperties.swift"; path = "Capstone/Model/Database/Question/KnowledgeCoreData+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
 		154A638C269BF498008E571C /* KnowledgeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KnowledgeModel.swift; sourceTree = "<group>"; };
@@ -450,11 +450,11 @@
 		157F96EA268EBB1B009BBF14 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				156948F526A97F2500EF8C3D /* KnowledgeSets */,
 				151F2AFA26A16FB300C63F2C /* BaseTabbarController */,
 				1507B211268F1412001945A8 /* BaseViewController */,
 				1526CA7926A522E60059619B /* Onboarding */,
 				1573549026A0301F00A5C59D /* History */,
+				156948F526A97F2500EF8C3D /* KnowledgeSets */,
 				15A0385E269E978D00D9D0FB /* Interview */,
 				154A639F269BFAB3008E571C /* InsertKnowledge */,
 				1585AFE42696EE5D0073F89E /* Authentication */,
@@ -622,7 +622,7 @@
 			children = (
 				157F9736268EFEA4009BBF14 /* Color.swift */,
 				157F973B268EFED5009BBF14 /* AccoutString.swift */,
-				15344168269FE0150078660E /* NotificationKey.swift */,
+				15344168269FE0150078660E /* Key.swift */,
 				151F2B0126A1828200C63F2C /* Image.swift */,
 			);
 			path = Ultis;
@@ -914,7 +914,7 @@
 				1573549426A030FE00A5C59D /* HistoryViewController.swift in Sources */,
 				1507B20D268F13CE001945A8 /* UserModel.swift in Sources */,
 				156948FA26A9BFB000EF8C3D /* KnowledgeSetTableViewCell.swift in Sources */,
-				15344169269FE0150078660E /* NotificationKey.swift in Sources */,
+				15344169269FE0150078660E /* Key.swift in Sources */,
 				15A03888269EC0C500D9D0FB /* OverviewTableViewCell.swift in Sources */,
 				1526CA7826A522E10059619B /* OnboardingViewController.swift in Sources */,
 				15A038B7269ED1FA00D9D0FB /* QuestionInterViewCoreData+CoreDataProperties.swift in Sources */,

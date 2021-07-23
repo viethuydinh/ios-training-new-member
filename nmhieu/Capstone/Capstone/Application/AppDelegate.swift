@@ -80,12 +80,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 }
 
 extension AppDelegate {
-    fileprivate func rootViewController() {
+    
+    func rootViewController() {
         self.window = UIWindow(frame: UIScreen.main.bounds)
-        let signScreen: SignInViewController = UIStoryboard(name: "Account", bundle: nil).instantiateViewController(withIdentifier: SignInViewController.identifier) as! SignInViewController
+        guard let onboardingScreen = UIStoryboard(name: "Onboarding", bundle: nil).instantiateViewController(identifier: OnboardingViewController.identifier) as? OnboardingViewController else { return }
+        
+        guard let signInScreen = UIStoryboard(name: "Account", bundle: nil).instantiateViewController(withIdentifier: SignInViewController.identifier) as? SignInViewController else { return }
+        
+        guard let homeScreen = UIStoryboard(name: "Home", bundle: nil).instantiateViewController(withIdentifier: HomeViewController.identifier) as? HomeViewController  else { return }
+        
+        
+        
         window = UIWindow(frame: UIScreen.main.bounds)
         window?.backgroundColor = .white
-        window?.rootViewController = signScreen
+        window?.rootViewController = signInScreen
         self.window?.makeKeyAndVisible()
     }
 }

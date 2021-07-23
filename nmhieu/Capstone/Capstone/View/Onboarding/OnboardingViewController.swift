@@ -31,6 +31,7 @@ class OnboardingViewController: UIViewController {
     //MARK: -Event
     @IBAction func eventStart() {
         guard let vc = UIStoryboard(name: "SignIn", bundle: nil).instantiateViewController(withIdentifier: "NavigationAuth") as? UINavigationController else { return }
+        UserDefaults.setValue(false, forKey: UserDefaultKey.firstLoadApp)
         self.view.window?.rootViewController = vc
     }
 }

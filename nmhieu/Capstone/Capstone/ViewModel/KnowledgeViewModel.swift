@@ -39,9 +39,8 @@ struct DefaultKnowledgeViewModel : KnowledgeViewModel {
         return knowledgeRepo.fetchQuestions(level: level)
     }
     
-    mutating func clear() {
-        self.listKnowledges.removeAll()
-        self.level  = .intern
+    func clear() {
+        
     }
     
 }

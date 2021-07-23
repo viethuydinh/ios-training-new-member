@@ -14,12 +14,13 @@ class InsertKnowledgeViewController: BaseVC {
     @IBOutlet weak var addButton: UIButton!
     @IBOutlet weak var bottomView: UIView!
     @IBOutlet weak var orderLabel: UILabel!
+    @IBOutlet weak var bottomConstraintsTableView: NSLayoutConstraint!
     
     var level : LevelInterView? 
     
     var knowledgeVM = DefaultKnowledgeViewModel()
     
-    var numberOfRow: Int = 0 {
+    var numberOfRow : Int = 0 {
         didSet {
             self.knowledgeVM.listKnowledges.append(KnowledgeModel(id: nil, content: "", answer: "", level: self.level))
             self.knowledgeTableView.reloadData()
@@ -91,19 +92,21 @@ class InsertKnowledgeViewController: BaseVC {
         if let beginEditing = notification.userInfo?["beginEditing"] as? Bool {
             if beginEditing {
                 let indexPath = notification.userInfo?["indexPath"] as! IndexPath
-                self.orderLabel.text = "\(indexPath.row)/\(self.numberOfRow)"
+                self.orderLabel.text = "\(indexPath.row  + 1)/\(self.numberOfRow)"
                 self.knowledgeTableView.scrollToRow(at: indexPath, at: .middle, animated: true)
             }
         }
     }
     
     @objc func eventKeyboardShow(notification : Notification) {
-        if let keyboardSize = (notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue {
-            if self.bottomView.frame.origin.y == self.originYBottomView {
-                let bottomChange = keyboardSize.height - self.bottomHeightSafeArea
-                self.bottomView.frame.origin.y -= bottomChange
-                self.knowledgeTableView.contentInset = UIEdgeInsets(top: 10.0, left: 0.0, bottom: bottomChange, right: 0.0)
-                self.orderLabel.isHidden = false
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
+            if let keyboardSize = (notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue {
+                if self.bottomView.frame.origin.y == self.originYBottomView {
+                    let bottomChange = keyboardSize.height - self.bottomHeightSafeArea
+                    self.bottomView.frame.origin.y -= bottomChange
+                    self.knowledgeTableView.contentInset = UIEdgeInsets(top: 10.0, left: 0.0, bottom: bottomChange, right: 0.0)
+                    self.orderLabel.isHidden = false
+                }
             }
         }
     }
