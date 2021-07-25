@@ -31,10 +31,24 @@ class ChooseLevelViewController: BaseVC {
     
     //MARK: -UI
     private func setupUI() {
-        self.fresherButton.layer.cornerRadius = 10.0
-        self.juniorButton.layer.cornerRadius = 10.0
-        self.middleButton.layer.cornerRadius = 10.0
-        self.seniorButton.layer.cornerRadius = 10.0
+        switch UIDevice.current.userInterfaceIdiom {
+        case .phone:
+            self.fresherButton.layer.cornerRadius = 10.0
+            self.juniorButton.layer.cornerRadius = 10.0
+            self.middleButton.layer.cornerRadius = 10.0
+            self.seniorButton.layer.cornerRadius = 10.0
+            break
+        case .pad:
+            self.fresherButton.layer.cornerRadius = 40.0
+            self.juniorButton.layer.cornerRadius = 40.0
+            self.middleButton.layer.cornerRadius = 40.0
+            self.seniorButton.layer.cornerRadius = 40.0
+        case .unspecified: break
+        case .tv: break
+        case .carPlay: break
+        case .mac: break
+        @unknown default: break
+        }
     }
     
     //MARK: -Event
