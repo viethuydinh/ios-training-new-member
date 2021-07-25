@@ -38,14 +38,16 @@ class SignUpViewController: UIViewController {
     @IBAction func signUpButton(_ sender: UIButton) {
         if firstNameTextField.text == "" || lastNameTextField.text == "" || emailTextField.text == "" || passwordTextField.text == "" || confirmPasswordTextField.text == "" {
             let alert = UIAlertController(title: "Information", message: "Its mandatory to enter all the fields", preferredStyle: .alert)
-            
+
             let ok = UIAlertAction(title: "Ok", style: .default, handler: nil)
             let cancel = UIAlertAction(title: "Cancel", style: .default, handler: nil)
-            
+
             alert.addAction(ok)
             alert.addAction(cancel)
-            
+
             self.present(alert, animated: true, completion: nil)
+//            errorLabel.text = "fail to login"
+//            errorLabel.isHidden = false
             
         } else if (passwordTextField.text != confirmPasswordTextField.text) {
             let alert = UIAlertController(title: "Information", message: "Password does not match", preferredStyle: .alert)

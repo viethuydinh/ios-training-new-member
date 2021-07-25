@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="18154" systemVersion="20F5046g" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="18154" systemVersion="20E241" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
     <entity name="Authentication" representedClassName=".Authentication" syncable="YES">
         <attribute name="confirmPassword" optional="YES" attributeType="String"/>
         <attribute name="email" optional="YES" attributeType="String"/>
@@ -7,7 +7,13 @@
         <attribute name="lastName" optional="YES" attributeType="String"/>
         <attribute name="password" optional="YES" attributeType="String"/>
     </entity>
+    <entity name="Question" representedClassName=".Question" syncable="YES">
+        <attribute name="answer" optional="YES" attributeType="String"/>
+        <attribute name="level" optional="YES" attributeType="String"/>
+        <attribute name="question" optional="YES" attributeType="String"/>
+    </entity>
     <elements>
         <element name="Authentication" positionX="-63" positionY="-18" width="128" height="104"/>
+        <element name="Question" positionX="-63" positionY="18" width="128" height="74"/>
     </elements>
 </model>
