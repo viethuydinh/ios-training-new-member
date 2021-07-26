@@ -57,7 +57,7 @@ class InsertKnowledgeViewController: BaseVC {
     private func setupTableView() {
         self.tableView.delegate = self
         self.tableView.dataSource = self
-        self.tableView.contentInset = UIEdgeInsets(top: 16.0, left: .zero, bottom: .zero, right: .zero)
+        self.tableView.contentInset = UIEdgeInsets(top: 16.0, left: .zero, bottom: 100.0, right: .zero)
         self.tableView.backgroundColor = .white
         self.tableView.register(UINib(nibName: InsertQuestionTableViewCell.name, bundle: nil), forCellReuseIdentifier: InsertQuestionTableViewCell.identifier)
     }
@@ -142,6 +142,7 @@ class InsertKnowledgeViewController: BaseVC {
                     }
                     dialog.show(superView: self.view)
                 }
+                NotificationCenter.default.post(name: Notification.Name(NotificationKey.UPDATE_QUESTION), object: nil)
             } onError: { (_) in
                 
             } onCompleted: {

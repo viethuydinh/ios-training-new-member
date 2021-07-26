@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		281701568C76321EF7CB1708 /* Pods_Capstone_nqhuy9_Capstone_nqhuy9UITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA1FD1223A468E05C3D3EC07 /* Pods_Capstone_nqhuy9_Capstone_nqhuy9UITests.framework */; };
 		6E95F0CD1CA11F833E530BE2 /* Pods_Capstone_nqhuy9Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 358FEDF518254B81DC782BC8 /* Pods_Capstone_nqhuy9Tests.framework */; };
+		B36D1E9226AEB81400D34F70 /* EditQuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B36D1E9126AEB81400D34F70 /* EditQuestionViewController.swift */; };
 		C009E5016078B88792495181 /* Pods_Capstone_nqhuy9.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D124386781458B5795EAF503 /* Pods_Capstone_nqhuy9.framework */; };
 		F4326668269FD36900A7AEB2 /* LevelPickerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F4326667269FD36900A7AEB2 /* LevelPickerView.xib */; };
 		F432666D269FD41400A7AEB2 /* LevelPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F432666C269FD41400A7AEB2 /* LevelPickerView.swift */; };
@@ -105,6 +106,7 @@
 		863409691CB1A480FB4C2656 /* Pods-Capstone_nqhuy9-Capstone_nqhuy9UITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Capstone_nqhuy9-Capstone_nqhuy9UITests.debug.xcconfig"; path = "Target Support Files/Pods-Capstone_nqhuy9-Capstone_nqhuy9UITests/Pods-Capstone_nqhuy9-Capstone_nqhuy9UITests.debug.xcconfig"; sourceTree = "<group>"; };
 		903968BBE03725A7106E4558 /* Pods-Capstone_nqhuy9.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Capstone_nqhuy9.release.xcconfig"; path = "Target Support Files/Pods-Capstone_nqhuy9/Pods-Capstone_nqhuy9.release.xcconfig"; sourceTree = "<group>"; };
 		ADC657B9F9BBBDE0B85CBCC7 /* Pods-Capstone_nqhuy9Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Capstone_nqhuy9Tests.release.xcconfig"; path = "Target Support Files/Pods-Capstone_nqhuy9Tests/Pods-Capstone_nqhuy9Tests.release.xcconfig"; sourceTree = "<group>"; };
+		B36D1E9126AEB81400D34F70 /* EditQuestionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditQuestionViewController.swift; sourceTree = "<group>"; };
 		D124386781458B5795EAF503 /* Pods_Capstone_nqhuy9.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Capstone_nqhuy9.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4326667269FD36900A7AEB2 /* LevelPickerView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LevelPickerView.xib; sourceTree = "<group>"; };
 		F432666C269FD41400A7AEB2 /* LevelPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelPickerView.swift; sourceTree = "<group>"; };
@@ -316,6 +318,7 @@
 				F433BC66269D35AA002F5146 /* InsertQuestionCell */,
 				F433BC71269D39B6002F5146 /* InsertKnowledgeViewController.swift */,
 				F491ED59269EE70D00A98D28 /* ListQuestionViewController.swift */,
+				B36D1E9126AEB81400D34F70 /* EditQuestionViewController.swift */,
 			);
 			path = QuestionScreen;
 			sourceTree = "<group>";
@@ -842,6 +845,7 @@
 				F43266A726A1228300A7AEB2 /* SplashCollectionViewCell.swift in Sources */,
 				F491ED34269E93E300A98D28 /* ReviewViewModel.swift in Sources */,
 				F4FDA834269702CC0039E9B4 /* Question.swift in Sources */,
+				B36D1E9226AEB81400D34F70 /* EditQuestionViewController.swift in Sources */,
 				F4326674269FD94D00A7AEB2 /* QuestionTableViewCell.swift in Sources */,
 				F4FDF6AE268F06AE001B02D3 /* Account.swift in Sources */,
 				F43266BC26A12EE000A7AEB2 /* UIImage+Extension.swift in Sources */,

@@ -24,6 +24,8 @@ protocol KnowledgeViewModel {
     func fetchRecommendQuestion() -> [Question]
     
     func deleteQuestion(id: Int16?) -> Bool
+    
+    func editQuestion(question: Question) -> Bool
 }
 
 struct DefaultKnowledgeViewModel : KnowledgeViewModel {
@@ -56,5 +58,9 @@ struct DefaultKnowledgeViewModel : KnowledgeViewModel {
     
     func deleteQuestion(id: Int16?) -> Bool {
         return self.repository.deleteQuestion(id: id)
+    }
+    
+    func editQuestion(question: Question) -> Bool {
+        return self.repository.editQuestion(question: question)
     }
 }

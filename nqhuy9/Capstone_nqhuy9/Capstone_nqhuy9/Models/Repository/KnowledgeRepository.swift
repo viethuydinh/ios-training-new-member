@@ -17,6 +17,8 @@ protocol KnowledgeRepository {
     
     func deleteQuestion(id: Int16?) -> Bool
     
+    func editQuestion(question: Question) -> Bool
+    
 }
 
 struct DefaultKnowledgeRepository: KnowledgeRepository {
@@ -54,6 +56,10 @@ struct DefaultKnowledgeRepository: KnowledgeRepository {
     func deleteQuestion(id: Int16?) -> Bool {
         guard let idDelete = id else { return false }
         return self.questionDAO.deleteAll(predicate: .init(format: "id = %@", argumentArray: [String(idDelete)]))
+    }
+    
+    func editQuestion(question: Question) -> Bool {
+        return self.questionDAO.save(domain: question)
     }
     
 }

@@ -39,7 +39,7 @@ class ListQuestionViewController: BaseVC {
         self.tableViewQuestion.delegate = self
         self.tableViewQuestion.dataSource = self
         self.tableViewQuestion.backgroundColor = .white
-        self.tableViewQuestion.contentInset = UIEdgeInsets(top: 16.0, left: .zero, bottom: .zero, right: .zero)
+        self.tableViewQuestion.contentInset = UIEdgeInsets(top: 16.0, left: .zero, bottom: (self.tabBarController?.tabBar.frame.height ?? .zero) + 24.0, right: .zero)
         self.tableViewQuestion.register(UINib(nibName: QuestionTableViewCell.name, bundle: nil), forCellReuseIdentifier: QuestionTableViewCell.identifier)
     }
     
@@ -48,6 +48,16 @@ class ListQuestionViewController: BaseVC {
         self.eventSearch()
         self.eventRecommend()
         self.eventAdd()
+        NotificationCenter.default.addObserver(
+            self,
+            selector: #selector(self.updateListQuestion),
+            name: Notification.Name(NotificationKey.UPDATE_QUESTION),
+            object: nil)
+    }
+    
+    @objc private func updateListQuestion(notification: NSNotification){
+        self.questionViewModel.listQuestions = self.questionViewModel.fetchListQuestion()
+        self.tableViewQuestion.reloadData()
     }
     
     private func eventSearch() {
@@ -165,5 +175,11 @@ extension ListQuestionViewController : UITableViewDelegate {
             }
             dialog.show(superView: self.view)
         }
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        guard let vc = self.getViewControllerFromStorybroad(storybroadName: "Main", identifier: EditQuestionViewController.identifier) as? EditQuestionViewController else { return }
+        vc.question = self.questionViewModel.listQuestions[indexPath.row]
+        self.navigationController?.pushViewController(vc, animated: true)
     }
 }

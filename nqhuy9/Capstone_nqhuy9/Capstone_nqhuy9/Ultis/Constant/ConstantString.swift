@@ -29,4 +29,5 @@ class AccountString {
 
 class NotificationKey {
     static let SAVE_REVIEW_DONE_KEY = "SaveReviewDone"
+    static let UPDATE_QUESTION = "UpdateQuestion"
 }
