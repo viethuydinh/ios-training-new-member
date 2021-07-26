@@ -81,8 +81,8 @@ struct CoreDataRepository<Domain : ObjectConvert> {
     func save(domain : Domain) -> Bool {
         var errorCount: Int = 0
         let entity = NSEntityDescription.entity(forEntityName: String(describing: Domain.Object.self), in: CoreDataConfiguration.shared.context())!
-        var newObject = Domain.Object(entity: entity, insertInto: CoreDataConfiguration.shared.context())
         if self.fetch(predicate: .init(format: "\(domain.key.keys.first!) = %@", argumentArray: [domain.key.values.first!])) == nil {
+            var newObject = Domain.Object(entity: entity, insertInto: CoreDataConfiguration.shared.context())
             newObject = domain.update(object: newObject)
         } else {
             let fetch: NSFetchRequest<Domain.Object> = NSFetchRequest<Domain.Object>(entityName: String(describing: Domain.Object.self))
@@ -90,7 +90,7 @@ struct CoreDataRepository<Domain : ObjectConvert> {
             do {
                 let results = try CoreDataConfiguration.shared.context().fetch(fetch)
                 results.forEach { (object) in
-                    newObject = domain.update(object: object)
+                    _ = domain.update(object: object)
                 }
             } catch {
                 print(error)

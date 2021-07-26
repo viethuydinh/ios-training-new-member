@@ -119,7 +119,7 @@ class SignUpViewController: BaseVC {
     }
     
     private func setupErrorRePassword() {
-        self.passwordTextField.addTarget(self, action: #selector(checkErrorRePassword), for: .editingDidEnd)
+        self.repasswordTextField.addTarget(self, action: #selector(checkErrorRePassword), for: .editingDidEnd)
     }
     
     @objc func checkErrorRePassword() {

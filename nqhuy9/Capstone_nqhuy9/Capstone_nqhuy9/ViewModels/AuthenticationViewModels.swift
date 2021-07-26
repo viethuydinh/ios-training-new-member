@@ -57,6 +57,6 @@ struct DefaultAuthenticationViewModel: AuthenticationViewModels {
     }
     
     func repasswordValidate(password: String?, repassword: String?) -> Bool {
-        return repassword == password
+        return password == repassword
     }
 }
