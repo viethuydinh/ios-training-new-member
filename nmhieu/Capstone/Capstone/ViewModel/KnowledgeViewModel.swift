@@ -16,7 +16,11 @@ protocol KnowledgeViewModel : BaseViewModel {
     
     func saveListKnowledges()
     
+    func updateKnowledge(knowledge : KnowledgeModel)
+    
     func fetchKnowledge(level : LevelInterView) -> [KnowledgeModel]
+    
+    func deleteKnowledge(id : Int)
 }
 
 struct DefaultKnowledgeViewModel : KnowledgeViewModel {
@@ -39,8 +43,15 @@ struct DefaultKnowledgeViewModel : KnowledgeViewModel {
         return knowledgeRepo.fetchQuestions(level: level)
     }
     
+    func deleteKnowledge(id: Int) {
+        self.knowledgeRepo.deleteKnowledge(id: id)
+    }
+    
+    func updateKnowledge(knowledge : KnowledgeModel) {
+        self.knowledgeRepo.updateKnowledge(knowledge: knowledge)
+    }
+
     func clear() {
         
     }
-    
 }

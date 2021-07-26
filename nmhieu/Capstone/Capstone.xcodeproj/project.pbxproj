@@ -37,6 +37,8 @@
 		1526CA8C26A567EC0059619B /* GifOnboardingCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1526CA8A26A567EC0059619B /* GifOnboardingCollectionViewCell.swift */; };
 		1526CA8D26A567EC0059619B /* GifOnboardingCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1526CA8B26A567EC0059619B /* GifOnboardingCollectionViewCell.xib */; };
 		1526CA8F26A56DD70059619B /* InterviewGif1.gif in Resources */ = {isa = PBXBuildFile; fileRef = 1526CA8E26A56DD70059619B /* InterviewGif1.gif */; };
+		1532C0F826AE9F38008003F7 /* AlertEditKnowledge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1532C0F726AE9F38008003F7 /* AlertEditKnowledge.swift */; };
+		1532C0FB26AE9F55008003F7 /* AlertEditKnowledge.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1532C0FA26AE9F55008003F7 /* AlertEditKnowledge.xib */; };
 		15344169269FE0150078660E /* Key.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15344168269FE0150078660E /* Key.swift */; };
 		154A6366269BF253008E571C /* KnowledgeCoreData+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 154A6364269BF253008E571C /* KnowledgeCoreData+CoreDataClass.swift */; };
 		154A6367269BF253008E571C /* KnowledgeCoreData+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 154A6365269BF253008E571C /* KnowledgeCoreData+CoreDataProperties.swift */; };
@@ -148,6 +150,8 @@
 		1526CA8A26A567EC0059619B /* GifOnboardingCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GifOnboardingCollectionViewCell.swift; sourceTree = "<group>"; };
 		1526CA8B26A567EC0059619B /* GifOnboardingCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GifOnboardingCollectionViewCell.xib; sourceTree = "<group>"; };
 		1526CA8E26A56DD70059619B /* InterviewGif1.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = InterviewGif1.gif; sourceTree = "<group>"; };
+		1532C0F726AE9F38008003F7 /* AlertEditKnowledge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertEditKnowledge.swift; sourceTree = "<group>"; };
+		1532C0FA26AE9F55008003F7 /* AlertEditKnowledge.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AlertEditKnowledge.xib; sourceTree = "<group>"; };
 		15344168269FE0150078660E /* Key.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Key.swift; sourceTree = "<group>"; };
 		154A6364269BF253008E571C /* KnowledgeCoreData+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "KnowledgeCoreData+CoreDataClass.swift"; path = "Capstone/Model/Database/Question/KnowledgeCoreData+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
 		154A6365269BF253008E571C /* KnowledgeCoreData+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "KnowledgeCoreData+CoreDataProperties.swift"; path = "Capstone/Model/Database/Question/KnowledgeCoreData+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
@@ -340,6 +344,15 @@
 			path = Cell;
 			sourceTree = "<group>";
 		};
+		1532C0F926AE9F3D008003F7 /* Alert */ = {
+			isa = PBXGroup;
+			children = (
+				1532C0F726AE9F38008003F7 /* AlertEditKnowledge.swift */,
+				1532C0FA26AE9F55008003F7 /* AlertEditKnowledge.xib */,
+			);
+			path = Alert;
+			sourceTree = "<group>";
+		};
 		154A6392269BF746008E571C /* Question */ = {
 			isa = PBXGroup;
 			children = (
@@ -389,6 +402,7 @@
 		156948F526A97F2500EF8C3D /* KnowledgeSets */ = {
 			isa = PBXGroup;
 			children = (
+				1532C0F926AE9F3D008003F7 /* Alert */,
 				156948FC26A9BFB500EF8C3D /* Cell */,
 				156948F326A97F1F00EF8C3D /* KnowledgeSetsViewController.swift */,
 				156948F626A97F7100EF8C3D /* KnowledgeSets.storyboard */,
@@ -759,6 +773,7 @@
 			files = (
 				15A0386B269E97D500D9D0FB /* Interview.storyboard in Resources */,
 				15095E7E268DC8B400129B9C /* LaunchScreen.storyboard in Resources */,
+				1532C0FB26AE9F55008003F7 /* AlertEditKnowledge.xib in Resources */,
 				1585AFDF2696EAA90073F89E /* Home.storyboard in Resources */,
 				15A03882269EBF4D00D9D0FB /* QuestionTableViewCell.xib in Resources */,
 				154A63A4269BFB2F008E571C /* InsertKnowledge.storyboard in Resources */,
@@ -877,6 +892,7 @@
 				15A038A3269ED12E00D9D0FB /* QuestionInterviewModel.swift in Sources */,
 				1585AFBB2696B1700073F89E /* AuthenticationViewModel.swift in Sources */,
 				1507B213268F1435001945A8 /* BaseVCViewController.swift in Sources */,
+				1532C0F826AE9F38008003F7 /* AlertEditKnowledge.swift in Sources */,
 				156948F426A97F1F00EF8C3D /* KnowledgeSetsViewController.swift in Sources */,
 				1573549826A031B000A5C59D /* HistoryTableViewCell.swift in Sources */,
 				15179EB52695565F008D3A46 /* Convertible.swift in Sources */,

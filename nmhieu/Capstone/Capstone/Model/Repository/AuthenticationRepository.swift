@@ -19,15 +19,15 @@ struct DefaultAuthenticationRepository : AuthenticationRepository {
     var coreDataRepo = CoreDataRepository<AccountModel>.shared
     
     func signIn(account: AccountModel) -> Bool {
-        let predicate : NSPredicate = .init(format: "username = %@", argumentArray: [account.username])
+        let predicate : NSPredicate = .init(format: "username == \(account.username ?? "")")
         guard let result = self.coreDataRepo.fetch(predicate: predicate) else { return false }
         if result.password == account.password { return true }
         return false
     }
     
     func signUp(account: AccountModel) -> Bool {
-        let predicate : NSPredicate = .init(format: "username = %@", argumentArray: [account.username])
-        if let result = self.coreDataRepo.fetch(predicate: predicate) { return false }
+        let predicate : NSPredicate = .init(format: "username == \(account.username ?? "")")
+        if self.coreDataRepo.fetch(predicate: predicate) != nil { return false }
         else {
             self.coreDataRepo.save(domain: account)
             return true

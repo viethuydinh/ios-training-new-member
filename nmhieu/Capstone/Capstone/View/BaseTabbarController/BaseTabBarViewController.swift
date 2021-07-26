@@ -9,7 +9,10 @@ import UIKit
 
 class BaseTabBarViewController: UITabBarController {
 
+    static let shared = BaseTabBarViewController()
+    
     var customTabBar: CustomTabBar!
+    
     var tabBarHeight: CGFloat {
         get {
             switch UIDevice.current.userInterfaceIdiom {
@@ -31,14 +34,14 @@ class BaseTabBarViewController: UITabBarController {
     func loadTabBar() {
         let tabbarItems: [TabItem] = [.home, .history, .sets]
 
-        setupCustomTabMenu(tabbarItems, completion: { viewControllers in
+        setUpCustomTabMenu(tabbarItems, completion: { viewControllers in
             self.viewControllers = viewControllers
         })
 
         selectedIndex = 0 
     }
 
-    func setupCustomTabMenu(_ menuItems: [TabItem], completion: @escaping ([UIViewController]) -> Void) {
+    func setUpCustomTabMenu(_ menuItems: [TabItem], completion: @escaping ([UIViewController]) -> Void) {
         let frame = tabBar.frame
         var controllers = [UIViewController]()
 

@@ -11,7 +11,11 @@ protocol KnowledgeRepository {
     
     func insertKnowledge(knowledge : KnowledgeModel)
     
+    func updateKnowledge(knowledge : KnowledgeModel)
+    
     func fetchQuestions(level : LevelInterView) -> [KnowledgeModel]
+    
+    func deleteKnowledge(id : Int)
 }
 
 
@@ -27,6 +31,11 @@ struct DefaulKnowledgeRepository : KnowledgeRepository {
         CoreDataRepository<KnowledgeModel>.shared.save(domain: questionData)
     }
     
+    func updateKnowledge(knowledge : KnowledgeModel) {
+        let predicate : NSPredicate = .init(format: "id == \(knowledge.id ?? 0)")
+        CoreDataRepository<KnowledgeModel>.shared.update(domain: knowledge, predicate: predicate)
+    }
+    
     func fetchQuestions(level: LevelInterView) -> [KnowledgeModel] {
         let predicate = NSPredicate(format: "level == \(level.rawValue)")
         
@@ -34,6 +43,12 @@ struct DefaulKnowledgeRepository : KnowledgeRepository {
             return []
         }
         return quesions
+    }
+    
+    func deleteKnowledge(id: Int) {
+        let predicate = NSPredicate(format: "id == \(id)")
+        
+        CoreDataRepository<KnowledgeModel>.shared.delete(predicate: predicate)
     }
 
 }
