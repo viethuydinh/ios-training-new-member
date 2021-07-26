@@ -40,7 +40,7 @@ class ListReviewsViewController: BaseVC {
         self.tableViewReview.delegate = self
         self.tableViewReview.dataSource = self
         self.tableViewReview.backgroundColor = .white
-        self.tableViewReview.contentInset = UIEdgeInsets(top: 16.0, left: .zero, bottom: .zero, right: .zero)
+        self.tableViewReview.contentInset = UIEdgeInsets(top: 16.0, left: .zero, bottom: (self.tabBarController?.tabBar.frame.height ?? .zero) + 24.0, right: .zero)
         self.tableViewReview.register(UINib(nibName: ReviewTableViewCell.name, bundle: nil), forCellReuseIdentifier: ReviewTableViewCell.identifier)
     }
     
@@ -103,5 +103,11 @@ extension ListReviewsViewController : UITableViewDelegate {
             }
             dialog.show(superView: self.view)
         }
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        guard let vc = self.getViewControllerFromStorybroad(storybroadName: "Main", identifier: InsertReviewViewController.identifier) as? InsertReviewViewController else { return }
+        vc.review = self.reviewViewModel.reviewList[indexPath.row]
+        self.navigationController?.pushViewController(vc, animated: true)
     }
 }

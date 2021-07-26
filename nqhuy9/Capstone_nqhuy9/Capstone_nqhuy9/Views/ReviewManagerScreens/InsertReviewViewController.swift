@@ -17,6 +17,8 @@ class InsertReviewViewController: BaseVC {
     @IBOutlet weak var statusButton: CheckBox!
     
     var insertReviewViewModel = DefaultReviewViewModel()
+    
+    var review: Review?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,6 +31,8 @@ class InsertReviewViewController: BaseVC {
         self.saveButton.layer.cornerRadius = 10
         self.setupView(backgroundColor: .white, view: self.reviewTextView, borderWidth: 1.0, borderColor: UIColor.gray.cgColor, cornerRadius: 8.0)
         self.setupView(backgroundColor: .white, view: self.candidateNameTextField, borderWidth: 1.0, borderColor: UIColor.gray.cgColor, cornerRadius: 8.0)
+        self.reviewTextView.text = self.review?.content
+        self.candidateNameTextField.text = self.review?.candidateName
     }
     
     private func setupView(backgroundColor: UIColor,view: UIView, borderWidth: CGFloat, borderColor: CGColor, cornerRadius: CGFloat) {
@@ -64,13 +68,13 @@ class InsertReviewViewController: BaseVC {
             .rx
             .controlEvent(.touchUpInside)
             .subscribe { (_) in
-                if self.insertReviewViewModel.createReview(review: Review(id: nil, candidateName: self.candidateNameTextField.text, content: self.reviewTextView.text, status: self.statusButton.isChecked)) {
-                    let dialog = AlertCustomView.init(title: "Success", content: "Create Review Success", isHiddenCancel: true) {
+                if self.insertReviewViewModel.createReview(review: Review(id: self.review != nil ? self.review?.id : nil, candidateName: self.candidateNameTextField.text, content: self.reviewTextView.text, status: self.statusButton.isChecked)) {
+                    let dialog = AlertCustomView.init(title: "Success", content: "Update Review Success", isHiddenCancel: true) {
                         self.navigationController?.popViewController(animated: true)
                     }
                     dialog.show(superView: self.view)
                 } else {
-                    let dialog = AlertCustomView.init(title: "Fail", content: "Create Review Fail", isHiddenCancel: true) {
+                    let dialog = AlertCustomView.init(title: "Fail", content: "Update Review Fail", isHiddenCancel: true) {
                         self.navigationController?.popViewController(animated: true)
                     }
                     dialog.show(superView: self.view)

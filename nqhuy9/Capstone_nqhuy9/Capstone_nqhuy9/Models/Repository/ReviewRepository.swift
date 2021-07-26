@@ -20,9 +20,9 @@ struct DefaultReviewRepository : ReviewRepository {
     var reviewDAO = CoreDataRepository<Review>.shared
     
     func createReview(review: Review) -> Bool {
-        let id = self.fetchAllReview().count + 1
+        let id = review.id != nil ? review.id : Int16(self.fetchAllReview().count + 1)
         var newReview = review
-        newReview.id = Int16(id)
+        newReview.id = id
         return reviewDAO.save(domain: newReview)
     }
     
