@@ -69,6 +69,10 @@ class KnowledgeSetsViewController: UIViewController {
         self.knowledgeVM.level = .intern
         self.knowledgeVM.listKnowledges = self.knowledgeVM.fetchKnowledge(level: self.knowledgeVM.level)
     }
+    
+    private func reloadData() {
+        self.knowledgeVM.listKnowledges = self.knowledgeVM.fetchKnowledge(level: self.knowledgeVM.level)
+    }
 }
 
 //MARK: -UITableViewDataSource
@@ -107,12 +111,24 @@ extension KnowledgeSetsViewController : UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
-//            self.numberOfRow -= 1
-            self.knowledgeTableView.deleteRows(at: [indexPath], with: .automatic)
+            self.knowledgeVM.listKnowledges.remove(at: indexPath.section)
+            self.knowledgeVM.deleteKnowledge(id: self.knowledgeVM.listKnowledges[indexPath.section].id ?? 0)
+            self.knowledgeTableView.reloadData()
         }
     }
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         return KnowledgeSetTableViewCell.heightHeader
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        AlertEditKnowledge.shared.bindingData(knowledge: self.knowledgeVM.listKnowledges[indexPath.section])
+        
+        AlertEditKnowledge.shared.editKnowledgeClosure = {
+            self.knowledgeVM.updateKnowledge(knowledge: $0)
+            self.reloadData()
+            self.knowledgeTableView.reloadData()
+        }
+        
     }
 }

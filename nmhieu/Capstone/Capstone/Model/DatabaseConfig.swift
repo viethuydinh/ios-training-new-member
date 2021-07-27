@@ -79,12 +79,36 @@ struct CoreDataRepository<Domain: ObjectConvertible> {
         }
         var newContext = Domain.Object(entity: entityInsert, insertInto: managedContext)
         newContext = domain.update(obj: newContext)
-        print("create new" )
         do {
             try managedContext.save()
         }
-        catch let error as NSError {
+        catch _ as NSError {
             
+        }
+    }
+    
+    func update(domain : Domain, predicate : NSPredicate) {
+        let managedContext = CoreDataConfiguration.shared.configure()
+        guard let entityInsert = NSEntityDescription.entity(forEntityName: Domain.name , in: managedContext) else { return }
+        if self.fetch(predicate: predicate) == nil {
+            var newContext = Domain.Object(entity: entityInsert, insertInto: managedContext)
+            newContext = domain.update(obj: newContext)
+        }
+        else {
+            let fetchRequest =  NSFetchRequest<NSManagedObject>(entityName: Domain.name)
+            fetchRequest.predicate = predicate
+            do {
+                guard let object = try CoreDataConfiguration.shared.configure().fetch(fetchRequest).first as? Domain.Object else { return }
+                domain.update(obj: object)
+            } catch {
+                print(error)
+            }
+        }
+        do {
+            try managedContext.save()
+        }
+        catch _ as NSError {
+        
         }
     }
     
@@ -139,5 +163,23 @@ struct CoreDataRepository<Domain: ObjectConvertible> {
             NSLog(error.description)
         }
     }
+    
+    func delete(predicate : NSPredicate) {
+        let fetch = NSFetchRequest<NSManagedObject>(entityName: Domain.name)
+        fetch.predicate = predicate
+        do {
+            guard let object = try CoreDataConfiguration.shared.configure().fetch(fetch).first else { return }
+            CoreDataConfiguration.shared.configure().delete(object)
+        }
+        catch let error as NSError {
+            NSLog(error.description)
+        }
+    
+        do {
+            try CoreDataConfiguration.shared.configure().save()
+        }
+        catch let error as NSError {
+            NSLog(error.description)
+        }
+    }
 }
- 
