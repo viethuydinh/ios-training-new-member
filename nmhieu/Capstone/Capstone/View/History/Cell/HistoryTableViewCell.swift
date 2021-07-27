@@ -43,6 +43,7 @@ class HistoryTableViewCell: UITableViewCell {
 }
 
 extension HistoryTableViewCell {
+    
     static func height(_ bounds : CGRect) -> CGFloat {
         return CGFloat(bounds.height - 80.0)/3
     }

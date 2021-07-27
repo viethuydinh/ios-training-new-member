@@ -4,13 +4,26 @@
 //
 //  Created by Nguyễn Minh Hiếu on 16/07/2021.
 //
-
 import UIKit
 
 class BaseTabBarViewController: UITabBarController {
 
+    static let shared = BaseTabBarViewController()
+    
     var customTabBar: CustomTabBar!
-    var tabBarHeight: CGFloat = 80.0
+    
+    var tabBarHeight: CGFloat {
+        get {
+            switch UIDevice.current.userInterfaceIdiom {
+            case .phone:
+                return 80.0
+            case .pad:
+                return 120.0
+            default:
+                return .zero
+            }
+        }
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,14 +33,14 @@ class BaseTabBarViewController: UITabBarController {
     func loadTabBar() {
         let tabbarItems: [TabItem] = [.home, .history, .sets]
 
-        setupCustomTabMenu(tabbarItems, completion: { viewControllers in
+        setUpCustomTabMenu(tabbarItems, completion: { viewControllers in
             self.viewControllers = viewControllers
         })
 
-        selectedIndex = 0 
+        selectedIndex = 0
     }
 
-    func setupCustomTabMenu(_ menuItems: [TabItem], completion: @escaping ([UIViewController]) -> Void) {
+    func setUpCustomTabMenu(_ menuItems: [TabItem], completion: @escaping ([UIViewController]) -> Void) {
         let frame = tabBar.frame
         var controllers = [UIViewController]()
 
@@ -59,5 +72,4 @@ class BaseTabBarViewController: UITabBarController {
     func changeTab(tab: Int) {
         self.selectedIndex = tab
     }
-
 }

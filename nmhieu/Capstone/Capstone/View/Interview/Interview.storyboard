@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <device id="ipad12_9rounded" orientation="portrait" layout="fullscreen" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
@@ -14,38 +14,47 @@
             <objects>
                 <viewController storyboardIdentifier="InterviewViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="dlI-HA-cya" customClass="InterviewViewController" customModule="Capstone" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="2NF-PZ-I2T">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="1366"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="D4v-Te-nvm">
-                                <rect key="frame" x="0.0" y="100" width="414" height="796"/>
+                                <rect key="frame" x="0.0" y="102" width="1024" height="1264"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WU2-3F-iUW">
-                                <rect key="frame" x="0.0" y="44" width="414" height="56"/>
+                                <rect key="frame" x="0.0" y="0.0" width="1024" height="102"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Create set" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rPc-ec-gcN">
-                                        <rect key="frame" x="169" y="22" width="76" height="18"/>
+                                        <rect key="frame" x="461" y="44.5" width="102" height="25.5"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
+                                        <variation key="heightClass=regular-widthClass=regular">
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="21"/>
+                                        </variation>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pS9-7R-hcV">
-                                        <rect key="frame" x="360" y="16" width="38" height="30"/>
+                                        <rect key="frame" x="940" y="38.5" width="52" height="38"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                         <state key="normal" title="Done">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+                                        <variation key="heightClass=regular-widthClass=regular">
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="21"/>
+                                        </variation>
                                         <connections>
                                             <action selector="eventDone" destination="dlI-HA-cya" eventType="touchUpInside" id="k6D-4h-BKE"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HaD-3V-2aL">
-                                        <rect key="frame" x="16" y="16" width="37" height="30"/>
+                                        <rect key="frame" x="32" y="38.5" width="49" height="38"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                         <state key="normal" title="Back">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+                                        <variation key="heightClass=regular-widthClass=regular">
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="21"/>
+                                        </variation>
                                         <connections>
                                             <action selector="eventBack" destination="dlI-HA-cya" eventType="touchUpInside" id="UyF-eZ-VM3"/>
                                         </connections>
@@ -53,14 +62,32 @@
                                 </subviews>
                                 <color key="backgroundColor" name="navy"/>
                                 <constraints>
+                                    <constraint firstAttribute="height" constant="102" id="Fmk-jI-52s"/>
                                     <constraint firstItem="HaD-3V-2aL" firstAttribute="centerY" secondItem="rPc-ec-gcN" secondAttribute="centerY" id="H9I-Bb-gu9"/>
                                     <constraint firstItem="rPc-ec-gcN" firstAttribute="centerX" secondItem="WU2-3F-iUW" secondAttribute="centerX" id="PrZ-LH-9MB"/>
+                                    <constraint firstAttribute="trailing" secondItem="pS9-7R-hcV" secondAttribute="trailing" constant="32" id="Z0o-ey-Psc"/>
                                     <constraint firstAttribute="height" constant="56" id="eaZ-Q4-PfU"/>
                                     <constraint firstAttribute="bottom" secondItem="rPc-ec-gcN" secondAttribute="bottom" constant="16" id="f33-c3-71e"/>
                                     <constraint firstAttribute="trailing" secondItem="pS9-7R-hcV" secondAttribute="trailing" constant="16" id="k3P-9M-N28"/>
+                                    <constraint firstAttribute="bottom" secondItem="rPc-ec-gcN" secondAttribute="bottom" constant="32" id="mys-SN-lvN"/>
+                                    <constraint firstItem="HaD-3V-2aL" firstAttribute="leading" secondItem="WU2-3F-iUW" secondAttribute="leading" constant="32" id="o1J-2W-lu8"/>
                                     <constraint firstItem="pS9-7R-hcV" firstAttribute="centerY" secondItem="rPc-ec-gcN" secondAttribute="centerY" id="olq-qh-mMV"/>
                                     <constraint firstItem="HaD-3V-2aL" firstAttribute="leading" secondItem="WU2-3F-iUW" secondAttribute="leading" constant="16" id="uCF-VN-Nqu"/>
                                 </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="Fmk-jI-52s"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=regular">
+                                    <mask key="constraints">
+                                        <include reference="Fmk-jI-52s"/>
+                                        <exclude reference="eaZ-Q4-PfU"/>
+                                        <exclude reference="uCF-VN-Nqu"/>
+                                        <exclude reference="f33-c3-71e"/>
+                                        <exclude reference="k3P-9M-N28"/>
+                                    </mask>
+                                </variation>
                             </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="HcP-yw-dbM"/>

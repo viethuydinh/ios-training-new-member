@@ -77,5 +77,6 @@ extension OverviewTableViewCell : UITextViewDelegate {
 }
 
 extension OverviewTableViewCell {
+    
     static let height : CGFloat = 300.0
 }

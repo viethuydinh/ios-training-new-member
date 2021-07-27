@@ -10,10 +10,13 @@ import UIKit
 class SignUpViewController: BaseVC {
     
     @IBOutlet weak var userNameTF: UITextField!
-    @IBOutlet weak var paswordTF: UITextField!
+    @IBOutlet weak var passwordTF: UITextField!
     @IBOutlet weak var confirmPasswordTF: UITextField!
     @IBOutlet weak var signUpButton: UIButton!
     @IBOutlet weak var signInLabel: UILabel!
+    @IBOutlet weak var userNameLabel: UILabel!
+    @IBOutlet weak var passwordLabel: UILabel!
+    @IBOutlet weak var confirmPasswordLabel: UILabel!
     
     var authenticationVM = DefaultAuthenticationViewModel()
     
@@ -26,7 +29,7 @@ class SignUpViewController: BaseVC {
     
     //MARK: -UI
     fileprivate func setUpUI() {
-        self.signUpButton.layer.cornerRadius = 10
+        self.signUpButton.layer.cornerRadius = self.signUpButton.bounds.height/2
         self.setUpRegister()
     }
     
@@ -54,7 +57,7 @@ class SignUpViewController: BaseVC {
     
     @IBAction func eventSignUp(_ sender: Any) {
         let state = self.authenticationVM.signUp(username: self.userNameTF.text ?? "",
-                                                 password: self.paswordTF.text ?? "",
+                                                 password: self.passwordTF.text ?? "",
                                                  repassword: self.confirmPasswordTF.text ?? "")
         if state.state {
             self.navigationController?.popViewController(animated: true)
@@ -65,7 +68,31 @@ class SignUpViewController: BaseVC {
     }
     
     @objc fileprivate func eventSignIn() {
-        self.navigationController?.popViewController(animated: true)
+        self.navigationController?.popViewController(animated: false)
+    }
+    
+    @objc private func eventUserName() {
+        UIView.animate(withDuration: 0.5) {
+            self.userNameTF.isHidden = false
+        } completion: { _ in
+            self.userNameTF.becomeFirstResponder()
+        }
+    }
+    
+    @objc private func eventPassword() {
+        UIView.animate(withDuration: 0.5) {
+            self.passwordTF.isHidden = false
+        } completion: { _ in
+            self.passwordTF.becomeFirstResponder()
+        }
+    }
+    
+    @objc private func eventConfirmPassword() {
+        UIView.animate(withDuration: 0.5) {
+            self.confirmPasswordTF.isHidden = false
+        } completion: { _ in
+            self.confirmPasswordTF.becomeFirstResponder()
+        }
     }
 }
 
@@ -74,11 +101,32 @@ extension SignUpViewController {
     
     fileprivate func setUpGesture() {
         self.setUpGestureSignInLabel()
+        self.setUpGestureUserNameLabel()
+        self.setUpGesturePasswordLabel()
+        self.setUpGestureConfirmPasswordLabel()
     }
     
     fileprivate func setUpGestureSignInLabel() {
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(self.eventSignIn))
         self.signInLabel.isUserInteractionEnabled = true
         self.signInLabel.addGestureRecognizer(tapGesture)
+    }
+    
+    private func setUpGestureUserNameLabel() {
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(self.eventUserName))
+        self.userNameLabel.isUserInteractionEnabled = true
+        self.userNameLabel.addGestureRecognizer(tapGesture)
+    }
+    
+    private func setUpGesturePasswordLabel() {
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(self.eventPassword))
+        self.passwordLabel.isUserInteractionEnabled = true
+        self.passwordLabel.addGestureRecognizer(tapGesture)
+    }
+    
+    private func setUpGestureConfirmPasswordLabel() {
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(self.eventConfirmPassword))
+        self.confirmPasswordLabel.isUserInteractionEnabled = true
+        self.confirmPasswordLabel.addGestureRecognizer(tapGesture)
     }
 }

@@ -9,6 +9,7 @@ import Foundation
 import UIKit
 
 enum TabItem: String, CaseIterable {
+    
     case home = "home"
     case history = "history"
     case sets = "sets"

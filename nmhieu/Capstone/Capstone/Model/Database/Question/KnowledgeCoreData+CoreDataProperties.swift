@@ -24,6 +24,7 @@ extension KnowledgeCoreData {
 }
 
 extension KnowledgeCoreData : DomainConvertible {
+    
     typealias Domain = KnowledgeModel
     
     var asDomain: KnowledgeModel {

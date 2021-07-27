@@ -53,5 +53,17 @@ class QuestionTableViewCell: UITableViewCell {
 }
 
 extension QuestionTableViewCell {
-    static let height : CGFloat = 56.0
+    
+    static var height : CGFloat {
+        get {
+            switch UIDevice.current.userInterfaceIdiom {
+            case .phone:
+               return 56.0
+            case .pad :
+               return 80.0
+            default:
+               return .zero
+            }
+        }
+    }
 }

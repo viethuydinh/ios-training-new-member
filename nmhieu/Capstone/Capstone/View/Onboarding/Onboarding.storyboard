@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
-    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
@@ -14,11 +14,11 @@
             <objects>
                 <viewController storyboardIdentifier="OnboardingViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Y6W-OH-hqX" customClass="OnboardingViewController" customModule="Capstone" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="cWv-1n-Pk8">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="567"/>
+                                <rect key="frame" x="0.0" y="44" width="414" height="683.5"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="b3f-9u-ISV">
                                     <size key="itemSize" width="369" height="519"/>
@@ -29,10 +29,10 @@
                                 <cells/>
                             </collectionView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="f7C-df-jv3">
-                                <rect key="frame" x="0.0" y="567" width="375" height="100"/>
+                                <rect key="frame" x="0.0" y="727.5" width="414" height="134.5"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gIM-fu-043">
-                                        <rect key="frame" x="209" y="25" width="150" height="50"/>
+                                        <rect key="frame" x="236.5" y="40.5" width="161.5" height="53.5"/>
                                         <color key="backgroundColor" name="navy"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="gIM-fu-043" secondAttribute="height" multiplier="3:1" id="o3k-h9-vOJ"/>
@@ -40,24 +40,47 @@
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <state key="normal" title="Let's start"/>
+                                        <variation key="heightClass=regular-widthClass=regular">
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="27"/>
+                                        </variation>
                                         <connections>
                                             <action selector="eventStart" destination="Y6W-OH-hqX" eventType="touchUpInside" id="xX1-G5-YMN"/>
                                         </connections>
                                     </button>
                                     <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="xvA-b0-a3Y">
-                                        <rect key="frame" x="16" y="36" width="122" height="28"/>
+                                        <rect key="frame" x="16" y="53.5" width="122" height="28"/>
                                         <color key="pageIndicatorTintColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <color key="currentPageIndicatorTintColor" name="navy"/>
                                     </pageControl>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
+                                    <constraint firstItem="gIM-fu-043" firstAttribute="height" secondItem="f7C-df-jv3" secondAttribute="height" multiplier="0.45" id="101-d5-JNN"/>
+                                    <constraint firstAttribute="trailing" secondItem="gIM-fu-043" secondAttribute="trailing" constant="32" id="Fyd-cE-WOn"/>
                                     <constraint firstAttribute="trailing" secondItem="gIM-fu-043" secondAttribute="trailing" constant="16" id="QmX-KY-WEQ"/>
                                     <constraint firstItem="xvA-b0-a3Y" firstAttribute="centerY" secondItem="f7C-df-jv3" secondAttribute="centerY" id="S2H-5g-ZF8"/>
                                     <constraint firstItem="gIM-fu-043" firstAttribute="centerY" secondItem="f7C-df-jv3" secondAttribute="centerY" id="WHo-wn-ULJ"/>
                                     <constraint firstItem="xvA-b0-a3Y" firstAttribute="leading" secondItem="f7C-df-jv3" secondAttribute="leading" constant="16" id="XqV-RI-fRB"/>
-                                    <constraint firstItem="gIM-fu-043" firstAttribute="width" secondItem="f7C-df-jv3" secondAttribute="width" multiplier="0.4" id="wX5-d9-PpU"/>
+                                    <constraint firstItem="gIM-fu-043" firstAttribute="height" secondItem="f7C-df-jv3" secondAttribute="height" multiplier="0.4" id="fdu-Gt-kzY"/>
+                                    <constraint firstItem="xvA-b0-a3Y" firstAttribute="leading" secondItem="f7C-df-jv3" secondAttribute="leading" constant="32" id="pIZ-mp-sM3"/>
                                 </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="pIZ-mp-sM3"/>
+                                        <exclude reference="101-d5-JNN"/>
+                                        <exclude reference="Fyd-cE-WOn"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=regular">
+                                    <mask key="constraints">
+                                        <exclude reference="XqV-RI-fRB"/>
+                                        <include reference="pIZ-mp-sM3"/>
+                                        <include reference="101-d5-JNN"/>
+                                        <include reference="Fyd-cE-WOn"/>
+                                        <exclude reference="QmX-KY-WEQ"/>
+                                        <exclude reference="fdu-Gt-kzY"/>
+                                    </mask>
+                                </variation>
                             </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>

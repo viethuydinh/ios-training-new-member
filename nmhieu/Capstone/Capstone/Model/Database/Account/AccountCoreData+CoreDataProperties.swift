@@ -23,6 +23,7 @@ extension AccountCoreData {
 }
 
 extension AccountCoreData : DomainConvertible {
+    
     typealias Domain = AccountModel
     
     var asDomain: Domain {

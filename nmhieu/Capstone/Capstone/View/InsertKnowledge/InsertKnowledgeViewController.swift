@@ -20,14 +20,6 @@ class InsertKnowledgeViewController: BaseVC {
     
     var knowledgeVM = DefaultKnowledgeViewModel()
     
-    var numberOfRow : Int = 0 {
-        didSet {
-            self.knowledgeVM.listKnowledges.append(KnowledgeModel(id: nil, content: "", answer: "", level: self.level))
-            self.knowledgeTableView.reloadData()
-            self.knowledgeTableView.scrollToRow(at: .init(row: self.numberOfRow - 1, section: 0), at: .bottom, animated: true)
-        }
-    }
-    
     var originYBottomView : CGFloat = .zero
     
     var bottomHeightSafeArea : CGFloat = .zero
@@ -40,6 +32,8 @@ class InsertKnowledgeViewController: BaseVC {
     }
     
     override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        self.setUpConstrainSubView()
         self.getFrameOfContent()
     }
     
@@ -54,8 +48,12 @@ class InsertKnowledgeViewController: BaseVC {
         self.knowledgeTableView.dataSource = self
         self.knowledgeTableView.delegate = self
         self.knowledgeTableView.contentInset = .init(top: 10.0, left: 0.0, bottom: 0.0, right: 0.0)
+    }
+    
+    private func setUpConstrainSubView() {
         self.addButton.layer.cornerRadius = self.addButton.bounds.height/2
     }
+        
     
     private func getFrameOfContent() {
         self.originYBottomView = self.bottomView.frame.origin.y
@@ -85,14 +83,16 @@ class InsertKnowledgeViewController: BaseVC {
     }
     
     @IBAction func eventAdd() {
-        self.numberOfRow += 1
+        self.knowledgeVM.listKnowledges.append(KnowledgeModel(id: nil, content: "", answer: "", level: self.level))
+        self.knowledgeTableView.reloadData()
+        self.knowledgeTableView.scrollToRow(at: .init(row: self.knowledgeVM.listKnowledges.count - 1, section: 0), at: .bottom, animated: true)
     }
     
     @objc func eventEnterKnowledge(notification : Notification) {
         if let beginEditing = notification.userInfo?["beginEditing"] as? Bool {
             if beginEditing {
                 let indexPath = notification.userInfo?["indexPath"] as! IndexPath
-                self.orderLabel.text = "\(indexPath.row  + 1)/\(self.numberOfRow)"
+                self.orderLabel.text = "\(indexPath.row  + 1)/\(self.knowledgeVM.listKnowledges.count)"
                 self.knowledgeTableView.scrollToRow(at: indexPath, at: .middle, animated: true)
             }
         }
@@ -128,7 +128,7 @@ class InsertKnowledgeViewController: BaseVC {
 extension InsertKnowledgeViewController : UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.numberOfRow
+        return self.knowledgeVM.listKnowledges.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -152,8 +152,8 @@ extension InsertKnowledgeViewController : UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
-            self.numberOfRow -= 1
-            self.knowledgeTableView.deleteRows(at: [indexPath], with: .automatic)
+            self.knowledgeVM.listKnowledges.remove(at: indexPath.row)
+            self.knowledgeTableView.reloadData()
         }
     }
 }

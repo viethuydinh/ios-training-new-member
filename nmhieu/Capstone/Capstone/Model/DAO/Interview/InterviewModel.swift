@@ -17,6 +17,7 @@ struct InterviewModel {
 }
 
 extension InterviewModel : ObjectConvertible {
+    
     typealias Object = InterviewCoreData
     
     func update(obj: InterviewCoreData) -> InterviewCoreData {

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <device id="retina6_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
@@ -14,14 +14,14 @@
             <objects>
                 <viewController storyboardIdentifier="HomeViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Zdv-Bi-InI" customClass="HomeViewController" customModule="Capstone" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="YnA-0X-2dd">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rgw-tk-4vm">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="133.5"/>
+                                <rect key="frame" x="0.0" y="44.000000000000014" width="428" height="185.33333333333337"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Xgf-Ib-ncr">
-                                        <rect key="frame" x="16" y="25" width="71" height="30"/>
+                                        <rect key="frame" x="16" y="40.666666666666671" width="71" height="30"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ldK-FE-fb1">
                                                 <rect key="frame" x="0.0" y="0.0" width="71" height="30"/>
@@ -34,39 +34,61 @@
                                         </subviews>
                                     </stackView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hi, Interviewer" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YIF-1g-Kkb">
-                                        <rect key="frame" x="263" y="31.5" width="96" height="17"/>
+                                        <rect key="frame" x="316" y="47" width="96" height="17"/>
                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
+                                        <variation key="heightClass=regular-widthClass=regular">
+                                            <fontDescription key="fontDescription" type="system" weight="medium" pointSize="24"/>
+                                        </variation>
                                     </label>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
+                                    <constraint firstItem="Xgf-Ib-ncr" firstAttribute="leading" secondItem="rgw-tk-4vm" secondAttribute="leading" constant="32" id="AKd-Jw-cBu"/>
                                     <constraint firstItem="Xgf-Ib-ncr" firstAttribute="centerY" secondItem="rgw-tk-4vm" secondAttribute="centerY" multiplier="0.6" id="JfZ-bW-lOu"/>
+                                    <constraint firstAttribute="trailing" secondItem="YIF-1g-Kkb" secondAttribute="trailing" constant="32" id="Kwv-en-BRk"/>
                                     <constraint firstItem="YIF-1g-Kkb" firstAttribute="centerY" secondItem="Xgf-Ib-ncr" secondAttribute="centerY" id="XBA-hu-OTf"/>
                                     <constraint firstItem="Xgf-Ib-ncr" firstAttribute="leading" secondItem="rgw-tk-4vm" secondAttribute="leading" constant="16" id="nZ4-0r-DGd"/>
                                     <constraint firstAttribute="trailing" secondItem="YIF-1g-Kkb" secondAttribute="trailing" constant="16" id="p2X-x5-cBP"/>
                                 </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="AKd-Jw-cBu"/>
+                                        <exclude reference="Kwv-en-BRk"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=regular">
+                                    <mask key="constraints">
+                                        <include reference="AKd-Jw-cBu"/>
+                                        <exclude reference="nZ4-0r-DGd"/>
+                                        <include reference="Kwv-en-BRk"/>
+                                        <exclude reference="p2X-x5-cBP"/>
+                                    </mask>
+                                </variation>
                             </view>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="Wmi-pP-t1k">
-                                <rect key="frame" x="16" y="133.5" width="343" height="343"/>
+                                <rect key="frame" x="16" y="229.33333333333337" width="396" height="396"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="mON-nW-iHy">
-                                        <rect key="frame" x="0.0" y="0.0" width="343" height="161.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="396" height="188"/>
                                         <subviews>
                                             <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ctf-T7-gBK">
-                                                <rect key="frame" x="0.0" y="0.0" width="161.5" height="161.5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="188" height="188"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ueO-x5-hCg">
-                                                        <rect key="frame" x="0.0" y="0.0" width="161.5" height="161.5"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="188" height="188"/>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
                                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <state key="normal" title="Intern">
                                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </state>
+                                                        <variation key="heightClass=regular-widthClass=regular">
+                                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="32"/>
+                                                        </variation>
                                                         <connections>
-                                                            <action selector="eventInternButton" destination="Zdv-Bi-InI" eventType="touchUpInside" id="Sjm-hl-7P9"/>
+                                                            <action selector="eventInternButton:" destination="Zdv-Bi-InI" eventType="touchUpInside" id="2xA-bd-F6i"/>
                                                         </connections>
                                                     </button>
                                                 </subviews>
@@ -80,17 +102,20 @@
                                                 </constraints>
                                             </view>
                                             <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ePy-53-Af1">
-                                                <rect key="frame" x="181.5" y="0.0" width="161.5" height="161.5"/>
+                                                <rect key="frame" x="208" y="0.0" width="188" height="188"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gmv-SO-gu0">
-                                                        <rect key="frame" x="0.0" y="0.0" width="161.5" height="161.5"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="188" height="188"/>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
                                                         <state key="normal" title="Fresher">
                                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </state>
+                                                        <variation key="heightClass=regular-widthClass=regular">
+                                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="32"/>
+                                                        </variation>
                                                         <connections>
-                                                            <action selector="eventFresherButton" destination="Zdv-Bi-InI" eventType="touchUpInside" id="jB1-B4-67o"/>
+                                                            <action selector="eventFresherButton:" destination="Zdv-Bi-InI" eventType="touchUpInside" id="Rk0-RW-IPh"/>
                                                         </connections>
                                                     </button>
                                                 </subviews>
@@ -105,20 +130,23 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="I3S-k4-e5P">
-                                        <rect key="frame" x="0.0" y="181.5" width="343" height="161.5"/>
+                                        <rect key="frame" x="0.0" y="208" width="396" height="188"/>
                                         <subviews>
                                             <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RgT-DV-BTw">
-                                                <rect key="frame" x="0.0" y="0.0" width="161.5" height="161.5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="188" height="188"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Ug-B8-3mM">
-                                                        <rect key="frame" x="0.0" y="0.0" width="161.5" height="161.5"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="188" height="188"/>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
                                                         <state key="normal" title="Junior">
                                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </state>
+                                                        <variation key="heightClass=regular-widthClass=regular">
+                                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="32"/>
+                                                        </variation>
                                                         <connections>
-                                                            <action selector="eventJuniorButton" destination="Zdv-Bi-InI" eventType="touchUpInside" id="G4S-12-rL8"/>
+                                                            <action selector="eventJuniorButton:" destination="Zdv-Bi-InI" eventType="touchUpInside" id="XGu-6d-4SI"/>
                                                         </connections>
                                                     </button>
                                                 </subviews>
@@ -131,17 +159,20 @@
                                                 </constraints>
                                             </view>
                                             <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LML-d8-IsY">
-                                                <rect key="frame" x="181.5" y="0.0" width="161.5" height="161.5"/>
+                                                <rect key="frame" x="208" y="0.0" width="188" height="188"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mYU-sf-ExQ">
-                                                        <rect key="frame" x="0.0" y="0.0" width="161.5" height="161.5"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="188" height="188"/>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
                                                         <state key="normal" title="Senior">
                                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </state>
+                                                        <variation key="heightClass=regular-widthClass=regular">
+                                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="32"/>
+                                                        </variation>
                                                         <connections>
-                                                            <action selector="eventSeniorButton" destination="Zdv-Bi-InI" eventType="touchUpInside" id="XSU-Qq-xFW"/>
+                                                            <action selector="eventSeniorButton:" destination="Zdv-Bi-InI" eventType="touchUpInside" id="45b-YT-dhQ"/>
                                                         </connections>
                                                     </button>
                                                 </subviews>
@@ -156,6 +187,9 @@
                                         </subviews>
                                     </stackView>
                                 </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Wmi-pP-t1k" secondAttribute="height" multiplier="1:1" id="ca2-wM-Qba"/>
+                                </constraints>
                             </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vPT-eT-D4k"/>
@@ -165,10 +199,30 @@
                             <constraint firstItem="rgw-tk-4vm" firstAttribute="leading" secondItem="vPT-eT-D4k" secondAttribute="leading" id="RW7-V4-brS"/>
                             <constraint firstItem="vPT-eT-D4k" firstAttribute="trailing" secondItem="Wmi-pP-t1k" secondAttribute="trailing" constant="16" id="WJm-v5-52H"/>
                             <constraint firstItem="vPT-eT-D4k" firstAttribute="trailing" secondItem="rgw-tk-4vm" secondAttribute="trailing" id="Yib-84-Qox"/>
+                            <constraint firstItem="Wmi-pP-t1k" firstAttribute="leading" secondItem="vPT-eT-D4k" secondAttribute="leading" constant="32" id="dHr-XB-ybH"/>
                             <constraint firstItem="Wmi-pP-t1k" firstAttribute="leading" secondItem="vPT-eT-D4k" secondAttribute="leading" constant="16" id="erL-Gm-UcE"/>
+                            <constraint firstItem="rgw-tk-4vm" firstAttribute="height" secondItem="YnA-0X-2dd" secondAttribute="height" multiplier="0.1" id="fLE-Qp-QRf"/>
+                            <constraint firstItem="vPT-eT-D4k" firstAttribute="trailing" secondItem="Wmi-pP-t1k" secondAttribute="trailing" constant="32" id="hwe-bd-Sc5"/>
                             <constraint firstItem="rgw-tk-4vm" firstAttribute="top" secondItem="vPT-eT-D4k" secondAttribute="top" id="phP-FT-rjT"/>
                             <constraint firstItem="rgw-tk-4vm" firstAttribute="height" secondItem="YnA-0X-2dd" secondAttribute="height" multiplier="0.2" id="tcH-zg-AMc"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="hwe-bd-Sc5"/>
+                                <exclude reference="fLE-Qp-QRf"/>
+                                <exclude reference="dHr-XB-ybH"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=regular">
+                            <mask key="constraints">
+                                <exclude reference="WJm-v5-52H"/>
+                                <include reference="hwe-bd-Sc5"/>
+                                <include reference="fLE-Qp-QRf"/>
+                                <exclude reference="tcH-zg-AMc"/>
+                                <include reference="dHr-XB-ybH"/>
+                                <exclude reference="erL-Gm-UcE"/>
+                            </mask>
+                        </variation>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item" id="u0z-JG-0l1"/>
                     <navigationItem key="navigationItem" id="CSJ-57-zPH"/>

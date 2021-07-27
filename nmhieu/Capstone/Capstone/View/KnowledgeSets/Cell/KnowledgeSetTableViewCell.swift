@@ -20,9 +20,22 @@ class KnowledgeSetTableViewCell: UITableViewCell {
 
 extension KnowledgeSetTableViewCell {
     
+    static var fontSize : CGFloat {
+        get {
+            switch UIDevice.current.userInterfaceIdiom {
+            case .phone:
+                return 14.0
+            case .pad :
+                return 20.0
+            default:
+                return .zero
+            }
+        }
+    }
+    
     static func height(width : CGFloat, question : String ,answer : String) -> CGFloat {
-        let questionLabelHeight = UILabel().size(width: width - 16, content: question, fontSize: 14.0).height
-        let answerLabelHeight = UILabel().size(width: width - 16, content: answer, fontSize: 14.0).height
+        let questionLabelHeight = UILabel().size(width: width - 16, content: question, fontSize: self.fontSize).height
+        let answerLabelHeight = UILabel().size(width: width - 16, content: answer, fontSize: self.fontSize).height
         
         return questionLabelHeight + answerLabelHeight + 100
     }

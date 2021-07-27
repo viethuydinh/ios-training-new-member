@@ -28,7 +28,7 @@ class HistoryViewController: UIViewController {
         self.historyTableView.register(UINib(nibName: HistoryTableViewCell.name, bundle: nil), forCellReuseIdentifier: HistoryTableViewCell.identifier)
         self.historyTableView.dataSource = self
         self.historyTableView.delegate = self
-        self.historyTableView.contentInset = UIEdgeInsets(top: 0.0, left: 0.0, bottom: 80.0, right: 0.0)
+        self.historyTableView.contentInset = UIEdgeInsets(top: 0.0, left: 0.0, bottom: BaseTabBarViewController.shared.tabBarHeight, right: 0.0)
     }
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
@@ -47,6 +47,7 @@ class HistoryViewController: UIViewController {
 }
 
 extension HistoryViewController : UITableViewDataSource {
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.interviewVM.interviewHistory.count
     }
@@ -59,6 +60,7 @@ extension HistoryViewController : UITableViewDataSource {
 }
 
 extension HistoryViewController : UITableViewDelegate {
+    
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return HistoryTableViewCell.height(tableView.bounds)
     }

@@ -16,20 +16,31 @@ class SignInViewController: BaseVC {
     @IBOutlet weak var animationView: UIView!
     @IBOutlet weak var userNameLabel: UILabel!
     @IBOutlet weak var passwordLabel: UILabel!
+    @IBOutlet weak var leadingConstraintAnimationView: NSLayoutConstraint!
+    @IBOutlet weak var topConstraintAnimationView: NSLayoutConstraint!
     
     var authenticationVM = DefaultAuthenticationViewModel()
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.setUpUI()
-//        self.event()
         self.setUpGesture()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.eventAnimationView()
+    }
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        self.setUpConstraintAnimationView()
     }
     
     //MARK: -UI
     fileprivate func setUpUI() {
         self.signInButton.layer.cornerRadius = 40
-        self.animationView.layer.cornerRadius = 225
         self.setUpRegister()
     }
     
@@ -48,13 +59,13 @@ class SignInViewController: BaseVC {
         self.signUpLabel.attributedText = attributedString
     }
     
-    //MARK: -Event
-//    private func event() {
-//        let notificationCenter = NotificationCenter.default
-//        notificationCenter.addObserver(self, selector: #selector(self.keyboardWillShow(notification:)), name: UIResponder.keyboardWillShowNotification, object: nil)
-//        notificationCenter.addObserver(self, selector: #selector(self.keyboardWillHide(notification:)), name: UIResponder.keyboardWillHideNotification, object: nil)
-//    }
+    private func setUpConstraintAnimationView() {
+        self.animationView.layer.cornerRadius = self.animationView.bounds.height/2
+        self.leadingConstraintAnimationView.constant = -self.animationView.bounds.width/2
+        self.topConstraintAnimationView.constant = -self.animationView.bounds.height/2
+    }
     
+    //MARK: -Event
     @IBAction func eventSignIn() {
         let stateAuth = self.authenticationVM.signIn(username: self.userNameTF.text ?? "",
                                                      password: self.passwordTF.text ?? "")
@@ -73,8 +84,13 @@ class SignInViewController: BaseVC {
     }
     
     @objc private func eventSignUp() {
-        guard let vc = UIStoryboard(name: "SignUp", bundle: nil).instantiateViewController(identifier: SignUpViewController.identifier) as? SignUpViewController else { return }
-        self.navigationController?.pushViewController(vc, animated: true)
+        self.view.bringSubviewToFront(self.animationView)
+        UIView.animate(withDuration: 0.5) {
+            self.animationView.transform = .init(scaleX: self.view.bounds.width, y: self.view.bounds.height)
+        } completion: { _ in
+            guard let vc = UIStoryboard(name: "SignUp", bundle: nil).instantiateViewController(identifier: SignUpViewController.identifier) as? SignUpViewController else { return }
+            self.navigationController?.pushViewController(vc, animated: false)
+        }
     }
     
     @objc private func eventUserName() {
@@ -92,18 +108,26 @@ class SignInViewController: BaseVC {
             self.passwordTF.becomeFirstResponder()
         }
     }
+    
+    private func eventAnimationView() {
+        UIView.animate(withDuration: 0.5) {
+            self.animationView.transform = .init(scaleX: 1, y: 1)
+        } completion: { _ in
+            self.view.sendSubviewToBack(self.animationView)
+        }
+    }
 }
 
 //MARK: -Gesture
 extension SignInViewController {
     
     fileprivate func setUpGesture() {
-        self.setUpGestureSignInLabel()
+        self.setUpGestureSignUpLabel()
         self.setUpGestureUserNameLabel()
         self.setUpGesturePasswordLabel()
     }
     
-    private func setUpGestureSignInLabel() {
+    private func setUpGestureSignUpLabel() {
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(self.eventSignUp))
         self.signUpLabel.isUserInteractionEnabled = true
         self.signUpLabel.addGestureRecognizer(tapGesture)
@@ -121,5 +145,3 @@ extension SignInViewController {
         self.passwordLabel.addGestureRecognizer(tapGesture)
     }
 }
-
-

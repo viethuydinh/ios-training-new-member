@@ -53,5 +53,17 @@ class CandidateInforTableViewCell: UITableViewCell {
 }
 
 extension CandidateInforTableViewCell {
-    static let height : CGFloat = 160.0 + 32.0
+    
+    static var height : CGFloat  {
+        get {
+            switch UIDevice.current.userInterfaceIdiom {
+            case .phone:
+                return 160.0 + 32.0
+            case .pad :
+                return 260.0 + 32.0
+            default:
+                return .zero
+            }
+        }
+    }
 }

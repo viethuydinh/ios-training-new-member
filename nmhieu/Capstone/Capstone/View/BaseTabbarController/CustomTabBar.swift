@@ -10,7 +10,47 @@ import UIKit
 class CustomTabBar: UIView {
 
     var itemTapped: ((_ tab: Int) -> Void)?
+    
     var activeItem: Int = 0
+    
+    var heightItem : CGFloat {
+        get {
+            switch UIDevice.current.userInterfaceIdiom {
+            case .phone:
+                return 25.0
+            case .pad:
+                return 40.0
+            default:
+                return .zero
+            }
+        }
+    }
+    
+    var fontSize : CGFloat {
+        get {
+            switch UIDevice.current.userInterfaceIdiom {
+            case .phone:
+                return 12.0
+            case .pad:
+                return 22.0
+            default:
+                return .zero
+            }
+        }
+    }
+    
+    var heightTitleLabel : CGFloat {
+        get {
+            switch UIDevice.current.userInterfaceIdiom {
+            case .phone:
+                return 13.0
+            case .pad:
+                return 30.0
+            default:
+                return .zero
+            }
+        }
+    }
 
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -56,7 +96,7 @@ class CustomTabBar: UIView {
 
         let itemTitleLabel = UILabel()
         itemTitleLabel.text = item.displayTitle
-        itemTitleLabel.font = UIFont.boldSystemFont(ofSize: 12.0)
+        itemTitleLabel.font = UIFont.boldSystemFont(ofSize: self.fontSize)
         itemTitleLabel.textAlignment = .center
         itemTitleLabel.translatesAutoresizingMaskIntoConstraints = false
         itemTitleLabel.clipsToBounds = true
@@ -71,11 +111,11 @@ class CustomTabBar: UIView {
         tabBarItem.addSubview(itemImageView)
 
         NSLayoutConstraint.activate([
-            itemImageView.heightAnchor.constraint(equalToConstant:25),
-            itemImageView.widthAnchor.constraint(equalToConstant: 25),
+            itemImageView.heightAnchor.constraint(equalToConstant: self.heightItem),
+            itemImageView.widthAnchor.constraint(equalToConstant: self.heightItem),
             itemImageView.centerXAnchor.constraint(equalTo: tabBarItem.centerXAnchor),
             itemImageView.topAnchor.constraint(equalTo: tabBarItem.topAnchor, constant: 8),
-            itemTitleLabel.heightAnchor.constraint(equalToConstant: 13),
+            itemTitleLabel.heightAnchor.constraint(equalToConstant: self.heightTitleLabel),
             itemTitleLabel.widthAnchor.constraint(equalTo: tabBarItem.widthAnchor),
             itemTitleLabel.topAnchor.constraint(equalTo: itemImageView.bottomAnchor, constant: 6),
             itemTitleLabel.centerXAnchor.constraint(equalTo: tabBarItem.centerXAnchor)
@@ -131,5 +171,4 @@ class CustomTabBar: UIView {
             }
         }
     }
-
 }

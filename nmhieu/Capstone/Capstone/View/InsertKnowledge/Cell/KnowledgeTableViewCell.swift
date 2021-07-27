@@ -62,5 +62,17 @@ extension KnowledgeTableViewCell : UITextFieldDelegate {
 }
 
 extension KnowledgeTableViewCell {
-    static let height : CGFloat = 120.0
+    
+    static var height : CGFloat {
+        get {
+            switch UIDevice.current.userInterfaceIdiom {
+            case .phone:
+                return 120.0
+            case .pad :
+                return 240.0
+            default:
+                return .zero
+            }
+        }
+    }
 }

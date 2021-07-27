@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <device id="ipad12_9rounded" orientation="portrait" layout="fullscreen" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
@@ -14,27 +14,30 @@
             <objects>
                 <viewController storyboardIdentifier="HistoryViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="zdP-qp-OUf" customClass="HistoryViewController" customModule="Capstone" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Vpc-Pz-77f">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="1366"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xBB-tO-ran">
-                                <rect key="frame" x="0.0" y="44" width="414" height="56"/>
+                                <rect key="frame" x="0.0" y="0.0" width="1024" height="102"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="History" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Bh-J3-5F2">
-                                        <rect key="frame" x="180" y="22" width="54" height="18"/>
+                                        <rect key="frame" x="469.5" y="40" width="85" height="30"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
+                                        <variation key="heightClass=regular-widthClass=regular">
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
+                                        </variation>
                                     </label>
                                     <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S28-b7-5RR">
-                                        <rect key="frame" x="360" y="16" width="38" height="30"/>
+                                        <rect key="frame" x="970" y="40" width="38" height="30"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                         <state key="normal" title="Done">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                     </button>
                                     <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KYg-rh-ZSi">
-                                        <rect key="frame" x="16" y="16" width="37" height="30"/>
+                                        <rect key="frame" x="32" y="40" width="37" height="30"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                         <state key="normal" title="Back">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -49,14 +52,32 @@
                                     <constraint firstAttribute="height" constant="56" id="0qW-Tg-2No"/>
                                     <constraint firstItem="1Bh-J3-5F2" firstAttribute="centerX" secondItem="xBB-tO-ran" secondAttribute="centerX" id="GNC-Pn-x8T"/>
                                     <constraint firstAttribute="bottom" secondItem="1Bh-J3-5F2" secondAttribute="bottom" constant="16" id="Hd0-OH-09P"/>
+                                    <constraint firstItem="KYg-rh-ZSi" firstAttribute="leading" secondItem="xBB-tO-ran" secondAttribute="leading" constant="32" id="QJK-kZ-ktN"/>
                                     <constraint firstAttribute="trailing" secondItem="S28-b7-5RR" secondAttribute="trailing" constant="16" id="XYJ-Yi-4Rx"/>
                                     <constraint firstItem="KYg-rh-ZSi" firstAttribute="leading" secondItem="xBB-tO-ran" secondAttribute="leading" constant="16" id="bIB-sc-9Hm"/>
                                     <constraint firstItem="S28-b7-5RR" firstAttribute="centerY" secondItem="1Bh-J3-5F2" secondAttribute="centerY" id="bRd-D4-5CO"/>
                                     <constraint firstItem="KYg-rh-ZSi" firstAttribute="centerY" secondItem="1Bh-J3-5F2" secondAttribute="centerY" id="ihc-j9-eDz"/>
+                                    <constraint firstAttribute="height" constant="102" id="imE-UC-7Th"/>
+                                    <constraint firstAttribute="bottom" secondItem="1Bh-J3-5F2" secondAttribute="bottom" constant="32" id="rHM-7v-RkH"/>
                                 </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="imE-UC-7Th"/>
+                                        <exclude reference="rHM-7v-RkH"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=regular">
+                                    <mask key="constraints">
+                                        <exclude reference="0qW-Tg-2No"/>
+                                        <include reference="imE-UC-7Th"/>
+                                        <exclude reference="bIB-sc-9Hm"/>
+                                        <exclude reference="Hd0-OH-09P"/>
+                                        <include reference="rHM-7v-RkH"/>
+                                    </mask>
+                                </variation>
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="oWE-7X-nt9">
-                                <rect key="frame" x="0.0" y="100" width="414" height="796"/>
+                                <rect key="frame" x="0.0" y="102" width="1024" height="1264"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
                         </subviews>

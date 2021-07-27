@@ -31,19 +31,19 @@ class HomeViewController: BaseVC {
     }
     
     //MARK: -Event
-    @IBAction func eventInternButton() {
+    @IBAction func eventInternButton(_ sender: Any) {
         self.eventOverlayView(level: .intern)
     }
     
-    @IBAction func eventFresherButton() {
+    @IBAction func eventFresherButton(_ sender: Any) {
         self.eventOverlayView(level: .fresher)
     }
     
-    @IBAction func eventJuniorButton() {
+    @IBAction func eventJuniorButton(_ sender: Any) {
         self.eventOverlayView(level: .junior)
     }
     
-    @IBAction func eventSeniorButton() {
+    @IBAction func eventSeniorButton(_ sender: Any) {
         self.eventOverlayView(level: .senior)
     }
     
@@ -75,6 +75,13 @@ class HomeViewController: BaseVC {
         actionSheet.addAction(createAction)
         actionSheet.addAction(interViewAction)
         actionSheet.addAction(cancelAction)
+        
+        if let popoverController = actionSheet.popoverPresentationController {
+            popoverController.sourceView = self.view
+            popoverController.sourceRect = CGRect(x: self.view.bounds.midX, y: self.view.bounds.midY, width: 0, height: 0)
+            popoverController.permittedArrowDirections = []
+        }
+        
         self.present(actionSheet, animated: true, completion: nil)
     }
 }

@@ -56,6 +56,8 @@
 		156948FB26A9BFB000EF8C3D /* KnowledgeSetTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 156948F926A9BFB000EF8C3D /* KnowledgeSetTableViewCell.xib */; };
 		1569490026A9C4E500EF8C3D /* UILabel+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 156948FF26A9C4E500EF8C3D /* UILabel+Extension.swift */; };
 		1569490226A9D8F100EF8C3D /* BaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1569490126A9D8F100EF8C3D /* BaseViewModel.swift */; };
+		15708CBE26AFFE6200E63493 /* AlertEditKnowledge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15708CBD26AFFE6200E63493 /* AlertEditKnowledge.swift */; };
+		15708CC026AFFE7500E63493 /* AlertEditKnowledge.xib in Resources */ = {isa = PBXBuildFile; fileRef = 15708CBF26AFFE7500E63493 /* AlertEditKnowledge.xib */; };
 		1573548C26A023FD00A5C59D /* CandidateInforModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1573548B26A023FD00A5C59D /* CandidateInforModel.swift */; };
 		1573548F26A024C900A5C59D /* OverviewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1573548E26A024C900A5C59D /* OverviewModel.swift */; };
 		1573549226A030E500A5C59D /* History.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1573549126A030E500A5C59D /* History.storyboard */; };
@@ -167,6 +169,8 @@
 		156948F926A9BFB000EF8C3D /* KnowledgeSetTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = KnowledgeSetTableViewCell.xib; sourceTree = "<group>"; };
 		156948FF26A9C4E500EF8C3D /* UILabel+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+Extension.swift"; sourceTree = "<group>"; };
 		1569490126A9D8F100EF8C3D /* BaseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewModel.swift; sourceTree = "<group>"; };
+		15708CBD26AFFE6200E63493 /* AlertEditKnowledge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertEditKnowledge.swift; sourceTree = "<group>"; };
+		15708CBF26AFFE7500E63493 /* AlertEditKnowledge.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AlertEditKnowledge.xib; sourceTree = "<group>"; };
 		1573548B26A023FD00A5C59D /* CandidateInforModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CandidateInforModel.swift; sourceTree = "<group>"; };
 		1573548E26A024C900A5C59D /* OverviewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverviewModel.swift; sourceTree = "<group>"; };
 		1573549126A030E500A5C59D /* History.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = History.storyboard; sourceTree = "<group>"; };
@@ -389,6 +393,7 @@
 		156948F526A97F2500EF8C3D /* KnowledgeSets */ = {
 			isa = PBXGroup;
 			children = (
+				15708CC126AFFEB200E63493 /* Alert */,
 				156948FC26A9BFB500EF8C3D /* Cell */,
 				156948F326A97F1F00EF8C3D /* KnowledgeSetsViewController.swift */,
 				156948F626A97F7100EF8C3D /* KnowledgeSets.storyboard */,
@@ -403,6 +408,15 @@
 				156948F926A9BFB000EF8C3D /* KnowledgeSetTableViewCell.xib */,
 			);
 			path = Cell;
+			sourceTree = "<group>";
+		};
+		15708CC126AFFEB200E63493 /* Alert */ = {
+			isa = PBXGroup;
+			children = (
+				15708CBD26AFFE6200E63493 /* AlertEditKnowledge.swift */,
+				15708CBF26AFFE7500E63493 /* AlertEditKnowledge.xib */,
+			);
+			path = Alert;
 			sourceTree = "<group>";
 		};
 		1573548D26A0248D00A5C59D /* Interview */ = {
@@ -420,8 +434,8 @@
 			isa = PBXGroup;
 			children = (
 				1573549526A0319300A5C59D /* Cell */,
-				1573549126A030E500A5C59D /* History.storyboard */,
 				1573549326A030FE00A5C59D /* HistoryViewController.swift */,
+				1573549126A030E500A5C59D /* History.storyboard */,
 			);
 			path = History;
 			sourceTree = "<group>";
@@ -429,8 +443,8 @@
 		1573549526A0319300A5C59D /* Cell */ = {
 			isa = PBXGroup;
 			children = (
-				1573549726A031B000A5C59D /* HistoryTableViewCell.xib */,
 				1573549626A031B000A5C59D /* HistoryTableViewCell.swift */,
+				1573549726A031B000A5C59D /* HistoryTableViewCell.xib */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -759,6 +773,7 @@
 			files = (
 				15A0386B269E97D500D9D0FB /* Interview.storyboard in Resources */,
 				15095E7E268DC8B400129B9C /* LaunchScreen.storyboard in Resources */,
+				15708CC026AFFE7500E63493 /* AlertEditKnowledge.xib in Resources */,
 				1585AFDF2696EAA90073F89E /* Home.storyboard in Resources */,
 				15A03882269EBF4D00D9D0FB /* QuestionTableViewCell.xib in Resources */,
 				154A63A4269BFB2F008E571C /* InsertKnowledge.storyboard in Resources */,
@@ -877,6 +892,7 @@
 				15A038A3269ED12E00D9D0FB /* QuestionInterviewModel.swift in Sources */,
 				1585AFBB2696B1700073F89E /* AuthenticationViewModel.swift in Sources */,
 				1507B213268F1435001945A8 /* BaseVCViewController.swift in Sources */,
+				15708CBE26AFFE6200E63493 /* AlertEditKnowledge.swift in Sources */,
 				156948F426A97F1F00EF8C3D /* KnowledgeSetsViewController.swift in Sources */,
 				1573549826A031B000A5C59D /* HistoryTableViewCell.swift in Sources */,
 				15179EB52695565F008D3A46 /* Convertible.swift in Sources */,

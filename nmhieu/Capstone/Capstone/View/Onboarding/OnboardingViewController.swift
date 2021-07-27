@@ -31,11 +31,17 @@ class OnboardingViewController: UIViewController {
     //MARK: -Event
     @IBAction func eventStart() {
         guard let vc = UIStoryboard(name: "SignIn", bundle: nil).instantiateViewController(withIdentifier: "NavigationAuth") as? UINavigationController else { return }
-        UserDefaults.setValue(false, forKey: UserDefaultKey.firstLoadApp)
+        
+//        guard let firstLoadApp = UserDefaults.value(forKey: UserDefaultKey.firstLoadApp) as? Bool else { return }
+//
+//        if firstLoadApp {
+//            UserDefaults.setValue(false, forKey: UserDefaultKey.firstLoadApp)
+//        }
         self.view.window?.rootViewController = vc
     }
 }
 
+//MARK: -UICollectionViewDataSource
 extension OnboardingViewController : UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -52,6 +58,7 @@ extension OnboardingViewController : UICollectionViewDataSource {
     }
 }
 
+//MARK: -UICollectionViewDelegate
 extension OnboardingViewController : UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {

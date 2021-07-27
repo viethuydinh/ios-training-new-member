@@ -37,7 +37,7 @@ class KnowledgeSetsViewController: UIViewController {
         self.knowledgeTableView.register(UINib(nibName: KnowledgeSetTableViewCell.identifier, bundle: nil), forCellReuseIdentifier: KnowledgeSetTableViewCell.identifier)
         self.knowledgeTableView.dataSource = self
         self.knowledgeTableView.delegate = self
-        self.knowledgeTableView.contentInset = .init(top: 0.0, left: 0.0, bottom: 80.0, right: 0.0)
+        self.knowledgeTableView.contentInset = .init(top: 0.0, left: 0.0, bottom: BaseTabBarViewController.shared.tabBarHeight, right: 0.0)
     }
     
     //MARK: -Event
@@ -73,6 +73,7 @@ class KnowledgeSetsViewController: UIViewController {
 
 //MARK: -UITableViewDataSource
 extension KnowledgeSetsViewController : UITableViewDataSource {
+    
     func numberOfSections(in tableView: UITableView) -> Int {
         return self.knowledgeVM.listKnowledges.count
     }
