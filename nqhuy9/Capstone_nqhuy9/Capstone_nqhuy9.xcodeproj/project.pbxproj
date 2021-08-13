@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		281701568C76321EF7CB1708 /* Pods_Capstone_nqhuy9_Capstone_nqhuy9UITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA1FD1223A468E05C3D3EC07 /* Pods_Capstone_nqhuy9_Capstone_nqhuy9UITests.framework */; };
 		6E95F0CD1CA11F833E530BE2 /* Pods_Capstone_nqhuy9Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 358FEDF518254B81DC782BC8 /* Pods_Capstone_nqhuy9Tests.framework */; };
+		B35D0B3626C68160004F81E6 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B35D0B3526C68160004F81E6 /* GoogleService-Info.plist */; };
 		B36D1E9226AEB81400D34F70 /* EditQuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B36D1E9126AEB81400D34F70 /* EditQuestionViewController.swift */; };
 		C009E5016078B88792495181 /* Pods_Capstone_nqhuy9.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D124386781458B5795EAF503 /* Pods_Capstone_nqhuy9.framework */; };
 		F4326668269FD36900A7AEB2 /* LevelPickerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F4326667269FD36900A7AEB2 /* LevelPickerView.xib */; };
@@ -106,6 +107,7 @@
 		863409691CB1A480FB4C2656 /* Pods-Capstone_nqhuy9-Capstone_nqhuy9UITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Capstone_nqhuy9-Capstone_nqhuy9UITests.debug.xcconfig"; path = "Target Support Files/Pods-Capstone_nqhuy9-Capstone_nqhuy9UITests/Pods-Capstone_nqhuy9-Capstone_nqhuy9UITests.debug.xcconfig"; sourceTree = "<group>"; };
 		903968BBE03725A7106E4558 /* Pods-Capstone_nqhuy9.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Capstone_nqhuy9.release.xcconfig"; path = "Target Support Files/Pods-Capstone_nqhuy9/Pods-Capstone_nqhuy9.release.xcconfig"; sourceTree = "<group>"; };
 		ADC657B9F9BBBDE0B85CBCC7 /* Pods-Capstone_nqhuy9Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Capstone_nqhuy9Tests.release.xcconfig"; path = "Target Support Files/Pods-Capstone_nqhuy9Tests/Pods-Capstone_nqhuy9Tests.release.xcconfig"; sourceTree = "<group>"; };
+		B35D0B3526C68160004F81E6 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		B36D1E9126AEB81400D34F70 /* EditQuestionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditQuestionViewController.swift; sourceTree = "<group>"; };
 		D124386781458B5795EAF503 /* Pods_Capstone_nqhuy9.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Capstone_nqhuy9.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4326667269FD36900A7AEB2 /* LevelPickerView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LevelPickerView.xib; sourceTree = "<group>"; };
@@ -404,6 +406,7 @@
 		F4FDF550268EA6B4001B02D3 /* Capstone_nqhuy9 */ = {
 			isa = PBXGroup;
 			children = (
+				B35D0B3526C68160004F81E6 /* GoogleService-Info.plist */,
 				F4FDF562268EA6B7001B02D3 /* Info.plist */,
 				F4FDF59D268EAB5B001B02D3 /* Resource */,
 				F4FDF59B268EAB40001B02D3 /* Ultis */,
@@ -693,6 +696,7 @@
 			files = (
 				F4B3922226A918A700C105EE /* AlertCustomView.xib in Resources */,
 				F4A0AFE226A671E500AAE6B9 /* interview2.gif in Resources */,
+				B35D0B3626C68160004F81E6 /* GoogleService-Info.plist in Resources */,
 				F4FDF66D268EF0BD001B02D3 /* Authentication.storyboard in Resources */,
 				F4FDF561268EA6B7001B02D3 /* LaunchScreen.storyboard in Resources */,
 				F433BC6D269D3659002F5146 /* InsertQuestionTableViewCell.xib in Resources */,

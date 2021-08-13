@@ -9,6 +9,11 @@ target 'Capstone_nqhuy9' do
   pod 'RxSwift', '5'
   pod 'RxCocoa', '5'
   pod 'RxGesture', '~> 3.0'
+  pod 'Firebase/Firestore'
+  pod 'FirebaseFirestoreSwift'
+  pod 'Firebase/Auth'
+  pod 'Firebase/Analytics'
+
 
   target 'Capstone_nqhuy9Tests' do
     inherit! :search_paths
