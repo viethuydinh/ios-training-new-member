@@ -10,6 +10,7 @@
 		281701568C76321EF7CB1708 /* Pods_Capstone_nqhuy9_Capstone_nqhuy9UITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA1FD1223A468E05C3D3EC07 /* Pods_Capstone_nqhuy9_Capstone_nqhuy9UITests.framework */; };
 		6E95F0CD1CA11F833E530BE2 /* Pods_Capstone_nqhuy9Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 358FEDF518254B81DC782BC8 /* Pods_Capstone_nqhuy9Tests.framework */; };
 		B35D0B3626C68160004F81E6 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B35D0B3526C68160004F81E6 /* GoogleService-Info.plist */; };
+		B361CD3926C7CC2E00FB955B /* BaseFirebase.swift in Sources */ = {isa = PBXBuildFile; fileRef = B361CD3826C7CC2E00FB955B /* BaseFirebase.swift */; };
 		B36D1E9226AEB81400D34F70 /* EditQuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B36D1E9126AEB81400D34F70 /* EditQuestionViewController.swift */; };
 		C009E5016078B88792495181 /* Pods_Capstone_nqhuy9.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D124386781458B5795EAF503 /* Pods_Capstone_nqhuy9.framework */; };
 		F4326668269FD36900A7AEB2 /* LevelPickerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F4326667269FD36900A7AEB2 /* LevelPickerView.xib */; };
@@ -108,6 +109,7 @@
 		903968BBE03725A7106E4558 /* Pods-Capstone_nqhuy9.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Capstone_nqhuy9.release.xcconfig"; path = "Target Support Files/Pods-Capstone_nqhuy9/Pods-Capstone_nqhuy9.release.xcconfig"; sourceTree = "<group>"; };
 		ADC657B9F9BBBDE0B85CBCC7 /* Pods-Capstone_nqhuy9Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Capstone_nqhuy9Tests.release.xcconfig"; path = "Target Support Files/Pods-Capstone_nqhuy9Tests/Pods-Capstone_nqhuy9Tests.release.xcconfig"; sourceTree = "<group>"; };
 		B35D0B3526C68160004F81E6 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		B361CD3826C7CC2E00FB955B /* BaseFirebase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseFirebase.swift; sourceTree = "<group>"; };
 		B36D1E9126AEB81400D34F70 /* EditQuestionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditQuestionViewController.swift; sourceTree = "<group>"; };
 		D124386781458B5795EAF503 /* Pods_Capstone_nqhuy9.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Capstone_nqhuy9.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4326667269FD36900A7AEB2 /* LevelPickerView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LevelPickerView.xib; sourceTree = "<group>"; };
@@ -236,6 +238,14 @@
 				ADC657B9F9BBBDE0B85CBCC7 /* Pods-Capstone_nqhuy9Tests.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		B361CD3726C7CC0D00FB955B /* FirebaseDatabase */ = {
+			isa = PBXGroup;
+			children = (
+				B361CD3826C7CC2E00FB955B /* BaseFirebase.swift */,
+			);
+			path = FirebaseDatabase;
 			sourceTree = "<group>";
 		};
 		F4326666269FD34500A7AEB2 /* ViewLevelPicker */ = {
@@ -440,6 +450,7 @@
 		F4FDF596268EAB03001B02D3 /* Database */ = {
 			isa = PBXGroup;
 			children = (
+				B361CD3726C7CC0D00FB955B /* FirebaseDatabase */,
 				F491ED26269E91F600A98D28 /* Review_CoreData */,
 				F4FDA83D269703860039E9B4 /* Question_CoreData */,
 				F4FDF55A268EA6B4001B02D3 /* Capstone_nqhuy9.xcdatamodeld */,
@@ -857,6 +868,7 @@
 				F4B3922626A91D3800C105EE /* AlertCustomView.swift in Sources */,
 				F433BC54269BF5B5002F5146 /* KnowledgeViewModel.swift in Sources */,
 				F43266A026A03D2000A7AEB2 /* AdvancePageControlView.swift in Sources */,
+				B361CD3926C7CC2E00FB955B /* BaseFirebase.swift in Sources */,
 				F432669126A03BFF00A7AEB2 /* SplashViewController.swift in Sources */,
 				F49723E926A58A7A00886321 /* UITableView+Extension.swift in Sources */,
 				F491ED40269E98C600A98D28 /* ReviewTableViewCell.swift in Sources */,
@@ -1095,7 +1107,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "interviewer.Capstone-nqhu";
+				PRODUCT_BUNDLE_IDENTIFIER = "interviewer2.Capstone-nqhuy";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;

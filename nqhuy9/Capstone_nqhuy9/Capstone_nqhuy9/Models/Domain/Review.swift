@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Review {
+struct Review : Codable {
     var id: Int16?
     var candidateName: String?
     var content: String?
