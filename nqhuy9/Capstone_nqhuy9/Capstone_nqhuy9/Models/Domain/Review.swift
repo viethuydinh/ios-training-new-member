@@ -8,24 +8,33 @@
 import Foundation
 
 struct Review : Codable {
-    var id: Int16?
+    var id: String?
     var candidateName: String?
     var content: String?
     var status: Bool
 }
 
 extension Review : ObjectConvert {
+    var idFirebase: String? {
+        get {
+            return nil
+        }
+        set (newVal) {
+            self.id = newVal
+        }
+    }
+    
     typealias Object = ReviewCoreData
     
     var key: [String : String] {
-        return ["id" : String(self.id ?? -1)]
+        return ["id" : self.id ?? ""]
     }
     
     func update(object: ReviewCoreData?) -> ReviewCoreData {
         let value = object
         if value == nil { return ReviewCoreData() }
         value?.content = self.content
-        value?.id = self.id ?? -1
+        value?.id = self.id ?? ""
         value?.candidateName = self.candidateName
         value?.status = self.status
         return value!

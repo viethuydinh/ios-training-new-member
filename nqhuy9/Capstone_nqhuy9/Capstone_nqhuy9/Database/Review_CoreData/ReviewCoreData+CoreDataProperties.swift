@@ -16,7 +16,7 @@ extension ReviewCoreData {
         return NSFetchRequest<ReviewCoreData>(entityName: "ReviewCoreData")
     }
 
-    @NSManaged public var id: Int16
+    @NSManaged public var id: String
     @NSManaged public var candidateName: String?
     @NSManaged public var content: String?
     @NSManaged public var status: Bool

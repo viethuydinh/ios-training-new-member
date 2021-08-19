@@ -8,7 +8,7 @@
 import Foundation
 import Firebase
 
-struct FirebaseRepository<Domain: Codable> {
+struct FirebaseRepository<Domain: Codable & ObjectConvert> {
     static var shared: FirebaseRepository<Domain> {
         return FirebaseRepository()
     }
@@ -33,7 +33,8 @@ struct FirebaseRepository<Domain: Codable> {
                     let decoder = JSONDecoder()
                     let dict = document.data()
                     if let data = try? JSONSerialization.data(withJSONObject: dict, options: []) {
-                        let element = try? decoder.decode(Domain.self, from: data)
+                        var element = try? decoder.decode(Domain.self, from: data)
+                        element?.idFirebase = document.reference.documentID
                         guard let e = element else { return }
                         result.append(e)
                     }
@@ -52,27 +53,31 @@ struct FirebaseRepository<Domain: Codable> {
         }
     }
     
-    func save(tableName:String, domain: Domain,id: String, conditionUpdate: [String:Any]) -> Bool {
+    func save(tableName:String, domain: Domain,id: String?) -> Bool {
         var error: Int = 0
         var ref: DocumentReference? = nil
         guard let dict = domain.dictionary else { return false }
-        db.collection(tableName).document(id).getDocument { querySnapshot, err in
-            if let err = err {
-                print("Error adding document: \(err)")
-                error += 1
-            } else if querySnapshot == nil {
-                print("Create")
-                ref = db.collection(tableName).addDocument(data: dict) { err in
-                    if let err = err {
-                        print("Error adding document: \(err)")
-                    } else {
-                        print("Document added with ID: \(ref!.documentID)")
-                    }
+        if id == nil {
+            ref = db.collection(tableName).addDocument(data: dict) { err in
+                if let err = err {
+                    print("Error adding document: \(err)")
+                    error += 1
+                } else {
+                    print("Document added with ID: \(ref!.documentID)")
                 }
-            } else {
-                print("Update")
-                let document = querySnapshot!
-                document.reference.updateData(conditionUpdate)
+            }
+        } else {
+            db.collection(tableName).document(id!).getDocument { querySnapshot, err in
+                if let err = err {
+                    print("Error adding document: \(err)")
+                    error += 1
+                } else if querySnapshot == nil {
+                    error += 1
+                } else {
+                    print("Update")
+                    let document = querySnapshot!
+                    document.reference.updateData(dict)
+                }
             }
         }
         
@@ -86,7 +91,7 @@ struct FirebaseRepository<Domain: Codable> {
     func saveAll(tableName: String, domains: [Domain]) -> Bool {
         var error: Int = 0
         domains.forEach { domain in
-            if !self.save(tableName: tableName, domain: domain, id: "", conditionUpdate: [:]) {
+            if !self.save(tableName: tableName, domain: domain, id: "") {
                 error += 1
             }
         }

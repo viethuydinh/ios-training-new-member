@@ -14,9 +14,9 @@ protocol ReviewViewModel {
     
     func createReview(review : Review) -> Bool
     
-    func fetchAllReview() -> [Review]
+    func fetchAllReview(completion: @escaping(([Review]) -> ())) -> Bool
     
-    func deleteReview(id : Int16?) -> Bool
+    func deleteReview(id : String?) -> Bool
 }
 
 struct DefaultReviewViewModel : ReviewViewModel {
@@ -31,11 +31,13 @@ struct DefaultReviewViewModel : ReviewViewModel {
         return self.repository.createReview(review: review)
     }
     
-    func fetchAllReview() -> [Review] {
-        self.repository.fetchAllReview()
+    func fetchAllReview(completion: @escaping(([Review]) -> ())) -> Bool {
+        return self.repository.fetchAllReview { review in
+            completion(review)
+        }
     }
     
-    func deleteReview(id: Int16?) -> Bool {
+    func deleteReview(id: String?) -> Bool {
         return self.repository.deleteReview(id: id)
     }
 }

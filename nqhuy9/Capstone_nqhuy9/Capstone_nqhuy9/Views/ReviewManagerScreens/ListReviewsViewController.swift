@@ -18,7 +18,6 @@ class ListReviewsViewController: BaseVC {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
         self.bindData()
-        self.tableViewReview.reloadData()
     }
 
     override func viewDidLoad() {
@@ -28,7 +27,11 @@ class ListReviewsViewController: BaseVC {
     }
     
     private func bindData() {
-        self.reviewViewModel.reviewList = self.reviewViewModel.fetchAllReview()
+        self.reviewViewModel.fetchAllReview { review in
+            print(review)
+            self.reviewViewModel.reviewList = review
+            self.tableViewReview.reloadData()
+        }
     }
     
     //MARK: -UI
@@ -81,7 +84,10 @@ extension ListReviewsViewController : UITableViewDataSource {
 
 extension ListReviewsViewController : UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        guard let content = self.reviewViewModel.fetchAllReview()[indexPath.row].content else { return .zero }
+        self.reviewViewModel.fetchAllReview { reviews in
+            self.reviewViewModel.reviewList = reviews
+        }
+        guard let content = self.reviewViewModel.reviewList[indexPath.row].content else { return .zero }
         return ReviewTableViewCell.height(bounds: UIScreen.main.bounds, content: content)
     }
     

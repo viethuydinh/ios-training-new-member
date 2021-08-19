@@ -8,7 +8,7 @@
 import Foundation
 
 struct Question {
-    var id: Int16?
+    var id: String?
     var content: String?
     var level: String?
     var answer: String?
@@ -18,15 +18,24 @@ extension Question : ObjectConvert {
     
     typealias Object = QuestionCoreData
     
+    var idFirebase: String? {
+        get {
+            return nil
+        }
+        set (newVal) {
+            self.id = newVal
+        }
+    }
+    
     var key: [String : String] {
-        return ["id" : String(self.id ?? -1)]
+        return ["id" : self.id ?? ""]
     }
     
     func update(object: QuestionCoreData?) -> QuestionCoreData {
         let value = object
         if value == nil { return QuestionCoreData() }
         value?.content = self.content
-        value?.id = self.id ?? -1
+        value?.id = self.id ?? ""
         value?.level = self.level
         value?.answer = self.answer
         return value!

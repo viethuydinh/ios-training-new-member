@@ -15,6 +15,13 @@ struct Account {
 }
 
 extension Account : ObjectConvert {
+    var idFirebase: String? {
+        get {
+            return nil
+        }
+        set { }
+    }
+    
     var key: [String : String] {
         return ["username" : self.username ?? ""]
     }

@@ -14,6 +14,8 @@ protocol ObjectConvert {
     func update(object: Object?) -> Object
     
     var key: [String : String] { get }
+    
+    var idFirebase : String? { get set }
 }
 
 

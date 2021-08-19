@@ -10,28 +10,29 @@ import Foundation
 protocol ReviewRepository {
     func createReview(review : Review) -> Bool
     
-    func fetchAllReview() -> [Review]
+    func fetchAllReview(completion: @escaping(([Review]) -> ())) -> Bool
     
-    func deleteReview(id : Int16?) -> Bool
+    func deleteReview(id : String?) -> Bool
 }
 
 struct DefaultReviewRepository : ReviewRepository {
     
     var reviewDAO = CoreDataRepository<Review>.shared
     
+    var reviewFirebase = FirebaseRepository<Review>.shared
+    
     func createReview(review: Review) -> Bool {
-        let id = review.id != nil ? review.id : Int16(self.fetchAllReview().count + 1)
-        var newReview = review
-        newReview.id = id
-        return reviewDAO.save(domain: newReview)
+        return reviewFirebase.save(tableName: "Review", domain: review, id: review.id)
     }
     
-    func fetchAllReview() -> [Review] {
-        return reviewDAO.fetchAll(predicate: nil)
+    func fetchAllReview(completion: @escaping(([Review]) -> ())) -> Bool {
+        return reviewFirebase.fetchAll(tableName: "Review") { review in
+            completion(review)
+        }
     }
     
-    func deleteReview(id : Int16?) -> Bool {
+    func deleteReview(id : String?) -> Bool {
         guard let idDelete = id else { return false }
-        return reviewDAO.deleteAll(predicate: .init(format: "id = %@", argumentArray: [String(idDelete)]))
+        return reviewFirebase.delete(tableName: "Review", value: idDelete)
     }
 }

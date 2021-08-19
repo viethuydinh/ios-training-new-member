@@ -17,7 +17,7 @@ extension QuestionCoreData {
     }
 
     @NSManaged public var content: String?
-    @NSManaged public var id: Int16
+    @NSManaged public var id: String?
     @NSManaged public var level: String?
     @NSManaged public var answer: String?
 
