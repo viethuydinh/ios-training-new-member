@@ -29,5 +29,29 @@ class Capstone_nqhuy9Tests: XCTestCase {
             // Put the code you want to measure the time of here.
         }
     }
+    //MARK: -Test Authentication
+    func testSignUp() {
+        let acc = Account(username: "huy@gmail.com", password: "Huy123!", repassword: "Huy123!")
+        let authen = DefaultAuthenticationViewModel()
+        XCTAssert(authen.signUp(account: acc))
+    }
+    
+    func testValidateEmail() {
+        let acc = Account(username: "huy@gmail", password: "Huy123!", repassword: "Huy123!")
+        let authen = DefaultAuthenticationViewModel()
+        XCTAssert(authen.emailValidate(email: acc.username))
+    }
+    
+    func testValidatePassword() {
+        let acc = Account(username: "huy@gmail.com", password: "Huy123", repassword: "Huy123!")
+        let authen = DefaultAuthenticationViewModel()
+        XCTAssert(authen.passwordValidate(password: acc.password))
+    }
+    
+    func testValidateRepassword() {
+        let acc = Account(username: "huy@gmail.com", password: "Huy123!", repassword: "Huy12!")
+        let authen = DefaultAuthenticationViewModel()
+        XCTAssert(authen.repasswordValidate(password: acc.password, repassword: acc.repassword))
+    }
 
 }

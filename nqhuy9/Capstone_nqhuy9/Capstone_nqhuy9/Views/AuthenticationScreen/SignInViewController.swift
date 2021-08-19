@@ -9,6 +9,7 @@ import UIKit
 import RxSwift
 import RxCocoa
 import RxGesture
+import Firebase
 
 class SignInViewController: BaseVC {
     
@@ -35,6 +36,18 @@ class SignInViewController: BaseVC {
         super.viewDidLoad()
         self.setupUI()
         self.event()
+        
+        //Test Firebase
+        //Read
+//        FirebaseRepository<Review>.shared.fetchAll(tableName: "Review") { res in
+//            print(res)
+//        }
+        
+        //Add
+//        FirebaseRepository<Review>.shared.save(tableName: "Review", domain: Review(id: nil, candidateName: "John", content: "Very Baddddddd", status: false))
+        
+        //Delete
+        FirebaseRepository<Review>.shared.delete(tableName: "Review", value: "UyPKq1pheeoHEvoVPudi")
     }
     
 //MARK: -UI
