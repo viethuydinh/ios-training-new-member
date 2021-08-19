@@ -19,29 +19,52 @@ struct FirebaseRepository<Domain: Codable & ObjectConvert> {
         
     }
     
-    func fetchAll(tableName: String, completion: @escaping(([Domain]) -> ())) -> Bool {
+    func fetchAll(tableName: String, field: String?, targetCondition: Any?, completion: @escaping(([Domain]) -> ())) -> Bool {
         var error: Int = 0
         var result: [Domain] = []
         let dispatch = DispatchGroup()
         dispatch.enter()
-        db.collection(tableName).getDocuments() { (querySnapshot, err) in
-            if let err = err {
-                print("Error getting documents: \(err)")
-                error += 1
-            } else {
-                for document in querySnapshot!.documents {
-                    let decoder = JSONDecoder()
-                    let dict = document.data()
-                    if let data = try? JSONSerialization.data(withJSONObject: dict, options: []) {
-                        var element = try? decoder.decode(Domain.self, from: data)
-                        element?.idFirebase = document.reference.documentID
-                        guard let e = element else { return }
-                        result.append(e)
+        if field != nil {
+            guard let target = targetCondition else { return false }
+            db.collection(tableName).whereField(field!, isEqualTo: target).getDocuments() { (querySnapshot, err) in
+                if let err = err {
+                    print("Error getting documents: \(err)")
+                    error += 1
+                } else {
+                    for document in querySnapshot!.documents {
+                        let decoder = JSONDecoder()
+                        let dict = document.data()
+                        if let data = try? JSONSerialization.data(withJSONObject: dict, options: []) {
+                            var element = try? decoder.decode(Domain.self, from: data)
+                            element?.idFirebase = document.reference.documentID
+                            guard let e = element else { return }
+                            result.append(e)
+                        }
                     }
                 }
+                dispatch.leave()
             }
-            dispatch.leave()
+        } else {
+            db.collection(tableName).getDocuments() { (querySnapshot, err) in
+                if let err = err {
+                    print("Error getting documents: \(err)")
+                    error += 1
+                } else {
+                    for document in querySnapshot!.documents {
+                        let decoder = JSONDecoder()
+                        let dict = document.data()
+                        if let data = try? JSONSerialization.data(withJSONObject: dict, options: []) {
+                            var element = try? decoder.decode(Domain.self, from: data)
+                            element?.idFirebase = document.reference.documentID
+                            guard let e = element else { return }
+                            result.append(e)
+                        }
+                    }
+                }
+                dispatch.leave()
+            }
         }
+        
         dispatch.notify(queue: .main) {
             completion(result)
         }
@@ -91,7 +114,7 @@ struct FirebaseRepository<Domain: Codable & ObjectConvert> {
     func saveAll(tableName: String, domains: [Domain]) -> Bool {
         var error: Int = 0
         domains.forEach { domain in
-            if !self.save(tableName: tableName, domain: domain, id: "") {
+            if !self.save(tableName: tableName, domain: domain, id: nil) {
                 error += 1
             }
         }

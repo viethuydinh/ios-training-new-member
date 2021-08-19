@@ -11,9 +11,9 @@ protocol KnowledgeRepository {
     
     func createListQuestion(questions: [Question]) -> Bool
     
-    func fetchListQuestion(predicate: NSPredicate?) -> [Question]
+    func fetchListQuestion(field: String?, targetCondition: Any?, completion: @escaping(([Question]) -> ())) -> Bool
     
-    func fetchRecommendQuestion(predicate: NSPredicate?) -> [Question]
+    func fetchRecommendQuestion(field: String?, targetCondition: Any?, completion: @escaping(([Question]) -> ())) -> Bool
     
     func deleteQuestion(id: String?) -> Bool
     
@@ -25,41 +25,31 @@ struct DefaultKnowledgeRepository: KnowledgeRepository {
     
     var questionDAO = CoreDataRepository<Question>.shared
     
+    var questionFirebase = FirebaseRepository<Question>.shared
+    
     func createListQuestion(questions: [Question]) -> Bool {
-        if questions.count > 0 {
-            let result = questionDAO.fetchAll(predicate: nil)
-            var id : String = String(result.count)
-            
-            var transformQuestions: [Question] = []
-            for i in 1...questions.count {
-                var q = questions[i-1]
-//                id += 1
-                q.id = id
-                if q.answer != "" && q.content != "" {
-                    transformQuestions.append(q)
-                }
-            }
-            return questionDAO.saveAll(domains: transformQuestions)
-        } else {
-            return false
+        return questionFirebase.saveAll(tableName: "Question", domains: questions)
+    }
+    
+    func fetchListQuestion(field: String?, targetCondition: Any?, completion: @escaping(([Question]) -> ())) -> Bool {
+        return questionFirebase.fetchAll(tableName: "Question", field: field, targetCondition: targetCondition) { questions in
+            completion(questions)
         }
     }
     
-    func fetchListQuestion(predicate: NSPredicate?) -> [Question] {
-        return questionDAO.fetchAll(predicate: predicate)
-    }
-    
-    func fetchRecommendQuestion(predicate : NSPredicate?) -> [Question] {
-        return Array(self.fetchListQuestion(predicate: predicate).choose(8))
+    func fetchRecommendQuestion(field: String?, targetCondition: Any?, completion: @escaping(([Question]) -> ())) -> Bool {
+        return self.fetchListQuestion(field: field, targetCondition: targetCondition) { questions in
+            completion(Array(questions.choose(8)))
+        }
     }
     
     func deleteQuestion(id: String?) -> Bool {
         guard let idDelete = id else { return false }
-        return self.questionDAO.deleteAll(predicate: .init(format: "id = %@", argumentArray: [idDelete]))
+        return questionFirebase.delete(tableName: "Question", value: idDelete)
     }
     
     func editQuestion(question: Question) -> Bool {
-        return self.questionDAO.save(domain: question)
+        return self.questionFirebase.save(tableName: "Question", domain: question, id: question.id)
     }
     
 }

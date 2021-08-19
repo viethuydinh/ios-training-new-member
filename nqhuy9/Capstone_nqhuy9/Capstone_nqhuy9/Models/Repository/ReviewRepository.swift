@@ -26,7 +26,7 @@ struct DefaultReviewRepository : ReviewRepository {
     }
     
     func fetchAllReview(completion: @escaping(([Review]) -> ())) -> Bool {
-        return reviewFirebase.fetchAll(tableName: "Review") { review in
+        return reviewFirebase.fetchAll(tableName: "Review", field: nil, targetCondition: nil) { review in
             completion(review)
         }
     }

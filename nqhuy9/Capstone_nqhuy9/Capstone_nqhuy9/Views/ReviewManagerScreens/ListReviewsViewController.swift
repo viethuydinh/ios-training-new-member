@@ -28,7 +28,6 @@ class ListReviewsViewController: BaseVC {
     
     private func bindData() {
         self.reviewViewModel.fetchAllReview { review in
-            print(review)
             self.reviewViewModel.reviewList = review
             self.tableViewReview.reloadData()
         }

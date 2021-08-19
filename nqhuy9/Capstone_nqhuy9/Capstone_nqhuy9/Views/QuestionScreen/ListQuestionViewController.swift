@@ -56,8 +56,12 @@ class ListQuestionViewController: BaseVC {
     }
     
     @objc private func updateListQuestion(notification: NSNotification){
-        self.questionViewModel.listQuestions = self.questionViewModel.fetchListQuestion()
-        self.tableViewQuestion.reloadData()
+        self.questionViewModel.fetchListQuestion() { questions in
+            self.questionViewModel.listQuestions = questions
+            self.tableViewQuestion.reloadData()
+        }
+//        self.questionViewModel.listQuestions = self.questionViewModel.fetchListQuestion()
+//        self.tableViewQuestion.reloadData()
     }
     
     private func eventSearch() {
@@ -65,8 +69,10 @@ class ListQuestionViewController: BaseVC {
             .rx
             .controlEvent(.touchUpInside)
             .subscribe { (_) in
-                self.questionViewModel.listQuestions = self.questionViewModel.fetchListQuestion()
-                self.tableViewQuestion.reloadData()
+                self.questionViewModel.fetchListQuestion() { questions in
+                    self.questionViewModel.listQuestions = questions
+                    self.tableViewQuestion.reloadData()
+                }
             } onError: { (_) in
                 
             } onCompleted: {
@@ -81,8 +87,10 @@ class ListQuestionViewController: BaseVC {
             .rx
             .controlEvent(.touchUpInside)
             .subscribe { (_) in
-                self.questionViewModel.listQuestions = self.questionViewModel.fetchRecommendQuestion()
-                self.tableViewQuestion.reloadData()
+                self.questionViewModel.fetchRecommendQuestion() { questions in
+                    self.questionViewModel.listQuestions = questions
+                    self.tableViewQuestion.reloadData()
+                }
             } onError: { (_) in
                 
             } onCompleted: {

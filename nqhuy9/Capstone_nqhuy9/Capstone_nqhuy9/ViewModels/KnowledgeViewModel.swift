@@ -19,9 +19,9 @@ protocol KnowledgeViewModel {
     
     func createListQuestion(questions: [Question]) -> Bool
     
-    func fetchListQuestion() -> [Question]
+    func fetchListQuestion(completion: @escaping(([Question]) -> ())) -> Bool
     
-    func fetchRecommendQuestion() -> [Question]
+    func fetchRecommendQuestion(completion: @escaping(([Question]) -> ())) -> Bool
     
     func deleteQuestion(id: String?) -> Bool
     
@@ -48,12 +48,16 @@ struct DefaultKnowledgeViewModel : KnowledgeViewModel {
         return self.repository.createListQuestion(questions: questions)
     }
     
-    func fetchListQuestion() -> [Question] {
-        return self.repository.fetchListQuestion(predicate: .init(format: "level = %@", argumentArray: [self.level.rawValue]))
+    func fetchListQuestion(completion: @escaping(([Question]) -> ())) -> Bool {
+        return self.repository.fetchListQuestion(field: "level", targetCondition: self.level.rawValue) { questions in
+            completion(questions)
+        }
     }
     
-    func fetchRecommendQuestion() -> [Question] {
-        return self.repository.fetchRecommendQuestion(predicate: .init(format: "level = %@", argumentArray: [self.level.rawValue]))
+    func fetchRecommendQuestion(completion: @escaping(([Question]) -> ())) -> Bool {
+        return self.repository.fetchRecommendQuestion(field: "level", targetCondition: self.level.rawValue) { questions in
+            completion(questions)
+        }
     }
     
     func deleteQuestion(id: String?) -> Bool {

@@ -71,8 +71,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 extension AppDelegate {
     fileprivate func rootViewController() {
         self.window = UIWindow(frame: UIScreen.main.bounds)
-//        guard let navigationAccount = UIStoryboard(name: "Splash", bundle: nil).instantiateViewController(withIdentifier: "navigationSplash") as? UINavigationController else { return }
-        guard let navigationAccount = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "NavigationMain") as? UINavigationController else { return }
+        guard let navigationAccount = UIStoryboard(name: "Splash", bundle: nil).instantiateViewController(withIdentifier: "navigationSplash") as? UINavigationController else { return }
         window?.rootViewController = navigationAccount
         window?.backgroundColor = .white
         self.window?.makeKeyAndVisible()
