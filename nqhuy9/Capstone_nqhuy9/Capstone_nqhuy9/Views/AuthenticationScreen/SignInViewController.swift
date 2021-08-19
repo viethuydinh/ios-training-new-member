@@ -44,10 +44,10 @@ class SignInViewController: BaseVC {
 //        }
         
         //Add
-//        FirebaseRepository<Review>.shared.save(tableName: "Review", domain: Review(id: nil, candidateName: "John", content: "Very Baddddddd", status: false))
+        FirebaseRepository<Review>.shared.save(tableName: "Review", domain: Review(id: nil, candidateName: "John", content: "Very Baddddddd", status: false), id: "w9fzn6k6UHuvs51nTn9g", conditionUpdate: ["content":"So gutttttt"])
         
         //Delete
-        FirebaseRepository<Review>.shared.delete(tableName: "Review", value: "UyPKq1pheeoHEvoVPudi")
+//        FirebaseRepository<Review>.shared.delete(tableName: "Review", value: "UyPKq1pheeoHEvoVPudi")
     }
     
 //MARK: -UI

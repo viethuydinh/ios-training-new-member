@@ -44,21 +44,32 @@ struct FirebaseRepository<Domain: Codable> {
         }
     }
     
-    func save(tableName:String, domain: Domain) {
+    func save(tableName:String, domain: Domain,id: String, conditionUpdate: [String:Any]) {
         var ref: DocumentReference? = nil
         guard let dict = domain.dictionary else { return }
-        ref = db.collection(tableName).addDocument(data: dict) { err in
+        db.collection(tableName).document(id).getDocument { querySnapshot, err in
             if let err = err {
                 print("Error adding document: \(err)")
+            } else if querySnapshot == nil {
+                print("Create")
+                ref = db.collection(tableName).addDocument(data: dict) { err in
+                    if let err = err {
+                        print("Error adding document: \(err)")
+                    } else {
+                        print("Document added with ID: \(ref!.documentID)")
+                    }
+                }
             } else {
-                print("Document added with ID: \(ref!.documentID)")
+                print("Update")
+                let document = querySnapshot!
+                document.reference.updateData(conditionUpdate)
             }
         }
     }
     
     func saveAll(tableName: String, domains: [Domain]) {
         domains.forEach { domain in
-            self.save(tableName: tableName, domain: domain)
+            self.save(tableName: tableName, domain: domain, id: "", conditionUpdate: [:])
         }
     }
     
