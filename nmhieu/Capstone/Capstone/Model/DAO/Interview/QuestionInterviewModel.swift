@@ -8,7 +8,8 @@
 import Foundation
 
 struct QuestionInterviewModel {
-    var id : Int?
+    var id : String?
+    var idCoredata : Int?
     var question : String?
     var answer : String?
     var rate : RateAnswer?
@@ -36,7 +37,7 @@ extension QuestionInterviewModel : ObjectConvertible {
     
     func update(obj: QuestionInterViewCoreData) -> QuestionInterViewCoreData {
         let object = obj
-        object.id = Int16(self.id ?? 0)
+        object.id = Int16(self.idCoredata ?? 0)
         object.question = self.question
         object.answer = self.answer
         object.rate = Int16(self.rate?.rawValue ?? 0)

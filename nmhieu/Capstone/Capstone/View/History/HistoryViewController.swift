@@ -39,10 +39,16 @@ class HistoryViewController: UIViewController {
         self.navigationController?.popViewController(animated: true)
     }
     
+    @IBAction func eventTest(_ sender: Any) {
+        print(self.interviewVM.fetchInterviewHistory())
+
+    }
     //MARK: -Data
     func bindingData() {
-        self.interviewVM.interviewHistory = self.interviewVM.fetchInterviewHistory()
-        self.historyTableView.reloadData()
+        self.interviewVM.fetchInterviewHistory { interview, error in
+            self.interviewVM.interviewHistory = interview
+            self.historyTableView.reloadData()
+        }
     }
 }
 

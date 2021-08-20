@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -17,12 +17,13 @@
 		15095E7E268DC8B400129B9C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 15095E7C268DC8B400129B9C /* LaunchScreen.storyboard */; };
 		15095E89268DC8B500129B9C /* CapstoneTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15095E88268DC8B500129B9C /* CapstoneTests.swift */; };
 		15095E94268DC8B500129B9C /* CapstoneUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15095E93268DC8B500129B9C /* CapstoneUITests.swift */; };
+		150F653D26CE15CB008A1D78 /* AuthenticationFirebase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 150F653C26CE15CB008A1D78 /* AuthenticationFirebase.swift */; };
+		150F653F26CE18C5008A1D78 /* KnowledgeDatabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 150F653E26CE18C5008A1D78 /* KnowledgeDatabase.swift */; };
 		15179EB52695565F008D3A46 /* Convertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15179EB42695565F008D3A46 /* Convertible.swift */; };
-		15179EBA269557B2008D3A46 /* DatabaseConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15179EB9269557B2008D3A46 /* DatabaseConfig.swift */; };
+		15179EBA269557B2008D3A46 /* CoreDataConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15179EB9269557B2008D3A46 /* CoreDataConfig.swift */; };
 		15179EBF26958532008D3A46 /* AccountModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15179EBE26958532008D3A46 /* AccountModel.swift */; };
 		15179ECB26958640008D3A46 /* Capstone.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 15179EC926958640008D3A46 /* Capstone.xcdatamodeld */; };
-		15179EE92695B949008D3A46 /* AccountCoreData+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15179EE72695B949008D3A46 /* AccountCoreData+CoreDataClass.swift */; };
-		15179EEA2695B949008D3A46 /* AccountCoreData+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15179EE82695B949008D3A46 /* AccountCoreData+CoreDataProperties.swift */; };
+		1519174826BAD2B80036169F /* KnowledgeUnitTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1519174726BAD2B80036169F /* KnowledgeUnitTest.swift */; };
 		151F2AF526A1246500C63F2C /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 151F2AF426A1246500C63F2C /* Date+Extension.swift */; };
 		151F2AF726A1291100C63F2C /* AuthenticationError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 151F2AF626A1291100C63F2C /* AuthenticationError.swift */; };
 		151F2AF926A1381700C63F2C /* CommonError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 151F2AF826A1381700C63F2C /* CommonError.swift */; };
@@ -30,6 +31,17 @@
 		151F2AFE26A1709800C63F2C /* CustomTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 151F2AFD26A1709800C63F2C /* CustomTabBar.swift */; };
 		151F2B0026A170CE00C63F2C /* TabBarItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 151F2AFF26A170CE00C63F2C /* TabBarItem.swift */; };
 		151F2B0226A1828200C63F2C /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = 151F2B0126A1828200C63F2C /* Image.swift */; };
+		15257D2426CA6E0800A0E43D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 15257D2326CA6E0800A0E43D /* GoogleService-Info.plist */; };
+		15257D2826CA727400A0E43D /* FirebaseConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15257D2726CA727400A0E43D /* FirebaseConfig.swift */; };
+		15257D2A26CA7C6800A0E43D /* InterviewDatabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15257D2926CA7C6800A0E43D /* InterviewDatabase.swift */; };
+		15257D2D26CA7CB400A0E43D /* InterviewCoreData+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15257D2B26CA7CB400A0E43D /* InterviewCoreData+CoreDataClass.swift */; };
+		15257D2E26CA7CB400A0E43D /* InterviewCoreData+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15257D2C26CA7CB400A0E43D /* InterviewCoreData+CoreDataProperties.swift */; };
+		15257D3126CA7CCE00A0E43D /* AccountCoreData+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15257D2F26CA7CCE00A0E43D /* AccountCoreData+CoreDataProperties.swift */; };
+		15257D3226CA7CCE00A0E43D /* AccountCoreData+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15257D3026CA7CCE00A0E43D /* AccountCoreData+CoreDataClass.swift */; };
+		15257D3526CA7CDB00A0E43D /* KnowledgeCoreData+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15257D3326CA7CDB00A0E43D /* KnowledgeCoreData+CoreDataClass.swift */; };
+		15257D3626CA7CDB00A0E43D /* KnowledgeCoreData+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15257D3426CA7CDB00A0E43D /* KnowledgeCoreData+CoreDataProperties.swift */; };
+		15257D3926CA7CE600A0E43D /* UserCoreData+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15257D3726CA7CE600A0E43D /* UserCoreData+CoreDataClass.swift */; };
+		15257D3A26CA7CE600A0E43D /* UserCoreData+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15257D3826CA7CE600A0E43D /* UserCoreData+CoreDataProperties.swift */; };
 		1526CA7826A522E10059619B /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1526CA7726A522E10059619B /* OnboardingViewController.swift */; };
 		1526CA7B26A525360059619B /* Onboarding.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1526CA7A26A525360059619B /* Onboarding.storyboard */; };
 		1526CA7F26A529FB0059619B /* OnboardingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1526CA7E26A529FB0059619B /* OnboardingViewModel.swift */; };
@@ -38,8 +50,7 @@
 		1526CA8D26A567EC0059619B /* GifOnboardingCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1526CA8B26A567EC0059619B /* GifOnboardingCollectionViewCell.xib */; };
 		1526CA8F26A56DD70059619B /* InterviewGif1.gif in Resources */ = {isa = PBXBuildFile; fileRef = 1526CA8E26A56DD70059619B /* InterviewGif1.gif */; };
 		15344169269FE0150078660E /* Key.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15344168269FE0150078660E /* Key.swift */; };
-		154A6366269BF253008E571C /* KnowledgeCoreData+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 154A6364269BF253008E571C /* KnowledgeCoreData+CoreDataClass.swift */; };
-		154A6367269BF253008E571C /* KnowledgeCoreData+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 154A6365269BF253008E571C /* KnowledgeCoreData+CoreDataProperties.swift */; };
+		1543FC1C26CE57F400E395E9 /* FirebaseError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1543FC1B26CE57F400E395E9 /* FirebaseError.swift */; };
 		154A638D269BF498008E571C /* KnowledgeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 154A638C269BF498008E571C /* KnowledgeModel.swift */; };
 		154A6396269BF9E0008E571C /* KnowledgeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 154A6395269BF9E0008E571C /* KnowledgeViewModel.swift */; };
 		154A639B269BFA2C008E571C /* KnowledgeRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 154A639A269BFA2C008E571C /* KnowledgeRepository.swift */; };
@@ -48,8 +59,6 @@
 		154A63B0269C1E08008E571C /* KnowledgeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 154A63AE269C1E08008E571C /* KnowledgeTableViewCell.swift */; };
 		154A63B1269C1E08008E571C /* KnowledgeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 154A63AF269C1E08008E571C /* KnowledgeTableViewCell.xib */; };
 		154A63B6269C2384008E571C /* UITableViewCell+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 154A63B5269C2384008E571C /* UITableViewCell+Extension.swift */; };
-		155F2FF826943573007EFBAC /* UserCoreData+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 155F2FF626943573007EFBAC /* UserCoreData+CoreDataClass.swift */; };
-		155F2FF926943573007EFBAC /* UserCoreData+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 155F2FF726943573007EFBAC /* UserCoreData+CoreDataProperties.swift */; };
 		156948F426A97F1F00EF8C3D /* KnowledgeSetsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 156948F326A97F1F00EF8C3D /* KnowledgeSetsViewController.swift */; };
 		156948F726A97F7100EF8C3D /* KnowledgeSets.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 156948F626A97F7100EF8C3D /* KnowledgeSets.storyboard */; };
 		156948FA26A9BFB000EF8C3D /* KnowledgeSetTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 156948F826A9BFB000EF8C3D /* KnowledgeSetTableViewCell.swift */; };
@@ -70,6 +79,10 @@
 		157F9732268EFAC0009BBF14 /* SignUp.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 157F9731268EFAC0009BBF14 /* SignUp.storyboard */; };
 		157F9737268EFEA4009BBF14 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 157F9736268EFEA4009BBF14 /* Color.swift */; };
 		157F973C268EFED5009BBF14 /* AccoutString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 157F973B268EFED5009BBF14 /* AccoutString.swift */; };
+		15826A9F26C2DD8E0027F282 /* DefaultContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15826A9E26C2DD8E0027F282 /* DefaultContainer.swift */; };
+		15826AA026C2DDDE0027F282 /* Pods_Capstone.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1554155826C28F0B00BB1BD0 /* Pods_Capstone.framework */; };
+		15826AA426C2DE7E0027F282 /* Inject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15826AA326C2DE7E0027F282 /* Inject.swift */; };
+		15826AA826C2E3BA0027F282 /* InterviewUnitTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15826AA726C2E3BA0027F282 /* InterviewUnitTest.swift */; };
 		1585AFBB2696B1700073F89E /* AuthenticationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1585AFBA2696B1700073F89E /* AuthenticationViewModel.swift */; };
 		1585AFD12696DA750073F89E /* AuthenticationRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1585AFD02696DA750073F89E /* AuthenticationRepository.swift */; };
 		1585AFD72696EA9E0073F89E /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1585AFD62696EA9E0073F89E /* HomeViewController.swift */; };
@@ -84,15 +97,14 @@
 		15A03888269EC0C500D9D0FB /* OverviewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15A03886269EC0C500D9D0FB /* OverviewTableViewCell.swift */; };
 		15A03889269EC0C500D9D0FB /* OverviewTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 15A03887269EC0C500D9D0FB /* OverviewTableViewCell.xib */; };
 		15A0388E269EC97100D9D0FB /* InterviewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15A0388D269EC97100D9D0FB /* InterviewModel.swift */; };
-		15A0389C269ECD9A00D9D0FB /* InterviewCoreData+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15A0389A269ECD9A00D9D0FB /* InterviewCoreData+CoreDataClass.swift */; };
-		15A0389D269ECD9A00D9D0FB /* InterviewCoreData+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15A0389B269ECD9A00D9D0FB /* InterviewCoreData+CoreDataProperties.swift */; };
 		15A038A3269ED12E00D9D0FB /* QuestionInterviewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15A038A2269ED12E00D9D0FB /* QuestionInterviewModel.swift */; };
 		15A038B6269ED1FA00D9D0FB /* QuestionInterViewCoreData+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15A038B4269ED1FA00D9D0FB /* QuestionInterViewCoreData+CoreDataClass.swift */; };
 		15A038B7269ED1FA00D9D0FB /* QuestionInterViewCoreData+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15A038B5269ED1FA00D9D0FB /* QuestionInterViewCoreData+CoreDataProperties.swift */; };
 		15A038BC269EF2C200D9D0FB /* InterviewRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15A038BB269EF2C200D9D0FB /* InterviewRepository.swift */; };
+		15CC089C26B7F7E60070C55F /* AuthenticationUnitTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15CC089B26B7F7E60070C55F /* AuthenticationUnitTest.swift */; };
+		15FD393F26BAE16D000B64A1 /* CoredataError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15FD393E26BAE16D000B64A1 /* CoredataError.swift */; };
 		17DCA4C5E48306770ED53512 /* Pods_CapstoneTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C57EF125C81F28DAD0D11FD /* Pods_CapstoneTests.framework */; };
 		45E19160B2B69DDB689A1456 /* Pods_Capstone_CapstoneUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D304FA87C63FB65B5C7B842 /* Pods_Capstone_CapstoneUITests.framework */; };
-		8CADBDA5078F84D6D1935E5F /* Pods_Capstone.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1425AABD8FCD33A9D5DF26EE /* Pods_Capstone.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -130,12 +142,13 @@
 		15095E8F268DC8B500129B9C /* CapstoneUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CapstoneUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		15095E93268DC8B500129B9C /* CapstoneUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CapstoneUITests.swift; sourceTree = "<group>"; };
 		15095E95268DC8B500129B9C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		150F653C26CE15CB008A1D78 /* AuthenticationFirebase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationFirebase.swift; sourceTree = "<group>"; };
+		150F653E26CE18C5008A1D78 /* KnowledgeDatabase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KnowledgeDatabase.swift; sourceTree = "<group>"; };
 		15179EB42695565F008D3A46 /* Convertible.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Convertible.swift; sourceTree = "<group>"; };
-		15179EB9269557B2008D3A46 /* DatabaseConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseConfig.swift; sourceTree = "<group>"; };
+		15179EB9269557B2008D3A46 /* CoreDataConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataConfig.swift; sourceTree = "<group>"; };
 		15179EBE26958532008D3A46 /* AccountModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountModel.swift; sourceTree = "<group>"; };
 		15179ECA26958640008D3A46 /* Capstone.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Capstone.xcdatamodel; sourceTree = "<group>"; };
-		15179EE72695B949008D3A46 /* AccountCoreData+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "AccountCoreData+CoreDataClass.swift"; path = "Capstone/Model/Database/Account/AccountCoreData+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
-		15179EE82695B949008D3A46 /* AccountCoreData+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "AccountCoreData+CoreDataProperties.swift"; path = "Capstone/Model/Database/Account/AccountCoreData+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
+		1519174726BAD2B80036169F /* KnowledgeUnitTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KnowledgeUnitTest.swift; sourceTree = "<group>"; };
 		151F2AF426A1246500C63F2C /* Date+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extension.swift"; sourceTree = "<group>"; };
 		151F2AF626A1291100C63F2C /* AuthenticationError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationError.swift; sourceTree = "<group>"; };
 		151F2AF826A1381700C63F2C /* CommonError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonError.swift; sourceTree = "<group>"; };
@@ -143,6 +156,17 @@
 		151F2AFD26A1709800C63F2C /* CustomTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBar.swift; sourceTree = "<group>"; };
 		151F2AFF26A170CE00C63F2C /* TabBarItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarItem.swift; sourceTree = "<group>"; };
 		151F2B0126A1828200C63F2C /* Image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
+		15257D2326CA6E0800A0E43D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		15257D2726CA727400A0E43D /* FirebaseConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseConfig.swift; sourceTree = "<group>"; };
+		15257D2926CA7C6800A0E43D /* InterviewDatabase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterviewDatabase.swift; sourceTree = "<group>"; };
+		15257D2B26CA7CB400A0E43D /* InterviewCoreData+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "InterviewCoreData+CoreDataClass.swift"; sourceTree = "<group>"; };
+		15257D2C26CA7CB400A0E43D /* InterviewCoreData+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "InterviewCoreData+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		15257D2F26CA7CCE00A0E43D /* AccountCoreData+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AccountCoreData+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		15257D3026CA7CCE00A0E43D /* AccountCoreData+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AccountCoreData+CoreDataClass.swift"; sourceTree = "<group>"; };
+		15257D3326CA7CDB00A0E43D /* KnowledgeCoreData+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "KnowledgeCoreData+CoreDataClass.swift"; sourceTree = "<group>"; };
+		15257D3426CA7CDB00A0E43D /* KnowledgeCoreData+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "KnowledgeCoreData+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		15257D3726CA7CE600A0E43D /* UserCoreData+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UserCoreData+CoreDataClass.swift"; sourceTree = "<group>"; };
+		15257D3826CA7CE600A0E43D /* UserCoreData+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UserCoreData+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		1526CA7726A522E10059619B /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
 		1526CA7A26A525360059619B /* Onboarding.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Onboarding.storyboard; sourceTree = "<group>"; };
 		1526CA7E26A529FB0059619B /* OnboardingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewModel.swift; sourceTree = "<group>"; };
@@ -151,8 +175,7 @@
 		1526CA8B26A567EC0059619B /* GifOnboardingCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GifOnboardingCollectionViewCell.xib; sourceTree = "<group>"; };
 		1526CA8E26A56DD70059619B /* InterviewGif1.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = InterviewGif1.gif; sourceTree = "<group>"; };
 		15344168269FE0150078660E /* Key.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Key.swift; sourceTree = "<group>"; };
-		154A6364269BF253008E571C /* KnowledgeCoreData+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "KnowledgeCoreData+CoreDataClass.swift"; path = "Capstone/Model/Database/Question/KnowledgeCoreData+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
-		154A6365269BF253008E571C /* KnowledgeCoreData+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "KnowledgeCoreData+CoreDataProperties.swift"; path = "Capstone/Model/Database/Question/KnowledgeCoreData+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
+		1543FC1B26CE57F400E395E9 /* FirebaseError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseError.swift; sourceTree = "<group>"; };
 		154A638C269BF498008E571C /* KnowledgeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KnowledgeModel.swift; sourceTree = "<group>"; };
 		154A6395269BF9E0008E571C /* KnowledgeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KnowledgeViewModel.swift; sourceTree = "<group>"; };
 		154A639A269BFA2C008E571C /* KnowledgeRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KnowledgeRepository.swift; sourceTree = "<group>"; };
@@ -161,8 +184,9 @@
 		154A63AE269C1E08008E571C /* KnowledgeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KnowledgeTableViewCell.swift; sourceTree = "<group>"; };
 		154A63AF269C1E08008E571C /* KnowledgeTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = KnowledgeTableViewCell.xib; sourceTree = "<group>"; };
 		154A63B5269C2384008E571C /* UITableViewCell+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableViewCell+Extension.swift"; sourceTree = "<group>"; };
-		155F2FF626943573007EFBAC /* UserCoreData+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "UserCoreData+CoreDataClass.swift"; path = "Capstone/Model/Database/User/UserCoreData+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
-		155F2FF726943573007EFBAC /* UserCoreData+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "UserCoreData+CoreDataProperties.swift"; path = "Capstone/Model/Database/User/UserCoreData+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
+		1554155726C28EDF00BB1BD0 /* Pods */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Pods; sourceTree = "<group>"; };
+		1554155826C28F0B00BB1BD0 /* Pods_Capstone.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Pods_Capstone.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1554155C26C28F2F00BB1BD0 /* FirebaseCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = FirebaseCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		156948F326A97F1F00EF8C3D /* KnowledgeSetsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KnowledgeSetsViewController.swift; sourceTree = "<group>"; };
 		156948F626A97F7100EF8C3D /* KnowledgeSets.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = KnowledgeSets.storyboard; sourceTree = "<group>"; };
 		156948F826A9BFB000EF8C3D /* KnowledgeSetTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KnowledgeSetTableViewCell.swift; sourceTree = "<group>"; };
@@ -183,6 +207,9 @@
 		157F9731268EFAC0009BBF14 /* SignUp.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SignUp.storyboard; sourceTree = "<group>"; };
 		157F9736268EFEA4009BBF14 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		157F973B268EFED5009BBF14 /* AccoutString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccoutString.swift; sourceTree = "<group>"; };
+		15826A9E26C2DD8E0027F282 /* DefaultContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultContainer.swift; sourceTree = "<group>"; };
+		15826AA326C2DE7E0027F282 /* Inject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Inject.swift; sourceTree = "<group>"; };
+		15826AA726C2E3BA0027F282 /* InterviewUnitTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterviewUnitTest.swift; sourceTree = "<group>"; };
 		1585AFBA2696B1700073F89E /* AuthenticationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationViewModel.swift; sourceTree = "<group>"; };
 		1585AFD02696DA750073F89E /* AuthenticationRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationRepository.swift; sourceTree = "<group>"; };
 		1585AFD62696EA9E0073F89E /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -197,12 +224,12 @@
 		15A03886269EC0C500D9D0FB /* OverviewTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverviewTableViewCell.swift; sourceTree = "<group>"; };
 		15A03887269EC0C500D9D0FB /* OverviewTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OverviewTableViewCell.xib; sourceTree = "<group>"; };
 		15A0388D269EC97100D9D0FB /* InterviewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterviewModel.swift; sourceTree = "<group>"; };
-		15A0389A269ECD9A00D9D0FB /* InterviewCoreData+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "InterviewCoreData+CoreDataClass.swift"; path = "Capstone/Model/Database/Interview/InterviewCoreData+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
-		15A0389B269ECD9A00D9D0FB /* InterviewCoreData+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "InterviewCoreData+CoreDataProperties.swift"; path = "Capstone/Model/Database/Interview/InterviewCoreData+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
 		15A038A2269ED12E00D9D0FB /* QuestionInterviewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionInterviewModel.swift; sourceTree = "<group>"; };
 		15A038B4269ED1FA00D9D0FB /* QuestionInterViewCoreData+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "QuestionInterViewCoreData+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
 		15A038B5269ED1FA00D9D0FB /* QuestionInterViewCoreData+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "QuestionInterViewCoreData+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
 		15A038BB269EF2C200D9D0FB /* InterviewRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterviewRepository.swift; sourceTree = "<group>"; };
+		15CC089B26B7F7E60070C55F /* AuthenticationUnitTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationUnitTest.swift; sourceTree = "<group>"; };
+		15FD393E26BAE16D000B64A1 /* CoredataError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoredataError.swift; sourceTree = "<group>"; };
 		3C57EF125C81F28DAD0D11FD /* Pods_CapstoneTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CapstoneTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F18C5BF9AEEFD3B9FC56A64 /* Pods-Capstone-CapstoneUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Capstone-CapstoneUITests.release.xcconfig"; path = "Target Support Files/Pods-Capstone-CapstoneUITests/Pods-Capstone-CapstoneUITests.release.xcconfig"; sourceTree = "<group>"; };
 		5A6BD8BB820596903C469AAB /* Pods-Capstone.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Capstone.debug.xcconfig"; path = "Target Support Files/Pods-Capstone/Pods-Capstone.debug.xcconfig"; sourceTree = "<group>"; };
@@ -218,7 +245,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8CADBDA5078F84D6D1935E5F /* Pods_Capstone.framework in Frameworks */,
+				15826AA026C2DDDE0027F282 /* Pods_Capstone.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -274,6 +301,7 @@
 		15095E6D268DC8B100129B9C /* Capstone */ = {
 			isa = PBXGroup;
 			children = (
+				15257D2326CA6E0800A0E43D /* GoogleService-Info.plist */,
 				157F96EE268EBB67009BBF14 /* Application */,
 				157F96EF268EBB7C009BBF14 /* Network */,
 				157F96ED268EBB4F009BBF14 /* Resource */,
@@ -291,6 +319,9 @@
 			children = (
 				15095E88268DC8B500129B9C /* CapstoneTests.swift */,
 				15095E8A268DC8B500129B9C /* Info.plist */,
+				15CC089B26B7F7E60070C55F /* AuthenticationUnitTest.swift */,
+				1519174726BAD2B80036169F /* KnowledgeUnitTest.swift */,
+				15826AA726C2E3BA0027F282 /* InterviewUnitTest.swift */,
 			);
 			path = CapstoneTests;
 			sourceTree = "<group>";
@@ -325,6 +356,30 @@
 			path = BaseTabbarController;
 			sourceTree = "<group>";
 		};
+		15257D2526CA723F00A0E43D /* Firebase */ = {
+			isa = PBXGroup;
+			children = (
+				15257D2726CA727400A0E43D /* FirebaseConfig.swift */,
+				150F653C26CE15CB008A1D78 /* AuthenticationFirebase.swift */,
+				15257D2926CA7C6800A0E43D /* InterviewDatabase.swift */,
+				150F653E26CE18C5008A1D78 /* KnowledgeDatabase.swift */,
+			);
+			path = Firebase;
+			sourceTree = "<group>";
+		};
+		15257D2626CA725000A0E43D /* Coredata */ = {
+			isa = PBXGroup;
+			children = (
+				15179EB9269557B2008D3A46 /* CoreDataConfig.swift */,
+				15A03892269ECBF600D9D0FB /* Interview */,
+				154A6394269BF76E008E571C /* User */,
+				154A6393269BF75A008E571C /* Account */,
+				154A6392269BF746008E571C /* Question */,
+				15179EC926958640008D3A46 /* Capstone.xcdatamodeld */,
+			);
+			path = Coredata;
+			sourceTree = "<group>";
+		};
 		1526CA7926A522E60059619B /* Onboarding */ = {
 			isa = PBXGroup;
 			children = (
@@ -347,8 +402,8 @@
 		154A6392269BF746008E571C /* Question */ = {
 			isa = PBXGroup;
 			children = (
-				154A6364269BF253008E571C /* KnowledgeCoreData+CoreDataClass.swift */,
-				154A6365269BF253008E571C /* KnowledgeCoreData+CoreDataProperties.swift */,
+				15257D3326CA7CDB00A0E43D /* KnowledgeCoreData+CoreDataClass.swift */,
+				15257D3426CA7CDB00A0E43D /* KnowledgeCoreData+CoreDataProperties.swift */,
 			);
 			path = Question;
 			sourceTree = "<group>";
@@ -356,8 +411,8 @@
 		154A6393269BF75A008E571C /* Account */ = {
 			isa = PBXGroup;
 			children = (
-				15179EE72695B949008D3A46 /* AccountCoreData+CoreDataClass.swift */,
-				15179EE82695B949008D3A46 /* AccountCoreData+CoreDataProperties.swift */,
+				15257D3026CA7CCE00A0E43D /* AccountCoreData+CoreDataClass.swift */,
+				15257D2F26CA7CCE00A0E43D /* AccountCoreData+CoreDataProperties.swift */,
 			);
 			path = Account;
 			sourceTree = "<group>";
@@ -365,8 +420,8 @@
 		154A6394269BF76E008E571C /* User */ = {
 			isa = PBXGroup;
 			children = (
-				155F2FF626943573007EFBAC /* UserCoreData+CoreDataClass.swift */,
-				155F2FF726943573007EFBAC /* UserCoreData+CoreDataProperties.swift */,
+				15257D3726CA7CE600A0E43D /* UserCoreData+CoreDataClass.swift */,
+				15257D3826CA7CE600A0E43D /* UserCoreData+CoreDataProperties.swift */,
 			);
 			path = User;
 			sourceTree = "<group>";
@@ -455,8 +510,6 @@
 				1585AFCF2696DA5C0073F89E /* Repository */,
 				15179ED6269586B6008D3A46 /* DAO */,
 				157F96EC268EBB30009BBF14 /* Database */,
-				15179EB42695565F008D3A46 /* Convertible.swift */,
-				15179EB9269557B2008D3A46 /* DatabaseConfig.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -492,11 +545,9 @@
 		157F96EC268EBB30009BBF14 /* Database */ = {
 			isa = PBXGroup;
 			children = (
-				15A03892269ECBF600D9D0FB /* Interview */,
-				154A6394269BF76E008E571C /* User */,
-				154A6393269BF75A008E571C /* Account */,
-				154A6392269BF746008E571C /* Question */,
-				15179EC926958640008D3A46 /* Capstone.xcdatamodeld */,
+				15179EB42695565F008D3A46 /* Convertible.swift */,
+				15257D2626CA725000A0E43D /* Coredata */,
+				15257D2526CA723F00A0E43D /* Firebase */,
 			);
 			path = Database;
 			sourceTree = "<group>";
@@ -504,6 +555,7 @@
 		157F96ED268EBB4F009BBF14 /* Resource */ = {
 			isa = PBXGroup;
 			children = (
+				15826A9D26C2DD5F0027F282 /* Dependency */,
 				15C3C8D826A6D5100056B106 /* Ultis */,
 				15C3C8D726A6D4F60056B106 /* Error */,
 				15C3C8D626A6D4E10056B106 /* Extension */,
@@ -545,6 +597,15 @@
 				157F9721268EF141009BBF14 /* SignIn.storyboard */,
 			);
 			path = SignIn;
+			sourceTree = "<group>";
+		};
+		15826A9D26C2DD5F0027F282 /* Dependency */ = {
+			isa = PBXGroup;
+			children = (
+				15826A9E26C2DD8E0027F282 /* DefaultContainer.swift */,
+				15826AA326C2DE7E0027F282 /* Inject.swift */,
+			);
+			path = Dependency;
 			sourceTree = "<group>";
 		};
 		1585AFCF2696DA5C0073F89E /* Repository */ = {
@@ -601,10 +662,10 @@
 		15A03892269ECBF600D9D0FB /* Interview */ = {
 			isa = PBXGroup;
 			children = (
+				15257D2B26CA7CB400A0E43D /* InterviewCoreData+CoreDataClass.swift */,
+				15257D2C26CA7CB400A0E43D /* InterviewCoreData+CoreDataProperties.swift */,
 				15A038B4269ED1FA00D9D0FB /* QuestionInterViewCoreData+CoreDataClass.swift */,
 				15A038B5269ED1FA00D9D0FB /* QuestionInterViewCoreData+CoreDataProperties.swift */,
-				15A0389A269ECD9A00D9D0FB /* InterviewCoreData+CoreDataClass.swift */,
-				15A0389B269ECD9A00D9D0FB /* InterviewCoreData+CoreDataProperties.swift */,
 			);
 			path = Interview;
 			sourceTree = "<group>";
@@ -627,6 +688,8 @@
 			children = (
 				151F2AF626A1291100C63F2C /* AuthenticationError.swift */,
 				151F2AF826A1381700C63F2C /* CommonError.swift */,
+				15FD393E26BAE16D000B64A1 /* CoredataError.swift */,
+				1543FC1B26CE57F400E395E9 /* FirebaseError.swift */,
 			);
 			path = Error;
 			sourceTree = "<group>";
@@ -645,6 +708,9 @@
 		387F4C3CD5E6E9458DC272D1 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				1554155C26C28F2F00BB1BD0 /* FirebaseCore.framework */,
+				1554155826C28F0B00BB1BD0 /* Pods_Capstone.framework */,
+				1554155726C28EDF00BB1BD0 /* Pods */,
 				1425AABD8FCD33A9D5DF26EE /* Pods_Capstone.framework */,
 				7D304FA87C63FB65B5C7B842 /* Pods_Capstone_CapstoneUITests.framework */,
 				3C57EF125C81F28DAD0D11FD /* Pods_CapstoneTests.framework */,
@@ -676,6 +742,7 @@
 				15095E67268DC8B100129B9C /* Sources */,
 				15095E68268DC8B100129B9C /* Frameworks */,
 				15095E69268DC8B100129B9C /* Resources */,
+				94898FD59EB2D3E803084E21 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -713,6 +780,7 @@
 				15095E8B268DC8B500129B9C /* Sources */,
 				15095E8C268DC8B500129B9C /* Frameworks */,
 				15095E8D268DC8B500129B9C /* Resources */,
+				20CAC37449CBA6C8A2A65483 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -788,6 +856,7 @@
 				15095E7B268DC8B400129B9C /* Assets.xcassets in Resources */,
 				157F9722268EF141009BBF14 /* SignIn.storyboard in Resources */,
 				1526CA7B26A525360059619B /* Onboarding.storyboard in Resources */,
+				15257D2426CA6E0800A0E43D /* GoogleService-Info.plist in Resources */,
 				154A63B1269C1E08008E571C /* KnowledgeTableViewCell.xib in Resources */,
 				1573549226A030E500A5C59D /* History.storyboard in Resources */,
 			);
@@ -832,6 +901,23 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		20CAC37449CBA6C8A2A65483 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Capstone-CapstoneUITests/Pods-Capstone-CapstoneUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Capstone-CapstoneUITests/Pods-Capstone-CapstoneUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Capstone-CapstoneUITests/Pods-Capstone-CapstoneUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		2650A1F4B1EAA1DD56FFAFF5 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -852,6 +938,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		94898FD59EB2D3E803084E21 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Capstone/Pods-Capstone-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Capstone/Pods-Capstone-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Capstone/Pods-Capstone-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		BDE8BD5273C59D58C03902E4 /* [CP] Check Pods Manifest.lock */ = {
@@ -884,12 +987,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				15A03881269EBF4D00D9D0FB /* QuestionTableViewCell.swift in Sources */,
+				15FD393F26BAE16D000B64A1 /* CoredataError.swift in Sources */,
+				15257D3A26CA7CE600A0E43D /* UserCoreData+CoreDataProperties.swift in Sources */,
+				15257D3126CA7CCE00A0E43D /* AccountCoreData+CoreDataProperties.swift in Sources */,
+				15257D3526CA7CDB00A0E43D /* KnowledgeCoreData+CoreDataClass.swift in Sources */,
 				1507B218268F14D6001945A8 /* UIViewController+Extension.swift in Sources */,
 				1569490226A9D8F100EF8C3D /* BaseViewModel.swift in Sources */,
 				154A63A9269BFB58008E571C /* InsertKnowledgeViewController.swift in Sources */,
 				154A63B6269C2384008E571C /* UITableViewCell+Extension.swift in Sources */,
 				157F971D268EF131009BBF14 /* SignInViewController.swift in Sources */,
 				15A038A3269ED12E00D9D0FB /* QuestionInterviewModel.swift in Sources */,
+				15257D3926CA7CE600A0E43D /* UserCoreData+CoreDataClass.swift in Sources */,
+				150F653D26CE15CB008A1D78 /* AuthenticationFirebase.swift in Sources */,
 				1585AFBB2696B1700073F89E /* AuthenticationViewModel.swift in Sources */,
 				1507B213268F1435001945A8 /* BaseVCViewController.swift in Sources */,
 				15708CBE26AFFE6200E63493 /* AlertEditKnowledge.swift in Sources */,
@@ -898,8 +1007,8 @@
 				15179EB52695565F008D3A46 /* Convertible.swift in Sources */,
 				1585AFD72696EA9E0073F89E /* HomeViewController.swift in Sources */,
 				15A03860269E97B900D9D0FB /* InterviewViewController.swift in Sources */,
-				154A6367269BF253008E571C /* KnowledgeCoreData+CoreDataProperties.swift in Sources */,
-				154A6366269BF253008E571C /* KnowledgeCoreData+CoreDataClass.swift in Sources */,
+				15257D2D26CA7CB400A0E43D /* InterviewCoreData+CoreDataClass.swift in Sources */,
+				15257D2E26CA7CB400A0E43D /* InterviewCoreData+CoreDataProperties.swift in Sources */,
 				15A038BC269EF2C200D9D0FB /* InterviewRepository.swift in Sources */,
 				151F2AF926A1381700C63F2C /* CommonError.swift in Sources */,
 				1573548F26A024C900A5C59D /* OverviewModel.swift in Sources */,
@@ -907,22 +1016,23 @@
 				15095E6F268DC8B100129B9C /* AppDelegate.swift in Sources */,
 				1526CA7F26A529FB0059619B /* OnboardingViewModel.swift in Sources */,
 				15A0388E269EC97100D9D0FB /* InterviewModel.swift in Sources */,
-				155F2FF926943573007EFBAC /* UserCoreData+CoreDataProperties.swift in Sources */,
+				15826A9F26C2DD8E0027F282 /* DefaultContainer.swift in Sources */,
 				15179EBF26958532008D3A46 /* AccountModel.swift in Sources */,
 				151F2B0026A170CE00C63F2C /* TabBarItem.swift in Sources */,
-				15A0389C269ECD9A00D9D0FB /* InterviewCoreData+CoreDataClass.swift in Sources */,
+				15826AA426C2DE7E0027F282 /* Inject.swift in Sources */,
 				154A639B269BFA2C008E571C /* KnowledgeRepository.swift in Sources */,
-				15179EEA2695B949008D3A46 /* AccountCoreData+CoreDataProperties.swift in Sources */,
 				151F2AFE26A1709800C63F2C /* CustomTabBar.swift in Sources */,
 				1507B21D268F1519001945A8 /* NSObject+Extension.swift in Sources */,
+				15257D2A26CA7C6800A0E43D /* InterviewDatabase.swift in Sources */,
 				15095E71268DC8B100129B9C /* SceneDelegate.swift in Sources */,
+				15257D2826CA727400A0E43D /* FirebaseConfig.swift in Sources */,
 				15A03871269E991E00D9D0FB /* CandidateInforTableViewCell.swift in Sources */,
 				1569490026A9C4E500EF8C3D /* UILabel+Extension.swift in Sources */,
 				1573548C26A023FD00A5C59D /* CandidateInforModel.swift in Sources */,
-				15A0389D269ECD9A00D9D0FB /* InterviewCoreData+CoreDataProperties.swift in Sources */,
 				151F2B0226A1828200C63F2C /* Image.swift in Sources */,
 				15179ECB26958640008D3A46 /* Capstone.xcdatamodeld in Sources */,
 				154A6396269BF9E0008E571C /* KnowledgeViewModel.swift in Sources */,
+				15257D3226CA7CCE00A0E43D /* AccountCoreData+CoreDataClass.swift in Sources */,
 				1585AFD12696DA750073F89E /* AuthenticationRepository.swift in Sources */,
 				151F2AFC26A1702300C63F2C /* BaseTabBarViewController.swift in Sources */,
 				157F9737268EFEA4009BBF14 /* Color.swift in Sources */,
@@ -934,17 +1044,18 @@
 				15A03888269EC0C500D9D0FB /* OverviewTableViewCell.swift in Sources */,
 				1526CA7826A522E10059619B /* OnboardingViewController.swift in Sources */,
 				15A038B7269ED1FA00D9D0FB /* QuestionInterViewCoreData+CoreDataProperties.swift in Sources */,
-				15179EBA269557B2008D3A46 /* DatabaseConfig.swift in Sources */,
-				155F2FF826943573007EFBAC /* UserCoreData+CoreDataClass.swift in Sources */,
+				15179EBA269557B2008D3A46 /* CoreDataConfig.swift in Sources */,
+				1543FC1C26CE57F400E395E9 /* FirebaseError.swift in Sources */,
+				150F653F26CE18C5008A1D78 /* KnowledgeDatabase.swift in Sources */,
 				154A638D269BF498008E571C /* KnowledgeModel.swift in Sources */,
 				1526CA8C26A567EC0059619B /* GifOnboardingCollectionViewCell.swift in Sources */,
+				15257D3626CA7CDB00A0E43D /* KnowledgeCoreData+CoreDataProperties.swift in Sources */,
 				15A0387B269E9E3A00D9D0FB /* InterviewViewModel.swift in Sources */,
 				157F973C268EFED5009BBF14 /* AccoutString.swift in Sources */,
 				154A63B0269C1E08008E571C /* KnowledgeTableViewCell.swift in Sources */,
 				151F2AF526A1246500C63F2C /* Date+Extension.swift in Sources */,
 				1526CA8526A537B80059619B /* UIImage+Extension.swift in Sources */,
 				151F2AF726A1291100C63F2C /* AuthenticationError.swift in Sources */,
-				15179EE92695B949008D3A46 /* AccountCoreData+CoreDataClass.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -952,7 +1063,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1519174826BAD2B80036169F /* KnowledgeUnitTest.swift in Sources */,
 				15095E89268DC8B500129B9C /* CapstoneTests.swift in Sources */,
+				15CC089C26B7F7E60070C55F /* AuthenticationUnitTest.swift in Sources */,
+				15826AA826C2E3BA0027F282 /* InterviewUnitTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1042,7 +1156,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -1097,7 +1211,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -1113,16 +1227,23 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = ABK98C7328;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Pods/FirebaseAnalytics/Frameworks",
+					"$(PROJECT_DIR)/Pods/GoogleAppMeasurement/Frameworks",
+				);
 				INFOPLIST_FILE = Capstone/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.CMCGlobal.com.Capstone;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -1134,16 +1255,24 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = ABK98C7328;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Pods/FirebaseAnalytics/Frameworks",
+					"$(PROJECT_DIR)/Pods/GoogleAppMeasurement/Frameworks",
+				);
 				INFOPLIST_FILE = Capstone/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = com.CMCGlobal.com.Capstone;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

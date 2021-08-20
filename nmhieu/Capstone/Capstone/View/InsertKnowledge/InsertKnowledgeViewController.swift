@@ -78,12 +78,16 @@ class InsertKnowledgeViewController: BaseVC {
     }
     
     @IBAction func eventDone() {
-        self.knowledgeVM.saveListKnowledges()
-        self.navigationController?.popViewController(animated: true)
+//        self.knowledgeVM.saveListKnowledges()
+        self.knowledgeVM.saveListKnowledges { error in
+            if error == nil {
+                self.navigationController?.popViewController(animated: true)
+            }
+        }
     }
     
     @IBAction func eventAdd() {
-        self.knowledgeVM.listKnowledges.append(KnowledgeModel(id: nil, content: "", answer: "", level: self.level))
+        self.knowledgeVM.listKnowledges.append(KnowledgeModel(idCoreData: nil, content: "", answer: "", level: self.level))
         self.knowledgeTableView.reloadData()
         self.knowledgeTableView.scrollToRow(at: .init(row: self.knowledgeVM.listKnowledges.count - 1, section: 0), at: .bottom, animated: true)
     }

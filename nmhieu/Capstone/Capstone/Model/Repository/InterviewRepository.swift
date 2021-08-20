@@ -10,13 +10,19 @@ import Foundation
 protocol InterviewRepository {
     func recommentQuestion(level : LevelInterView) -> [QuestionInterviewModel]
     
+    func recommentQuestion(level : LevelInterView, completion : @escaping ([QuestionInterviewModel], Error?) -> ())
+    
     func saveInterView(data : InterviewModel)
+    
+    func saveInterView(data : InterviewModel, completion : @escaping(Error?) -> ())
+    
+    func fetchInterviewHistory(completion : @escaping ([InterviewModel], Error?) -> ())
     
     func fetchInterviewHistory() -> [InterviewModel]
 }
 
 struct DefaultInterviewRepository : InterviewRepository {
-    
+
     func recommentQuestion(level : LevelInterView) -> [QuestionInterviewModel] {
         var results : [QuestionInterviewModel] = []
         let predicateLevel : NSPredicate = .init(format: "level == \(level.rawValue)")
@@ -27,7 +33,7 @@ struct DefaultInterviewRepository : InterviewRepository {
         
         idRandom.forEach { (id) in
             var result = QuestionInterviewModel()
-            result.id = questions[id].id
+            result.idCoredata = questions[id].idCoreData
             result.question = questions[id].content
             result.answer = questions[id].answer
             result.rate = .good
@@ -37,27 +43,53 @@ struct DefaultInterviewRepository : InterviewRepository {
         return results
     }
     
+    func recommentQuestion(level: LevelInterView, completion: @escaping ([QuestionInterviewModel], Error?) -> ()) {
+        FirebaseRepository<KnowledgeModel>.shared.fetch(limit: 5, whereFeild: "level", isEqualTo: level.rawValue, completion: { response, error in
+            var results : [QuestionInterviewModel] = []
+            guard let knowledges = response else { return }
+            knowledges.forEach { knowledge in
+                var result = QuestionInterviewModel()
+                result.id = knowledge.id
+                result.question = knowledge.content
+                result.answer = knowledge.answer
+                result.rate = .good
+                results.append(result)
+            }
+            completion(results, error)
+        })
+    }
+    
     func saveInterView(data: InterviewModel) {
         var id : Int = 0
-        id = CoreDataRepository<InterviewModel>.shared.fetchAll()?.count ?? 0
+//        idCoreData = CoreDataRepository<InterviewModel>.shared.fetchAll()?.count ?? 0
         
         var interviewData = data
-        interviewData.id = id
+//        interviewData.idCoreData = idCoreData
         
         let questionsInterviewData = data.listQuestions
     
-        CoreDataRepository<InterviewModel>.shared.save(domain: interviewData)
+//        CoreDataRepository<InterviewModel>.shared.save(domain: interviewData)
         questionsInterviewData?.forEach({ (question) in
             var questionInterview = question
-            questionInterview.id = id
+            questionInterview.idCoredata = id
             CoreDataRepository<QuestionInterviewModel>.shared.save(domain: questionInterview)
         })
     }
     
+    func saveInterView(data: InterviewModel, completion: @escaping (Error?) -> ()) {
+        FirebaseRepository<InterviewModel>.shared.save(domain: data) { error in
+            completion(error)
+        }
+    }
+    
+    func fetchInterviewHistory(completion : @escaping ([InterviewModel],Error?) -> ()) {
+        FirebaseRepository<InterviewModel>.shared.fetchAll(completion: { interviewDatabase, error in
+            guard let interview = interviewDatabase else { return }
+            completion(interview ,error)
+        })
+    }
+    
     func fetchInterviewHistory() -> [InterviewModel] {
-        var historyInterview : [InterviewModel]  = []
-        guard let interview = CoreDataRepository<InterviewModel>.shared.fetchAll() else { return [] }
-        historyInterview = interview
-        return historyInterview
+        return []
     }
 }

@@ -10,12 +10,16 @@ import Foundation
 protocol AuthenticationViewModel {
     func signIn(username : String, password : String) -> (state : Bool,message : String)
     
+    func signIn(username : String, password : String, completion : @escaping (Bool, String) -> ())
+    
     func signUp(username : String, password : String, repassword : String) -> (state : Bool,message : String)
+    
+    func signUp(username : String, password : String, repassword : String, completion : @escaping (Bool, String) -> ())
 }
 
 struct DefaultAuthenticationViewModel : AuthenticationViewModel {
     
-    var authenticationRepo = DefaultAuthenticationRepository()
+    @Inject var authenticationRepo : AuthenticationRepository
     
     func signIn(username: String, password: String) -> (state : Bool, message : String) {
         if username.isEmpty || password.isEmpty {
@@ -31,13 +35,30 @@ struct DefaultAuthenticationViewModel : AuthenticationViewModel {
             return (state, message)
         }
     }
+    
+    func signIn(username: String, password: String, completion: @escaping (Bool, String) -> ()) {
+        if username.isEmpty || password.isEmpty {
+            completion(false, AuthenticationError.emptyField.rawValue)
+        }
+        else {
+            var account = AccountModel()
+            account.username = username
+            account.password = password
+            account.email = username
+            self.authenticationRepo.signIn(account: account) { error in
+                let state = error == nil ? true : false
+                let message = state ? ("") : (AuthenticationError.inforNotfound.rawValue)
+                completion(state, message)
+            }
+        }
+    }
 
     func signUp(username: String, password: String, repassword: String) -> (state : Bool,message : String) {
         if username.isEmpty || password.isEmpty || repassword.isEmpty {
-            return (false ,AuthenticationError.emptyField.rawValue)
+            return (false, AuthenticationError.emptyField.rawValue)
         }
         else if password != repassword {
-            return (false ,AuthenticationError.confirmPasswordNotMatch.rawValue)
+            return (false, AuthenticationError.confirmPasswordNotMatch.rawValue)
         }
         else {
             var account = AccountModel()
@@ -50,7 +71,28 @@ struct DefaultAuthenticationViewModel : AuthenticationViewModel {
         }
     }
     
-    func saveSecretAccout(username : String, password : String) {
-        
+    func signUp(username: String, password: String, repassword: String, completion: @escaping (Bool, String) -> ()) {
+        if username.isEmpty || password.isEmpty || repassword.isEmpty {
+           completion(false, AuthenticationError.emptyField.rawValue)
+        }
+        else if password != repassword {
+            completion(false, AuthenticationError.confirmPasswordNotMatch.rawValue)
+        }
+        else {
+            var account = AccountModel()
+            account.username = username
+            account.password = password
+            account.email = username
+            self.authenticationRepo.signUp(account: account) { error in
+                let state = error == nil ? true : false
+                let message = state ? ("") : (AuthenticationError.notAvailableUsername.rawValue)
+                completion(state, message)
+            }
+        }
     }
+    
+    func saveSecretAccout(username : String, password : String) {
+//        DefaultAuthenticationViewModel()
+    }
+    
 }

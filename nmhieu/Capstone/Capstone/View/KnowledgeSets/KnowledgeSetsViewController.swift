@@ -54,8 +54,8 @@ class KnowledgeSetsViewController: UIViewController {
         default:
             break
         }
-        self.knowledgeVM.listKnowledges = self.knowledgeVM.fetchKnowledge(level: self.knowledgeVM.level)
-        self.knowledgeTableView.reloadData()
+//        self.knowledgeVM.listKnowledges = self.knowledgeVM.fetchKnowledge(level: self.knowledgeVM.level)
+        self.reloadData()
     }
     
     @IBAction func eventAdd(_ sender: Any) {
@@ -67,11 +67,17 @@ class KnowledgeSetsViewController: UIViewController {
     //MARK: -BindingData
     private func bindingData() {
         self.knowledgeVM.level = .intern
-        self.knowledgeVM.listKnowledges = self.knowledgeVM.fetchKnowledge(level: self.knowledgeVM.level)
+        self.reloadData()
     }
     
     private func reloadData() {
-        self.knowledgeVM.listKnowledges = self.knowledgeVM.fetchKnowledge(level: self.knowledgeVM.level)
+        self.knowledgeVM.fetchKnowledge(level: self.knowledgeVM.level) { knowledges, error in
+            if error == nil {
+                self.knowledgeVM.listKnowledges = knowledges
+                self.knowledgeTableView.reloadData()
+            }
+        }
+//        self.knowledgeVM.listKnowledges = self.knowledgeVM.fetchKnowledge(level: self.knowledgeVM.level)
     }
 }
 
@@ -112,8 +118,13 @@ extension KnowledgeSetsViewController : UITableViewDelegate {
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
             self.knowledgeVM.listKnowledges.remove(at: indexPath.section)
-            self.knowledgeVM.deleteKnowledge(id: self.knowledgeVM.listKnowledges[indexPath.section].id ?? 0)
-            self.knowledgeTableView.reloadData()
+            self.knowledgeVM.deleteKnowledge(id: self.knowledgeVM.listKnowledges[indexPath.section].id ?? "") { error in
+                if error == nil {
+                    self.reloadData()
+                }
+            }
+//            self.knowledgeVM.deleteKnowledge(idCoredata: self.knowledgeVM.listKnowledges[indexPath.section].idCoreData ?? 0)
+//            self.knowledgeTableView.reloadData()
         }
     }
     
@@ -125,9 +136,11 @@ extension KnowledgeSetsViewController : UITableViewDelegate {
         AlertEditKnowledge.shared.bindingData(knowledge: self.knowledgeVM.listKnowledges[indexPath.section])
         
         AlertEditKnowledge.shared.editKnowledgeClosure = {
-            self.knowledgeVM.updateKnowledge(knowledge: $0)
-            self.reloadData()
-            self.knowledgeTableView.reloadData()
+            self.knowledgeVM.updateKnowledge(knowledge: $0) { error in
+                if error == nil {
+                    self.reloadData()
+                }
+            }
         }
         
     }

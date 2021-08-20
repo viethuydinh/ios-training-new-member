@@ -67,19 +67,44 @@ class SignInViewController: BaseVC {
     
     //MARK: -Event
     @IBAction func eventSignIn() {
-        let stateAuth = self.authenticationVM.signIn(username: self.userNameTF.text ?? "",
-                                                     password: self.passwordTF.text ?? "")
-        if stateAuth.state {
-            self.view.bringSubviewToFront(self.animationView)
-            UIView.animate(withDuration: 0.5) {
-                self.animationView.transform = .init(scaleX: self.view.bounds.width, y: self.view.bounds.height)
-            } completion: { _ in
-                guard let vc = UIStoryboard(name: "Home", bundle: nil).instantiateViewController(withIdentifier: "NavigationMain") as? UINavigationController else { return }
-                self.view.window?.rootViewController = vc
-            }
+//        let stateAuth = self.authenticationVM.signIn(username: self.userNameTF.text ?? "",
+//                                                     password: self.passwordTF.text ?? "")
+//        if stateAuth.state {
+//            self.view.bringSubviewToFront(self.animationView)
+//            UIView.animate(withDuration: 0.5) {
+//                self.animationView.transform = .init(scaleX: self.view.bounds.width, y: self.view.bounds.height)
+//            } completion: { _ in
+//                guard let vc = UIStoryboard(name: "Home", bundle: nil).instantiateViewController(withIdentifier: "NavigationMain") as? UINavigationController else { return }
+//                self.view.window?.rootViewController = vc
+//            }
+//        }
+//        else {
+//            self.eventAlert(message: stateAuth.message)
+//        }
+        
+        let dispatchGroup = DispatchGroup()
+        var stateAuth : Bool = false
+        var messageAuth = ""
+        dispatchGroup.enter()
+        self.authenticationVM.signIn(username: self.userNameTF.text ?? "",
+                                     password: self.passwordTF.text ?? "") { state, message in
+            stateAuth = state
+            messageAuth = message
+            dispatchGroup.leave()
         }
-        else {
-            self.eventAlert(message: stateAuth.message)
+        dispatchGroup.notify(queue: .main) {
+            if stateAuth {
+                self.view.bringSubviewToFront(self.animationView)
+                UIView.animate(withDuration: 0.5) {
+                    self.animationView.transform = .init(scaleX: self.view.bounds.width, y: self.view.bounds.height)
+                } completion: { _ in
+                    guard let vc = UIStoryboard(name: "Home", bundle: nil).instantiateViewController(withIdentifier: "NavigationMain") as? UINavigationController else { return }
+                    self.view.window?.rootViewController = vc
+                }
+            }
+            else {
+                self.eventAlert(message: messageAuth)
+            }
         }
     }
     

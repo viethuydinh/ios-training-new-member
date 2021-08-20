@@ -19,9 +19,15 @@ protocol InterviewViewModel {
     
     func recommentListQuestions() -> [QuestionInterviewModel]
     
+    func recommentListQuestions(completion : @escaping ([QuestionInterviewModel], Error?) -> ())
+    
     func saveInterView(tableView : UITableView)
     
+    func saveInterView(tableView : UITableView, completion : @escaping (Error?) -> ())
+    
     func fetchInterviewHistory() -> [InterviewModel]
+    
+    func fetchInterviewHistory(completion : @escaping ([InterviewModel], Error?) -> ())
     
     func getDataOnCadidateProfileSection(tableView : UITableView) -> CandidateInforModel
     
@@ -31,8 +37,8 @@ protocol InterviewViewModel {
 }
 
 struct DefaultInterviewViewModel : InterviewViewModel {
-    
-    var interViewRepository = DefaultInterviewRepository()
+ 
+    @Inject var interViewRepository : InterviewRepository
     
     var image: UIImage?
     
@@ -46,6 +52,12 @@ struct DefaultInterviewViewModel : InterviewViewModel {
         return self.interViewRepository.recommentQuestion(level: self.level)
     }
     
+    func recommentListQuestions(completion: @escaping ([QuestionInterviewModel], Error?) -> ()) {
+        self.interViewRepository.recommentQuestion(level: self.level) { questions, error in
+            completion(questions, error)
+        }
+    }
+    
     func saveInterView(tableView : UITableView) {
         var interviewData = InterviewModel()
         interviewData.id = nil
@@ -55,6 +67,19 @@ struct DefaultInterviewViewModel : InterviewViewModel {
         interviewData.overview = self.getDataOnOverviewSection(tableView: tableView)
         
         self.interViewRepository.saveInterView(data: interviewData)
+    }
+    
+    func saveInterView(tableView: UITableView, completion: @escaping (Error?) -> ()) {
+        var interviewData = InterviewModel()
+        interviewData.id = nil
+        interviewData.date = Date()
+        interviewData.candidateInfor = self.getDataOnCadidateProfileSection(tableView: tableView)
+        interviewData.listQuestions = self.getDataOnQuestionSection(tableView: tableView)
+        interviewData.overview = self.getDataOnOverviewSection(tableView: tableView)
+        
+        self.interViewRepository.saveInterView(data: interviewData) { error in
+            completion(error)
+        }
     }
     
     func getDataOnCadidateProfileSection(tableView: UITableView) -> CandidateInforModel {
@@ -91,6 +116,12 @@ struct DefaultInterviewViewModel : InterviewViewModel {
     
     func fetchInterviewHistory() -> [InterviewModel] {
         return self.interViewRepository.fetchInterviewHistory()
+    }
+    
+    func fetchInterviewHistory(completion: @escaping ([InterviewModel], Error?) -> ()) {
+        self.interViewRepository.fetchInterviewHistory { interview, error in
+            completion(interview,error)
+        }
     }
     
 }

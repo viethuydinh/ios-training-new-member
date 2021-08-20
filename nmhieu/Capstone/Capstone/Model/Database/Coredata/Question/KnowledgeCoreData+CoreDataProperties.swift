@@ -27,9 +27,9 @@ extension KnowledgeCoreData : DomainConvertible {
     
     typealias Domain = KnowledgeModel
     
-    var asDomain: KnowledgeModel {
+    var asDomain: Domain {
         var domain = Domain()
-        domain.id = Int(self.id)
+        domain.idCoreData = Int(self.id)
         domain.content = self.content
         domain.answer = self.answer
         domain.level = LevelInterView(rawValue: Int(self.level))

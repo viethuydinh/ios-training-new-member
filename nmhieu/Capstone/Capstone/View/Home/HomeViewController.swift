@@ -58,14 +58,25 @@ class HomeViewController: BaseVC {
         }
         
         let interViewAction = UIAlertAction(title: "Interview", style: .default) { (action) in
-            let numberQuestions = self.knowledgeVM.fetchKnowledge(level: level).count
-            if numberQuestions >= 5 {
-                guard let vc = UIStoryboard(name: "Interview", bundle: nil).instantiateViewController(withIdentifier: InterviewViewController.identifier) as? InterviewViewController else { return }
-                vc.level = level
-                self.navigationController?.pushViewController(vc, animated: true)
+//            let numberQuestions = self.knowledgeVM.fetchKnowledge(level: level).count
+            var numberQuestions = 0
+            let dispatchGroup = DispatchGroup()
+            dispatchGroup.enter()
+            self.knowledgeVM.fetchKnowledge(level: level) { questions, error in
+                if error == nil {
+                    numberQuestions = questions.count
+                }
+                dispatchGroup.leave()
             }
-            else {
-                self.eventAlert(message: CommonError.notEnoughQuestion.rawValue)
+            dispatchGroup.notify(queue: .main) {
+                if numberQuestions >= 5 {
+                    guard let vc = UIStoryboard(name: "Interview", bundle: nil).instantiateViewController(withIdentifier: InterviewViewController.identifier) as? InterviewViewController else { return }
+                    vc.level = level
+                    self.navigationController?.pushViewController(vc, animated: true)
+                }
+                else {
+                    self.eventAlert(message: CommonError.notEnoughQuestion.rawValue)
+                }
             }
         }
         

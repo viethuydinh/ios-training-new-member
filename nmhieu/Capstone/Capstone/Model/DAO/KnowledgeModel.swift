@@ -6,9 +6,11 @@
 //
 
 import Foundation
+import FirebaseFirestoreSwift
 
 struct KnowledgeModel {
-    var id : Int?
+    var id : String?
+    var idCoreData : Int?
     var content : String?
     var answer : String?
     var level : LevelInterView?
@@ -36,13 +38,27 @@ enum LevelInterView : Int,Codable {
 
 extension KnowledgeModel : ObjectConvertible {
     typealias Object = KnowledgeCoreData
-    
-    func update(obj: KnowledgeCoreData) -> KnowledgeCoreData {
+
+    func update(obj: Object) -> Object {
         let object = obj
-        object.id = Int16(self.id ?? 0)
+        object.id = Int16(self.idCoreData ?? 0)
         object.content = self.content
         object.answer = self.answer
         object.level = Int16(self.level?.rawValue ?? 0)
+        return object
+    }
+}
+
+extension KnowledgeModel : ObjectConvertibleFirebase {
+    
+    typealias ObjectFirebase = KnowledgeDatabase
+    
+    func asObject() -> ObjectFirebase {
+        var object = ObjectFirebase()
+        object.id = self.id
+        object.content = self.content
+        object.answer = self.answer
+        object.level = self.level?.rawValue ?? 0
         return object
     }
 }

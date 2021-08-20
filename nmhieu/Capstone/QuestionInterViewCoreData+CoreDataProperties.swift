@@ -28,7 +28,7 @@ extension QuestionInterViewCoreData : DomainConvertible {
     
     var asDomain: QuestionInterviewModel {
         var domain = Domain()
-        domain.id = Int(self.id)
+        domain.idCoredata = Int(self.id)
         domain.question = self.question
         domain.answer = self.answer
         domain.rate = RateAnswer(rawValue: Int(self.rate))

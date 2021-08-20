@@ -21,7 +21,7 @@ class QuestionTableViewCell: UITableViewCell {
     
     func getQuestion() -> QuestionInterviewModel {
         var question = QuestionInterviewModel()
-        question.id = nil
+        question.idCoredata = nil
         question.question = self.questionLabel.text
         question.rate = self.status
         return question

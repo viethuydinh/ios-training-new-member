@@ -49,6 +49,12 @@ class InterviewViewController: BaseVC {
     
     var level : LevelInterView?
     
+    var questionsFirebase : [QuestionInterviewModel]? {
+        didSet {
+            self.setUpUI()
+        }
+    }
+    
     var editingOverview : Bool? {
         didSet {
             self.event()
@@ -56,8 +62,7 @@ class InterviewViewController: BaseVC {
     }
     
     override func viewDidLoad() {
-        super.viewDidLoad()
-        self.setUpUI()
+        super.viewDidLoad() 
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -86,7 +91,9 @@ class InterviewViewController: BaseVC {
     }
     
     @IBAction func eventDone() {
-        self.interviewVM.saveInterView(tableView: self.interViewTableView)
+        self.interviewVM.saveInterView(tableView: self.interViewTableView) { error in
+            print(error)
+        }
         self.navigationController?.popViewController(animated: true)
     }
     
@@ -126,7 +133,22 @@ class InterviewViewController: BaseVC {
     
     //MARK: -ConfigData
     private func configData() {
-        self.interviewVM.questions = self.interviewVM.recommentListQuestions()
+        let dispatchGroup = DispatchGroup()
+        dispatchGroup.enter()
+        var errorFirebase : Error?
+        self.interviewVM.recommentListQuestions { questions, error in
+            self.questionsFirebase = questions
+            errorFirebase = error
+            dispatchGroup.leave()
+        }
+        
+        dispatchGroup.notify(queue: .main) {
+            if errorFirebase == nil {
+                self.interviewVM.questions = self.questionsFirebase ?? []
+                self.interViewTableView.reloadData()
+            }
+        }
+//        self.interviewVM.questions = self.interviewVM.recommentListQuestions()
     }
 }
 

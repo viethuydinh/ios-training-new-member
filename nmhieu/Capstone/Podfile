@@ -6,7 +6,11 @@ target 'Capstone' do
   use_frameworks!
 
   # Pods for Capstone
- 
+ 	pod 'Swinject'
+	pod 'Firebase/Analytics'
+	pod 'Firebase/Firestore'
+	pod 'FirebaseFirestoreSwift'
+	pod 'Firebase/Auth'
 
   target 'CapstoneTests' do
     inherit! :search_paths
