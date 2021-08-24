@@ -39,7 +39,7 @@ class QuestionTableViewCell: UITableViewCell {
 extension QuestionTableViewCell {
     static func height(bounds : CGRect,content : String) -> CGFloat {
         let label = UILabel()
-        label.font = .systemFont(ofSize: 15.0)
+        label.font = .systemFont(ofSize: 17.0)
         label.text = content
         label.numberOfLines = 0
         let size: CGSize = label.sizeThatFits(.init(width: bounds.width - 32.0, height: .infinity))
