@@ -13,6 +13,7 @@ target 'Capstone_nqhuy9' do
   pod 'FirebaseFirestoreSwift'
   pod 'Firebase/Auth'
   pod 'Firebase/Analytics'
+  pod 'Firebase/Messaging'
 
 
   target 'Capstone_nqhuy9Tests' do
