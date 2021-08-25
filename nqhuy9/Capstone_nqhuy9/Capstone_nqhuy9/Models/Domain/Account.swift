@@ -8,7 +8,7 @@
 import Foundation
 import CoreData
 
-struct Account {
+struct Account: Codable {
     var username : String?
     var password : String?
     var repassword : String?

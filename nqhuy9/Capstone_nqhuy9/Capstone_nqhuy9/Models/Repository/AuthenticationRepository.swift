@@ -10,7 +10,7 @@ import RxSwift
 import RxCocoa
 
 protocol AuthenticationRepository {
-    func signIn(account: Account) -> Bool
+    func signIn(account: Account, completion: @escaping((Bool) -> ()))
     
     func signUp(account: Account) -> Bool
 }
@@ -19,18 +19,19 @@ struct DefaultAuthenticationRepository : AuthenticationRepository {
     
     var accountDAO = CoreDataRepository<Account>.shared
     
-    func signIn(account: Account) -> Bool {
-        guard let username = account.username else { return false }
-        guard let password = account.password else { return false }
-        guard let result = accountDAO.fetch(predicate: .init(format: "username = %@", argumentArray: [username])) else { return false }
-        if username == result.username && password == result.password {
-            return true
-        } else {
-            return false
+    var accountFirebase = FirebaseRepository<Account>.shared
+    
+    func signIn(account: Account, completion: @escaping((Bool) -> ())) {
+        accountFirebase.fetch(tableName: "Account", field: "username", targetCondition: account.username) { acc in
+            if acc == nil {
+                completion(false)
+            } else {
+                completion(acc!.username == account.username && acc!.password == account.password)
+            }
         }
     }
     
     func signUp(account: Account) -> Bool {
-        accountDAO.save(domain: account)
+        accountFirebase.save(tableName: "Account", domain: account, id: nil)
     }
 }

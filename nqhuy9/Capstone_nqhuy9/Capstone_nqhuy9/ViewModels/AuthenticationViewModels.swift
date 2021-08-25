@@ -8,7 +8,7 @@
 import Foundation
 
 protocol AuthenticationViewModels {
-    func signIn(account: Account) -> Bool
+    func signIn(account: Account, completion: @escaping((Bool) -> ()))
     
     func signUp(account: Account) -> Bool
     
@@ -25,11 +25,13 @@ struct DefaultAuthenticationViewModel: AuthenticationViewModels {
         self.repository = DefaultAuthenticationRepository()
     }
     
-    func signIn(account: Account) -> Bool {
+    func signIn(account: Account, completion: @escaping((Bool) -> ())){
         if self.emailValidate(email: account.username) && self.passwordValidate(password: account.password) {
-            return repository.signIn(account: account)
+            repository.signIn(account: account) { authen in
+                completion(authen)
+            }
         } else {
-            return false
+            completion(false)
         }
     }
     

@@ -125,14 +125,16 @@ class SignInViewController: BaseVC {
             .withLatestFrom(Observable.combineLatest(self.usernameTextField.rx.text, self.passwordTextField.rx.text))
             .map{ Account(username: $0, password: $1, repassword: nil) }
             .subscribe { (acc) in
-                if self.signInViewModel.signIn(account: Account(username: self.usernameTextField.text, password: self.passwordTextField.text, repassword: nil)) {
-                    guard let chooseLevelVC = self.getViewControllerFromStorybroad(storybroadName: "Main", identifier: "NavigationMain") as? UINavigationController else { return }
-                    self.view.window!.rootViewController = chooseLevelVC
-                } else {
-                    let dialog = AlertCustomView.init(title: "Fail", content: "Sign In Error", isHiddenCancel: true) {
-                        return
+                self.signInViewModel.signIn(account: Account(username: self.usernameTextField.text, password: self.passwordTextField.text, repassword: nil)) { authen in
+                    if authen {
+                        guard let chooseLevelVC = self.getViewControllerFromStorybroad(storybroadName: "Main", identifier: "NavigationMain") as? UINavigationController else { return }
+                        self.view.window!.rootViewController = chooseLevelVC
+                    } else {
+                        let dialog = AlertCustomView.init(title: "Fail", content: "Sign In Error", isHiddenCancel: true) {
+                            return
+                        }
+                        dialog.show(superView: self.view)
                     }
-                    dialog.show(superView: self.view)
                 }
             } onError: { (_) in
                 

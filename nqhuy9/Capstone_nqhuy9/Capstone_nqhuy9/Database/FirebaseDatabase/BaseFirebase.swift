@@ -19,6 +19,12 @@ struct FirebaseRepository<Domain: Codable & ObjectConvert> {
         
     }
     
+    func fetch(tableName: String, field: String?, targetCondition: Any?, completion: @escaping((Domain?) -> ())) -> Bool {
+        return self.fetchAll(tableName: tableName, field: field, targetCondition: targetCondition) { domains in
+            completion(domains.first)
+        }
+    }
+    
     func fetchAll(tableName: String, field: String?, targetCondition: Any?, completion: @escaping(([Domain]) -> ())) -> Bool {
         var error: Int = 0
         var result: [Domain] = []
