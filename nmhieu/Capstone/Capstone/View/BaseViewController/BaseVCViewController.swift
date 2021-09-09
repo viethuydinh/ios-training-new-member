@@ -64,5 +64,5 @@ class BaseVC: UIViewController,UIGestureRecognizerDelegate {
         }
         actionAlert.addAction(cancelAction)
         self.present(actionAlert, animated: true, completion: nil)
-    }
+     }
 }

@@ -59,6 +59,7 @@
 		154A63B0269C1E08008E571C /* KnowledgeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 154A63AE269C1E08008E571C /* KnowledgeTableViewCell.swift */; };
 		154A63B1269C1E08008E571C /* KnowledgeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 154A63AF269C1E08008E571C /* KnowledgeTableViewCell.xib */; };
 		154A63B6269C2384008E571C /* UITableViewCell+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 154A63B5269C2384008E571C /* UITableViewCell+Extension.swift */; };
+		1557B35626D682B20064B531 /* PushNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1557B35526D682B20064B531 /* PushNotification.swift */; };
 		156948F426A97F1F00EF8C3D /* KnowledgeSetsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 156948F326A97F1F00EF8C3D /* KnowledgeSetsViewController.swift */; };
 		156948F726A97F7100EF8C3D /* KnowledgeSets.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 156948F626A97F7100EF8C3D /* KnowledgeSets.storyboard */; };
 		156948FA26A9BFB000EF8C3D /* KnowledgeSetTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 156948F826A9BFB000EF8C3D /* KnowledgeSetTableViewCell.swift */; };
@@ -144,6 +145,7 @@
 		15095E95268DC8B500129B9C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		150F653C26CE15CB008A1D78 /* AuthenticationFirebase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationFirebase.swift; sourceTree = "<group>"; };
 		150F653E26CE18C5008A1D78 /* KnowledgeDatabase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KnowledgeDatabase.swift; sourceTree = "<group>"; };
+		1510989626D643500087FE33 /* CapstoneRelease.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = CapstoneRelease.entitlements; sourceTree = "<group>"; };
 		15179EB42695565F008D3A46 /* Convertible.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Convertible.swift; sourceTree = "<group>"; };
 		15179EB9269557B2008D3A46 /* CoreDataConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataConfig.swift; sourceTree = "<group>"; };
 		15179EBE26958532008D3A46 /* AccountModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountModel.swift; sourceTree = "<group>"; };
@@ -187,6 +189,7 @@
 		1554155726C28EDF00BB1BD0 /* Pods */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Pods; sourceTree = "<group>"; };
 		1554155826C28F0B00BB1BD0 /* Pods_Capstone.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Pods_Capstone.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1554155C26C28F2F00BB1BD0 /* FirebaseCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = FirebaseCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1557B35526D682B20064B531 /* PushNotification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PushNotification.swift; sourceTree = "<group>"; };
 		156948F326A97F1F00EF8C3D /* KnowledgeSetsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KnowledgeSetsViewController.swift; sourceTree = "<group>"; };
 		156948F626A97F7100EF8C3D /* KnowledgeSets.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = KnowledgeSets.storyboard; sourceTree = "<group>"; };
 		156948F826A9BFB000EF8C3D /* KnowledgeSetTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KnowledgeSetTableViewCell.swift; sourceTree = "<group>"; };
@@ -301,6 +304,7 @@
 		15095E6D268DC8B100129B9C /* Capstone */ = {
 			isa = PBXGroup;
 			children = (
+				1510989626D643500087FE33 /* CapstoneRelease.entitlements */,
 				15257D2326CA6E0800A0E43D /* GoogleService-Info.plist */,
 				157F96EE268EBB67009BBF14 /* Application */,
 				157F96EF268EBB7C009BBF14 /* Network */,
@@ -570,6 +574,7 @@
 			children = (
 				15095E70268DC8B100129B9C /* SceneDelegate.swift */,
 				15095E6E268DC8B100129B9C /* AppDelegate.swift */,
+				1557B35526D682B20064B531 /* PushNotification.swift */,
 			);
 			path = Application;
 			sourceTree = "<group>";
@@ -990,6 +995,7 @@
 				15FD393F26BAE16D000B64A1 /* CoredataError.swift in Sources */,
 				15257D3A26CA7CE600A0E43D /* UserCoreData+CoreDataProperties.swift in Sources */,
 				15257D3126CA7CCE00A0E43D /* AccountCoreData+CoreDataProperties.swift in Sources */,
+				1557B35626D682B20064B531 /* PushNotification.swift in Sources */,
 				15257D3526CA7CDB00A0E43D /* KnowledgeCoreData+CoreDataClass.swift in Sources */,
 				1507B218268F14D6001945A8 /* UIViewController+Extension.swift in Sources */,
 				1569490226A9D8F100EF8C3D /* BaseViewModel.swift in Sources */,
@@ -1255,9 +1261,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_IDENTITY = "Apple Development";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = ABK98C7328;
+				CODE_SIGN_ENTITLEMENTS = Capstone/CapstoneRelease.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = H2MYGJSW7B;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Pods/FirebaseAnalytics/Frameworks",
@@ -1270,9 +1277,9 @@
 					"@executable_path/Frameworks",
 				);
 				ONLY_ACTIVE_ARCH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = com.CMCGlobal.com.Capstone;
+				PRODUCT_BUNDLE_IDENTIFIER = com.CMCGlobal.com.CapstoneNMHieu;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "";
+				PROVISIONING_PROFILE_SPECIFIER = "Hieu Nguyễn";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

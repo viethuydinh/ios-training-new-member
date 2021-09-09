@@ -114,7 +114,7 @@ struct FirebaseRepository<Domain : ObjectConvertibleFirebase>  {
         var errorFirebase : Error?
         dispatchGroup.enter()
         guard Auth.auth().currentUser != nil else { return }
-        Firestore.firestore().collection(Domain.name).limit(to: limit).whereField(whereFeild, isEqualTo: isEqualTo).getDocuments { (query, error) in
+        Firestore.firestore().collection(Domain.name).limit(to: limit).whereField(whereFeild, isGreaterThanOrEqualTo: isEqualTo).getDocuments { (query, error) in
             if error != nil {
                 resultsDomain = []
                 errorFirebase = error

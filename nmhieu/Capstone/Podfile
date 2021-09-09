@@ -11,6 +11,7 @@ target 'Capstone' do
 	pod 'Firebase/Firestore'
 	pod 'FirebaseFirestoreSwift'
 	pod 'Firebase/Auth'
+	pod 'Firebase/Messaging'
 
   target 'CapstoneTests' do
     inherit! :search_paths

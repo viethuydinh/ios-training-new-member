@@ -8,6 +8,8 @@
 import UIKit
 import CoreData
 import Firebase
+import UserNotifications
+import FirebaseMessaging
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -15,12 +17,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        let pushManager = PushNotificationManager(userID: "HRUwYvqCchY4AtLH538X0e4gVNH2")
+        pushManager.registerForPushNotifications()
         DefaultContainer.shared.register()
         FirebaseApp.configure()
         // Override point for customization after application launch.
         return true
     }
-
+    
+   
     // MARK: UISceneSession Lifecycle
 
     func application(_ application: UIApplication, configurationForConnecting connectingSceneSession: UISceneSession, options: UIScene.ConnectionOptions) -> UISceneConfiguration {
@@ -91,8 +96,6 @@ extension AppDelegate {
         guard let signInScreen = UIStoryboard(name: "Account", bundle: nil).instantiateViewController(withIdentifier: SignInViewController.identifier) as? SignInViewController else { return }
         
         guard let homeScreen = UIStoryboard(name: "Home", bundle: nil).instantiateViewController(withIdentifier: HomeViewController.identifier) as? HomeViewController  else { return }
-        
-        
         
         window = UIWindow(frame: UIScreen.main.bounds)
         window?.backgroundColor = .white
