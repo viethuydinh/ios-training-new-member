@@ -11,7 +11,7 @@ import UIKit
 enum TabItem: String, CaseIterable {
     case level = "Level"
     case question = "Question"
-    case review = "Review"
+    case review = ""
 
     var viewController: UIViewController {
         switch self {
@@ -37,7 +37,7 @@ enum TabItem: String, CaseIterable {
         case .question:
             return UIImage(named: "question")!
         case .review:
-            return UIImage(named: "review")!
+            return UIImage()
         }
     }
     
