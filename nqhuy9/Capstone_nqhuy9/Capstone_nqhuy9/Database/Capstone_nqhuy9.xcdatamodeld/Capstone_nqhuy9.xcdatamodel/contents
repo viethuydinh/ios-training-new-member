@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="18154" systemVersion="20F71" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="AccountCoreData" representedClassName=".AccountCoreData" syncable="YES">
+        <attribute name="password" optional="YES" attributeType="String"/>
+        <attribute name="repassword" optional="YES" attributeType="String"/>
+        <attribute name="username" optional="YES" attributeType="String"/>
+    </entity>
+    <entity name="QuestionCoreData" representedClassName=".QuestionCoreData" syncable="YES">
+        <attribute name="answer" optional="YES" attributeType="String"/>
+        <attribute name="content" optional="YES" attributeType="String"/>
+        <attribute name="id" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="level" optional="YES" attributeType="String"/>
+    </entity>
+    <entity name="ReviewCoreData" representedClassName=".ReviewCoreData" syncable="YES">
+        <attribute name="candidateName" optional="YES" attributeType="String"/>
+        <attribute name="content" optional="YES" attributeType="String"/>
+        <attribute name="id" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="status" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+    </entity>
+    <elements>
+        <element name="AccountCoreData" positionX="309.1796875" positionY="-25.73828125" width="128" height="88"/>
+        <element name="QuestionCoreData" positionX="126" positionY="-18" width="128" height="89"/>
+        <element name="ReviewCoreData" positionX="216" positionY="0" width="128" height="103"/>
+    </elements>
+</model>
