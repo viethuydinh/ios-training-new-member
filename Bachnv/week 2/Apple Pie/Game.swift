@@ -14,7 +14,7 @@ struct Game {
     var formattedWord: String {
         var guessedWord = ""
         for letter in word {
-            if guessedLetters.contains(letter) {
+            if String(guessedLetters).range(of: String(letter), options: .diacriticInsensitive) != nil{
                 guessedWord += "\(letter)"
             } else{
                 guessedWord += "_"

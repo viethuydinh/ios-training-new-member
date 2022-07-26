@@ -8,7 +8,7 @@
 import UIKit
 
 class ViewController: UIViewController {
-    var listOfWords = ["buncha","guitar","football","bug","mouse"]
+    var listOfWords = ["búnchả","guitar","nhà","mẹ","chuột"]
     let incorrectMovesAllowed = 7
     var isPlayer1Turn = true
     var awardPoint = 0 {
@@ -46,6 +46,8 @@ class ViewController: UIViewController {
     @IBOutlet weak var player2PointLabel: UILabel!
     @IBOutlet weak var player2Background: UIStackView!
     @IBOutlet var letterButtons: [UIButton]!
+    @IBOutlet weak var fullWordTxtField: UITextField!
+    @IBOutlet weak var submitBtn: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -117,6 +119,27 @@ class ViewController: UIViewController {
             playerPointCalculate(point: 1, false)
         }
         updateGameState()
+    }
+    
+    
+    @IBAction func submitBtnPressed(_ sender: Any) {
+        if fullWordTxtField.text == nil {
+            return
+        }
+        let inputTxt = fullWordTxtField.text!
+        if String(inputTxt.lowercased()).compare(currentGame.word, options: .diacriticInsensitive) == .orderedSame {
+            let alert = UIAlertController(title: "Good Job!", message: "You have guessed correct word!", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "OK", style: .default))
+            self.present(alert, animated: true)
+            awardPoint += 5
+            playerPointCalculate(point: 5, true)
+            newRound()
+        }else{
+            let alert = UIAlertController(title: "Unfortunately!", message: "You have guessed the wrong word!", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "OK", style: .default))
+            self.present(alert, animated: true)
+        }
+        
     }
     func playerPointCalculate(point p:Int, _ isAdd:Bool){
         if isPlayer1Turn {
